@@ -21,86 +21,90 @@
         width: 100%;
         background: url('../images/back-1.jpg') center repeat;
         .header{
-            display: flex;
-            padding: 18px 100px;
-            justify-content: space-between;
-            align-items: center;
-            
-            .lLogo{
-                width: 250px;
-                height: 60px;
-                img{
-                    width: 100%;
-                    height: 100%;
-                    vertical-align: middle;
+            width: 1400px;
+            margin: 0 auto;
+            .header_child{
+                display: flex;
+                padding: 18px 100px;
+                justify-content: space-between;
+                align-items: center;
+                
+                .lLogo{
+                    width: 250px;
+                    height: 60px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        vertical-align: middle;
+                    }
                 }
-            }
-            .rBox{
-               .top-row{
-                   display: flex;
-                   align-items: center;
-                   padding-bottom: 10px;
-                   .text:nth-child(1){
-                       margin-left: auto;
-                   }
-                   .text{
-                       font-size: 14px;
-                       color: #6a3f24;
-                       cursor: pointer;
-                       span{
-                           display: inline-block;
+                .rBox{
+                   .top-row{
+                       display: flex;
+                       align-items: center;
+                       padding-bottom: 10px;
+                       .text:nth-child(1){
+                           margin-left: auto;
+                       }
+                       .text{
+                           font-size: 14px;
+                           color: #6a3f24;
+                           cursor: pointer;
+                           span{
+                               display: inline-block;
+                               margin: 0 20px;
+                           }
+                       }
+                       .contacts{
+                           width: 36px;
+                           height: 36px;
+                           border-radius: 50%;
+                           background: #ccc;
                            margin: 0 20px;
                        }
                    }
-                   .contacts{
-                       width: 36px;
-                       height: 36px;
-                       border-radius: 50%;
-                       background: #ccc;
-                       margin: 0 20px;
-                   }
-               }
-               .search_row{
-                   display: flex;
-                   .search{
-                        position: relative;
-                       .inp{
-                           width: 260px;
-                           height: 34px;
-                           line-height: 34px;
-                           border: 1px solid #6c4228;
-                           padding: 0 15px;
-                           box-shadow: rgba(204, 204, 204, 1) solid 1px;
-                           border-radius: 17px;
-                           font-size: 14px;
-                       }
-                       .icon_img{
-                        width: 18px;
-                        height: 18px;
-                        position: absolute;
-                        right: 15px;
-                        top: 5px;
-                        cursor: pointer;
-                        img{
-                                width: 100%;
-                                height: 100%;
-                                vertical-align: middle;
+                   .search_row{
+                       display: flex;
+                       .search{
+                            position: relative;
+                           .inp{
+                               width: 260px;
+                               height: 34px;
+                               line-height: 34px;
+                               border: 1px solid #6c4228;
+                               padding: 0 15px;
+                               box-shadow: rgba(204, 204, 204, 1) solid 1px;
+                               border-radius: 17px;
+                               font-size: 14px;
+                           }
+                           .icon_img{
+                            width: 18px;
+                            height: 18px;
+                            position: absolute;
+                            right: 15px;
+                            top: 5px;
+                            cursor: pointer;
+                            img{
+                                    width: 100%;
+                                    height: 100%;
+                                    vertical-align: middle;
+                                }
                             }
-                        }
+                       }
+                       .btn{
+                            width: 100px;
+                            height: 34px;
+                            line-height: 34px;
+                            text-align: center;
+                            background-color: rgba(0, 68, 56, 1);
+                            font-size: 14px;
+                            color: #ffffff;
+                            margin-left: 15px;
+                            border-radius: 17px;
+                            cursor: pointer;
+                       }
                    }
-                   .btn{
-                        width: 100px;
-                        height: 34px;
-                        line-height: 34px;
-                        text-align: center;
-                        background-color: rgba(0, 68, 56, 1);
-                        font-size: 14px;
-                        color: #ffffff;
-                        margin-left: 15px;
-                        border-radius: 17px;
-                        cursor: pointer;
-                   }
-               }
+                }
             }
         }
     }
@@ -112,6 +116,10 @@
         background: #614130;
         border-bottom: 1px solid #877061;
         position: relative;
+        .nav_box{
+            width: 1400px;
+            margin: 0 auto;
+        }
         ul{
             display: flex;
             li{
@@ -383,7 +391,6 @@
                 .cont{
                     margin-top: 35px;
                     .box{
-                        width: 100%;
                         padding: 18px 16px;
                         background: #fff;
                         margin-bottom: 10px;
