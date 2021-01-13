@@ -7,7 +7,8 @@ $(() => {
             lis[num].onclick = function(){
                 // alert(num);
                 $(this).addClass('active').siblings().removeClass('active');
-                $(this).children("span").addClass('active').parent().siblings().children("span").removeClass('active');
+                $(this).children("span").addClass('active').parent().siblings().
+                children("span").removeClass('active');
             }
         }
    }
