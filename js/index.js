@@ -6,6 +6,26 @@ $(function () {
     //     $(this).addClass('active');
     //     $(this).parents('.content').removeClass('active');
     // })
+    $('#depart .tab').click(function () {
+        $('#depart .tab').removeClass('active');
+        $(this).addClass('active');
+    });
+    $('#newsOne .back').click(function () {
+        $('#newsOne .back').removeClass('active');
+        $(this).addClass('active');
+    });
+    $('#newsTwo .back').click(function () {
+        $('#newsTwo .back').removeClass('active');
+        $(this).addClass('active');
+    });
+    $('#edition .back_url').click(function () {
+        $('#edition .back_url').removeClass('active');
+        $(this).addClass('active');
+    });
+    $('#uls .lis').click(function () {
+        $('#uls .lis').removeClass('active');
+        $(this).addClass('active');
+    });
     function onMyLoad() {
         var lis = $('.nav ul li');
         for (var i = 0; i < lis.length; i++) {
