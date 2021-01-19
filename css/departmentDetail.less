@@ -1,0 +1,194 @@
+@media screen and (mix-width: 1440px){
+    .spacing,.center{
+        min-width: 1400px !important;
+        padding: 0 40px !important;
+    }
+    .padding{
+        padding: 12px 40px;
+    }
+}
+.wrap{
+    .center{
+        width: 1400px;
+        margin: 20px auto;
+        .Breadcrumb{
+            span{
+                font-size: 14px;
+                color: #999999;
+            }
+            span:hover{
+                color: #333333;
+                cursor: pointer;
+            }
+        }
+        .introduce{
+            margin-top: 20px;
+            display: flex;
+            .lBox{
+                width: 65%;
+                height: 530px;
+                background: #cccccc;
+            }
+            .rBox{
+                width: 35%;
+                height: 530px;
+                background: #e5e5e5;
+            }
+        }
+        .row{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 70px;
+            .cel{
+                .box{
+                    display: flex;
+                    .icon{
+                        width: 30px;
+                        height: 30px;
+                        background: #ccc;
+                        border-radius: 50%;
+                        text-align: center;
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img{
+                            width: 25px;
+                            height: 25px;
+                        }
+                    }
+                    .icon:nth-child(2){
+                        margin-left: 20px;
+                    }
+                }
+                .title{
+                    font-size: 32px;
+                    font-weight: bold;
+                    font-family: 'St';
+                    color: #333333;
+                }
+                .btn{
+                    font-size: 14px;
+                    border: 1px solid #cccccc;
+                    padding: 5px 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .headPhoto{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            .box:hover .box_child{
+                display: none;
+            }
+            .box:hover .box_active{
+                display: block;
+            }
+            .box{
+                width: 190px;
+                height: 392px;
+                background: #fff;
+                padding: 5px;
+                .box_child{
+                    display: block;
+                    border: 1px solid #999999;
+                    text-align: center;
+                    padding: 20px;
+                    .img{
+                        width: 140px;
+                        height: 196px;
+                        margin: 0 auto;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            vertical-align: middle;
+                        }
+                    }
+                    .name{
+                        font-size: 20px;
+                        color: #614130;
+                    }
+                    .position{
+                        font-size: 14px;
+                        color: #333333;
+                        padding-top: 14px;
+                    }
+                }
+                .box_active{
+                    display: none;
+                    border: 1px solid #999999;
+                    padding: 20px;
+                    background: #614130;
+                    .title{
+                        font-size: 16px;
+                        font-weight: bold;
+                        color:#ffffff
+                    }
+                    .text{
+                        font-size: 14px;
+                        color: #ffffff;
+                    }
+                }
+                .back_bord{
+                    border: 1px solid #614130;
+                    padding: 3px;
+                    margin: 5px 0;
+                    .back{
+                        width: 170px;
+                        height: 41px;
+                        line-height: 41px;
+                        text-align: center;
+                        margin: 0 auto;
+                        font-size: 16px;
+                        color: #614130;
+                        background: url('../images/未标题-12.png') no-repeat;
+                    }
+                }
+                .back_row{
+                    display: flex;
+                    justify-content: space-between;
+                    cursor: pointer;
+                    .cel_o{
+                        width: 80px;
+                        height: 32px;
+                        line-height: 32px;
+                        text-align: center;
+                        font-size: 14px;
+                        color: #ffffff;
+                        background: url('../images/未标题-13.png') no-repeat;
+                    }
+                    .cel_t{
+                        width: 80px;
+                        height: 32px;
+                        line-height: 32px;
+                        text-align: center;
+                        font-size: 14px;
+                        color: #ffffff;
+                        background: url('../images/未标题-14.png') no-repeat;
+                    }
+                }
+            }
+        }
+        .dynamic{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px 0;
+            .box{
+                width: 24%;
+                border: 1px solid #cccccc;
+                .imgs{
+                    width: 100%;
+                    height: 165px;
+                    background: #cccccc;
+                }
+                .desc{
+                    padding: 17px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

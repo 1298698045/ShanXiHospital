@@ -18,10 +18,10 @@ $(function () {
         $('#newsTwo .back').removeClass('active');
         $(this).addClass('active');
     });
-    $('#edition .back_url').click(function () {
-        $('#edition .back_url').removeClass('active');
-        $(this).addClass('active');
-    });
+    // $('#edition .back_url').click(function () {
+    //     $('#edition .back_url').removeClass('active');
+    //     $(this).addClass('active');
+    // })
     $('#uls .lis').click(function () {
         $('#uls .lis').removeClass('active');
         $(this).addClass('active');
@@ -38,5 +38,5 @@ $(function () {
             };
         }
     }
-    onMyLoad();
+    //    onMyLoad();
 });
