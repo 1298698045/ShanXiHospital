@@ -1,6 +1,16 @@
 $(function(){
-    $('.tabs .tab').click(function(){
-        $('.tabs .tab').removeClass('active');
+    $(function () {
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            slidesPerView: 5,
+            paginationClickable: true,
+            spaceBetween: 30,
+            nextButton: '.right_icon',
+            prevButton: '.left_icon'
+        });
+    })
+    $('.swiper-wrapper .swiper-slide').click(function(){
+        $('.swiper-wrapper .swiper-slide').removeClass('active');
         $(this).addClass('active');
         let value = $(this).html();
         console.log(value);

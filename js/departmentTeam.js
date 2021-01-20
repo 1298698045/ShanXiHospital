@@ -4,8 +4,8 @@ $(function(){
         $(this).addClass('active');
     })
     $('#pageValue').change(function(e){
-        console.log($(this).val());
+        let page = $(this).val();
+        $('.paging .num').removeClass('active');
+        $('.paging .num').eq(page-1).addClass('active');
     })
-    // let val = $('#pageValue').val();
-    // console.log(val);
 })
