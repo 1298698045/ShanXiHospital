@@ -38,12 +38,12 @@ $(function(){
                 <div class="nav_box spacing">
                     <ul class="spacing">
                         <li>
-                            <span class="">
+                            <span class="" id="home">
                                 首页
                             </span>
                             <div class="content"></div>
                         </li>
-                        <li>
+                        <li id="patient">
                             <span>
                                 患者服务
                             </span>      
@@ -86,7 +86,7 @@ $(function(){
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li id="characteristic">
                             <span>
                                 特色诊疗
                             </span>      
@@ -94,7 +94,7 @@ $(function(){
 
                             </div>
                         </li>
-                        <li>
+                        <li id="department">
                             <span>
                                 科室导航
                             </span>      
@@ -118,7 +118,7 @@ $(function(){
 
                             </div>
                         </li>
-                        <li>
+                        <li id="journalism">
                             <span>
                                 新闻中心
                             </span>      
@@ -164,7 +164,7 @@ $(function(){
         </div>
     `
     let pos = `
-        <div class="posBox">
+        <div class="rightNav">
             <div class="box">
                 <div class="w_text">
                     <p>远程</p>
@@ -239,4 +239,19 @@ $(function(){
         }
         return(false);
     }
+    $('#home').click(function(){
+        window.location.href = '../home/index.html'
+    })
+    $('#characteristic').click(function(){
+        window.location.href = '../characteristic/characteristic.html';
+    })
+    $('#patient').click(function(){
+        window.location.href = '../patient/index.html';
+    })
+    $('#department').click(function(){
+        window.location.href = '../department/department.html';
+    })
+    $('#journalism').click(function(){
+        window.location.href = '../journalism/journalism.html'
+    })
 })
