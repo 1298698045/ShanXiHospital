@@ -2,6 +2,12 @@ $(function(){
     $('.tabs .tab').click(function(){
         $('.tabs .tab').children().removeClass('active');
         $(this).children().addClass('active');
+        $('.content_wrap').hide();
+        let index = $(this).index();
+        $('.content_wrap').eq(index).show();
+    })
+    $('#detail').click(function(){
+        window.location.href = '../journalism/detail.html'
     })
 })
 new Pagination({

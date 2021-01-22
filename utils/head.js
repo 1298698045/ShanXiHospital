@@ -226,9 +226,16 @@ $(function(){
         }
     }
     // onMyLoad();
+    $('.nav ul li').click(function(){
+        $('.nav ul li').children('span').removeClass('active');
+        $(this).children('span' ).addClass('active');
+    })
     $('#cz').click(function(){
         window.location.href = '../patient/index.html';
     })
+   let index = getQueryVariable("index");
+   $('.nav ul li').children('span').removeClass('active');
+   $('.nav ul li').eq(index).children('span').addClass('active');
     function getQueryVariable(variable)
     {
         var query = window.location.search.substring(1);
@@ -240,18 +247,18 @@ $(function(){
         return(false);
     }
     $('#home').click(function(){
-        window.location.href = '../home/index.html'
+        window.location.href = '../home/index.html?index='+0;
     })
     $('#characteristic').click(function(){
-        window.location.href = '../characteristic/characteristic.html';
+        window.location.href = '../characteristic/characteristic.html?index='+2;
     })
     $('#patient').click(function(){
-        window.location.href = '../patient/index.html';
+        window.location.href = '../patient/index.html?index='+1;
     })
     $('#department').click(function(){
-        window.location.href = '../department/department.html';
+        window.location.href = '../department/department.html?index='+3;
     })
     $('#journalism').click(function(){
-        window.location.href = '../journalism/journalism.html'
+        window.location.href = '../journalism/journalism.html?index='+6
     })
 })

@@ -84,53 +84,94 @@
                     }
                 }
             }
-            .content{
-                padding: 38px 0;
-                display: flex;
-                justify-content: space-between;
-                .lCont{
-                    width: 860px;
-                    .box{
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        .imgs{
-                            width: 260px;
-                            height: 150px;
-                            background: #c9c0ba;
+            .content_wrap{
+                display: none;
+                .content{
+                    padding: 38px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    .lCont{
+                        width: 860px;
+                        .box{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            .imgs{
+                                width: 260px;
+                                height: 150px;
+                                background: #c9c0ba;
+                            }
+                            .desc_wrap{
+                                width: 574px;
+                                padding-left: 26px;
+                                .title{
+                                    font-size: 20px;
+                                    color: #333333;
+                                    font-weight: bold;
+                                }
+                                .desc{
+                                    font-size: 14px;
+                                    color: #666666;
+                                    margin: 30px 0;
+                                }
+                                .time{
+                                    font-size: 14px;
+                                    color: #999999;
+                                }
+                            }
                         }
-                        .desc_wrap{
-                            width: 574px;
-                            padding-left: 26px;
-                            .title{
-                                font-size: 20px;
-                                color: #333333;
-                                font-weight: bold;
-                            }
-                            .desc{
-                                font-size: 14px;
-                                color: #666666;
-                                margin: 30px 0;
-                            }
-                            .time{
-                                font-size: 14px;
-                                color: #999999;
-                            }
+                    }
+                    .rCont{
+                        width: 280px;
+                        .backImg{
+                            width: 280px;
+                            height: 190px;
+                            background: #ccc;
+                        }
+                        .recommend{
+                            padding: 18px 15px;
+                            font-size: 16px;
+                            border: 1px solid #ededed;
+                            border-top: none;
                         }
                     }
                 }
-                .rCont{
-                    width: 280px;
-                    .backImg{
-                        width: 280px;
-                        height: 190px;
-                        background: #ccc;
-                    }
-                    .recommend{
-                        padding: 18px 15px;
-                        font-size: 16px;
-                        border: 1px solid #ededed;
-                        border-top: none;
+                .box::after{
+                    content: '';
+                    width: 33.3%;
+                }
+                .box_wrap{
+                    margin-top: 37px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    .box{
+                        width: 33.3%;
+                        border: 1px solid #cccccc;
+                        box-sizing: border-box;
+                        padding: 24px;
+                        .imgs{
+                            height: 202px;
+                            background: #ccc;
+                        }
+                        .title{
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            font-size: 18px;
+                            font-weight: bold;
+                            color: #333333;
+                            margin-top: 20px;
+                        }
+                        .desc{
+                            margin-top: 5px;
+                            font-size: 14px;
+                            color: #666666;
+                        }
+                        .time{
+                            font-size: 12px;
+                            color: #505050;
+                            margin-top: 15px;
+                        }
                     }
                 }
             }
