@@ -1,0 +1,230 @@
+.wrap {
+    background: url('../images/repeat.png') center repeat;
+  }
+  .wrap .center {
+    width: 1230px;
+    margin: 20px auto;
+  }
+  .wrap .center .Breadcrumb span {
+    font-size: 14px;
+    color: #333333;
+  }
+  .wrap .center .Breadcrumb .black {
+    color: #704c2f;
+    cursor: pointer;
+  }
+  .wrap .center .container .row_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+  }
+  .wrap .center .container .row_title .imgs {
+    width: 24px;
+    height: 40px;
+  }
+  .wrap .center .container .row_title .imgs img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .wrap .center .container .row_title .name {
+    font-size: 32px;
+    font-weight: bold;
+    color: #575757;
+    padding: 0 40px;
+    cursor: pointer;
+    font-family: 'St';
+  }
+  .wrap .center .container .tab_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .wrap .center .container .tab_wrap .icon {
+    width: 15px;
+    height: 27px;
+    cursor: pointer;
+  }
+  .wrap .center .container .tab_wrap .icon img {
+    width: 100%;
+    height: 100%;
+  }
+  .wrap .center .container .tab_wrap .swiper-container {
+    flex: 1;
+    height: 160px;
+    margin: 0 25px;
+  }
+  .wrap .center .container .tab_wrap .swiper-container .swiper-wrapper {
+    display: flex;
+  }
+  .wrap .center .container .tab_wrap .swiper-container .swiper-wrapper .swiper-slide {
+    width: 220px !important;
+    height: 160px;
+    font-size: 16px;
+    color: #ffffff;
+    background: url('../images/tab-.png') no-repeat;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: 10px !important;
+  }
+  .wrap .center .container .tab_wrap .swiper-container .swiper-wrapper .swiper-slide .img {
+    width: 54px;
+    height: 53px;
+    margin-bottom: 5px;
+  }
+  .wrap .center .container .tab_wrap .swiper-container .swiper-wrapper .swiper-slide .img img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .wrap .center .container .tab_wrap .swiper-container .swiper-wrapper .swiper-slide.active {
+    background: url('../images/tab-active.png') no-repeat;
+  }
+  .wrap .center .container .tab_wrap .tabs {
+    flex: 1;
+    display: flex;
+    height: 160px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 25px;
+    transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1);
+    transition-duration: 0ms;
+    transform: translate(0px, 0px) translateZ(0px);
+  }
+  .wrap .center .container .tab_wrap .tabs .tab {
+    width: 18%;
+    height: 160px;
+    font-size: 16px;
+    color: #ffffff;
+    background: url('../images/tab-.png') no-repeat;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .wrap .center .container .tab_wrap .tabs .tab .img {
+    width: 54px;
+    height: 53px;
+    margin-bottom: 5px;
+  }
+  .wrap .center .container .tab_wrap .tabs .tab .img img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .wrap .center .container .tab_wrap .tabs .tab.active {
+    background: url('../images/tab-active.png') no-repeat;
+  }
+  .wrap .center .container .content {
+    display: none;
+  }
+  .wrap .center .container .content .cont {
+    margin-bottom: 28px;
+  }
+  .wrap .center .container .content .box {
+    margin: 28px 0;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .wrap .center .container .content .box p {
+    width: 24%;
+    line-height: 46px;
+    font-size: 16px;
+    text-align: center;
+    background: url('../images/tab2.png') no-repeat;
+  }
+  .wrap .center .container .content .box p.active {
+    color: #ffffff;
+    background: url('../images/tab.png') no-repeat;
+  }
+  .wrap .center .container .content .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+    border-left: 1px solid #2c6557;
+    border-spacing: 0;
+    cursor: pointer;
+  }
+  .wrap .center .container .content .table thead tr th {
+    background: #004438;
+    color: #fff;
+    white-space: nowrap;
+    height: 58px;
+    line-height: 58px;
+    border: 1px solid #2c6557;
+  }
+  .wrap .center .container .content .table .tbody .dataRow {
+    line-height: 48px;
+  }
+  .wrap .center .container .content .table .tbody .dataRow td {
+    text-align: center;
+    border: 1px solid #2c6557;
+  }
+  .wrap .center .container .content .table .tbody .dataRow .operation {
+    background: #fff;
+  }
+  .wrap .center .container .content .table .tbody .dataRow .operation .btn {
+    width: 80px;
+    line-height: 32px;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    outline: 0;
+    color: #fff;
+    background: #6a3f24;
+    cursor: pointer;
+  }
+  .wrap .center .container .content .table .tbody .dataRow .operation .msg {
+    background: #004438;
+  }
+  .wrap .center .container .content .table .tbody .dataRow:nth-child(2n) {
+    background: #f2f2f2;
+  }
+  .wrap .bottomBack {
+    margin-top: 40px;
+  }
+  .wrap .bottomBack .top {
+    width: 100%;
+    height: 18px;
+    background: url('../images/sy-2.png') no-repeat;
+  }
+  .wrap .bottomBack .cont {
+    width: 100%;
+    height: 150px;
+    background: url('../images/footer.png') no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrap .bottomBack .cont .minW {
+    width: 1230px;
+  }
+  .wrap .bottomBack .cont .minW .box_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .wrap .bottomBack .cont .minW .box_wrap .item .imgs {
+    width: 61px;
+    height: 61px;
+  }
+  .wrap .bottomBack .cont .minW .box_wrap .item .imgs img {
+    width: 100%;
+    height: 100%;
+  }
+  .wrap .bottomBack .cont .minW .box_wrap .item .name {
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+  }
+  

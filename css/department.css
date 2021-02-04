@@ -1,0 +1,84 @@
+.wrap .center {
+    width: 1230px;
+    margin: 20px auto;
+  }
+  .wrap .center .Breadcrumb span {
+    font-size: 14px;
+    color: #999999;
+  }
+  .wrap .center .Breadcrumb span:hover {
+    color: #333333;
+    cursor: pointer;
+  }
+  .wrap .center .department .title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 32px 0;
+    font-family: 'St';
+  }
+  .wrap .center .department .boxContent .row {
+    font-size: 20px;
+    color: #505050;
+    font-weight: bold;
+    padding-bottom: 18px;
+  }
+  .wrap .center .department .boxContent .tabs {
+    display: flex;
+    border: 1px solid #614130;
+    margin: 28px 0;
+    border-radius: 5px;
+  }
+  .wrap .center .department .boxContent .tabs .tab {
+    flex: 1;
+    line-height: 60px;
+    text-align: center;
+    font-size: 14px;
+    border-right: 1px solid #614130;
+    cursor: pointer;
+  }
+  .wrap .center .department .boxContent .tabs .tab:last-child {
+    border: none;
+  }
+  .wrap .center .department .boxContent .tabs .tab.active {
+    color: #ffffff;
+    background: #614130;
+  }
+  .wrap .center .department .boxContent .label_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .wrap .center .department .boxContent .label_box .label {
+    width: 18.8%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+  .wrap .center .department .boxContent .label_box .label .img {
+    width: 22px;
+    height: 40px;
+    border-right: 1px solid #cccccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrap .center .department .boxContent .label_box .label .img img {
+    width: 22px;
+    height: 22px;
+  }
+  .wrap .center .department .boxContent .label_box .label .text {
+    flex: 1;
+    padding: 0 15px;
+    font-size: 14px;
+    color: #333333;
+  }
+  .wrap .center .department .boxContent .label_box .label:hover {
+    cursor: pointer;
+    border: 1px solid #614130;
+  }
+  
