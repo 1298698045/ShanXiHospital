@@ -166,42 +166,72 @@ $(function(){
     let pos = `
         <div class="rightNav">
             <div class="box">
+                <div class="icon_img">
+                    <img src="../../images/r_icon7.jpg" />
+                </div>
                 <div class="w_text">
                     <p>远程</p>
                     <p>医疗</p>
                 </div>
             </div>
             <div class="box">
+                <div class="icon_img">
+                    <img src="../../images/r_icon6.jpg" />
+                </div>
                 <div class="w_text">
                     <p>远程</p>
                     <p>医疗</p>
                 </div>
             </div>
             <div class="box">
+                <div class="icon_img">
+                    <img src="../../images/r_icon5.jpg" />
+                </div>
                 <div class="w_text">
                     <p>远程</p>
                     <p>医疗</p>
                 </div>
             </div>
             <div class="box">
+                <div class="icon_img">
+                    <img src="../../images/r_icon8.jpg" />
+                </div>
                 <div class="w_text">
                     <p>远程</p>
                     <p>医疗</p>
                 </div>
             </div>
             <div class="box">
+                <div class="icon_img">
+                    <img src="../../images/r_icon9.png" />
+                </div>
                 <div class="w_text">
                     <p>远程</p>
                     <p>医疗</p>
                 </div>
             </div>
             <div class="box">
+                <div class="icon_img">
+                    <img src="../../images/r_icon3.jpg" />
+                </div>
                 <div class="w_text">
                     <p>远程</p>
                     <p>医疗</p>
                 </div>
             </div>
             <div class="box">
+                <div class="icon_img">
+                    <img src="../../images/r_icon2.jpg" />
+                </div>
+                <div class="w_text">
+                    <p>远程</p>
+                    <p>医疗</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon_img">
+                    <img src="../../images/r_icon1.jpg" />
+                </div>
                 <div class="w_text">
                     <p>远程</p>
                     <p>医疗</p>

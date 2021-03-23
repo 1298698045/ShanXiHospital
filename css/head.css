@@ -220,11 +220,16 @@
   .flex_head_container .nav ul li:hover span {
     border-bottom: 3px solid #322d2b;
   }
+  .posBoxWrap{
+    width: 1230px;
+    margin: 0 auto;
+    position: relative;
+  }
   .rightNav {
     width: 56px;
-    position: fixed;
+    position: absolute;
     top: 161px;
-    right: 269px;
+    right: -76px;
     z-index: 999;
   }
   .rightNav .box {
@@ -244,6 +249,17 @@
     text-align: center;
     font-size: 12px;
     color: #ffffff;
+  }
+  .rightNav .box .icon_img{
+    width: 45px;
+    height: 45px;
+  }
+  .rightNav .box .icon_img img{
+    width: 100%;
+    height: 100%;
+  }
+  .rightNav .box:hover .icon_img{
+    display: none;
   }
   .rightNav .box:hover {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);

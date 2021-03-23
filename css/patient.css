@@ -227,4 +227,17 @@
     color: #fff;
     text-align: center;
   }
-  
+  .wrap .center .container .content .NoticeBody{
+    display: flex;
+    justify-content: space-between;
+  }
+  .wrap .center .container .content .NoticeBody .left_wrap{
+    width: 30%;
+    height: 100px;
+    background: #ccc;
+  }
+  .wrap .center .container .content .NoticeBody .right_wrap{
+    width: 65%;
+    height: 100px;
+    background: #f90;
+  }
