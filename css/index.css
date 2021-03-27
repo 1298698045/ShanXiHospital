@@ -1,3 +1,11 @@
+@media screen and (max-width: 1440px) {
+  .swiper-button-next{
+    right: 15%!important;
+  }
+  .swiper-button-prev{
+    left: 15%!important;
+  }
+}
 .wrap {
     width: 100%;
     height: 100%;
@@ -73,6 +81,10 @@
     justify-content: center;
     align-items: center;
   }
+  .wrap .center .module .box:hover{
+    cursor: pointer;
+    background: url('../images/c-active.png') no-repeat;
+  }
   .wrap .center .module .box .box_child .imgs {
     width: 61px;
     height: 61px;
@@ -115,13 +127,14 @@
     width: 91px;
     line-height: 30px;
     text-align: center;
-    color: #333333;
+    color: #815b3f;
     font-size: 16px;
     cursor: pointer;
   }
   .wrap .center .News .left_box .row .list_text .back.active {
     color: #ffffff;
-    background: url('../images/cc.png') no-repeat;
+    background: url('../images/news_tab.png') no-repeat;
+    background-size: 100% 100%;
   }
   .wrap .center .News .left_box .cont {
     margin-top: 35px;
@@ -165,7 +178,7 @@
   }
   .wrap .center .News .left_box .cont .banner_wrap .r_desc .time {
     font-size: 12px;
-    color: #614130;
+    color: #815b3f;
     padding: 24px 0 30px 0;
   }
   .wrap .center .News .left_box .cont .banner_wrap .r_desc .desc {
@@ -183,6 +196,7 @@
   .wrap .center .News .left_box .cont .row_wrap:hover .block{
     color: #614130;
     cursor: pointer;
+    background: url('../images/left_icon1_active.png') no-repeat;
   }
   .wrap .center .News .left_box .cont .row_wrap:hover .desc{
     color: #614130;
@@ -191,13 +205,15 @@
   .wrap .center .News .left_box .cont .row_wrap .block {
     width: 55px;
     height: 55px;
-    border: 1px solid #999999;
+    /* border: 1px solid #999999; */
+    background: url('../images/left_icon1.png') no-repeat;
     text-align: center;
     color: #999999;
     margin-right: 13px;
   }
   .wrap .center .News .left_box .cont .row_wrap .block .weight {
     font-size: 24px;
+    font-weight: bold;
   }
   .wrap .center .News .left_box .cont .row_wrap .block .time {
     font-size: 11px;
@@ -230,13 +246,14 @@
     width: 91px;
     line-height: 30px;
     text-align: center;
-    color: #333333;
+    color: #815b3f;
     font-size: 16px;
     cursor: pointer;
   }
   .wrap .center .News .right_box .row .list_text .back.active {
     color: #ffffff;
-    background: url('../images/cc.png') no-repeat;
+    background: url('../images/news_tab.png') no-repeat;
+    background-size: 100% 100%;
   }
   .wrap .center .News .right_box .cont {
     margin-top: 35px;
@@ -295,7 +312,30 @@
   .wrap .center .department .cont .img_wrap {
     width: 425px;
     height: 310px;
-    background: #ccc;
+    background: url('../images/depart.png');
+    position: relative;
+  }
+  .wrap .center .department .cont .img_wrap .mantle{
+    position: absolute;
+    bottom: 0;
+    width: 425px;
+    height: auto;
+    /* height: 90px; */
+    background: rgba(0, 0, 0, .8);
+  }
+  .wrap .center .department .cont .img_wrap .mantle .text_cont{
+    padding: 17px ;
+    color: #fff;
+  }
+  .wrap .center .department .cont .img_wrap .mantle .text_cont .title{
+    font-size: 22px;
+    color: #fff;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+  .wrap .center .department .cont .img_wrap .mantle .text_cont .desc{
+    font-size: 12px;
+    line-height: 2;
   }
   .wrap .center .department .cont .departList {
     width: 788px;
@@ -304,18 +344,41 @@
     display: flex;
   }
   .wrap .center .department .cont .departList .tabs .tab {
-    width: 210px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 18px;
-    color: #333333;
+    width: 92px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 16px;
+    color: #815b3f;
     text-align: center;
     cursor: pointer;
+    margin-right: 20px;
   }
   .wrap .center .department .cont .departList .tabs .tab.active {
     color: #fff;
-    background: url('../images/未标题-7.png') no-repeat;
+    background: url('../images/head_tab.png') no-repeat;
     background-size: 100% 100%;
+  }
+  .wrap .center .department .cont .departList .d_right{
+    display: flex;
+    align-items: center;
+  }
+  .wrap .center .department .cont .departList .d_right .solid{
+    width: 345px;
+    height: 2px;
+    background: #815b3f;
+  }
+  .wrap .center .department .cont .departList .d_right .more{
+    height: 16px;
+    line-height: 16px;
+    font-size: 16px;
+    color: #333333;
+    padding-left:36px;
+    background: url('../images/tag1.png') center left no-repeat;
+  }
+  .wrap .center .department .cont .departList .d_right .more:hover{
+    cursor: pointer;
+    background: url('../images/tag.png') center left no-repeat;
+    color: #815b3f;
   }
   .wrap .center .department .cont .departList .uls {
     display: flex;
@@ -330,13 +393,17 @@
     font-size: 16px;
     color: #614130;
     margin-top: 14px;
-    background: url('../images/未标题-9.png') no-repeat;
+    background: url('../images/depart_icon.png') no-repeat;
     cursor: pointer;
   }
-  .wrap .center .department .cont .departList .uls .lis.active {
-    color: #ffffff;
-    background: url('../images/未标题-20.png') no-repeat;
+  .wrap .center .department .cont .departList .uls .lis:hover{
+    color: #815b3f;
+    background: url('../images/depart_icon_active.png') no-repeat;
   }
+  /* .wrap .center .department .cont .departList .uls .lis.active {
+    color: #815b3f;
+    background: url('../images/depart_icon_active.png') no-repeat;
+  } */
   .wrap .center .department .imgList {
     display: flex;
     justify-content: space-between;
@@ -348,8 +415,20 @@
     line-height: 160px;
     font-size: 22px;
     color: #fff;
-    background: url('../images/未标题-11.png') no-repeat;
+    /* background: url('../images/未标题-11.png') no-repeat; */
     cursor: pointer;
+  }
+  .wrap .center .department .imgList .back_1{
+    background: url('../images/back1.png') no-repeat;
+  }
+  .wrap .center .department .imgList .back_2{
+    background: url('../images/back2.png') no-repeat;
+  }
+  .wrap .center .department .imgList .back_3{
+    background: url('../images/back3.png') no-repeat;
+  }
+  .wrap .center .department .imgList .back_4{
+    background: url('../images/back4.png') no-repeat;
   }
   .wrap .center .introduce {
     padding-top: 80px;
@@ -359,23 +438,39 @@
     justify-content: space-between;
     padding: 50px 0;
   }
-  .wrap .center .introduce .headPhoto .box:hover .box_child {
+  .wrap .center .introduce .headPhoto .box .block .hover:hover .box_child{
     display: none;
   }
-  .wrap .center .introduce .headPhoto .box:hover .box_active {
+  .wrap .center .introduce .headPhoto .box .block .hover:hover .box_active_wrap{
     display: block;
   }
+  /* .wrap .center .introduce .headPhoto .box:hover .box_child {
+    display: none;
+  }
+  .wrap .center .introduce .headPhoto .box:hover .box_active_wrap {
+    display: block;
+  } */
   .wrap .center .introduce .headPhoto .box {
     width: 190px;
     height: 392px;
     background: #fff;
     padding: 5px;
+    cursor: pointer;
+  }
+  .wrap .center .introduce .headPhoto .box .block{
+    /* margin: 5px; */
   }
   .wrap .center .introduce .headPhoto .box .box_child {
+    width: 180px;
+    height: 295px;
+    margin: 0 auto;
     display: block;
-    border: 1px solid #999999;
     text-align: center;
-    padding: 20px;
+    background: url('../images/info_border.png') no-repeat;
+    background-size: 100% 100%;
+  }
+  .wrap .center .introduce .headPhoto .box .box_child .pad{
+    padding: 17px;
   }
   .wrap .center .introduce .headPhoto .box .box_child .img {
     width: 140px;
@@ -390,45 +485,60 @@
   .wrap .center .introduce .headPhoto .box .box_child .name {
     font-size: 20px;
     color: #614130;
+    padding-top: 12px;
   }
   .wrap .center .introduce .headPhoto .box .box_child .position {
     font-size: 14px;
-    color: #333333;
-    padding-top: 14px;
+    color: #999999;
+    padding-top: 10px;
+  }
+  .wrap .center .introduce .headPhoto .box .box_active_wrap{
+    width: 185px;
+    height: 295px;
+    display: none;
+    margin: 0 auto;
+    background: url('../images/b-border.png') no-repeat;
   }
   .wrap .center .introduce .headPhoto .box .box_active {
-    display: none;
-    border: 1px solid #999999;
+
+  }
+  .wrap .center .introduce .headPhoto .box .box_active .descWrap{
     padding: 20px;
-    background: #614130;
   }
   .wrap .center .introduce .headPhoto .box .box_active .title {
     font-size: 16px;
     font-weight: bold;
     color: #ffffff;
+    margin: 10px 0;
   }
   .wrap .center .introduce .headPhoto .box .box_active .text {
     font-size: 14px;
-    color: #ffffff;
+    color: #edded3;
   }
   .wrap .center .introduce .headPhoto .box .back_bord {
-    border: 1px solid #614130;
+    /* border: 1px solid #614130; */
     padding: 3px;
     margin: 5px 0;
   }
   .wrap .center .introduce .headPhoto .box .back_bord .back {
-    width: 170px;
+    width: 180px;
     height: 41px;
     line-height: 41px;
     text-align: center;
     margin: 0 auto;
     font-size: 16px;
+    color: #333333;
+    /* background: url('../images/未标题-12.png') no-repeat; */
+    background: url('../images/info_back.png') no-repeat;
+    background-size: 100% 100%;
+  }
+  .wrap .center .introduce .headPhoto .box .back_bord .back:hover{
     color: #614130;
-    background: url('../images/未标题-12.png') no-repeat;
+    background: url('../images/info_back_active.png') no-repeat;
   }
   .wrap .center .introduce .headPhoto .box .back_row {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     cursor: pointer;
   }
   .wrap .center .introduce .headPhoto .box .back_row .cel_o {
@@ -438,7 +548,11 @@
     text-align: center;
     font-size: 14px;
     color: #ffffff;
-    background: url('../images/未标题-13.png') no-repeat;
+    /* background: url('../images/未标题-13.png') no-repeat; */
+    background: url('../images/left_name.png') no-repeat;
+  }
+  .wrap .center .introduce .headPhoto .box .back_row .cel_o:hover{
+    background: url('../images/left_name_active.png') no-repeat;
   }
   .wrap .center .introduce .headPhoto .box .back_row .cel_t {
     width: 80px;
@@ -447,7 +561,11 @@
     text-align: center;
     font-size: 14px;
     color: #ffffff;
-    background: url('../images/未标题-14.png') no-repeat;
+    /* background: url('../images/未标题-14.png') no-repeat; */
+    background: url('../images/right_name.png') no-repeat;
+  }
+  .wrap .center .introduce .headPhoto .box .back_row .cel_t:hover{
+    background: url('../images/right_name_active.png') no-repeat;
   }
   .wrap .center .introduce .ul_wrap {
     display: flex;
@@ -456,15 +574,48 @@
   .wrap .center .introduce .ul_wrap li {
     width: 307px;
     height: 270px;
-    background: url('../images/未标题-16.png') no-repeat;
+    /* background: url('../images/未标题-16.png') no-repeat; */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
+    background-size: 100% 100%;
+  }
+  .wrap .center .introduce .ul_wrap li .box{
+    margin: 40px 0 0 30px;
+  }
+  .wrap .center .introduce .ul_wrap li:nth-child(1){
+    background: url('../images/bottom1.png');
+  }
+  .wrap .center .introduce .ul_wrap li:nth-child(2){
+    background: url('../images/bottom2.png');
+  }
+  .wrap .center .introduce .ul_wrap li:nth-child(3){
+    background: url('../images/bottom3.png');
+  }
+  .wrap .center .introduce .ul_wrap li:nth-child(4){
+    background: url('../images/bottom4.png');
   }
   .wrap .center .introduce .ul_wrap li .box .name{
-    font-size: 22px;
+    font-size: 24px;
+    font-weight: bold;
     color: #fff;
     text-align: center;
+  }
+  .wrap .center .introduce .ul_wrap li .box .name.active{
+    color: #815b3f;
+  }
+  .wrap .center .introduce .ul_wrap li .box .more.active{
+    border: 0;
+    background: #815b3f;
+  }
+  .wrap .center .introduce .ul_wrap li .box .more:hover{
+    border: none;
+    color: #fff!important;
+    background: #815b3f;
+  }
+  .wrap .center .introduce .ul_wrap li .box .more.d-active{
+    color: #815b3f;
+    border: 1px solid #815b3f;
   }
   .wrap .center .introduce .ul_wrap li .box .more{
     width: 150px;
@@ -477,6 +628,7 @@
     margin-top: 25px;
     color: #fff;
     cursor: pointer;
+    box-sizing: border-box;
   }
   .wrap .footer {
     background: #272320;
@@ -546,3 +698,8 @@
     cursor: pointer;
   }
   
+  .swiper-container1{
+    width: 1230px;
+    margin: 0 auto;
+    overflow: hidden;
+  }

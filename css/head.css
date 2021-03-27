@@ -14,9 +14,85 @@
   .flex_head_container {
     width: 100%;
   }
+  .back_top{
+    width: 100%;
+    height: 20px;
+    background: url('../images/back_top.png') no-repeat;
+    background-size: 100% 100%;
+  }
   .flex_head_container .header_box {
     width: 100%;
-    background: url('../images/back-1.jpg') center repeat;
+    height: 120px;
+    background: url(../images/headerbg.png) no-repeat;
+    background-size: 100% 100%;
+  }
+  .search_wrap{
+    width: 304px;
+    /* height: 45px; */
+    background: #815b3f;
+    padding: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .search_wrap .searchs{
+    position: relative;
+  }
+  .search_wrap .searchs .inp{
+    width: 180px;
+    height: 38px;
+    line-height: 38px;
+    border: none;
+    outline: 0;
+    background: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 0 20px;
+  }
+.search_wrap .serach_icon{
+    position: absolute;
+    display: block;
+    height: 18px;
+    width: 18px;
+    background: url('../images/search.png') no-repeat;
+    background-size: 100%;
+    top: 10px;
+    left: 10px;
+}
+  .search_wrap .btn_text{
+    flex: 1;
+    color: #edded3;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .hospitalTab {
+    display: flex;
+    margin-right: 20px;
+  }
+  .hospitalTab .topTab{
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .hospitalTab .maxTab{
+    width: 175px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    background: url('../images/top1_1.png') no-repeat;
+    background-size: 100% 100%;
+    font-size: 16px;
+    color: #815b3f;
+  }
+  .hospitalTab .minTab{
+    width: 95px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    background: url('../images/top1_2.png') no-repeat;
+    background-size: 100% 100%;
+    font-size: 16px;
+    color: #815b3f;
   }
   .flex_head_container .header_box .header {
     width: 1230px;
@@ -29,8 +105,8 @@
     align-items: center;
   }
   .flex_head_container .header_box .header .header_child .lLogo {
-    width: 250px;
-    height: 60px;
+    width: 332px;
+    height: 80px;
   }
   .flex_head_container .header_box .header .header_child .lLogo img {
     width: 100%;
@@ -74,6 +150,7 @@
     text-align: center;
     color: #333333;
     margin-right: 18px;
+    font-size: 14px;
     background: url('../images/未标题-5.png') no-repeat;
   }
   .flex_head_container .header_box .header .header_child .rBox .back_icon .back_url.active {
@@ -131,7 +208,7 @@
     cursor: pointer;
   }
   .flex_head_container .nav {
-    padding-top: 12px;
+    padding: 12px 0;
     background: #614130;
     border-bottom: 1px solid #877061;
     position: relative;
@@ -145,14 +222,18 @@
   }
   .flex_head_container .nav ul li {
     flex: 1;
-    font-size: 14px;
-    color: #ffffff;
-    font-weight: bold;
+    font-size: 16px;
+    color: #edded3;
+    /* font-weight: bold; */
     cursor: pointer;
   }
   .flex_head_container .nav ul li span {
+    width: 100px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
     display: inline-block;
-    padding-bottom: 12px;
+    /* padding-bottom: 12px; */
     border-bottom: 3px solid transparent;
   }
   .flex_head_container .nav ul li .content {
@@ -212,13 +293,20 @@
     color: #fff;
   }
   .flex_head_container .nav ul li span.active {
-    border-bottom: 3px solid #322d2b;
+    /* border-bottom: 3px solid #322d2b; */
+    color: #fff;
+    font-weight: bold;
+    background: url('../images/head_tab.png') no-repeat;
+    background-size: 100% 100%;
   }
   .flex_head_container .nav ul li:hover .content {
     display: block;
   }
   .flex_head_container .nav ul li:hover span {
-    border-bottom: 3px solid #322d2b;
+    color: #fff;
+    font-weight: bold;
+    background: url('../images/head_tab.png') no-repeat;
+    background-size: 100% 100%;
   }
   .posBoxWrap{
     width: 1230px;
@@ -228,7 +316,8 @@
   .rightNav {
     width: 56px;
     position: absolute;
-    top: 161px;
+    /* top: 161px; */
+    top: 0;
     right: -76px;
     z-index: 999;
   }

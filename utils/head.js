@@ -2,11 +2,12 @@ $(function(){
     let header = document.querySelector('.headerWrap')
     let str = `
         <div class="flex_head_container">
+            <div class="back_top"></div>
             <div class="header_box">
                 <div class="header spacing">
                     <div class="header_child">
                         <div class="lLogo">
-                            <img src="../../images/logo.png" alt="">
+                            <img src="../../images/logo1.png" alt="">
                         </div>
                         <div class="rBox">
                             <div class="back_icon"  id="edition">
@@ -17,17 +18,20 @@ $(function(){
                                 </p>
                             </div>
                             <div class="search_row">
-                                <div class="search">
-                                    <input type="text" class="inp" placeholder="输入搜索关键词">
-                                    <div class="icon_img">
-                                        <img src="../../images/未标题-17.png" alt="">
+                                <div class="hospitalTab">
+                                    <div class="topTab maxTab">治未病健康体检中心</div>
+                                    <div class="topTab minTab">名医门诊</div>
+                                    <div class="topTab minTab">胜利分院</div>
+                                    <div class="topTab minTab">和平分院</div>
+                                </div>
+                                <div class="search_wrap">
+                                    <div class="searchs">
+                                        <input type="text" class="inp" placeholder="请输入你要查询的内容">
+                                        <i class="serach_icon"></i>
                                     </div>
-                                </div>
-                                <div class="btn">
-                                    胜利分院
-                                </div>
-                                <div class="btn">
-                                    和平分院
+                                    <div class="btn_text">
+                                        搜索
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -121,6 +125,14 @@ $(function(){
                         <li id="journalism">
                             <span>
                                 新闻中心
+                            </span>      
+                            <div class="content">
+
+                            </div>
+                        </li>
+                        <li id="infoPublic">
+                            <span>
+                                信息公开
                             </span>      
                             <div class="content">
 
@@ -290,5 +302,8 @@ $(function(){
     })
     $('#journalism').click(function(){
         window.location.href = '../journalism/journalism.html?index='+6
+    })
+    $('#infoPublic').click(function(){
+        window.location.href = '../infoOpen/infoOpen.html?index='+7
     })
 })
