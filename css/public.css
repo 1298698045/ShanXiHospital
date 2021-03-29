@@ -33,4 +33,7 @@ a {
 a:hover {
     text-decoration: none
 }
-input{outline: none;}
+button{
+    cursor: pointer;
+}
+input,button{outline: 0;border:none;}

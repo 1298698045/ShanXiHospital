@@ -57,7 +57,7 @@ $(function(){
                                         <div class="column">
                                             <h3>患者服务</h3>
                                         </div>
-                                        <div class="column">
+                                        <div class="column hover">
                                             <p class="lis_p" id="cz">出诊信息</p>
                                             <p class="lis_p">停诊信息</p>
                                             <p class="lis_p">就医须知</p>
@@ -65,23 +65,23 @@ $(function(){
                                             <p class="lis_p">医保指南</p>
                                             <p class="lis_p">体检中心</p>
                                         </div>
-                                        <div class="column border">
+                                        <div class="column border hover">
                                             <p class="lis_p">交通路线</p>
                                             <p class="lis_p">院内导航</p>
                                             <p class="lis_p">查询服务</p>
                                             <p class="lis_p">便民服务</p>
                                             <p class="lis_p">常见问题</p>
                                         </div>
-                                        <div class="column border border column_flex">
+                                        <div class="column border column_flex">
                                             <h5>就诊须知</h5>
                                             <p class="lis_p">· 预约挂号须知</p>
-                                            <p class="lis_p">· 就诊须知（总院）</p>
-                                            <p class="lis_p">· 就医须知（名医门诊）</p>
+                                            <p class="lis_p width">· 就诊须知（总院）</p>
+                                            <p class="lis_p width">· 就医须知（名医门诊）</p>
                                             <p class="lis_p">· 门诊就诊流程</p>
                                         </div>
                                         <div class="column column_flex">
                                             <h5>院内导航</h5>
-                                            <p class="lis_p">· 门诊楼层科示意图</p>
+                                            <p class="lis_p width">· 门诊楼层科示意图</p>
                                             <p class="lis_p">· 病房楼楼层分布</p>
                                             <p class="lis_p">· 西楼楼层分布</p>
                                             <p class="lis_p">· 院内导航二维码</p>

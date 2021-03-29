@@ -5,6 +5,9 @@
   .swiper-button-prev{
     left: 15%!important;
   }
+  .wrap .banner{
+    height: 500px!important;
+  }
 }
 .wrap {
     width: 100%;
@@ -43,7 +46,7 @@
   .wrap .banner .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
     width: 50px;
     height: 12px;
-    background: #614130;
+    background: #815b3f;
     border-radius: 6px;
   }
   .wrap .banner .swiper-container .swiper-button-prev{
@@ -99,6 +102,7 @@
     font-size: 18px;
     color: #ffffff;
     padding-top: 12px;
+    font-weight: bold;
   }
   .wrap .center .News {
     padding: 60px 0;
@@ -118,7 +122,7 @@
     width: 380px;
     font-size: 32px;
     font-weight: bold;
-    color: #614130;
+    color: #815b3f;
   }
   .wrap .center .News .left_box .row .list_text {
     display: flex;
@@ -143,21 +147,32 @@
     display: flex;
     justify-content: space-between;
   }
-  .wrap .center .News .left_box .cont .banner_wrap .bannerChild {
+  /* .wrap .center .News .left_box .cont .banner_wrap .bannerChild {
+    width: 360px;
+    height: 215px;
+    background: #ccc;
+    margin-right: 20px;
+    overflow: hidden;
+  } */
+  .wrap .center .News .left_box .cont .banner_wrap .swiper-container-child{
+    width: 750px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .wrap .center .News .left_box .cont .banner_wrap .swiper-container-child .swiper-slide{
+    display: flex;
+  }
+  .wrap .center .News .left_box .cont .banner_wrap .swiper-container-child .swiper-slide .bannerChild {
     width: 360px;
     height: 215px;
     background: #ccc;
     margin-right: 20px;
     overflow: hidden;
   }
-  .wrap .center .News .left_box .cont .banner_wrap .bannerChild .swiper-container-child{
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-  .banner_wrap .bannerChild .swiper-pagination-bullets{
+  .banner_wrap .swiper-pagination-bullets{
+    width: 360px;
     text-align: right;
-    margin-right: 10px;
   }
   .swiper-pagination-bullet{
     width: 25px;
@@ -166,7 +181,7 @@
     background: #ffffff;
   }
   .swiper-pagination-bullet-active{
-    background: #614130;
+    background: #815b3f;
   }
   .wrap .center .News .left_box .cont .banner_wrap .r_desc {
     width: 370px;
@@ -179,11 +194,11 @@
   .wrap .center .News .left_box .cont .banner_wrap .r_desc .time {
     font-size: 12px;
     color: #815b3f;
-    padding: 24px 0 30px 0;
+    padding: 24px 0;
+    /* padding: 24px 0 30px 0; */
   }
   .wrap .center .News .left_box .cont .banner_wrap .r_desc .desc {
     text-align: left;
-    text-indent: 2em;
     font-size: 14px;
     color: #999999;
   }
@@ -194,12 +209,12 @@
     cursor: pointer;
   }
   .wrap .center .News .left_box .cont .row_wrap:hover .block{
-    color: #614130;
+    color: #815b3f;
     cursor: pointer;
     background: url('../images/left_icon1_active.png') no-repeat;
   }
   .wrap .center .News .left_box .cont .row_wrap:hover .desc{
-    color: #614130;
+    color: #815b3f;
     cursor: pointer;
   }
   .wrap .center .News .left_box .cont .row_wrap .block {
@@ -237,7 +252,7 @@
   .wrap .center .News .right_box .row .l_name {
     font-size: 32px;
     font-weight: bold;
-    color: #614130;
+    color: #815b3f;
   }
   .wrap .center .News .right_box .row .list_text {
     display: flex;
@@ -278,7 +293,7 @@
   }
   .wrap .center .News .right_box .cont .box:hover .time,
   .wrap .center .News .right_box .cont .box:hover .text {
-    color: #614130;
+    color: #815b3f;
   }
   .wrap .center .News .right_box .cont .text {
     color: #333333;
@@ -300,7 +315,7 @@
   .wrap .center .department .row_title .name {
     font-size: 32px;
     font-weight: bold;
-    color: #614130;
+    color: #815b3f;
     padding: 0 40px;
     cursor: pointer;
   }
@@ -391,19 +406,19 @@
     line-height: 40px;
     text-align: center;
     font-size: 16px;
-    color: #614130;
+    color: #333333;
     margin-top: 14px;
     background: url('../images/depart_icon.png') no-repeat;
     cursor: pointer;
   }
-  .wrap .center .department .cont .departList .uls .lis:hover{
-    color: #815b3f;
-    background: url('../images/depart_icon_active.png') no-repeat;
-  }
-  /* .wrap .center .department .cont .departList .uls .lis.active {
+  /* .wrap .center .department .cont .departList .uls .lis:hover{
     color: #815b3f;
     background: url('../images/depart_icon_active.png') no-repeat;
   } */
+  .wrap .center .department .cont .departList .uls .lis.active {
+    color: #815b3f;
+    background: url('../images/depart_icon_active.png') no-repeat;
+  }
   .wrap .center .department .imgList {
     display: flex;
     justify-content: space-between;
@@ -443,6 +458,7 @@
   }
   .wrap .center .introduce .headPhoto .box .block .hover:hover .box_active_wrap{
     display: block;
+    margin-left: 5px;
   }
   /* .wrap .center .introduce .headPhoto .box:hover .box_child {
     display: none;
@@ -454,7 +470,7 @@
     width: 190px;
     height: 392px;
     background: #fff;
-    padding: 5px;
+    padding-top: 5px;
     cursor: pointer;
   }
   .wrap .center .introduce .headPhoto .box .block{
@@ -484,7 +500,7 @@
   }
   .wrap .center .introduce .headPhoto .box .box_child .name {
     font-size: 20px;
-    color: #614130;
+    color: #815b3f;
     padding-top: 12px;
   }
   .wrap .center .introduce .headPhoto .box .box_child .position {
@@ -500,7 +516,7 @@
     background: url('../images/b-border.png') no-repeat;
   }
   .wrap .center .introduce .headPhoto .box .box_active {
-
+    
   }
   .wrap .center .introduce .headPhoto .box .box_active .descWrap{
     padding: 20px;
@@ -516,7 +532,7 @@
     color: #edded3;
   }
   .wrap .center .introduce .headPhoto .box .back_bord {
-    /* border: 1px solid #614130; */
+    /* border: 1px solid #815b3f; */
     padding: 3px;
     margin: 5px 0;
   }
@@ -533,7 +549,7 @@
     background-size: 100% 100%;
   }
   .wrap .center .introduce .headPhoto .box .back_bord .back:hover{
-    color: #614130;
+    color: #815b3f;
     background: url('../images/info_back_active.png') no-repeat;
   }
   .wrap .center .introduce .headPhoto .box .back_row {
@@ -652,6 +668,10 @@
   }
   .wrap .footer .top .box .write {
     color: #ffffff;
+  }
+  .wrap .footer .top .box .black:hover{
+    color: white;
+    cursor: pointer;
   }
   .wrap .footer .top .box .black {
     color: #9e9692;

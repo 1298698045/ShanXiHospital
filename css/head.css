@@ -18,7 +18,8 @@
     width: 100%;
     height: 20px;
     background: url('../images/back_top.png') no-repeat;
-    background-size: 100% 100%;
+    /* background-size: 100% 100%; */
+    background-size: cover;
   }
   .flex_head_container .header_box {
     width: 100%;
@@ -28,9 +29,9 @@
   }
   .search_wrap{
     width: 304px;
-    /* height: 45px; */
+    height: 44px;
     background: #815b3f;
-    padding: 3px;
+    padding: 0 3px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,6 +85,14 @@
     font-size: 16px;
     color: #815b3f;
   }
+  .hospitalTab .maxTab:hover{
+    color: #6a3f24;
+    background: url('../images/top1_1_active.png') no-repeat;
+  }
+  .hospitalTab .minTab:hover{
+    color: #6a3f24;
+    background: url('../images/top1_2_active.png') no-repeat;
+  }
   .hospitalTab .minTab{
     width: 95px;
     height: 45px;
@@ -100,7 +109,8 @@
   }
   .flex_head_container .header_box .header .header_child {
     display: flex;
-    padding: 18px 0;
+    padding-top: 18px;
+    /* padding: 18px 0; */
     justify-content: space-between;
     align-items: center;
   }
@@ -209,9 +219,13 @@
   }
   .flex_head_container .nav {
     padding: 12px 0;
-    background: #614130;
+    background: url('../images/head_back.png') no-repeat;
+    background-size: 100% 100%;
+    /* background: #614130; */
     border-bottom: 1px solid #877061;
     position: relative;
+    height: 61px;
+    box-sizing: border-box;
   }
   .flex_head_container .nav .nav_box {
     width: 1230px;
@@ -226,6 +240,7 @@
     color: #edded3;
     /* font-weight: bold; */
     cursor: pointer;
+    padding-bottom: 30px;
   }
   .flex_head_container .nav ul li span {
     width: 100px;
@@ -239,10 +254,10 @@
   .flex_head_container .nav ul li .content {
     position: absolute;
     left: 0;
-    top: 47px;
+    top: 61px;
     width: 100%;
-    background: rgba(106, 77, 59, 0.9);
-    z-index: 999;
+    background: rgba(106, 63, 36, 0.9);
+    z-index: 9999;
     display: none;
   }
   .flex_head_container .nav ul li .content .content_child {
@@ -269,11 +284,19 @@
   .flex_head_container .nav ul li .content .content_child .row .column .lis_p {
     width: 118px;
     text-align: center;
-    font-size: 14px;
-    color: #ffffff;
+    font-size: 15px;
+    color: #cbaf9c;
     margin-bottom: 23px;
   }
-  .flex_head_container .nav ul li .content .content_child .row .column .lis_p:hover {
+  /* .flex_head_container .nav ul li .content .content_child .row .column .width {
+    width: 200px;
+    text-align: left;
+  } */
+  .flex_head_container .nav ul li .content .content_child .row .hover{
+    margin-top: 15px;
+  }
+  .flex_head_container .nav ul li .content .content_child .row .hover .lis_p:hover {
+    color: #fff;
     background: url('../images/未标题-1.png') no-repeat;
   }
   .flex_head_container .nav ul li .content .content_child .row .column .lis_p.active {
@@ -284,7 +307,17 @@
     border-right: 1px solid #877061;
   }
   .flex_head_container .nav ul li .content .content_child .row .column_flex {
+    text-align: left!important;
     flex: 2;
+  }
+  .flex_head_container .nav ul li .content .content_child .row .column_flex .lis_p{
+    width: 200px;
+    text-align: left;
+  }
+  .flex_head_container .nav ul li .content .content_child .row .column_flex .lis_p:hover{
+    transition: all .5s ease-in;
+    margin-left: 8px;
+    color: #fff;
   }
   .flex_head_container .nav ul li .content.active {
     display: block;
