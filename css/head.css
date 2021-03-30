@@ -1,6 +1,7 @@
 @media screen and (max-width:1440px) {
   .rightNav{
-    right: 50px!important;
+    right: 0;
+    /* right: 50px!important; */
   }
 }
 @font-face {
@@ -347,12 +348,12 @@
     position: relative;
   }
   .rightNav {
-    width: 56px;
-    position: absolute;
-    /* top: 161px; */
-    top: 0;
-    right: -76px;
-    z-index: 999;
+    position: fixed;
+    right: 28px;
+    top: 50%;
+    height: 520px;
+    margin-top: -175px;
+    z-index: 1001;
   }
   .rightNav .box {
     width: 56px;
@@ -369,7 +370,7 @@
   .rightNav .box .w_text {
     display: none;
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     color: #ffffff;
   }
   .rightNav .box .icon_img{

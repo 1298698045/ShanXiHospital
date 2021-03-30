@@ -50,14 +50,19 @@
     justify-content: space-between;
   }
   .wrap .center .department .boxContent .label_box .label {
-    width: 18.8%;
+    /* width: 18.8%; */
+    width: 196px;
     height: 40px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    background: url('../images/c_tab.png') no-repeat;
+    /* border: 1px solid #ccc; */
+    /* border-radius: 5px; */
     margin-bottom: 15px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
+  }
+  .wrap .center .department .boxContent .label.none{
+    visibility: hidden!important;
   }
   .wrap .center .department .boxContent .label_box .label .img {
     width: 22px;
@@ -72,13 +77,21 @@
     height: 22px;
   }
   .wrap .center .department .boxContent .label_box .label .text {
+    width: 155px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     flex: 1;
-    padding: 0 15px;
-    font-size: 14px;
-    color: #333333;
+    padding: 0 24px;
+    /* padding: 0 15px; */
+    font-size: 16px;
+    color: #815b3f;
   }
   .wrap .center .department .boxContent .label_box .label:hover {
     cursor: pointer;
-    border: 1px solid #614130;
+    background: url('../images/c_tab_active.png') no-repeat;
   }
-  
+  .wrap .center .content .boxCont .label_box .label:hover .text{
+    color: #6a3f24;
+    font-weight: bold;
+  }

@@ -19,8 +19,8 @@ new Pagination({
     total: 100,
     jumper: true,
     singlePageHide: false,
-    prevText: '上一页',
-    nextText: '下一页',
+    prevText: '',
+    nextText: '',
     disabled: true,
     currentChange: function(index) {
         console.log(index);

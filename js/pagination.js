@@ -1,6 +1,6 @@
 "use strict";
 /**
- * @author 小秋秋
+ * @author 栋
  * @time 2020-09-11
  */
 var __spreadArrays = (this && this.__spreadArrays) || function () {
@@ -192,6 +192,10 @@ var Pagination = /** @class */ (function () {
             var text_2 = this.createElement('span');
             text_2.innerText = '页';
             jumper.appendChild(text_2);
+            var text_3 = this.createElement('p');
+            text_3.classList.add('_btn');
+            text_3.innerText = '跳转';
+            jumper.appendChild(text_3);
             container.appendChild(jumper);
         }
         // 保存元素

@@ -268,8 +268,10 @@ $(function(){
         }
     }
     // onMyLoad();
-    $('.nav ul li').click(function(){
+    $('.nav ul li').hover(function(){
         $('.nav ul li').children('span').removeClass('active');
+        $(this).children('span' ).addClass('active');
+    },function(){
         $(this).children('span' ).addClass('active');
     })
     $('#cz').click(function(){
