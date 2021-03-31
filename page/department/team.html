@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../css/head.css">
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/departmentTeam.css">
+    <link rel="stylesheet" href="../../css/pagination.css">
 </head>
 <body>
     <div class="wrap">
@@ -19,14 +20,52 @@
             <div class="Breadcrumb">
                 <span>您现在的位置:  </span>
                 <span class="black">首页 ></span>
-                <span class="black">患者服务 ></span>
-                <span>出诊信息</span>
+                <span>科室导航</span>
             </div>
             <div class="content">
-                <div class="rowTitle">
-                    医生团队
+                <div class="row_title">
+                    <div class="imgs">
+                        <img src="../../images/01.png" alt="">
+                    </div>
+                    <p class="name">医生团队</p>
+                    <div class="imgs">
+                        <img src="../../images/02.png" alt="">
+                    </div>
                 </div>
-                <div class="row_inp">
+                <div class="formSearch">
+                    <div class="filed">
+                        <input type="text" class="inp" placeholder="疾病名称">
+                    </div>
+                    <div class="filed">
+                        <div class="inp select" id="departSel">
+                            <input type="text" placeholder="科室名称" readonly>
+                            <i class="bottom_icon">
+                                
+                            </i>
+                            <div class="selectModal">
+                                <p class="subject">科室名称</p>
+                                <ul>
+                                    <li>肿瘤科</li>
+                                    <li>肿瘤科</li>
+                                    <li>肿瘤科</li>
+                                    <li>肿瘤科</li>
+                                    <li>肿瘤科</li>
+                                    <li>肿瘤科</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filed">
+                        <input type="text" class="inp" placeholder="医师名称">
+                    </div>
+                    <div class="filed">
+                        <button class="btn">搜索</button>
+                    </div>
+                </div>
+                <!-- <div class="rowTitle">
+                    医生团队
+                </div> -->
+                <!-- <div class="row_inp">
                     <select name="" id="" class="inp">
                         <option value="">临床科室</option>
                         <option value="">医技科室</option>
@@ -46,395 +85,15 @@
                     </select>
                     <input type="text" class="inp" placeholder="医师名称">
                     <button class="btn">查询</button>
-                </div>
+                </div> -->
                 <div class="headPhoto">
-                    <div class="box">
-                        <div class="box_child">
-                            <div class="img">
-                                <img src="../../images/未标题-15.png" alt="">
-                            </div>
-                            <p class="name">黄贵华</p>
-                            <p class="position">主任医师</p>
-                        </div>
-                        <div class="box_active">
-                            <p class="title">王晞星，主任医师</p>
-                            <p class="text">
-                                教授，博/硕士研究生导师，全国首批名中医，山西省中医药研究院（山西省中医院）院长。
-                            </p>
-                            <p class="title">专业特长：</p>
-                            <p class="text">
-                                中西医结合治疗各种良恶性肿瘤、消化系统疾病及疑难杂症。
-                            </p>
-                            <p class="title">出诊时间：</p>
-                            <p class="text">
-                                每周二、周四、周五上午..
-                            </p>
-                        </div>
-                        <div class="back_bord">
-                            <div class="back">
-                                内综肿瘤科
-                            </div>
-                        </div>
-                        <div class="back_row">
-                            <div class="cel_o">挂号</div>
-                            <div class="cel_t">问诊</div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="box_child">
-                            <div class="img">
-                                <img src="../../images/未标题-15.png" alt="">
-                            </div>
-                            <p class="name">黄贵华</p>
-                            <p class="position">主任医师</p>
-                        </div>
-                        <div class="box_active">
-                            <p class="title">王晞星，主任医师</p>
-                            <p class="text">
-                                教授，博/硕士研究生导师，全国首批名中医，山西省中医药研究院（山西省中医院）院长。
-                            </p>
-                            <p class="title">专业特长：</p>
-                            <p class="text">
-                                中西医结合治疗各种良恶性肿瘤、消化系统疾病及疑难杂症。
-                            </p>
-                            <p class="title">出诊时间：</p>
-                            <p class="text">
-                                每周二、周四、周五上午..
-                            </p>
-                        </div>
-                        <div class="back_bord">
-                            <div class="back">
-                                内综肿瘤科
-                            </div>
-                        </div>
-                        <div class="back_row">
-                            <div class="cel_o">挂号</div>
-                            <div class="cel_t">问诊</div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="box_child">
-                            <div class="img">
-                                <img src="../../images/未标题-15.png" alt="">
-                            </div>
-                            <p class="name">黄贵华</p>
-                            <p class="position">主任医师</p>
-                        </div>
-                        <div class="box_active">
-                            <p class="title">王晞星，主任医师</p>
-                            <p class="text">
-                                教授，博/硕士研究生导师，全国首批名中医，山西省中医药研究院（山西省中医院）院长。
-                            </p>
-                            <p class="title">专业特长：</p>
-                            <p class="text">
-                                中西医结合治疗各种良恶性肿瘤、消化系统疾病及疑难杂症。
-                            </p>
-                            <p class="title">出诊时间：</p>
-                            <p class="text">
-                                每周二、周四、周五上午..
-                            </p>
-                        </div>
-                        <div class="back_bord">
-                            <div class="back">
-                                内综肿瘤科
-                            </div>
-                        </div>
-                        <div class="back_row">
-                            <div class="cel_o">挂号</div>
-                            <div class="cel_t">问诊</div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="box_child">
-                            <div class="img">
-                                <img src="../../images/未标题-15.png" alt="">
-                            </div>
-                            <p class="name">黄贵华</p>
-                            <p class="position">主任医师</p>
-                        </div>
-                        <div class="box_active">
-                            <p class="title">王晞星，主任医师</p>
-                            <p class="text">
-                                教授，博/硕士研究生导师，全国首批名中医，山西省中医药研究院（山西省中医院）院长。
-                            </p>
-                            <p class="title">专业特长：</p>
-                            <p class="text">
-                                中西医结合治疗各种良恶性肿瘤、消化系统疾病及疑难杂症。
-                            </p>
-                            <p class="title">出诊时间：</p>
-                            <p class="text">
-                                每周二、周四、周五上午..
-                            </p>
-                        </div>
-                        <div class="back_bord">
-                            <div class="back">
-                                内综肿瘤科
-                            </div>
-                        </div>
-                        <div class="back_row">
-                            <div class="cel_o">挂号</div>
-                            <div class="cel_t">问诊</div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="box_child">
-                            <div class="img">
-                                <img src="../../images/未标题-15.png" alt="">
-                            </div>
-                            <p class="name">黄贵华</p>
-                            <p class="position">主任医师</p>
-                        </div>
-                        <div class="box_active">
-                            <p class="title">王晞星，主任医师</p>
-                            <p class="text">
-                                教授，博/硕士研究生导师，全国首批名中医，山西省中医药研究院（山西省中医院）院长。
-                            </p>
-                            <p class="title">专业特长：</p>
-                            <p class="text">
-                                中西医结合治疗各种良恶性肿瘤、消化系统疾病及疑难杂症。
-                            </p>
-                            <p class="title">出诊时间：</p>
-                            <p class="text">
-                                每周二、周四、周五上午..
-                            </p>
-                        </div>
-                        <div class="back_bord">
-                            <div class="back">
-                                内综肿瘤科
-                            </div>
-                        </div>
-                        <div class="back_row">
-                            <div class="cel_o">挂号</div>
-                            <div class="cel_t">问诊</div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="box_child">
-                            <div class="img">
-                                <img src="../../images/未标题-15.png" alt="">
-                            </div>
-                            <p class="name">黄贵华</p>
-                            <p class="position">主任医师</p>
-                        </div>
-                        <div class="box_active">
-                            <p class="title">王晞星，主任医师</p>
-                            <p class="text">
-                                教授，博/硕士研究生导师，全国首批名中医，山西省中医药研究院（山西省中医院）院长。
-                            </p>
-                            <p class="title">专业特长：</p>
-                            <p class="text">
-                                中西医结合治疗各种良恶性肿瘤、消化系统疾病及疑难杂症。
-                            </p>
-                            <p class="title">出诊时间：</p>
-                            <p class="text">
-                                每周二、周四、周五上午..
-                            </p>
-                        </div>
-                        <div class="back_bord">
-                            <div class="back">
-                                内综肿瘤科
-                            </div>
-                        </div>
-                        <div class="back_row">
-                            <div class="cel_o">挂号</div>
-                            <div class="cel_t">问诊</div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="box_child">
-                            <div class="img">
-                                <img src="../../images/未标题-15.png" alt="">
-                            </div>
-                            <p class="name">黄贵华</p>
-                            <p class="position">主任医师</p>
-                        </div>
-                        <div class="box_active">
-                            <p class="title">王晞星，主任医师</p>
-                            <p class="text">
-                                教授，博/硕士研究生导师，全国首批名中医，山西省中医药研究院（山西省中医院）院长。
-                            </p>
-                            <p class="title">专业特长：</p>
-                            <p class="text">
-                                中西医结合治疗各种良恶性肿瘤、消化系统疾病及疑难杂症。
-                            </p>
-                            <p class="title">出诊时间：</p>
-                            <p class="text">
-                                每周二、周四、周五上午..
-                            </p>
-                        </div>
-                        <div class="back_bord">
-                            <div class="back">
-                                内综肿瘤科
-                            </div>
-                        </div>
-                        <div class="back_row">
-                            <div class="cel_o">挂号</div>
-                            <div class="cel_t">问诊</div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="box_child">
-                            <div class="img">
-                                <img src="../../images/未标题-15.png" alt="">
-                            </div>
-                            <p class="name">黄贵华</p>
-                            <p class="position">主任医师</p>
-                        </div>
-                        <div class="box_active">
-                            <p class="title">王晞星，主任医师</p>
-                            <p class="text">
-                                教授，博/硕士研究生导师，全国首批名中医，山西省中医药研究院（山西省中医院）院长。
-                            </p>
-                            <p class="title">专业特长：</p>
-                            <p class="text">
-                                中西医结合治疗各种良恶性肿瘤、消化系统疾病及疑难杂症。
-                            </p>
-                            <p class="title">出诊时间：</p>
-                            <p class="text">
-                                每周二、周四、周五上午..
-                            </p>
-                        </div>
-                        <div class="back_bord">
-                            <div class="back">
-                                内综肿瘤科
-                            </div>
-                        </div>
-                        <div class="back_row">
-                            <div class="cel_o">挂号</div>
-                            <div class="cel_t">问诊</div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="box_child">
-                            <div class="img">
-                                <img src="../../images/未标题-15.png" alt="">
-                            </div>
-                            <p class="name">黄贵华</p>
-                            <p class="position">主任医师</p>
-                        </div>
-                        <div class="box_active">
-                            <p class="title">王晞星，主任医师</p>
-                            <p class="text">
-                                教授，博/硕士研究生导师，全国首批名中医，山西省中医药研究院（山西省中医院）院长。
-                            </p>
-                            <p class="title">专业特长：</p>
-                            <p class="text">
-                                中西医结合治疗各种良恶性肿瘤、消化系统疾病及疑难杂症。
-                            </p>
-                            <p class="title">出诊时间：</p>
-                            <p class="text">
-                                每周二、周四、周五上午..
-                            </p>
-                        </div>
-                        <div class="back_bord">
-                            <div class="back">
-                                内综肿瘤科
-                            </div>
-                        </div>
-                        <div class="back_row">
-                            <div class="cel_o">挂号</div>
-                            <div class="cel_t">问诊</div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="box_child">
-                            <div class="img">
-                                <img src="../../images/未标题-15.png" alt="">
-                            </div>
-                            <p class="name">黄贵华</p>
-                            <p class="position">主任医师</p>
-                        </div>
-                        <div class="box_active">
-                            <p class="title">王晞星，主任医师</p>
-                            <p class="text">
-                                教授，博/硕士研究生导师，全国首批名中医，山西省中医药研究院（山西省中医院）院长。
-                            </p>
-                            <p class="title">专业特长：</p>
-                            <p class="text">
-                                中西医结合治疗各种良恶性肿瘤、消化系统疾病及疑难杂症。
-                            </p>
-                            <p class="title">出诊时间：</p>
-                            <p class="text">
-                                每周二、周四、周五上午..
-                            </p>
-                        </div>
-                        <div class="back_bord">
-                            <div class="back">
-                                内综肿瘤科
-                            </div>
-                        </div>
-                        <div class="back_row">
-                            <div class="cel_o">挂号</div>
-                            <div class="cel_t">问诊</div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="box_child">
-                            <div class="img">
-                                <img src="../../images/未标题-15.png" alt="">
-                            </div>
-                            <p class="name">黄贵华</p>
-                            <p class="position">主任医师</p>
-                        </div>
-                        <div class="box_active">
-                            <p class="title">王晞星，主任医师</p>
-                            <p class="text">
-                                教授，博/硕士研究生导师，全国首批名中医，山西省中医药研究院（山西省中医院）院长。
-                            </p>
-                            <p class="title">专业特长：</p>
-                            <p class="text">
-                                中西医结合治疗各种良恶性肿瘤、消化系统疾病及疑难杂症。
-                            </p>
-                            <p class="title">出诊时间：</p>
-                            <p class="text">
-                                每周二、周四、周五上午..
-                            </p>
-                        </div>
-                        <div class="back_bord">
-                            <div class="back">
-                                内综肿瘤科
-                            </div>
-                        </div>
-                        <div class="back_row">
-                            <div class="cel_o">挂号</div>
-                            <div class="cel_t">问诊</div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="box_child">
-                            <div class="img">
-                                <img src="../../images/未标题-15.png" alt="">
-                            </div>
-                            <p class="name">黄贵华</p>
-                            <p class="position">主任医师</p>
-                        </div>
-                        <div class="box_active">
-                            <p class="title">王晞星，主任医师</p>
-                            <p class="text">
-                                教授，博/硕士研究生导师，全国首批名中医，山西省中医药研究院（山西省中医院）院长。
-                            </p>
-                            <p class="title">专业特长：</p>
-                            <p class="text">
-                                中西医结合治疗各种良恶性肿瘤、消化系统疾病及疑难杂症。
-                            </p>
-                            <p class="title">出诊时间：</p>
-                            <p class="text">
-                                每周二、周四、周五上午..
-                            </p>
-                        </div>
-                        <div class="back_bord">
-                            <div class="back">
-                                内综肿瘤科
-                            </div>
-                        </div>
-                        <div class="back_row">
-                            <div class="cel_o">挂号</div>
-                            <div class="cel_t">问诊</div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
-            <div class="paging">
+            <div id="pages">
+                
+            </div>
+            <!-- <div class="paging">
                 <p class="total">共16页</p>
                 <p class="icon_left icon">
                     <img src="../../images/9.svg" alt="">
@@ -455,7 +114,7 @@
                     <input type="number" id="pageValue">
                 </p>
                 <p class="btn">跳转</p>
-            </div>
+            </div> -->
         </div>
         <div class="footer_wrap"></div>
     </div>
@@ -466,4 +125,5 @@
 <script src="../../utils/head.js"></script>
 <script src="../../js/less.min.js"></script>
 <script src="../../utils/footer.js"></script>
+<script src="../../js/pagination.js"></script>
 </html>

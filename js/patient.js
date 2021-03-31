@@ -39,20 +39,16 @@ $(function(){
         $(this).addClass('active');
     })
     function fun(){
-        let contentHeight = $('.l_text').height(); // 左侧内容高度
-        var scale = $('.left_wrap').height() / contentHeight;
         //设置滑块的高度 
-        var h1 = $('.sliderWrap').height() * scale;
-        if (h1 < 26) { 
-            h1 = 26; 
-        }else if (scale >= 1) { 
-            //说明当前内容能过完全显示在可视区域内，不需要滚动条 
-            $('.sliderWrap').css('display','none');
-        } 
-        //设置滑块的高度 
-        $('.slider').css('height',h1+'px'); 
+        //$('.slider').css('height',h1+'px'); 
         //设置y轴的增量 
         var y = 0; 
+
+        //确定每次滚动滚轮右侧滚动条移动的距离
+        var ystepnumber = (($('.l_text').height()+40 - $('.left_wrap').height())/55)
+        var ysteplength = $('.scrollBar').height()/ystepnumber
+        
+
         //为wrap添加滚轮事件 
         var wrapDiv = document.querySelector('.left_wrap');
         wrapDiv.onmousewheel = function(e){
@@ -60,10 +56,10 @@ $(function(){
             var event1 = event || e 
             if (event.wheelDelta < 0) { 
                 //滑动条向下滚动 
-                y += 10; 
+                y += ysteplength; 
             }else if (event.wheelDelta > 0) { 
                 //滑动条向上滚动 
-                y -= 10; 
+                y -= ysteplength; 
             } 
             //y变化时说明在滚动，此时使滚动条发生滚动，以及设置content内容部分滚动 
             //判断极端情况，滑块不能划出屏幕 
@@ -75,10 +71,15 @@ $(function(){
                 //滑块最多滑到最底部 
                 y = $('.sliderWrap').height() - $('.slider').height(); 
             } 
-            //更新滑块的位置 
+            var scale = y/($('.sliderWrap').height() - $('.slider').height()); 
+            // console.log(scale)
             $('.slider').css('top',y+'px')
-            scale = $('.left_wrap').height() / $('.l_text').height(); 
-            $('.l_text').css('top',-y/scale+'px');
+            $('.l_text').css('top',-scale*(($('.l_text').height()+40) - $('.left_wrap').height())+'px');
+
+            //console.log(y/sliderWrap)
+            //console.log(-y/scale)
+            //更新滑块的位置 
+            //$('.l_text').css('top',-y/scale+'px');
         }
     }
     new Pagination({
