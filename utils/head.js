@@ -106,7 +106,7 @@ $(function(){
 
                             </div>
                         </li>
-                        <li>
+                        <li id="expert">
                             <span>
                                 专家介绍
                             </span>      
@@ -272,14 +272,19 @@ $(function(){
         $('.nav ul li').children('span').removeClass('active');
         $(this).children('span' ).addClass('active');
     },function(){
-        $(this).children('span' ).addClass('active');
+        // $(this).children('span' ).addClass('active');
+        resetFun();
     })
     $('#cz').click(function(){
         window.location.href = '../patient/index.html';
     })
-   let index = getQueryVariable("index");
-   $('.nav ul li').children('span').removeClass('active');
-   $('.nav ul li').eq(index).children('span').addClass('active');
+    resetFun();
+    function resetFun(){
+        let index = getQueryVariable("index");
+        $('.nav ul li').children('span').removeClass('active');
+        $('.nav ul li').eq(index).children('span').addClass('active');
+    }
+
     function getQueryVariable(variable)
     {
         var query = window.location.search.substring(1);
@@ -291,21 +296,24 @@ $(function(){
         return(false);
     }
     $('#home').click(function(){
-        window.location.href = '../home/index.html?index='+0;
+        window.location.href = '/page/home/index.html?index='+0;
     })
     $('#characteristic').click(function(){
-        window.location.href = '../characteristic/characteristic.html?index='+2;
+        window.location.href = '/page/characteristic/characteristic.html?index='+2;
     })
     $('#patient').click(function(){
-        window.location.href = '../patient/index.html?index='+1;
+        window.location.href = '/page/patient/index.html?index='+1;
     })
     $('#department').click(function(){
-        window.location.href = '../department/department.html?index='+3;
+        window.location.href = '/page/department/department.html?index='+3;
     })
     $('#journalism').click(function(){
-        window.location.href = '../journalism/journalism.html?index='+6
+        window.location.href = '/page/journalism/journalism.html?index='+6
     })
     $('#infoPublic').click(function(){
-        window.location.href = '../infoOpen/infoOpen.html?index='+7
+        window.location.href = '/page/infoOpen/infoOpen.html?index='+7
+    })
+    $('#expert').click(function(){
+        window.location.href = '/page/expert/expert.html?index='+4
     })
 })

@@ -209,16 +209,51 @@
   }
   .wrap .ysImageWrap .ys_container .rightBox{
     flex: 1;
-
+    position: relative;
+    /* overflow: hidden; */
   }
   .wrap .ysImageWrap .ys_container .rightBox .boxWrap{
+    width: 1090px;
+    overflow: hidden;
     display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   .wrap .ysImageWrap .ys_container .rightBox .boxWrap .box{
     width: 250px;
     height: 344px;
     background: url('../images/min_back.png') no-repeat;
     background-size: 100% 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 28px 19px;
+    box-sizing: border-box;
+    position: relative;
+    left: 0px;
+  }
+  .wrap .ysImageWrap .ys_container .rightBox .boxWrap .box .boxBlock{
+    display: flex;
+  }
+  .wrap .ysImageWrap .ys_container .rightBox .boxWrap .box .text{
+    column-count: 8;
+    column-gap: 0px;
+    font-size: 14px;
+    color: #666666;
+    flex: 1;
+    word-wrap: break-word;
+    word-break: break-all;
+    line-height: 1;
+    overflow: hidden;
+  }
+  .wrap .ysImageWrap .ys_container .rightBox .boxWrap .box .subject{
+    width: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    word-wrap: break-word;
+    word-break: break-all;
+    line-height: 1;
   }
   .wrap .ysImageWrap .ys_container .rightBox .sliderWrap{
     width: 100%;
@@ -227,6 +262,8 @@
     background-size: 100% 100%;
     margin-top: 41px;
     position: relative;
+    top: 344px;
+    z-index: 9999;
   }
   .wrap .ysImageWrap .ys_container .rightBox .sliderWrap .slider{
     width: 27px;
@@ -467,7 +504,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 0;
+    margin: 20px 0 100px 0;
   }
   .wrap .center .dynamic .box {
     width: 290px;
@@ -512,9 +549,10 @@
     border: 1px solid #815b3f;
     box-sizing: border-box;
     background: #fff;
+    padding: 21px 18px;
   }
   .wrap .center .dynamic .box .boxSolid .textCont{
-    padding: 21px 18px;
+    padding-bottom: 20px;
     border-bottom: 1px solid #e5e5e5;
   }
   .wrap .center .dynamic .box .boxSolid .textCont .color{
@@ -527,4 +565,104 @@
     margin-top: 19px;
     padding-bottom: 10px;
     
+  }
+  .wrap .center .dynamic .box .boxSolid .bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 14px;
+  }
+  .wrap .center .dynamic .box .boxSolid .bottom .l_time_box{
+    width: 54px;
+    height: 54px;
+    background: url('../images/left_icon1.png') no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+  }
+  .wrap .center .dynamic .box .boxSolid .bottom .youjiantou{
+    width: 20px;
+    height: 14px;
+    background: url('../images/youjiantou.png') no-repeat;
+  }
+  .wrap .center .dynamic .box .boxSolid .bottom .l_time_box .time{
+    font-size: 24px;
+    color: #999999;
+  }
+  .wrap .center .dynamic .box .boxSolid .bottom .l_time_box .year{
+    font-size: 12px;
+    color: #999999;
+  }
+  .modal{
+    background: rgba(0,0,0,.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+  }
+  .modal .popupWrap{
+    position: fixed;
+    width: 1230px;
+    height: 600px;
+    /* margin: 90px auto; */
+    background: url('../images/modal.png') no-repeat;
+    padding: 5px;
+    box-sizing: border-box;
+    transition: all 1s;
+    top: 50%;
+    left: 50%;
+    margin-left: -615px;
+    margin-top: -261px;
+    padding: 5px;
+  }
+  .modal .popupWrap .block{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: relative;
+  }
+  .modal .popupWrap .block .cancel{
+    width: 15px;
+    height: 15px;
+    background: url('../images/cancel.png') no-repeat;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+  }
+  .modal .popupWrap .block .title{
+    font-size: 32px;
+    color: #333333;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 45px;
+    padding-bottom: 20px;
+  }
+  .modal .popupWrap .block .article{
+    padding: 0 70px 0 30px;
+  }
+  .modal .popupWrap .block .article .text{
+    font-size: 16px;
+    color: #666666;
+    text-indent: 2em;
+    line-height: 1.8;
+  }
+  .modal .popupWrap .block .modal_slider_wrap{
+    position: absolute;
+    right: 40px;
+    top: 92px;
+    width: 10px;
+    height: 439px;
+    background: url('../images/modal_slider.png') no-repeat;
+    background-size: 100% 100%;
+  }
+  .modal .popupWrap .block .modal_slider_wrap .modal_slider{
+    width: 27px;
+    height: 26px;
+    background: url(../images/slider.png) no-repeat;
+    position: absolute;
+    top: 0px;
+    left: -9px;
+    cursor: pointer;
   }
