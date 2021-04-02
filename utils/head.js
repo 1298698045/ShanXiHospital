@@ -114,7 +114,7 @@ $(function(){
 
                             </div>
                         </li>
-                        <li>
+                        <li id="hostipalSurvey">
                             <span>
                                 医院概况
                             </span>      
@@ -315,5 +315,8 @@ $(function(){
     })
     $('#expert').click(function(){
         window.location.href = '/page/expert/expert.html?index='+4
+    })
+    $('#hostipalSurvey').click(function(){
+        window.location.href = '/page/hospitalSurvey/hospitalSurvey.html?index='+5
     })
 })
