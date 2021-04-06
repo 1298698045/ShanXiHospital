@@ -154,7 +154,7 @@ $(function(){
 
                             </div>
                         </li>
-                        <li>
+                        <li id="chineseMedicine">
                             <span>
                                 中医特色
                             </span>      
@@ -324,5 +324,8 @@ $(function(){
     })
     $('#talentDevelopment').click(function(){
         window.location.href = '/page/talentDevelopment/index.html?index='+9
+    })
+    $('#chineseMedicine').click(function(){
+        window.location.href = '/page/chineseMedicine/index.html?index='+10
     })
 })
