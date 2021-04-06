@@ -1,15 +1,79 @@
 $(function(){
     let str = `
+    <div class="bottomBack">
+            <div class="top"></div>
+            <div class="cont">
+                <div class="minW">
+                    <div class="box_wrap">
+                        <div class="item">
+                            <p class="imgs">
+                                <img src="../../images/i.png" alt="">
+                            </p>
+                            <p class="name">门诊出诊表</p>
+                        </div>
+                        <div class="item">
+                            <p class="imgs">
+                                <img src="../../images/icon_2.png" alt="">
+                            </p>
+                            <p class="name">就医须知</p>
+                        </div>
+                        <div class="item">
+                            <p class="imgs">
+                                <img src="../../images/icon_3.png" alt="">
+                            </p>
+                            <p class="name">医院位置</p>
+                        </div>
+                        <div class="item">
+                            <p class="imgs">
+                                <img src="../../images/icon.png" alt="">
+                            </p>
+                            <p class="name">专科专病</p>
+                        </div>
+                        <div class="item">
+                            <p class="imgs">
+                                <img src="../../images/icon_5.png" alt="">
+                            </p>
+                            <p class="name">健康体检</p>
+                        </div>
+                        <div class="item">
+                            <p class="imgs">
+                                <img src="../../images/icon_6.png" alt="">
+                            </p>
+                            <p class="name">健康科普</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top"></div>
+        </div>
     <div class="footer">
         <div class="top">
             <div class="box">
                 <span class="write">友情链接：</span>
                 <span class="black">“十四五”规划意见建议</span>
-                <span class="write left">中华人民共和国国家卫生健康委员会</span>  
+                <span class="solid">
+                    |
+                </span>
+                <span class="black left">中华人民共和国国家卫生健康委员会</span>  
+                <span class="solid">
+                    |
+                </span>
                 <span class="black left">      国家中医药管理</span>
+                <span class="solid">
+                    |
+                </span>
                 <span class="black left">山西省卫生健康委员会</span>
+                <span class="solid">
+                    |
+                </span>
                 <span class="black left">山西省医院管理中心</span>
+                <span class="solid">
+                    |
+                </span>
                 <span class="black left">山西省中医管理局</span>
+                <span class="solid">
+                    |
+                </span>
                 <span class="black left">山西省医药大学</span>
                 <span class="back left">|</span>
             </div>

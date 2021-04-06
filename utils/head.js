@@ -138,7 +138,7 @@ $(function(){
 
                             </div>
                         </li>
-                        <li>
+                        <li id="teaching">
                             <span>
                                 科研教学
                             </span>      
@@ -146,7 +146,7 @@ $(function(){
 
                             </div>
                         </li>
-                        <li>
+                        <li id="talentDevelopment">
                             <span>
                                 人才建设
                             </span>      
@@ -318,5 +318,11 @@ $(function(){
     })
     $('#hostipalSurvey').click(function(){
         window.location.href = '/page/hospitalSurvey/hospitalSurvey.html?index='+5
+    })
+    $('#teaching').click(function(){
+        window.location.href = '/page/teaching/teaching.html?index='+8
+    })
+    $('#talentDevelopment').click(function(){
+        window.location.href = '/page/talentDevelopment/index.html?index='+9
     })
 })

@@ -153,6 +153,9 @@
   .wrap .container .hospitalWrap .tab_wrap .tabs .tab.active {
     background: url('../images/tab-active.png') no-repeat;
   }
+  .wrap .container .content{
+    display: none;
+  }
   .wrap .container .content .marginAuto{
     width: 1230px;
     margin: 0 auto;
@@ -759,4 +762,145 @@
     line-height: 2;
     color: #333333;
     font-size:14px;
+  }
+  .wrap  .container .content .leader_wrap{
+    height: 590px;
+    background: url('../images/photo_back.png') no-repeat;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+  }
+  .wrap  .container .content .leader_wrap img{
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .wrap  .container .content .videoWrap{
+    margin-bottom: 70px;
+  }
+  .wrap  .container .content .videoWrap .tabs{
+    display: flex;
+    justify-content: space-between;
+  }
+  .wrap  .container .content .videoWrap .tabs .tab{
+    width: 285px;
+    height: 47px;
+    line-height: 47px;
+    background: url('../images/tab_child.png') no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #086252;
+    cursor: pointer;
+    margin-bottom: 21px;
+  }
+  .wrap  .container .content .videoWrap .tabs .tab.active{
+    color: #feffff;
+    background: url('../images/tab_child_active.png') no-repeat;
+  }
+
+    .wrap  .container .content .videoWrap .dynamic {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0 51px 0;
+  }
+    .wrap  .container .content .videoWrap .dynamic .box {
+    width: 390px;
+    height: 310px;
+    background: url('../images/memorabilia_box.png') no-repeat;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+  }
+    .wrap  .container .content .videoWrap .dynamic .box .box_child{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+  }
+    .wrap  .container .content .videoWrap .dynamic .box .box_child .img{
+    width: 100%;
+    height: 225px;
+    background: url('../images/video_photo.png') no-repeat;
+    padding-top: 1px;
+    position: relative;
+  }
+  .wrap  .container .content .videoWrap .dynamic .box .box_child .img .play_icon{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: url('../images/play.png') no-repeat;
+    cursor: pointer;
+  }
+    .wrap  .container .content .videoWrap .dynamic .box .box_child .img .timeBox{
+    width: 54px;
+    height: 54px;
+    background: url('../images/g_box.png') no-repeat;
+    text-align: center;
+    margin-top: 23px;
+    margin-left: 19px;
+  }
+    .wrap  .container .content .videoWrap .dynamic .box .box_child .textWrap{
+    /* padding: 21px 18px; */
+    font-size: 18px;
+    color: #333333;
+    box-sizing: border-box;
+    background: #fff;
+  }
+    .wrap  .container .content .videoWrap .dynamic .box .box_child .textWrap .text{
+      margin: 19px;
+      font-weight: bold;
+  }
+    .wrap  .container .content .videoWrap .dynamic .box .boxSolid{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #815b3f;
+    box-sizing: border-box;
+    background: #fff;
+    padding: 21px 18px;
+  }
+    .wrap  .container .content .videoWrap .dynamic .box .boxSolid .textCont{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+    .wrap  .container .content .videoWrap .dynamic .box .boxSolid .textCont .color{
+    font-size: 16px;
+    color: #815b3f;
+  }
+    .wrap  .container .content .videoWrap .dynamic .box .boxSolid .textCont .desc{
+    font-size: 14px;
+    color: #999999;
+    margin-top: 19px;
+    padding-bottom: 10px;
+    
+  }
+    .wrap  .container .content .videoWrap .dynamic .box .boxSolid .bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 14px;
+  }
+    .wrap  .container .content .videoWrap .dynamic .box .boxSolid .bottom .l_time_box{
+    width: 54px;
+    height: 54px;
+    background: url('../images/left_icon1.png') no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+  }
+    .wrap  .container .content .videoWrap .dynamic .box .boxSolid .bottom .youjiantou{
+    width: 20px;
+    height: 14px;
+    background: url('../images/youjiantou.png') no-repeat;
+  }
+    .wrap  .container .content .videoWrap .dynamic .box .boxSolid .bottom .l_time_box .time{
+    font-size: 24px;
+    color: #999999;
+  }
+    .wrap  .container .content .videoWrap .dynamic .box .boxSolid .bottom .l_time_box .year{
+    font-size: 12px;
+    color: #999999;
   }

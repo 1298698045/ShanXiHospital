@@ -65,7 +65,7 @@
                     </div>
                 </div>
             </div>
-            <div class="content content_wrap">
+            <div class="content content_wrap" style="display:block;">
                 <div class="bg_block">
                     <div class="jd_wrap">
                         <div class="lbox">
@@ -318,6 +318,29 @@
                     </div>
                 </div>
             </div>
+            <!-- 历史沿革 -->
+            <div class="content"></div>
+            <!-- 医院领导 -->
+            <div class="content">
+                <div class="leader_wrap marginAuto">
+                    <img src="../../images/leader_photo.png" alt="">
+                </div>
+            </div>
+            <!-- 视频中心 -->
+            <div class="content">
+                <div class="videoWrap marginAuto">
+                    <div class="tabs">
+                        <p class="tab active">专家出诊（名医门诊）</p>
+                        <p class="tab">专家出诊（总院）</p>
+                        <p class="tab">专家出诊（胜利分院）</p>
+                        <p class="tab">和平分院专家出诊表</p>
+                    </div>
+                    <div class="dynamic" id="videoId">
+
+                    </div>
+                    <div id="videoPages"></div>
+                </div>
+            </div>
         </div>
         <div class="footer_wrap"></div>
     </div>
@@ -443,6 +466,24 @@
             `
         }
         $('#featuresId').append(strfeatures);
+        let videoStr = '';
+        for(let i=0; i < 9; i++){
+            videoStr += `
+                <div class="box">
+                    <div class="box_child">
+                        <div class="img">
+                            <p class="play_icon"></p>
+                        </div>
+                        <div class="textWrap">
+                            <p class="text">
+                                大爱无言惠苍生
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            `
+        }
+        $('#videoId').append(videoStr);
         new Pagination({
             element: '#pages',
             type: 1,
@@ -462,6 +503,23 @@
         // 医院风貌
         new Pagination({
             element: '#pagesFeatures',
+            type: 1,
+            pageIndex: 1,
+            pageSize: 10,
+            pageCount: 7,
+            total: 100,
+            jumper: true,
+            singlePageHide: false,
+            prevText: '',
+            nextText: '',
+            disabled: true,
+            currentChange: function(index) {
+                console.log(index);
+            }
+        });
+        // 视频中心
+        new Pagination({
+            element: '#videoPages',
             type: 1,
             pageIndex: 1,
             pageSize: 10,

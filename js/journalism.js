@@ -6,9 +6,17 @@ $(function(){
         let index = $(this).index();
         $('.content_wrap').eq(index).show();
     })
-    $('#detail').click(function(){
-        window.location.href = '../journalism/detail.html'
+    $('#news .box').click(function(){
+        window.location.href = '../journalism/detail.html?index='+6;
     })
+    $('#news .box').hover(function () {
+        $('#news .box').removeClass('active');
+        $('#news .box .desc_wrap').children('.title').removeClass('active');
+        $(this).addClass('active');
+        $(this).children('.desc_wrap').children('.title').addClass('active');
+    },function(){
+        $(this).addClass('active');
+    });
 })
 new Pagination({
     element: '#pages',

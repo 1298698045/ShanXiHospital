@@ -1,9 +1,12 @@
-.wrap {
-    background: url('../images/repeat.png') center repeat;
-  }
+.wrap{
+  width: 100%;
+  background: url('../images/bg.png') no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
   .wrap .center {
     width: 1230px;
-    margin: 20px auto;
+    margin: 30px auto;
     padding-bottom: 50px;
   }
   .wrap .center .Breadcrumb span {
@@ -11,8 +14,11 @@
     color: #333333;
   }
   .wrap .center .Breadcrumb .black {
-    color: #704c2f;
+  }
+
+  .wrap .center .Breadcrumb .black:hover{
     cursor: pointer;
+    color: #704c2f;
   }
   .wrap .center .container .row_title {
     display: flex;
@@ -67,20 +73,17 @@
     background: url('../images/backr.png') no-repeat;
   }
   .wrap .center .container .tabs .tab .text {
-    width: 265px;
-    height: 46px;
-    line-height: 46px;
+    width: 285px;
+    height: 47px;
+    line-height: 47px;
+    background: url('../images/tab_child.png') no-repeat;
     text-align: center;
-    color: #333333;
-    background: #f1eee9;
+    color: #086252;
     cursor: pointer;
-    border-top: 1px solid #c9c0ba;
-    border-bottom: 1px solid #c9c0ba;
   }
   .wrap .center .container .tabs .tab .text.active {
     color: #fff;
-    border: none;
-    background: #004438;
+    background: url('../images/tab_child_active.png') no-repeat;
   }
   .wrap .center .container .content_wrap {
     display: none;
@@ -97,43 +100,80 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 200px;
+    /* padding: 24px 0; */
+    box-sizing: border-box;
+    cursor: pointer;
   }
-  .wrap .center .container .content_wrap .content .lCont .box .imgs {
-    width: 260px;
-    height: 150px;
-    background: #c9c0ba;
+  .wrap .center .container .content_wrap .content .lCont .box.active{
+    background: #fff;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    position: relative;
+  }
+  
+  .wrap .center .container .content_wrap .content .lCont .box.active::before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 89px;
+    height: 200px;
+    background: url('../images/leftBck.png') no-repeat;
+    content: '';
+    display: block;
+  }
+  .wrap .center .container .content_wrap .content .lCont .box.active::after{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 89px;
+    height: 200px;
+    background: url('../images/rightBack.png') no-repeat;
+    content: '';
+    display: block;
   }
   .wrap .center .container .content_wrap .content .lCont .box .desc_wrap {
-    width: 574px;
-    padding-left: 26px;
+    
   }
   .wrap .center .container .content_wrap .content .lCont .box .desc_wrap .title {
     font-size: 20px;
     color: #333333;
     font-weight: bold;
   }
+  .wrap .center .container .content_wrap .content .lCont .box .desc_wrap .title.active{
+    color: #815b3f;
+  }
   .wrap .center .container .content_wrap .content .lCont .box .desc_wrap .desc {
     font-size: 14px;
-    color: #666666;
-    margin: 30px 0;
+    color: #333333;
+    margin: 25px 0;
   }
   .wrap .center .container .content_wrap .content .lCont .box .desc_wrap .time {
     font-size: 14px;
-    color: #999999;
+    color: #666666;
   }
   .wrap .center .container .content_wrap .content .rCont {
-    width: 280px;
+    width: 344px;
   }
   .wrap .center .container .content_wrap .content .rCont .backImg {
-    width: 280px;
+    width: 344px;
     height: 190px;
-    background: #ccc;
+    line-height: 190px;
+    font-size: 36px;
+    text-align: center;
+    color: #815b3f;
+    background: url('../images/news_top.png') no-repeat;
   }
   .wrap .center .container .content_wrap .content .rCont .recommend {
     padding: 18px 15px;
     font-size: 16px;
     border: 1px solid #ededed;
     border-top: none;
+    color: #333333;
+  }
+  .wrap .center .container .content_wrap .content .rCont .recommend:hover{
+    cursor: pointer;
+    color: #815b3f;
   }
   .wrap .center .container .content_wrap .box::after {
     content: '';
@@ -173,4 +213,7 @@
     color: #505050;
     margin-top: 15px;
   }
-  
+  ._page_container{
+    justify-content: flex-start!important;
+    margin-left: 30px;
+  }

@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>信息公开</title>
+    <title>人才建设</title>
     <link rel="stylesheet" href="../../css/swiper-3.4.2.min.css">
     <link rel="stylesheet" href="../../css/public.css">
     <link rel="stylesheet" href="../../css/head.css">
     <link rel="stylesheet" href="../../css/footer.css">
-    <link rel="stylesheet" href="../../css/infoOpen.css">
+    <link rel="stylesheet" href="../../css/teaching.css">
+    <link rel="stylesheet" href="../../css/talentDevelopment.css">
 </head>
 <body>
     <div class="wrap">
@@ -19,15 +20,15 @@
             <div class="Breadcrumb">
                 <span>您现在的位置:  </span>
                 <span class="black">首页 ></span>
-                <span class="black">信息公开 ></span>
-                <span>通知公告</span>
+                <span class="black">科研教学 ></span>
+                <span>科研动态</span>
             </div>
             <div class="container">
                 <div class="row_title">
                     <div class="imgs">
                         <img src="../../images/01.png" alt="">
                     </div>
-                    <p class="name">信息公开</p>
+                    <p class="name">人才建设</p>
                     <div class="imgs">
                         <img src="../../images/02.png" alt="">
                     </div>
@@ -38,28 +39,19 @@
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide active">
+                                人才招聘
+                            </div>
+                            <div class="swiper-slide">
+                                人才培养
+                            </div>
+                            <div class="swiper-slide">
+                                研究生教育
+                            </div>
+                            <div class="swiper-slide">
                                 通知公告
                             </div>
                             <div class="swiper-slide">
-                                招标信息
-                            </div>
-                            <div class="swiper-slide">
-                                规章制度
-                            </div>
-                            <div class="swiper-slide">
-                                院务、党务公开
-                            </div>
-                            <div class="swiper-slide">
-                                用药信息
-                            </div>
-                            <div class="swiper-slide">
-                                医院资源
-                            </div>
-                            <div class="swiper-slide">
-                                医保新政
-                            </div>
-                            <div class="swiper-slide">
-                                下载专区
+                                各类表单下载
                             </div>
                         </div>
                     </div>
@@ -220,66 +212,82 @@
             </div>
         </div>
         <div class="footer_wrap"></div>
-
     </div>
 </body>
 <script src="../../js/jquery.js"></script>
 <script src="../../js/swiper-3.4.2.min.js"></script>
+<script src="../../js/pagination.js"></script>
 <script src="../../utils/head.js"></script>
  
 <script src="../../utils/footer.js"></script>
-<script src="../../js/infoOpen.js"></script>
 <script>
-    $(function(){
-        $('.swiper-wrapper .swiper-slide').click(function(){
-        $('.swiper-wrapper .swiper-slide').removeClass('active');
-        $(this).addClass('active');
-        let value = $(this).html();
-        $('.container .content').hide()
-        $('.container .content').eq($(this).index()).show()
-            if($(this).index()==0){
-                funScroll();
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 5,
+        paginationClickable: true,
+        spaceBetween: 30,
+        nextButton: '.right_icon',
+        prevButton: '.left_icon',
+        onSlideChangeEnd: function(swiper){
+            if(swiper.isBeginning){
+                swiper.prevButton.removeClass('prev_active');
+            }else{
+                swiper.prevButton.addClass('prev_active');
             }
-        })
-        funScroll();
-        function funScroll(){
-            //设置滑块的高度 
-            //$('.slider').css('height',h1+'px'); 
-            //设置y轴的增量 
-            var y = 0; 
-
-            //确定每次滚动滚轮右侧滚动条移动的距离
-            var ystepnumber = (($('.l_text').height()+40 - $('.left_wrap').height())/55)
-            var ysteplength = $('.scrollBar').height()/ystepnumber
-            
-            //为wrap添加滚轮事件 
-            var wrapDiv = document.querySelector('.left_wrap');
-            wrapDiv.onmousewheel = function(e){
-                e.preventDefault();
-                var event1 = event || e 
-                if (event.wheelDelta < 0) { 
-                    //滑动条向下滚动 
-                    y += ysteplength; 
-                }else if (event.wheelDelta > 0) { 
-                    //滑动条向上滚动 
-                    y -= ysteplength; 
-                } 
-                //y变化时说明在滚动，此时使滚动条发生滚动，以及设置content内容部分滚动 
-                //判断极端情况，滑块不能划出屏幕 
-                if (y <= 0) { 
-                    //滑块最多滑到顶部 
-                    y = 0; 
-                } 
-                if(y >= $('.sliderWrap').height() - $('.slider').height()){ 
-                    //滑块最多滑到最底部 
-                    y = $('.sliderWrap').height() - $('.slider').height(); 
-                } 
-                var scale = y/($('.sliderWrap').height() - $('.slider').height()); 
-                // console.log(scale)
-                $('.slider').css('top',y+'px')
-                $('.l_text').css('top',-scale*(($('.l_text').height()+40) - $('.left_wrap').height())+'px');
+            if(swiper.isEnd){
+                swiper.nextButton.addClass('next_active');
+            }else{
+                swiper.nextButton.removeClass('next_active');
             }
         }
+    });
+    $('.swiper-wrapper .swiper-slide').click(function(){
+        $('.swiper-wrapper .swiper-slide').removeClass('active');
+        $(this).addClass('active');
+        $('.container .content').hide();
+        $('.container .content').eq($(this).index()).show();
+        if($(this).index()==0){
+            funScroll();
+        }
     })
+    funScroll();
+    function funScroll(){
+        //设置滑块的高度 
+        //$('.slider').css('height',h1+'px'); 
+        //设置y轴的增量 
+        var y = 0; 
+
+        //确定每次滚动滚轮右侧滚动条移动的距离
+        var ystepnumber = (($('.l_text').height()+40 - $('.left_wrap').height())/55)
+        var ysteplength = $('.scrollBar').height()/ystepnumber
+        
+        //为wrap添加滚轮事件 
+        var wrapDiv = document.querySelector('.left_wrap');
+        wrapDiv.onmousewheel = function(e){
+            e.preventDefault();
+            var event1 = event || e 
+            if (event.wheelDelta < 0) { 
+                //滑动条向下滚动 
+                y += ysteplength; 
+            }else if (event.wheelDelta > 0) { 
+                //滑动条向上滚动 
+                y -= ysteplength; 
+            } 
+            //y变化时说明在滚动，此时使滚动条发生滚动，以及设置content内容部分滚动 
+            //判断极端情况，滑块不能划出屏幕 
+            if (y <= 0) { 
+                //滑块最多滑到顶部 
+                y = 0; 
+            } 
+            if(y >= $('.sliderWrap').height() - $('.slider').height()){ 
+                //滑块最多滑到最底部 
+                y = $('.sliderWrap').height() - $('.slider').height(); 
+            } 
+            var scale = y/($('.sliderWrap').height() - $('.slider').height()); 
+            // console.log(scale)
+            $('.slider').css('top',y+'px')
+            $('.l_text').css('top',-scale*(($('.l_text').height()+40) - $('.left_wrap').height())+'px');
+        }
+    }
 </script>
 </html>
