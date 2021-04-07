@@ -18,7 +18,7 @@
         <div class="center">
             <div class="Breadcrumb">
                 <span>您现在的位置:  </span>
-                <span class="black">首页 ></span>
+                <span class="black" id="homePage">首页 ></span>
                 <span class="black">患者服务 ></span>
                 <span>出诊信息</span>
             </div>
@@ -294,4 +294,11 @@
 <script src="../../utils/head.js"></script>
  
 <script src="../../utils/footer.js"></script>
+<script>
+    $(function(){
+        $('.label').click(function(){
+            window.location.href = '/page/characteristic/detail.html?index='+2
+        })
+    })
+</script>
 </html>

@@ -12,7 +12,7 @@
     font-size: 14px;
     color: #333333;
   }
-  .wrap .center .Breadcrumb .black {
+  .wrap .center .Breadcrumb .black:hover {
     color: #815b3f;
     cursor: pointer;
   }
@@ -441,6 +441,28 @@
     height: 585px;
     background: url('../images/right_box_back.png') no-repeat;
     background-size: 100% 100%;
+    position: relative;
+  }
+  .wrap .center .container .content .NoticeBody .right_wrap .scrollBarTwo{
+    margin: 20px 20px 0  0;
+  }
+  .wrap .center .container .content .NoticeBody .right_wrap .scrollBarTwo .sliderWrapTwo{
+    height: 500px;
+    width: 10px;
+    /* height: 499px; */
+    background: url('../images/sliderWrap.png') no-repeat;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+  }
+  .wrap .center .container .content .NoticeBody .right_wrap .scrollBarTwo .sliderWrapTwo .sliderTwo{
+    width:27px; 
+    height: 26px;
+    background: url('../images/slider.png') no-repeat;
+    position: absolute;
+    top: 0px;
+    left: -9px;
+    cursor: pointer;
   }
   .wrap .center .container .content .NoticeBody .right_wrap .article{
     margin: 35px;
@@ -470,7 +492,7 @@
   }
   .wrap .center .container .content .NoticeBody .right_wrap .article .r_text{
     line-height: 3;
-    margin-left: 50px;
+    text-indent: 4em;
   }
   .wrap .center .container .content .NoticeBody .right_wrap .article .subject{
     margin-left: 30px;
@@ -484,11 +506,12 @@
     color: #333333;
     font-size:14px;
     /* line-height: 2; */
-    margin-left: 40px;
+
+    text-indent: 4em;
     padding: 20px 0;
   }
   .wrap .center .container .content .NoticeBody .right_wrap .article .subject .text{
-    margin-left: 60px;
+    text-indent: 5em;
     line-height: 2;
     color: #333333;
     font-size:14px;
@@ -521,7 +544,7 @@
   .commonProblem .rowBox .centBack .row{
     display: flex;
     height: 45px;
-    align-items: center;
+    /* align-items: center; */
   }
   .commonProblem .rowBox .centBack .row .left_icon{
     width: 24px;
@@ -538,6 +561,7 @@
     background: url('../images/da.png') no-repeat;
   }
   .commonProblem .rowBox .centBack .row .text{
+    width: 1090px;
     font-size: 20px;
     color: #333333;
     margin-left: 16px;

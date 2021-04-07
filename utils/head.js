@@ -296,7 +296,7 @@ $(function(){
         return(false);
     }
     $('#home').click(function(){
-        window.location.href = '/page/home/index.html?index='+0;
+        window.location.href = '/index.html?index='+0;
     })
     $('#characteristic').click(function(){
         window.location.href = '/page/characteristic/characteristic.html?index='+2;
@@ -327,5 +327,9 @@ $(function(){
     })
     $('#chineseMedicine').click(function(){
         window.location.href = '/page/chineseMedicine/index.html?index='+10
+    })
+    $('#homePage').click(function(){
+        console.log(12123)
+        window.location.href = '/index.html?index='+0
     })
 })

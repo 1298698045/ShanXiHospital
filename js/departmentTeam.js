@@ -49,6 +49,9 @@ $(function(){
         return template;
     }
     $('.headPhoto').append(tempFun());
+    $('.box').click(function(){
+        window.location.href = '/page/department/doctorDetail.html?index='+3
+    })
     new Pagination({
         element: '#pages',
         type: 1,

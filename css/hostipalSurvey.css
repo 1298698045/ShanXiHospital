@@ -16,7 +16,7 @@
     font-size: 14px;
     color: #333333;
 }
-.wrap .container .hospitalWrap .Breadcrumb .black {
+.wrap .container .hospitalWrap .Breadcrumb .black:hover {
     color: #815b3f;
     cursor: pointer;
 }
@@ -763,6 +763,97 @@
     color: #333333;
     font-size:14px;
   }
+  /* 历史沿革 */
+  .wrap  .container .content .historyWrap{
+    display: flex;
+  }
+  .wrap  .container .content .historyWrap .leftWrap{
+    width: 382px;
+    height: 809px;
+  }
+  .wrap  .container .content .historyWrap .leftWrap .prev_btn{
+    width: 382px;
+    height: 44px;
+    background: url('../images/prev.png') no-repeat;
+  }
+  .wrap  .container .content .historyWrap .leftWrap .boxCont{
+    margin: 16px 0;
+  }
+  .wrap  .container .content .historyWrap .leftWrap .boxCont .box{
+    width: 382px;
+    height: 130px;
+    background: url('../images/bannerBox.png') no-repeat;
+    margin-bottom: 10px;
+    padding: 33px 58px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  .wrap  .container .content .historyWrap .leftWrap .boxCont .box .time{
+    font-size: 28px;
+    color: #086252;
+    font-weight: bold;
+  }
+  .wrap  .container .content .historyWrap .leftWrap .boxCont .box .name{
+    font-size: 22px;
+    color: #333333;
+  }
+  .wrap  .container .content .historyWrap .leftWrap .boxCont .box.active{
+    background: url('../images/bannerBox_active.png') no-repeat;
+  }
+  .wrap  .container .content .historyWrap .leftWrap .boxCont .box.active .time{
+    color: #ffffff;
+  }
+  .wrap  .container .content .historyWrap .leftWrap .boxCont .box.active .name{
+    color: #ffffff;
+  }
+  .wrap  .container .content .historyWrap .leftWrap .next_btn{
+    width: 382px;
+    height: 44px;
+    background: url('../images/next_btn.png') no-repeat;
+  }
+  .wrap  .container .content .historyWrap .rightWrap {
+    margin-left: 45px;
+    box-sizing: border-box;
+  }
+  .wrap  .container .content .historyWrap .rightWrap .stepBox{
+    padding-left: 37px;
+    border-left: 1px solid #bbbbbb;
+  }
+  .wrap  .container .content .historyWrap .rightWrap .stepBox .title{
+    font-size: 22px;
+    font-weight: bold;
+    color: #333333;
+    padding-bottom: 46px;
+    display: flex;
+    align-items: center;
+  }
+  .wrap  .container .content .historyWrap .rightWrap .stepBox .title.top{
+    padding-top: 65px;
+  }
+  .wrap  .container .content .historyWrap .rightWrap .stepBox .title::before{
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url('../images/l-icon.png');
+    margin-right: 13px;
+  }
+  .wrap  .container .content .historyWrap .rightWrap .stepBox .desc{
+    font-size: 16px;
+    color: #333333;
+    /* line-height: 2; */
+    position: relative;
+  }
+  .wrap  .container .content .historyWrap .rightWrap .stepBox .desc .tag_icon{
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    background: url('../images/yuan.png');
+    position: absolute;
+    left: -43px;
+    top: 10px;
+  }
+  /* 医院领导 */
   .wrap  .container .content .leader_wrap{
     height: 590px;
     background: url('../images/photo_back.png') no-repeat;

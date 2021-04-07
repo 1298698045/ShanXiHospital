@@ -19,7 +19,7 @@
             <div class="max_img_content">
                 <div class="Breadcrumb">
                     <span>您现在的位置:  </span>
-                    <span class="black">首页 ></span>
+                    <span class="black" id="homePage">首页 ></span>
                     <span class="black">科室导航 ></span>
                     <span>康复科</span>
                 </div>
@@ -215,7 +215,7 @@
                 <div class="imgs">
                     <img src="../../images/02.png" alt="">
                 </div>
-                <p class="more">
+                <p class="more" id="departs">
                     更多
                 </p>
             </div>
@@ -604,6 +604,9 @@
             //     }
             // })
         }
+        $('#departs').click(function(){
+            window.location.href = '/page/department/team.html?index='+3
+        })
     })
 </script>
 </html>
