@@ -1,5 +1,6 @@
 .wrap {
   width: 100%;
+  min-height: 100vh;
   background: url('../images/bg.png') no-repeat;
   background-position: center;
   background-attachment: fixed;

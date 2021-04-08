@@ -264,6 +264,7 @@
     position: relative;
     top: 344px;
     z-index: 9999;
+    cursor: pointer;
   }
   .wrap .ysImageWrap .ys_container .rightBox .sliderWrap .slider{
     width: 27px;

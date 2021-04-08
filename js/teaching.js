@@ -10,26 +10,44 @@ $(function(){
     function tempFun(){
         let str = '';
         for(let i=0; i < 6; i++){
-            str += `
-                <li class="block">
-                    <div class="box">
-                        <div class="img">
-                            <img src="/images/teaching1.1.png" alt="">
-                        </div>
-                        <div class="rightCont">
-                            <p class="title">我院圆满完成山西省科学技术厅社会发展攻关项目课题验...</p>
-                            <div class="boxTime">
-                                <p class="maxText">
-                                    04
-                                </p>
-                                <p class="time">
-                                    2020-12
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            `
+            // str += `
+            //     <li class="block">
+            //         <div class="box">
+            //             <div class="img">
+            //                 <img src="/images/teaching1.1.png" alt="">
+            //             </div>
+            //             <div class="rightCont">
+            //                 <p class="title">我院圆满完成山西省科学技术厅社会发展攻关项目课题验...</p>
+            //                 <div class="boxTime">
+            //                     <p class="maxText">
+            //                         04
+            //                     </p>
+            //                     <p class="time">
+            //                         2020-12
+            //                     </p>
+            //                 </div>
+            //             </div>
+            //         </div>
+            //     </li>
+            // `
+            str += '<li class="block">'+
+            '                    <div class="box">'+
+            '                        <div class="img">'+
+            '                            <img src="/images/teaching1.1.png" alt="">'+
+            '                        </div>'+
+            '                        <div class="rightCont">'+
+            '                            <p class="title">我院圆满完成山西省科学技术厅社会发展攻关项目课题验...</p>'+
+            '                            <div class="boxTime">'+
+            '                                <p class="maxText">'+
+            '                                    04'+
+            '                                </p>'+
+            '                                <p class="time">'+
+            '                                    2020-12'+
+            '                                </p>'+
+            '                            </div>'+
+            '                        </div>'+
+            '                    </div>'+
+            '                </li>';
         }
         $('.dynamic').append(str);
     }

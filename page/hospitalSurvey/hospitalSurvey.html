@@ -475,23 +475,38 @@
         });
         let str = '';
         for(let i=0; i < 9; i++){
-            str += `
-                <div class="box">
-                    <div class="box_child">
-                        <div class="img">
-                            <div class="timeBox">
-                                <p class="time">04</p>
-                                <p class="year">2020-12</p>
-                            </div>
-                        </div>
-                        <div class="textWrap">
-                            <p class="text">
-                                山西省中医院党委召开巡视工作部署会...
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            `
+            // str += `
+            //     <div class="box">
+            //         <div class="box_child">
+            //             <div class="img">
+            //                 <div class="timeBox">
+            //                     <p class="time">04</p>
+            //                     <p class="year">2020-12</p>
+            //                 </div>
+            //             </div>
+            //             <div class="textWrap">
+            //                 <p class="text">
+            //                     山西省中医院党委召开巡视工作部署会...
+            //                 </p>
+            //             </div>
+            //         </div>
+            //     </div>
+            // `
+            str += '<div class="box">'+
+'                    <div class="box_child">'+
+'                        <div class="img">'+
+'                            <div class="timeBox">'+
+'                                <p class="time">04</p>'+
+'                                <p class="year">2020-12</p>'+
+'                            </div>'+
+'                        </div>'+
+'                        <div class="textWrap">'+
+'                            <p class="text">'+
+'                                山西省中医院党委召开巡视工作部署会...'+
+'                            </p>'+
+'                        </div>'+
+'                    </div>'+
+'                </div>';
         }
         $('#memorabiliaId').append(str);
         let list = [
@@ -534,40 +549,66 @@
         ]
         let strfeatures = '';
         for(let i=0; i < list.length; i++){
-            strfeatures += `
-                <div class="box">
-                    <div class="box_child">
-                        <div class="img">
-                            <div class="modal">
-                                <p class="add_icon"></p>    
-                            </div>
-                        </div>
-                        <div class="textWrap">
-                            <p class="text">
-                                ${list[i].name}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            `
+            // strfeatures += `
+            //     <div class="box">
+            //         <div class="box_child">
+            //             <div class="img">
+            //                 <div class="modal">
+            //                     <p class="add_icon"></p>    
+            //                 </div>
+            //             </div>
+            //             <div class="textWrap">
+            //                 <p class="text">
+            //                     ${list[i].name}
+            //                 </p>
+            //             </div>
+            //         </div>
+            //     </div>
+            // `
+            strfeatures += '<div class="box">'+
+'                    <div class="box_child">'+
+'                        <div class="img">'+
+'                            <div class="modal">'+
+'                                <p class="add_icon"></p>    '+
+'                            </div>'+
+'                        </div>'+
+'                        <div class="textWrap">'+
+'                            <p class="text">'
+                                + list[i].name +
+'                            </p>'+
+'                        </div>'+
+'                    </div>'+
+'                </div>';
         }
         $('#featuresId').append(strfeatures);
         let videoStr = '';
         for(let i=0; i < 9; i++){
-            videoStr += `
-                <div class="box">
-                    <div class="box_child">
-                        <div class="img">
-                            <p class="play_icon"></p>
-                        </div>
-                        <div class="textWrap">
-                            <p class="text">
-                                大爱无言惠苍生
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            `
+            // videoStr += `
+            //     <div class="box">
+            //         <div class="box_child">
+            //             <div class="img">
+            //                 <p class="play_icon"></p>
+            //             </div>
+            //             <div class="textWrap">
+            //                 <p class="text">
+            //                     大爱无言惠苍生
+            //                 </p>
+            //             </div>
+            //         </div>
+            //     </div>
+            // `
+            videoStr += '<div class="box">'+
+'                    <div class="box_child">'+
+'                        <div class="img">'+
+'                            <p class="play_icon"></p>'+
+'                        </div>'+
+'                        <div class="textWrap">'+
+'                            <p class="text">'+
+'                                大爱无言惠苍生'+
+'                            </p>'+
+'                        </div>'+
+'                    </div>'+
+'                </div>';
         }
         $('#videoId').append(videoStr);
         new Pagination({
