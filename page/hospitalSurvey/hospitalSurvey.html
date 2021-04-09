@@ -20,9 +20,9 @@
             <div class="hospitalWrap">
                 <div class="Breadcrumb">
                     <span>您现在的位置:  </span>
+                    <span class="black">首页 ></span>
                     <span class="black">医院概况 ></span>
-                    <span class="black">医院简介 ></span>
-                    <span>出诊信息</span>
+                    <span id="defaultVal">医院简介</span>
                 </div>
                 <div class="row_title">
                     <div class="imgs">
@@ -37,26 +37,26 @@
                     <div class="left_icon icon">
                     </div>
                     <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide active">
+                        <div class="swiper-wrapper" id="swiperId">
+                            <div class="swiper-slide active" title="医院简介">
                                 医院简介
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="大事记">
                                 大事记
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="医院风貌">
                                 医院风貌
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="医院文化">
                                 医院文化
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="历史沿革">
                                 历史沿革
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="医院领导">
                                 医院领导
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="视频中心">
                                 视频中心
                             </div>
                         </div>
@@ -439,6 +439,24 @@
 <script src="../../js/pagination.js"></script>
 <script>
     $(function () {
+        let name = getUrlParam("name");
+        $('#defaultVal').html(name)
+        console.log(name,'name')
+        $('#swiperId .swiper-slide').removeClass('active');
+        $('#swiperId .swiper-slide[title="'+name+'"]').addClass('active');
+        var index = $('#swiperId .swiper-slide[title="'+name+'"]').index();
+        $('.container .content').hide().eq(index).show()
+        function getUrlParam(key) {
+            // 获取参数
+            var url = window.location.search;
+            // 正则筛选地址栏
+            var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+            // 匹配目标参数
+            var result = url.substr(1).match(reg);
+            //返回参数值
+            return result ? decodeURIComponent(result[2]) : null;
+        }
+
         var swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
             slidesPerView: 5,
@@ -462,6 +480,8 @@
         $('.swiper-wrapper .swiper-slide').click(function(){
             $('.swiper-wrapper .swiper-slide').removeClass('active');
             $(this).addClass('active');
+            let value = $(this).html();
+            $('#defaultVal').html(value);
             $('.container .content').hide();
             $('.container .content').eq($(this).index()).show();
             if($(this).index()==3){
@@ -611,6 +631,9 @@
 '                </div>';
         }
         $('#videoId').append(videoStr);
+        $('#videoId .box').click(function(){
+            window.location.href = '/page/hospitalSurvey/videoDetail.html?index='+5
+        })
         new Pagination({
             element: '#pages',
             type: 1,

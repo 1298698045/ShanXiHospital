@@ -21,7 +21,7 @@
                 <span>您现在的位置:  </span>
                 <span class="black" id="homePage">首页 ></span>
                 <span class="black">患者服务 ></span>
-                <span>出诊信息</span>
+                <span id="defaultVal">出诊信息</span>
             </div>
             <div class="container">
                 <div class="row_title">
@@ -37,38 +37,38 @@
                     <div class="left_icon icon">
                     </div>
                     <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide active">
+                        <div class="swiper-wrapper" id="swiperId">
+                            <div class="swiper-slide active" title="出诊信息">
                                 出诊信息
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="停诊信息">
                                 停诊信息
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="就医须知">
                                 就医须知
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="住院指南">
                                 住院指南
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="医保指南">
                                 医保指南
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="体检中心">
                                 体检中心
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="交通路线">
                                 交通路线
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="院内导航">
                                 院内导航
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="查询服务">
                                 查询服务
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="便民服务">
                                 便民服务
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="常见问题">
                                 常见问题
                             </div>
                         </div>
@@ -163,6 +163,36 @@
                                             <button class="btn msg">在线咨询</button>
                                         </td>
                                     </tr>
+                                    <tr class="dataRow">
+                                        <td>肖汉玺</td>
+                                        <td>主任医师</td>
+                                        <td>胃及十二指肠溃疡、胃肠功能性疾病</td>
+                                        <td>周二、四、六上午、周一、三、五、日下午</td>
+                                        <td class="operation">
+                                            <button class="btn">预约</button>
+                                            <button class="btn msg">在线咨询</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="dataRow">
+                                        <td>肖汉玺</td>
+                                        <td>主任医师</td>
+                                        <td>胃及十二指肠溃疡、胃肠功能性疾病</td>
+                                        <td>周二、四、六上午、周一、三、五、日下午</td>
+                                        <td class="operation">
+                                            <button class="btn">预约</button>
+                                            <button class="btn msg">在线咨询</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="dataRow">
+                                        <td>肖汉玺</td>
+                                        <td>主任医师</td>
+                                        <td>胃及十二指肠溃疡、胃肠功能性疾病</td>
+                                        <td>周二、四、六上午、周一、三、五、日下午</td>
+                                        <td class="operation">
+                                            <button class="btn">预约</button>
+                                            <button class="btn msg">在线咨询</button>
+                                        </td>
+                                    </tr>
                                 </tbody>
                                 
                             </table>
@@ -195,10 +225,38 @@
                                         <td>主任医师</td>
                                         <td>2020-10-10</td>
                                         <td>2020-10-10</td>
-                                        <!-- <td class="operation">
-                                            <button class="btn">预约</button>
-                                            <button class="btn msg">在线咨询</button>
-                                        </td> -->
+                                    </tr>
+                                    <tr class="dataRow">
+                                        <td>名医门诊</td>
+                                        <td>脾胃科</td>
+                                        <td>陈玉珍</td>
+                                        <td>主任医师</td>
+                                        <td>2020-10-10</td>
+                                        <td>2020-10-10</td>
+                                    </tr>
+                                    <tr class="dataRow">
+                                        <td>名医门诊</td>
+                                        <td>脾胃科</td>
+                                        <td>陈玉珍</td>
+                                        <td>主任医师</td>
+                                        <td>2020-10-10</td>
+                                        <td>2020-10-10</td>
+                                    </tr>
+                                    <tr class="dataRow">
+                                        <td>名医门诊</td>
+                                        <td>脾胃科</td>
+                                        <td>陈玉珍</td>
+                                        <td>主任医师</td>
+                                        <td>2020-10-10</td>
+                                        <td>2020-10-10</td>
+                                    </tr>
+                                    <tr class="dataRow">
+                                        <td>名医门诊</td>
+                                        <td>脾胃科</td>
+                                        <td>陈玉珍</td>
+                                        <td>主任医师</td>
+                                        <td>2020-10-10</td>
+                                        <td>2020-10-10</td>
                                     </tr>
                                 </tbody>
                                 
@@ -378,116 +436,44 @@
                     </div>
                 </div>
                 <!-- 住院指南 -->
-                <div class="content">
+                <div class="content" id="zyzn">
                     <div class="NoticeBody">
                         <div class="left_wrap">
                             <div class="l_text">
                                 <div class="row_back active">
                                     <i class="icon_l"></i>
                                     <span class="active">
-                                        预约挂号须知
+                                        院内导航
                                     </span>
                                 </div>
                                 <div class="row_back">
                                     <i class="icon_l"></i>
                                     <span>
-                                        就医须知（总院）
+                                        病房楼楼层分布
                                     </span>
                                 </div>
                                 <div class="row_back">
                                     <i class="icon_l"></i>
                                     <span>
-                                        就医须知（名医门诊）
+                                        住院须知
                                     </span>
                                 </div>
                                 <div class="row_back">
                                     <i class="icon_l"></i>
                                     <span>
-                                        门诊就诊流程
+                                        住院患者探视须知
                                     </span>
                                 </div>
                                 <div class="row_back">
                                     <i class="icon_l"></i>
                                     <span>
-                                        新农合就诊流程
+                                        住出院流程
                                     </span>
                                 </div>
                                 <div class="row_back">
                                     <i class="icon_l"></i>
                                     <span>
-                                        中草药房温馨提示
-                                    </span>
-                                </div>
-                                <div class="row_back">
-                                    <i class="icon_l"></i>
-                                    <span>
-                                        检验科化验项目及取报告结果...
-                                    </span>
-                                </div>
-                                <div class="row_back">
-                                    <i class="icon_l"></i>
-                                    <span>
-                                        检验科化验项目流程
-                                    </span>
-                                </div>
-                                <div class="row_back">
-                                    <i class="icon_l"></i>
-                                    <span>
-                                        山西省中医院病历复印、复制...
-                                    </span>
-                                </div>
-                                <div class="row_back">
-                                    <i class="icon_l"></i>
-                                    <span>
-                                        山西省中医院病历复印、复制...
-                                    </span>
-                                </div>
-                                <div class="row_back">
-                                    <i class="icon_l"></i>
-                                    <span>
-                                        山西省中医院病历复印、复制...
-                                    </span>
-                                </div>
-                                <div class="row_back">
-                                    <i class="icon_l"></i>
-                                    <span>
-                                        山西省中医院病历复印、复制...
-                                    </span>
-                                </div>
-                                <div class="row_back">
-                                    <i class="icon_l"></i>
-                                    <span>
-                                        山西省中医院病历复印、复制...
-                                    </span>
-                                </div>
-                                <div class="row_back">
-                                    <i class="icon_l"></i>
-                                    <span>
-                                        山西省中医院病历复印、复制...
-                                    </span>
-                                </div>
-                                <div class="row_back">
-                                    <i class="icon_l"></i>
-                                    <span>
-                                        山西省中医院病历复印、复制...
-                                    </span>
-                                </div>
-                                <div class="row_back">
-                                    <i class="icon_l"></i>
-                                    <span>
-                                        山西省中医院病历复印、复制...
-                                    </span>
-                                </div>
-                                <div class="row_back">
-                                    <i class="icon_l"></i>
-                                    <span>
-                                        山西省中医院病历复印、复制...
-                                    </span>
-                                </div>
-                                <div class="row_back">
-                                    <i class="icon_l"></i>
-                                    <span>
-                                        山西省中医院病历复印、复制...
+                                        中医医院病例复印管理规定
                                     </span>
                                 </div>
                             </div>
@@ -503,38 +489,13 @@
                             <div class="article">
                                 <div class="title">
                                     <i class="left"></i>
-                                    <span>预约挂号须知</span>
+                                    <span>院内导航</span>
                                 </div>
                                 <div class="time">
                                     时间：2019-12-30      点击：5121次
                                 </div>
-                                <p class="r_text">
-                                    尊敬的患者朋友：
-                                </p>
-                                <p class="r_text">
-                                    感谢您信任我院，为了方便您快捷就诊，特提示下列注意事项：
-                                </p>
-                                <div class="subject">
-                                    <p class="name">一、预约挂号</p>
-                                    <p class="min-timu">
-                                        1、预约挂号方法：
-                                    </p>
-                                    <p class="text">
-                                        电话预约：12580 、  118114 、 12320
-                                    </p>
-                                    <p class="text">
-                                        微信预约：sxszyyfwh 、 近医通 、健康山西微服务
-                                    </p>
-                                    <p class="text">
-                                        网址预约：www.sxzyy.com
-                                    </p>
-                                    <p class="min-timu">
-                                        2、患者实名注册，每日下午16:00开放第15日号源，预约成功后，如未交费需凭身份证提前半小时来院取号
-                                    </p>
-                                    <p class="name">二、现场挂号</p>
-                                    <p class="min-timu">
-                                        门诊大厅一层设有专家出诊时间表，各科室均有专家门诊、普通门诊，根据病情选择您需要的大夫来挂号
-                                    </p>
+                                <div class="imgPhoto">
+                                    <img src="/images/nav.jpg" alt="">
                                 </div>
                             </div>
                             <div class="scrollBarTwo">
@@ -549,7 +510,11 @@
                 </div>
                 <!-- 医保指南 -->
                 <div class="content">
-
+                    <div class="box" id="tab_child">
+                        <p class="active">医保通道</p>
+                        <p>医保信息</p>
+                        <p>医保新政</p>
+                    </div>
                 </div>
                 <!-- 体检中心 -->
                 <div class="content">

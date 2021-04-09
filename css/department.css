@@ -167,7 +167,7 @@
     cursor: pointer;
   }
   .wrap .center .department .boxContent .row.active{
-    color: #fff;
+    /* color: #fff; */
   }
   .wrap .center .department .boxContent .row.active::after{
     background: url('../images/select_active.png') no-repeat;

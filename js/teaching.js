@@ -1,10 +1,35 @@
 $(function(){
+    let name = getUrlParam("name");
+    console.log(name,'name')
+    $('#defaultVal').html(name);
+    $('.tabs .tab .text').removeClass('active');
+    $('.tabs .tab .text[title="'+name+'"]').addClass('active');
+    var index = $('.tabs .tab .text[title="'+name+'"]').parent().index();
+    $('.content_wrap').hide().eq(index).show()
+    function getUrlParam(key) {
+        // 获取参数
+        var url = window.location.search;
+        // 正则筛选地址栏
+        var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+        // 匹配目标参数
+        var result = url.substr(1).match(reg);
+        //返回参数值
+        return result ? decodeURIComponent(result[2]) : null;
+    }
+
     $('.tabs .tab').click(function(){
         $('.tabs .tab').children().removeClass('active');
         $(this).children().addClass('active');
-        // $('.content_wrap').hide();
-        // let index = $(this).index();
-        // $('.content_wrap').eq(index).show();
+        let value = $(this).children().html();
+        $('#defaultVal').html(value);
+        $('.container .content').hide();
+        let index = $(this).index();
+        $('.container .content').eq(index).show();
+        if(index==2||index==3){
+            $('#pages').hide();
+        }else {
+            $('#pages').show();
+        }
     })
     tempFun();
     function tempFun(){

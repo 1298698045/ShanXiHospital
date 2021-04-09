@@ -262,20 +262,23 @@
     display: none;
   }
   .flex_head_container .nav ul li .content .content_child {
-    width: 1230px;
+    width: 1264px;
     margin: 0 auto;
   }
   .flex_head_container .nav ul li .content .content_child .row {
     display: flex;
   }
   .flex_head_container .nav ul li .content .content_child .row .column {
-    margin-right: 60px;
+    /* margin-right: 60px; */
+    margin-right: 39px;
     padding: 40px 0;
   }
-  .flex_head_container .nav ul li .content .content_child .row .column h3 {
+  .flex_head_container .nav ul li .content .content_child .row .subject h3 {
     font-size: 30px;
     font-weight: bold;
     color: #ffffff;
+    margin-top: 40px;
+    margin-right: 43px;
   }
   .flex_head_container .nav ul li .content .content_child .row .column h5 {
     font-size: 20px;
@@ -287,14 +290,17 @@
     text-align: center;
     font-size: 15px;
     color: #cbaf9c;
-    margin-bottom: 23px;
+    margin-bottom: 12px;
   }
-  /* .flex_head_container .nav ul li .content .content_child .row .column .width {
-    width: 200px;
-    text-align: left;
-  } */
-  .flex_head_container .nav ul li .content .content_child .row .hover{
+  .flex_head_container .nav ul li .content .content_child .row .column .widths {
+    width: 300px!important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .flex_head_container .nav ul li .content .content_child .row .margin_child .lis_p:nth-child(1){
     margin-top: 15px;
+    /* padding-top: -15px; */
   }
   .flex_head_container .nav ul li .content .content_child .row .hover .lis_p:hover {
     color: #fff;
@@ -304,7 +310,7 @@
     background: url('../images/未标题-1.png') no-repeat;
   }
   .flex_head_container .nav ul li .content .content_child .row .border {
-    padding-right: 60px;
+    /* padding-right: 60px; */
     border-right: 1px solid #877061;
   }
   .flex_head_container .nav ul li .content .content_child .row .column_flex {
@@ -319,6 +325,56 @@
     transition: all .5s ease-in;
     margin-left: 8px;
     color: #fff;
+  }
+  .flex_head_container .nav ul li .content .content_child .row .column .rowLi{
+    display: flex;
+  }
+  .flex_head_container .nav ul li .content .content_child .row .column .rowLi .cel_li{
+    width: 100px;
+    font-size: 15px;
+    color: #cbaf9c;
+    margin-bottom: 12px;
+  }
+  .flex_head_container .nav ul li .content .content_child .row .column .rowLi .cel_li:hover{
+    transition: all .5s ease-in;
+    margin-left: 8px;
+    color: #fff;
+  }
+  .flex_head_container .nav ul li .content .content_child .row .hospitalJd{
+    display: flex;
+  }
+  .flex_head_container .nav ul li .content .content_child .row .hospitalJd .l_img{
+    width: 334px;
+    height: 184px;
+    background: #ccc;
+    margin-right: 46px;
+    background: url('../images/bgphoto.png') no-repeat;
+    background-size: 100% 100%;
+  }
+  .flex_head_container .nav ul li .content .content_child .row .hospitalJd .r_jd{
+    width: 334px;
+    height: 184px;
+  }
+  .flex_head_container .nav ul li .content .content_child .row .hospitalJd .r_jd .title{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    padding-bottom: 10px;
+  }
+  .flex_head_container .nav ul li .content .content_child .row .hospitalJd .r_jd .desc{
+    font-size: 14px;
+    color: #fff;
+  }
+  .flex_head_container .nav ul li .content .content_child .row .hospitalJd .r_jd .detail_btn{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    background: #6a3f24;
+    font-size: 14px;
+    color: #fff;
+    margin-top: 15px;
   }
   .flex_head_container .nav ul li .content.active {
     display: block;

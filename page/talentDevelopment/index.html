@@ -20,8 +20,8 @@
             <div class="Breadcrumb">
                 <span>您现在的位置:  </span>
                 <span class="black" id="homePage">首页 ></span>
-                <span class="black">科研教学 ></span>
-                <span>科研动态</span>
+                <span class="black">人才建设 ></span>
+                <span id="defaultVal">人才招聘</span>
             </div>
             <div class="container">
                 <div class="row_title">
@@ -37,20 +37,20 @@
                     <div class="left_icon icon">
                     </div>
                     <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide active">
+                        <div class="swiper-wrapper" id="swiperId">
+                            <div class="swiper-slide active" title="人才招聘">
                                 人才招聘
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="人才培养">
                                 人才培养
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="研究生教育">
                                 研究生教育
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="通知公告">
                                 通知公告
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="各类表单下载">
                                 各类表单下载
                             </div>
                         </div>
@@ -221,6 +221,23 @@
  
 <script src="../../utils/footer.js"></script>
 <script>
+    let name = getUrlParam("name");
+    $('#defaultVal').html(name)
+    console.log(name,'name')
+    $('#swiperId .swiper-slide').removeClass('active');
+    $('#swiperId .swiper-slide[title="'+name+'"]').addClass('active');
+    var index = $('#swiperId .swiper-slide[title="'+name+'"]').index();
+    $('.container .content').hide().eq(index).show()
+    function getUrlParam(key) {
+        // 获取参数
+        var url = window.location.search;
+        // 正则筛选地址栏
+        var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+        // 匹配目标参数
+        var result = url.substr(1).match(reg);
+        //返回参数值
+        return result ? decodeURIComponent(result[2]) : null;
+    }
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         slidesPerView: 5,
@@ -244,6 +261,8 @@
     $('.swiper-wrapper .swiper-slide').click(function(){
         $('.swiper-wrapper .swiper-slide').removeClass('active');
         $(this).addClass('active');
+        let value = $(this).html();
+        $('#defaultVal').html(value);
         $('.container .content').hide();
         $('.container .content').eq($(this).index()).show();
         if($(this).index()==0){

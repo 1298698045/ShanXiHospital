@@ -20,7 +20,7 @@
                 <span>您现在的位置:  </span>
                 <span class="black" id="homePage">首页 ></span>
                 <span class="black">信息公开 ></span>
-                <span>通知公告</span>
+                <span id="defaultVal">通知公告</span>
             </div>
             <div class="container">
                 <div class="row_title">
@@ -36,29 +36,29 @@
                     <div class="left_icon icon">
                     </div>
                     <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide active">
+                        <div class="swiper-wrapper" id="swiperId">
+                            <div class="swiper-slide active" title="通知公告">
                                 通知公告
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="招标信息">
                                 招标信息
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="规章制度">
                                 规章制度
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="院务、党务公开">
                                 院务、党务公开
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="用药信息">
                                 用药信息
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="医院资源">
                                 医院资源
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="医保新政">
                                 医保新政
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" title="下载专区">
                                 下载专区
                             </div>
                         </div>
@@ -231,15 +231,34 @@
 <script src="../../js/infoOpen.js"></script>
 <script>
     $(function(){
+        let name = getUrlParam("name");
+        $('#defaultVal').html(name)
+        console.log(name,'name')
+        $('#swiperId .swiper-slide').removeClass('active');
+        $('#swiperId .swiper-slide[title="'+name+'"]').addClass('active');
+        var index = $('#swiperId .swiper-slide[title="'+name+'"]').index();
+        $('.container .content').hide().eq(index).show()
+        function getUrlParam(key) {
+            // 获取参数
+            var url = window.location.search;
+            // 正则筛选地址栏
+            var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+            // 匹配目标参数
+            var result = url.substr(1).match(reg);
+            //返回参数值
+            return result ? decodeURIComponent(result[2]) : null;
+        }
+        
         $('.swiper-wrapper .swiper-slide').click(function(){
-        $('.swiper-wrapper .swiper-slide').removeClass('active');
-        $(this).addClass('active');
-        let value = $(this).html();
-        $('.container .content').hide()
-        $('.container .content').eq($(this).index()).show()
-            if($(this).index()==0){
-                funScroll();
-            }
+            $('.swiper-wrapper .swiper-slide').removeClass('active');
+            $(this).addClass('active');
+            let value = $(this).html();
+            $('#defaultVal').html(value);
+            $('.container .content').hide()
+            $('.container .content').eq($(this).index()).show()
+                if($(this).index()==0){
+                    funScroll();
+                }
         })
         funScroll();
         function funScroll(){

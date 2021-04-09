@@ -6,21 +6,37 @@ $(function () {
     //     $(this).addClass('active');
     //     $(this).parents('.content').removeClass('active');
     // })
+    // 科室导航
     $('#depart .tab').click(function () {
         $('#depart .tab').removeClass('active');
         $(this).addClass('active');
+        $('.departList .ulsWrap').hide();
+        $('.departList .ulsWrap').eq($(this).index()).show();
     });
+    // 科室导航-查看更多
+    $('#depart .more').click(function(){
+        window.location.href = '/page/department/department.html?index=3'
+    })
+    // 新闻
     $('#newsOne .back').hover(function(){
         $('#newsOne .back').removeClass('active');
         $(this).addClass('active');
+        $('.News .left_box .cont').hide();
+        $('.News .left_box .cont').eq($(this).index()).show()
     },function(){
         $(this).addClass('active');
     })
+    // 信息中心
     $('#newsTwo .back').hover(function(){
         $('#newsTwo .back').removeClass('active');
         $(this).addClass('active');
+        $('.right_box .cont').hide();
+        $('.right_box .cont').eq($(this).index()).show();
     },function(){
         $(this).addClass('active');
+    })
+    $('.right_box .cont .box').click(function(){
+        window.location.href = '/page/infoOpen/infoOpen.html?index=7'
     })
     // $('#newsOne .back').click(function () {
     //     $('#newsOne .back').removeClass('active');
@@ -34,11 +50,16 @@ $(function () {
     //     $('#edition .back_url').removeClass('active');
     //     $(this).addClass('active');
     // })
-    $('#uls .lis').hover(function () {
+    // 科室导航
+    $('.departList .uls .lis').hover(function () {
         $('#uls .lis').removeClass('active');
         $(this).addClass('active');
         console.log($(this).index())
-        $('.img_wrap').css("background","#ccc")
+        if($(this).index()==0){
+            $('.img_wrap img').attr('src','/images/depart.png');
+        }else {
+            $('.img_wrap img').attr('src','/images/back2.png');
+        }
     },function(){
         $(this).addClass('active');
     });
@@ -54,5 +75,9 @@ $(function () {
             };
         }
     }
+    // 跳转新闻详情
+    $('.News .left_box .row_wrap').click(function(){
+        window.location.href = '/page/journalism/detail.html?index='+6
+    })
     //    onMyLoad();
 });

@@ -1,9 +1,9 @@
 @media screen and (max-width: 1440px) {
   .swiper-button-next{
-    right: 15%!important;
+    right: 0%!important;
   }
   .swiper-button-prev{
-    left: 15%!important;
+    left: 0%!important;
   }
   .wrap .banner{
     height: 500px!important;
@@ -60,13 +60,13 @@
   .swiper-button-next, .swiper-button-prev{
     width: 55px!important;
     height: 17px!important;
-    top: 85%!important;
+    top: -100px!important;
   }
   .swiper-button-next{
-    right: 18%;
+    right: 0%;
   }
   .swiper-button-prev{
-    left: 18%;
+    left: 0%;
   }
   .wrap .center {
     padding: 72px 0;
@@ -143,6 +143,10 @@
   }
   .wrap .center .News .left_box .cont {
     margin-top: 35px;
+    display: none;
+  }
+  .wrap .center .News .left_box .cont.active{
+    display: block;
   }
   .wrap .center .News .left_box .cont .banner_wrap {
     display: flex;
@@ -156,7 +160,7 @@
     margin-right: 20px;
     overflow: hidden;
   } */
-  .wrap .center .News .left_box .cont .banner_wrap .swiper-container-child{
+  .wrap .center .News .left_box .cont .banner_wrap .swiper-container-child,.swiper-container-child{
     width: 750px;
     height: 100%;
     overflow: hidden;
@@ -274,6 +278,10 @@
   }
   .wrap .center .News .right_box .cont {
     margin-top: 35px;
+    display: none;
+  }
+  .wrap .center .News .right_box .cont.active{
+    display: block;
   }
   .wrap .center .News .right_box .cont .box {
     padding: 18px 16px;
@@ -329,8 +337,12 @@
   .wrap .center .department .cont .img_wrap {
     width: 425px;
     height: 310px;
-    background: url('../images/depart.png');
+    /* background: url('../images/depart.png'); */
     position: relative;
+  }
+  .wrap .center .department .cont .img_wrap img{
+    width: 100%;
+    height: 100%;
   }
   .wrap .center .department .cont .img_wrap .mantle{
     position: absolute;
@@ -397,10 +409,16 @@
     background: url('../images/tag.png') center left no-repeat;
     color: #815b3f;
   }
+  .wrap .center .department .cont .departList .ulsWrap{
+    display: none;
+  }
   .wrap .center .department .cont .departList .uls {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+  }
+  .wrap .center .department .cont .departList .ulsWrap.active{
+    display: block;
   }
   .wrap .center .department .cont .departList .uls .lis {
     width: 146px;

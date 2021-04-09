@@ -1,4 +1,23 @@
 $(function(){
+    let name = getUrlParam("name");
+    $('#defaultVal').html(name)
+    console.log(name,'name')
+    $('#swiperId .swiper-slide').removeClass('active');
+    $('#swiperId .swiper-slide[title="'+name+'"]').addClass('active');
+    var index = $('#swiperId .swiper-slide[title="'+name+'"]').index();
+    $('.container .content').hide().eq(index).show()
+    console.log($('#swiperId .swiper-slide[title="'+name+'"]'))
+    function getUrlParam(key) {
+        // 获取参数
+        var url = window.location.search;
+        // 正则筛选地址栏
+        var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+        // 匹配目标参数
+        var result = url.substr(1).match(reg);
+        //返回参数值
+        return result ? decodeURIComponent(result[2]) : null;
+    }
+    
     $(function () {
         var swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
@@ -25,6 +44,7 @@ $(function(){
         $('.swiper-wrapper .swiper-slide').removeClass('active');
         $(this).addClass('active');
         let value = $(this).html();
+        $('#defaultVal').html(value);
         console.log(value);
         //if(value=='停诊信息'){}
         console.log()
@@ -32,6 +52,8 @@ $(function(){
         $('.container .content').eq($(this).index()).show()
         if($(this).index()==2){
             fun();
+        }else if($(this).index()==3){
+            funScroll();
         }
     })
     $('#tab_child p').click(function(){
@@ -82,6 +104,37 @@ $(function(){
             //$('.l_text').css('top',-y/scale+'px');
         }
     }
+
+    function funScroll(){
+        //设置y轴的增量 
+        var y = 0;
+        $('#zyzn .article').height(500);
+        //确定每次滚动滚轮右侧滚动条移动的距离
+        var leftheight = -$('#zyzn .scrollBarTwo').height() + $('#zyzn .article').height();
+        var rightheight = $('#zyzn .sliderWrapTwo').height() - $('#zyzn .sliderWrapTwo .sliderTwo').height();
+        var ysteplength = (rightheight/leftheight)*50;
+        var wrapDiv = document.querySelector('#zyzn .right_wrap');
+        wrapDiv.onmousewheel = function(e){
+            e.preventDefault();
+            var events = event || e;
+            if(events.wheelDelta < 0){
+                y += ysteplength;
+            }else if(events.wheelDelta > 0){
+                y -= ysteplength;
+            }
+            if( y <= 0){
+                y = 0;
+            }
+            if(y >= rightheight){
+                //滑块最多滑到最底部 
+                y = rightheight
+            }
+            var scale = y / rightheight;
+            $('#zyzn .sliderWrapTwo .sliderTwo').css('top',y+'px')
+            $('#zyzn .article').css('top',-scale * leftheight);
+        }
+    }
+
     new Pagination({
         element: '#pages',
         type: 1,

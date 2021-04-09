@@ -87,6 +87,12 @@
       background: url('../images/tab_child_active.png') no-repeat;
       background-size: 100% 100%;
     }
+    .wrap .center .container .content.active{
+      display: block;
+    }
+    .wrap .center .container .content{
+      display: none;
+    }
     .wrap .center .container .content .dynamic{
         display: flex;
         flex-wrap: wrap;
