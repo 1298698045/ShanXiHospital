@@ -19,8 +19,7 @@
             <div class="Breadcrumb">
                 <span>您现在的位置:  </span>
                 <span class="black" id="homePage">首页 ></span>
-                <span class="black">患者服务 ></span>
-                <span>出诊信息</span>
+                <span>特色诊疗</span>
             </div>
             <div class="content">
                 <div class="row_title">
@@ -32,7 +31,7 @@
                         <img src="../../images/02.png" alt="">
                     </div>
                 </div>
-                <div class="boxCont">
+                <div class="boxCont" id="ysbz">
                     <p class="title">优势病种</p>
                     <ul class="box">
                         <li>
@@ -84,7 +83,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="boxCont">
+                <div class="boxCont" id="zdks">
                     <p class="title">重点科室</p>
                     <div class="label_box">
                         <div class="label">
@@ -171,7 +170,7 @@
                         <div class="label none"></div>
                     </div>
                 </div>
-                <div class="boxCont">
+                <div class="boxCont" id="ysbz_two">
                     <p class="title">特色医疗</p>
                     <div class="label_box">
                         <div class="label">
@@ -296,7 +295,13 @@
 <script src="../../utils/footer.js"></script>
 <script>
     $(function(){
-        $('.label').click(function(){
+        $('#ysbz ul li').click(function(){
+            window.location.href = '/page/characteristic/detail.html?index='+2
+        })
+        $('#zdks .label').click(function(){
+            window.location.href = '/page/department/detail.html?index=3'
+        })
+        $('#ysbz_two .label').click(function(){
             window.location.href = '/page/characteristic/detail.html?index='+2
         })
     })

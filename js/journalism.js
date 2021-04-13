@@ -1,4 +1,8 @@
 $(function(){
+    $('#return').click(function(){
+        window.location.href = '/page/journalism/journalism.html?index=6&name=院内新闻';
+        $('#defaultVal').html('院内新闻')
+    })
     let name = getUrlParam("name");
     $('#defaultVal').html(name);
     $('.tabs .tab p').removeClass('active');
@@ -34,11 +38,95 @@ $(function(){
         $(this).addClass('active');
         $(this).children('.desc_wrap').children('.title').addClass('active');
     },function(){
-        $(this).addClass('active');
+        $('#news .box').removeClass('active');
+        $('#news .box .desc_wrap').children('.title').removeClass('active');
     });
 })
+let str = '';
+for(let i=0; i < 9; i++){
+    str += '<div class="box">'+
+'                    <div class="box_child">'+
+'                        <div class="img">'+
+'                            <div class="timeBox">'+
+'                                <p class="time">04</p>'+
+'                                <p class="year">2020-12</p>'+
+'                            </div>'+
+'                        </div>'+
+'                        <div class="textWrap">'+
+'                            <p class="text">'+
+'                                山西省中医院党委召开巡视工作部署会...'+
+'                            </p>'+
+'                        </div>'+
+'                    </div>'+
+'                </div>';
+}
+$('#memorabiliaId').append(str);
+let videoStr = '';
+for(let i=0; i < 9; i++){
+    videoStr += '<div class="box">'+
+'                    <div class="box_child">'+
+'                        <div class="img">'+
+'                            <p class="play_icon"></p>'+
+'                        </div>'+
+'                        <div class="textWrap">'+
+'                            <p class="text">'+
+'                                大爱无言惠苍生'+
+'                            </p>'+
+'                        </div>'+
+'                    </div>'+
+'                </div>';
+}
+$('#videoId').append(videoStr);
 new Pagination({
     element: '#pages',
+    type: 1,
+    pageIndex: 1,
+    pageSize: 10,
+    pageCount: 5,
+    total: 100,
+    jumper: true,
+    singlePageHide: false,
+    prevText: '',
+    nextText: '',
+    disabled: true,
+    currentChange: function(index) {
+        console.log(index);
+    }
+});
+new Pagination({
+    element: '#pageTwo',
+    type: 1,
+    pageIndex: 1,
+    pageSize: 10,
+    pageCount: 5,
+    total: 100,
+    jumper: true,
+    singlePageHide: false,
+    prevText: '',
+    nextText: '',
+    disabled: true,
+    currentChange: function(index) {
+        console.log(index);
+    }
+});
+new Pagination({
+    element: '#pageThree',
+    type: 1,
+    pageIndex: 1,
+    pageSize: 10,
+    pageCount: 5,
+    total: 100,
+    jumper: true,
+    singlePageHide: false,
+    prevText: '',
+    nextText: '',
+    disabled: true,
+    currentChange: function(index) {
+        console.log(index);
+    }
+});
+new Pagination({
+    element: '#videoPages',
     type: 1,
     pageIndex: 1,
     pageSize: 10,

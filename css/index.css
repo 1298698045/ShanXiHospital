@@ -189,6 +189,9 @@
   .swiper-pagination-bullet-active{
     background: #815b3f;
   }
+  .wrap .center .News .left_box .cont .banner_wrap{
+    cursor: pointer;
+  }
   .wrap .center .News .left_box .cont .banner_wrap .r_desc {
     width: 370px;
   }
@@ -196,6 +199,10 @@
     font-size: 22px;
     font-weight: bold;
     color: #333333;
+  }
+  .wrap .center .News .left_box .cont .banner_wrap .r_desc .title:hover{
+    color: #815b3f;
+    cursor: pointer;
   }
   .wrap .center .News .left_box .cont .banner_wrap .r_desc .time {
     font-size: 14px;

@@ -522,6 +522,10 @@ $(function(){
                     <p>远程</p>
                     <p>医疗</p>
                 </div>
+                <div class="qrCode">
+                    <i></i>
+                    <div class="imgs"></div>
+                </div>
             </div>
             <div class="box">
                 <div class="icon_img">
@@ -530,6 +534,10 @@ $(function(){
                 <div class="w_text">
                     <p>远程</p>
                     <p>医疗</p>
+                </div>
+                <div class="qrCode">
+                    <i></i>
+                    <div class="imgs"></div>
                 </div>
             </div>
         </div>
@@ -824,11 +832,17 @@ $(function(){
     })
     // 新闻
     $('#journalism').children('span').click(function(){
+        $('#journalism .content').css({
+            'display':'none'
+        })
         let val = encodeURI('院内新闻');
         window.location.href = '/page/journalism/journalism.html?index='+6+'&name='+val
     })
     // 信息公开
     $('#infoPublic').children('span').click(function(){
+        $('#infoPublic .content').css({
+            'display':'none'
+        })
         let val = encodeURI('通知公告');
         window.location.href = '/page/infoOpen/infoOpen.html?index='+7+'&name='+val;
     })
@@ -837,15 +851,24 @@ $(function(){
     })
     // 医院概况
     $('#hostipalSurvey').children('span').click(function(){
+        $('#hostipalSurvey .content').css({
+            'display':'none'
+        })
         let val = encodeURI('医院简介');
         window.location.href = '/page/hospitalSurvey/hospitalSurvey.html?index='+5+'&name='+val;
     })
     // 科研教学
     $('#teaching').children('span').click(function(){
+        $('#teaching .content').css({
+            'display':'none'
+        })
         let val = encodeURI('科研动态');
         window.location.href = '/page/teaching/teaching.html?index='+8+'&name='+val
     })
     $('#talentDevelopment').children('span').click(function(){
+        $('#talentDevelopment .content').css({
+            'display':'none'
+        })
         let val = encodeURI('人才招聘');
         window.location.href = '/page/talentDevelopment/index.html?index='+9+'&name='+val;
     })
@@ -861,6 +884,9 @@ $(function(){
       window.location.href = '/page/patient/index.html?index='+1+'&name='+val;
     })
     $('#patient').children('span').click(function(){
+        $('#patient .content').css({
+            'display':'none'
+        })
         let val = encodeURI('出诊信息');
         window.location.href = '/page/patient/index.html?index='+1+'&name='+val;
     })

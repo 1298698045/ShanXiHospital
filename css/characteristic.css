@@ -12,9 +12,9 @@
   }
   .wrap .center .Breadcrumb span {
     font-size: 14px;
-    color: #999999;
+    color: #333;
   }
-  .wrap .center .Breadcrumb span:hover {
+  .wrap .center .Breadcrumb .black:hover {
     color: #815b3f;
     cursor: pointer;
   }

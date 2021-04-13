@@ -65,7 +65,7 @@
                 <div class="classWrap">
                     <div class="boxTop">
                         <p class="label">所在科室：</p>
-                        <div class="rightBox">
+                        <div class="rightBox"  id="departTabs">
                             <div class="tabs">
                                 <p class="tab active">
                                     <span>重点科室</span>
@@ -92,52 +92,97 @@
                                     <span>体检中心</span>
                                 </p>
                             </div>
-                            <div class="tabContent">
-                                <p class="depart_text">
-                                    肿瘤科
-                                </p>
-                                <p class="depart_text">
-                                    脾胃病科 
-                                </p>
-                                <p class="depart_text">
-                                    肾一科
-                                </p>
-                                <p class="depart_text">
-                                    肾二科
-                                </p>
-                                <p class="depart_text">
-                                    肾三科
-                                </p>
-                                <p class="depart_text active">
-                                    妇科
-                                </p>
-                                <p class="depart_text">
-                                    肝病科
-                                </p>
-                                <p class="depart_text">
-                                    内分泌科
-                                </p>
-                                <p class="depart_text">
-                                    心病一科
-                                </p>
-                                <p class="depart_text">
-                                    心病二科
-                                </p>
-                                <p class="depart_text">
-                                    风湿免疫科
-                                </p>
-                                <p class="depart_text">
-                                    肺病科
-                                </p>
-                                <p class="depart_text">
-                                    乳腺科
-                                </p>
+                            <div class="block" style="display: block;">
+                                <div class="tabContent"  id="szks">
+                                    <p class="depart_text">
+                                        肿瘤科
+                                    </p>
+                                    <p class="depart_text">
+                                        脾胃病科 
+                                    </p>
+                                    <p class="depart_text">
+                                        肾一科
+                                    </p>
+                                    <p class="depart_text">
+                                        肾二科
+                                    </p>
+                                    <p class="depart_text">
+                                        肾三科
+                                    </p>
+                                    <p class="depart_text">
+                                        妇科
+                                    </p>
+                                    <p class="depart_text">
+                                        肝病科
+                                    </p>
+                                    <p class="depart_text">
+                                        内分泌科
+                                    </p>
+                                    <p class="depart_text">
+                                        心病一科
+                                    </p>
+                                    <p class="depart_text">
+                                        心病二科
+                                    </p>
+                                    <p class="depart_text">
+                                        风湿免疫科
+                                    </p>
+                                    <p class="depart_text">
+                                        肺病科
+                                    </p>
+                                    <p class="depart_text">
+                                        乳腺科
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="block">
+                                <div class="tabContent">
+                                    <p class="depart_text">
+                                        妇科
+                                    </p>
+                                    <p class="depart_text">
+                                        脾胃病科 
+                                    </p>
+                                    <p class="depart_text">
+                                        肾一科
+                                    </p>
+                                    <p class="depart_text">
+                                        肾二科
+                                    </p>
+                                    <p class="depart_text">
+                                        肾三科
+                                    </p>
+                                    <p class="depart_text">
+                                        妇科
+                                    </p>
+                                    <p class="depart_text">
+                                        肝病科
+                                    </p>
+                                    <p class="depart_text">
+                                        内分泌科
+                                    </p>
+                                    <p class="depart_text">
+                                        心病一科
+                                    </p>
+                                    <p class="depart_text">
+                                        心病二科
+                                    </p>
+                                    <p class="depart_text">
+                                        风湿免疫科
+                                    </p>
+                                    <p class="depart_text">
+                                        肺病科
+                                    </p>
+                                    <p class="depart_text">
+                                        乳腺科
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="boxBottom">
-                        <p class="label">所在科室：</p>                                                           
-                        <div class="tabContent">
+                        <p class="label">专家职称：</p>                                                           
+                        <div class="tabContent" id="zjzc">
                             <p class="depart_text">
                                 名老专家
                             </p>
@@ -153,7 +198,7 @@
                             <p class="depart_text">
                                 医师
                             </p>
-                            <p class="depart_text active">
+                            <p class="depart_text">
                                 主任护师
                             </p>
                             <p class="depart_text">
@@ -172,15 +217,15 @@
                     <p class="label">
                         您已经选择：
                     </p>
-                    <ul>
-                        <li>
+                    <ul id="paramsId">
+                        <!-- <li>
                             内分泌科
                             <i class="close"></i>
                         </li>
                         <li>
                             主任医师
                             <i class="close"></i>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
                 <div class="headPhoto">
@@ -203,9 +248,53 @@
 <script src="../../js/pagination.js"></script>
 <script>
     $(function(){
-        $('ul li .close').click(function(){
+        $('#paramsId .close').click(function(){
             $(this).parent().remove();
         })
+        $('#departTabs .tab').click(function(){
+            $('#departTabs .tab').removeClass('active');
+            $(this).addClass('active');
+            $('#departTabs .block').hide();
+            $('#departTabs .block').eq($(this).index()).show();
+        })
+        let arr = [];
+        $('#departTabs .tabContent .depart_text').click(function(){
+            $('#departTabs .tabContent .depart_text').removeClass('active');
+            $(this).addClass('active');
+            let name = $(this).html();
+            arr.push(name);
+            arr =  uniq(arr);
+            arrFun(arr);
+        })
+        $('#zjzc .depart_text').click(function(){
+            $('#zjzc .depart_text').removeClass('active');
+            $(this).addClass('active');
+            let name = $(this).html();
+            arr.push(name);
+            arr =  uniq(arr);
+            arrFun(arr);
+        })
+        function arrFun(arr){
+            let modouleStr = '';
+            for(let i = 0; i < arr.length; i++){
+                modouleStr = '<li>'+
+                        arr[i] +
+'                        <i class="close"></i>'+
+'                    </li>';
+            }
+            
+            $('#paramsId').append(modouleStr);
+        }
+        function uniq(array){
+            var temp = []; //一个新的临时数组
+            for(var i = 0; i < array.length; i++){
+                if(temp.indexOf(array[i]) == -1){
+                    temp.push(array[i]);
+                }
+            }
+            return temp;
+        }
+
     })
 </script>
 </html>

@@ -277,7 +277,17 @@
         margin-left: 50px;
       }
       .wrap  .container .content .NoticeBody .right_wrap .article .subject{
+        height: 425px;
+        overflow: hidden;
         margin-left: 30px;
+      }
+
+      /* 滚动条 */
+      .wrap  .container .content .NoticeBody .right_wrap .article .subject::-webkit-scrollbar-thumb {
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;      
+        background: linear-gradient(red,orange); 
       }
       .wrap  .container .content .NoticeBody .right_wrap .article .subject .name{
         font-size:16px;
@@ -296,4 +306,29 @@
         line-height: 2;
         color: #333333;
         font-size:14px;
+      }
+
+      /* 人才建设 */
+      .wrap .center .container .content .box {
+        /* margin: 28px 0; */
+        margin: 76px 0 10px 0;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .wrap .center .container .content .box p {
+        width: 24%;
+        line-height: 46px;
+        font-size: 16px;
+        color: #086252;
+        text-align: center;
+        background: url('../images/tab2.png') no-repeat;
+      }
+      .wrap .center .container .content .box p.active {
+        color: #feffff;
+        background: url('../images/tab.png') no-repeat;
+      }
+      .wrap .center .container .content .insurance{
+        display: none;
       }

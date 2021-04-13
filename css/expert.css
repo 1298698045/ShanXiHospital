@@ -157,6 +157,9 @@
   padding-bottom: 15px;
   border-bottom: 4px solid transparent;
 }
+.wrap .center .content .classWrap .boxTop .rightBox .block{
+  display: none;
+}
 .wrap .center .content .classWrap .boxTop .rightBox .tabContent{
   width: 950px;
   display: flex;

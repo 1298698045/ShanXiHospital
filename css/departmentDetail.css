@@ -17,8 +17,10 @@
   .wrap .maxImage{
     width: 100%;
     height: 460px;
-    background: url('../images/bannerTwo.png') no-repeat;
-    background-size: 100% 100%;
+    background: url('../images/bannerTwo.jpg') no-repeat;
+    /* background-size: 100% 100%; */
+    background-size: cover;
+    background-position: center;
   }
   .wrap .maxImage .max_img_content{
     width: 1230px;

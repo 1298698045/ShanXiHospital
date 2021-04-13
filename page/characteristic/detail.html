@@ -19,7 +19,7 @@
             <div class="Breadcrumb">
                 <span>您现在的位置:  </span>
                 <span class="black" id="homePage">首页 ></span>
-                <span class="black">特色诊疗  ></span>
+                <span class="black" id="return">特色诊疗  ></span>
                 <span>肿瘤科中医特色治疗</span>
             </div>
             <div class="content">
@@ -74,6 +74,9 @@
 <script src="../../utils/footer.js"></script>
 <script>
     $(function(){
+        $('#return').click(function(){
+            window.location.href = '/page/characteristic/characteristic.html?index=2';
+        })
         function tempFun(){
             let template = '';
             for(let i = 0; i < 6 ; i++){

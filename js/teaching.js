@@ -1,4 +1,8 @@
 $(function(){
+    $('#return').click(function(){
+        window.location.href = '/page/teaching/teaching.html?index=8&name=科研动态';
+        $('#defaultVal').html('科研动态')
+    })
     let name = getUrlParam("name");
     console.log(name,'name')
     $('#defaultVal').html(name);

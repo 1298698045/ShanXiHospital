@@ -59,6 +59,8 @@ $(function(){
     $('#tab_child p').click(function(){
         $('#tab_child p').removeClass('active');
         $(this).addClass('active');
+        $('#visitInfo .blockWrap').hide();
+        $('#visitInfo .blockWrap').eq($(this).index()).show();
     })
     function fun(){
         //设置滑块的高度 
@@ -155,5 +157,31 @@ $(function(){
     $('#traffic .tabs .tab').click(function(){
         $('#traffic .tabs .tab').removeClass('active');
         $(this).addClass('active');
+    })
+    // 就医须知
+    $('#jyxz_id .row_back').click(function(){
+        $('#jyxz_id .row_back').removeClass('active');
+        $('#jyxz_id .row_back span').removeClass('active');
+        $(this).addClass('active');
+        $(this).children('span').addClass('active');
+        $('#jyxz_id .rightCont').hide();
+        $('#jyxz_id .rightCont').eq($(this).index()).show();
+    })
+    $('#zyzn .row_back').click(function(){
+        $('#zyzn .row_back').removeClass('active');
+        $('#zyzn .row_back span').removeClass('active');
+        $(this).addClass('active');
+        $(this).children('span').addClass('active');
+        $('#zyzn .rightCont').hide();
+        $('#zyzn .rightCont').removeClass('active');
+        $('#zyzn .rightCont').eq($(this).index()).show();
+        $('#zyzn .rightCont').eq($(this).index()).addClass('active');
+    })
+    // 医保指南
+    $('#ybzn_tab_child p').click(function(){
+        $('#ybzn_tab_child p').removeClass('active');
+        $(this).addClass('active');
+        $('#ybzn_id .insurance').hide();
+        $('#ybzn_id .insurance').eq($(this).index()).show();
     })
 })
