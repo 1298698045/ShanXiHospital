@@ -1,8 +1,4 @@
 $(function(){
-    $('#return').click(function(){
-        window.location.href = '/page/journalism/journalism.html?index=6&name=院内新闻';
-        $('#defaultVal').html('院内新闻')
-    })
     let name = getUrlParam("name");
     $('#defaultVal').html(name);
     $('.tabs .tab p').removeClass('active');
@@ -21,26 +17,18 @@ $(function(){
     }
 
     $('.tabs .tab').click(function(){
-        $('.tabs .tab').children().removeClass('active');
-        $(this).children().addClass('active');
-        let value = $(this).children().html();
-        $('#defaultVal').html(value);
-        $('.content_wrap').hide();
-        let index = $(this).index();
-        $('.content_wrap').eq(index).show();
+        if($(this).index()==0){
+            window.location.href = '/page/chineseMedicine/index.html?index=10';
+        }else {
+            $('.tabs .tab').children().removeClass('active');
+            $(this).children().addClass('active');
+            let value = $(this).children().html();
+            $('#defaultVal').html(value);
+            $('.content_wrap').hide();
+            let index = $(this).index();
+            $('.content_wrap').eq(index).show();
+        }
     })
-    $('#news .box').click(function(){
-        window.location.href = '../journalism/detail.html?index='+6;
-    })
-    $('#news .box').hover(function () {
-        $('#news .box').removeClass('active');
-        $('#news .box .desc_wrap').children('.title').removeClass('active');
-        $(this).addClass('active');
-        $(this).children('.desc_wrap').children('.title').addClass('active');
-    },function(){
-        $('#news .box').removeClass('active');
-        $('#news .box .desc_wrap').children('.title').removeClass('active');
-    });
 })
 let str = '';
 for(let i=0; i < 9; i++){
@@ -78,38 +66,6 @@ for(let i=0; i < 9; i++){
 }
 $('#videoId').append(videoStr);
 new Pagination({
-    element: '#pages',
-    type: 1,
-    pageIndex: 1,
-    pageSize: 10,
-    pageCount: 5,
-    total: 100,
-    jumper: true,
-    singlePageHide: false,
-    prevText: '',
-    nextText: '',
-    disabled: true,
-    currentChange: function(index) {
-        console.log(index);
-    }
-});
-new Pagination({
-    element: '#pageTwo',
-    type: 1,
-    pageIndex: 1,
-    pageSize: 10,
-    pageCount: 5,
-    total: 100,
-    jumper: true,
-    singlePageHide: false,
-    prevText: '',
-    nextText: '',
-    disabled: true,
-    currentChange: function(index) {
-        console.log(index);
-    }
-});
-new Pagination({
     element: '#pageThree',
     type: 1,
     pageIndex: 1,
@@ -141,9 +97,3 @@ new Pagination({
         console.log(index);
     }
 });
-$('#memorabiliaId .box').click(function(){
-    window.location.href = '/page/characteristic/detail.html?index=2';
-})
-$('#videoId .box').click(function(){
-    window.location.href = '/page/hospitalSurvey/videoDetail.html?index=5';
-})

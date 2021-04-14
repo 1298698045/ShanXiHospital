@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>中医特色</title>
+    <link rel="stylesheet" href="../../css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="../../css/public.css">
+    <link rel="stylesheet" href="../../css/head.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/displayBlock.css">
+    <link rel="stylesheet" href="/css/pagination.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="headerWrap"></div>
+        <div class="posBoxWrap"></div>
+        <div class="center">
+            <div class="Breadcrumb">
+                <span>您现在的位置:  </span>
+                <span class="black" id="homePage">首页 ></span>
+                <span class="black">中医特色 ></span>
+                <span class="black">中医药博物馆 ></span>
+                <span>陈列展示</span>
+            </div>
+            <div class="row_title">
+                <div class="imgs">
+                    <img src="../../images/01.png" alt="">
+                </div>
+                <p class="name">陈列展示</p>
+                <div class="imgs">
+                    <img src="../../images/02.png" alt="">
+                </div>
+            </div>
+            <div class="features marginAuto">
+                <div class="dynamic" id="featuresId">
+                </div>
+            </div>
+            <div id="pages">
+
+            </div>
+        </div>
+        <div class="footer_wrap">
+
+        </div>
+        
+        <div class="modal_modal">
+            <div class="popupWrap">
+                <div class="block">
+                    <div class="swiper-container_modal">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="/images/yyfm_1.1.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/images/yyfm_1.1.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/images/yyfm_1.1.png" alt="">
+                            </div>
+                        </div>
+                        <div >
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="title">陈列展示</p>
+                        <p class="cancel" id="modal_cancel">
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/swiper-3.4.2.min.js"></script>
+<script src="../../utils/head.js"></script>
+<script src="../../js/pagination.js"></script>
+<script src="../../utils/footer.js"></script>
+<script>
+    $(function(){
+        // 陈列展示
+        let list = [
+            {
+                imgUrl:"/images/t5.jpg",
+                name:"山西中医博物馆"
+            },
+            {
+                imgUrl:"/images/t6.jpg",
+                name:"山西中医颂"
+            },
+            {
+                imgUrl:"/images/t7.jpg",
+                name:"人文始祖伏羲、神农展厅"
+            },
+            {
+                imgUrl:"/images/t5.jpg",
+                name:"山西中医博物馆"
+            },
+            {
+                imgUrl:"/images/t6.jpg",
+                name:"山西中医颂"
+            },
+            {
+                imgUrl:"/images/t7.jpg",
+                name:"人文始祖伏羲、神农展厅"
+            },
+            {
+                imgUrl:"/images/t5.jpg",
+                name:"山西中医博物馆"
+            },
+            {
+                imgUrl:"/images/t6.jpg",
+                name:"山西中医颂"
+            },
+            {
+                imgUrl:"/images/t7.jpg",
+                name:"人文始祖伏羲、神农展厅"
+            }
+        ]
+        let strfeatures = '';
+        for(let i=0; i < list.length; i++){
+            strfeatures += '<div class="box">'+
+'                    <div class="box_child">'+
+'                        <div class="img">'+
+'                         <img class="imgurl" src="'+ list[i].imgUrl +'"/>  '+    
+'                            <div class="modal">'+
+'                                <p class="add_icon"></p>    '+
+'                            </div>'+
+'                        </div>'+
+'                        <div class="text_Wrap">'+
+'                            <p class="text">'
+                                + list[i].name +
+'                            </p>'+
+'                        </div>'+
+'                    </div>'+
+'                </div>';
+        }
+        $('#featuresId').append(strfeatures);
+        var swiperTwo = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            slidesPerView: 3,
+            paginationClickable: true
+        });
+        $('#featuresId .box .add_icon').click(function(){
+            $('.modal_modal').show();
+        })
+        $('#modal_cancel').click(function(){
+            $('.modal_modal').hide();
+        })
+        new Pagination({
+            element: '#pages',
+            type: 1,
+            pageIndex: 1,
+            pageSize: 10,
+            pageCount: 5,
+            total: 100,
+            jumper: true,
+            singlePageHide: false,
+            prevText: '',
+            nextText: '',
+            disabled: true,
+            currentChange: function(index) {
+                console.log(index);
+            }
+        });
+    })
+</script>
+</html>

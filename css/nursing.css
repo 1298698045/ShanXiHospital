@@ -17,7 +17,7 @@
   .wrap .maxImage{
     width: 100%;
     height: 460px;
-    background: url('../images/bannerTwo.jpg') no-repeat;
+    background: url('../images/bannerTwo_5.jpg') no-repeat;
     /* background-size: 100% 100%; */
     background-size: cover;
     background-position: center;
@@ -40,21 +40,13 @@
     cursor: pointer;
   }
   .wrap .maxImage .max_img_content .layOut_panel{
-    display: flex;
-    justify-content: space-between;
     margin-top: 10px;
-  }
-  .wrap .maxImage .max_img_content .layOut_panel .l_img{
-    width: 634px;
-    height: 400px;
-    background: url('../images/women.png') no-repeat;
-    background-size:100% 100%;
+    overflow: hidden;
   }
   .wrap .maxImage .max_img_content .layOut_panel .r_cont_wrap{
-    /* width: 475px;
-    height: 400px; */
-    overflow: hidden;
-    
+    /* width: 475px; */
+    height: 400px;
+    float: right;
   }
   .wrap .maxImage .max_img_content .layOut_panel .r_cont_wrap .flex{
     display: flex;
@@ -90,7 +82,7 @@
   }
   .wrap .maxImage .max_img_content .layOut_panel .r_cont_wrap .article{
     /* width: 295px; */
-    /* height: 186px; */
+    height: 186px;
     cursor: pointer;
     margin-left: 20px;
   }
@@ -105,7 +97,7 @@
     word-wrap: break-word;
     word-break:break-all;
     line-height: 1; */
-    height: 238px;
+    height: 308px;
     float: left;
     font-size: 16px;
     color: #ffffff;
@@ -149,7 +141,6 @@
   .wrap .maxImage .max_img_content .layOut_panel .r_cont_wrap .rowColumn{
     display: flex;
     margin-top: 53px;
-    float: right;
   }
   .wrap .maxImage .max_img_content .layOut_panel .r_cont_wrap .rowColumn .box{
     width: 85px;  
@@ -224,11 +215,6 @@
   }
   .wrap .ysImageWrap .ys_container .rightBox .boxWrap{
     width: 1090px;
-    position: relative;
-    height: 344px;
-    overflow: hidden;
-  }
-  .wrap .ysImageWrap .ys_container .rightBox .boxWrap .scrollbox{
     overflow: hidden;
     display: flex;
     position: absolute;
@@ -249,10 +235,9 @@
   }
   .wrap .ysImageWrap .ys_container .rightBox .boxWrap .box .boxBlock{
     display: flex;
-    
   }
   .wrap .ysImageWrap .ys_container .rightBox .boxWrap .box .text{
-    /* column-count: 8;
+    column-count: 8;
     column-gap: 0px;
     font-size: 14px;
     color: #666666;
@@ -260,13 +245,7 @@
     word-wrap: break-word;
     word-break: break-all;
     line-height: 1;
-    overflow: hidden; */
-    height: 308px;
-    float: left;
-    font-size: 14px;
-    color: #666666;
-    letter-spacing: 2px;
-    writing-mode: vertical-rl;
+    overflow: hidden;
   }
   .wrap .ysImageWrap .ys_container .rightBox .boxWrap .box .subject{
     width: 10px;
@@ -276,7 +255,6 @@
     word-wrap: break-word;
     word-break: break-all;
     line-height: 1;
-    margin-left: 10px;
   }
   .wrap .ysImageWrap .ys_container .rightBox .sliderWrap{
     width: 100%;
@@ -285,8 +263,8 @@
     background-size: 100% 100%;
     margin-top: 41px;
     position: relative;
+    top: 344px;
     z-index: 9999;
-    cursor: pointer;
   }
   .wrap .ysImageWrap .ys_container .rightBox .sliderWrap .slider{
     width: 27px;
@@ -295,6 +273,18 @@
     position: absolute;
     left: 2px;
     top: -7px;
+    cursor: pointer;
+  }
+  .wrap .center {
+    width: 1230px;
+    margin: 20px auto;
+  }
+  .wrap .center .Breadcrumb span {
+    font-size: 14px;
+    color: #999999;
+  }
+  .wrap .center .Breadcrumb span:hover {
+    color: #333333;
     cursor: pointer;
   }
   .wrap .center {
@@ -549,70 +539,50 @@
   .wrap .center .headPhoto .box .back_row .cel_t:hover{
     background: url('../images/right_name_active.png') no-repeat;
   }
-  .wrap .center .memorabilia .dynamic {
+  .wrap .center .dynamic {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 0 51px 0;
+    margin: 20px 0 100px 0;
   }
-  .wrap .center .memorabilia .dynamic .box {
-    width: 390px;
-    height: 310px;
-    background: url('../images/memorabilia_box.png') no-repeat;
+  .wrap .center .dynamic .box {
+    width: 290px;
+    height: 260px;
+    background: url('../images/c_time_box.png') no-repeat;
     padding: 5px;
     box-sizing: border-box;
-    margin-bottom: 30px;
-    cursor: pointer;
   }
-  .wrap .center .memorabilia .dynamic .box .box_child{
+  .wrap .center .dynamic .box .box_child{
     width: 100%;
     height: 100%;
-    background: #fff;
+    background: #ccc;
   }
-  .wrap .center .memorabilia .dynamic .box .box_child .img{
+  .wrap .center .dynamic .box .box_child .img{
     width: 100%;
-    height: 225px;
+    height: 166px;
     background: url('../images/c_img1.1.png') no-repeat;
-    background-size: cover;
-    padding-top: 1px;
   }
-  .wrap .center .memorabilia .dynamic .box .box_child .img .timeBox{
+  .wrap .center .dynamic .box .box_child .img .timeBox{
     width: 54px;
     height: 54px;
-    background: url('../images/g_box.png') no-repeat;
+    background: url('../images/tuceng.png') no-repeat;
     text-align: center;
-    margin-top: 23px;
-    margin-left: 19px;
   }
-  .wrap .center .memorabilia .dynamic .box:hover  .box_child .img .timeBox{
-      background: url('/images/g_box_active.png') no-repeat;
-  }
-  .wrap .center .memorabilia .dynamic .box:hover  .box_child .text{
-      color: #815b3f;
-  }
-  .wrap .center .memorabilia .dynamic .box .box_child .img .timeBox .time{
+  .wrap .center .dynamic .box .box_child .img .timeBox .time{
     font-size: 24px;
     color: #fff;
   }
-  .wrap .center .memorabilia .dynamic .box .box_child .img .timeBox .year{
+  .wrap .center .dynamic .box .box_child .img .timeBox .year{
     font-size: 12px;
     color: #ffffff;
   }
-  .wrap .center .memorabilia .dynamic .box .box_child .textWrap{
-    /* padding: 21px 18px; */
+  .wrap .center .dynamic .box .box_child .textWrap{
+    padding: 21px 18px;
     font-size: 16px;
     box-sizing: border-box;
     background: #fff;
   }
-  .wrap .center .memorabilia .dynamic .box .box_child .textWrap .text{
-    margin: 26px 35px;
-    width: 310px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  .wrap .center .memorabilia .dynamic .box .boxSolid{
+  .wrap .center .dynamic .box .boxSolid{
     width: 100%;
     height: 100%;
     border: 1px solid #815b3f;
@@ -620,44 +590,44 @@
     background: #fff;
     padding: 21px 18px;
   }
-  .wrap .center .memorabilia .dynamic .box .boxSolid .textCont{
+  .wrap .center .dynamic .box .boxSolid .textCont{
     padding-bottom: 20px;
     border-bottom: 1px solid #e5e5e5;
   }
-  .wrap .center .memorabilia .dynamic .box .boxSolid .textCont .color{
+  .wrap .center .dynamic .box .boxSolid .textCont .color{
     font-size: 16px;
     color: #815b3f;
   }
-  .wrap .center .memorabilia .dynamic .box .boxSolid .textCont .desc{
+  .wrap .center .dynamic .box .boxSolid .textCont .desc{
     font-size: 14px;
     color: #999999;
     margin-top: 19px;
     padding-bottom: 10px;
     
   }
-  .wrap .center .memorabilia .dynamic .box .boxSolid .bottom{
+  .wrap .center .dynamic .box .boxSolid .bottom{
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 14px;
   }
-  .wrap .center .memorabilia .dynamic .box .boxSolid .bottom .l_time_box{
+  .wrap .center .dynamic .box .boxSolid .bottom .l_time_box{
     width: 54px;
     height: 54px;
     background: url('../images/left_icon1.png') no-repeat;
     background-size: 100% 100%;
     text-align: center;
   }
-  .wrap .center .memorabilia .dynamic .box .boxSolid .bottom .youjiantou{
+  .wrap .center .dynamic .box .boxSolid .bottom .youjiantou{
     width: 20px;
     height: 14px;
     background: url('../images/youjiantou.png') no-repeat;
   }
-  .wrap .center .memorabilia .dynamic .box .boxSolid .bottom .l_time_box .time{
+  .wrap .center .dynamic .box .boxSolid .bottom .l_time_box .time{
     font-size: 24px;
     color: #999999;
   }
-  .wrap .center .memorabilia .dynamic .box .boxSolid .bottom .l_time_box .year{
+  .wrap .center .dynamic .box .boxSolid .bottom .l_time_box .year{
     font-size: 12px;
     color: #999999;
   }

@@ -18,28 +18,28 @@ $(function(){
         return result ? decodeURIComponent(result[2]) : null;
     }
     
-    $(function () {
-        var swiper = new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination',
-            slidesPerView: 5,
-            paginationClickable: true,
-            spaceBetween: 30,
-            nextButton: '.right_icon',
-            prevButton: '.left_icon',
-            onSlideChangeEnd: function(swiper){
-                if(swiper.isBeginning){
-                    swiper.prevButton.removeClass('prev_active');
-                }else{
-                    swiper.prevButton.addClass('prev_active');
-                }
-                if(swiper.isEnd){
-                    swiper.nextButton.addClass('next_active');
-                }else{
-                    swiper.nextButton.removeClass('next_active');
-                }
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 5,
+        paginationClickable: true,
+        spaceBetween: 30,
+        nextButton: '.right_icon',
+        prevButton: '.left_icon',
+        onSlideChangeEnd: function(swiper){
+            if(swiper.isBeginning){
+                swiper.prevButton.removeClass('prev_active');
+            }else{
+                swiper.prevButton.addClass('prev_active');
             }
-        });
-    })
+            if(swiper.isEnd){
+                swiper.nextButton.addClass('next_active');
+            }else{
+                swiper.nextButton.removeClass('next_active');
+            }
+        }
+    });
+    let slideIdx = getUrlParam("slideIdx");
+    swiper.slideTo(slideIdx, 1000, false);
     $('.swiper-wrapper .swiper-slide').click(function(){
         $('.swiper-wrapper .swiper-slide').removeClass('active');
         $(this).addClass('active');
@@ -54,6 +54,8 @@ $(function(){
             fun();
         }else if($(this).index()==3){
             funScroll();
+        }else if($(this).index()==5){
+            window.location.href = '/page/home/nursing.html?index=-1';
         }
     })
     $('#tab_child p').click(function(){

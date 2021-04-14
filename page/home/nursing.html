@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>体检中心</title>
+    <link rel="stylesheet" href="../../css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="../../css/public.css">
+    <link rel="stylesheet" href="../../css/head.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/nursing.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="headerWrap"></div>
+        <div class="posBoxWrap"></div>
+        <div class="maxImage">
+            <div class="max_img_content">
+                <div class="Breadcrumb">
+                    <span>您现在的位置:  </span>
+                    <span class="black" id="homePage">首页 ></span>
+                    <span>体检中心</span>
+                </div>
+                <div class="layOut_panel">
+                    <div class="l_img"></div>
+                    <div class="r_cont_wrap">
+                        <div class="flex">
+                            <div class="preview">
+                                <i class="icon top_icon"></i>
+                                <p class="text" id="previewDetail">查看详细</p>
+                                <i class="icon bottom_icon"></i>
+                            </div>
+                            <div class="article">
+                                <p class="column">
+                                    山西省中医院治未病健康体检中心，成立于2012年。现有医师9名，护理人员8名，技师人员6名。医师职称结构为主任医师4名，副主任...
+                                </p>
+                            </div>
+                            <div class="tag">
+                                <div class="text" style="line-height: 1;font-size: 39px;">
+                                    <div class="topBack"></div>
+                                    治未病健康体检中心
+                                    <div class="bottomBack">
+                                        <span class="dept"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <div class="row_title">
+                <div class="imgs">
+                    <img src="../../images/01.png" alt="">
+                </div>
+                <p class="name">医生团队</p>
+                <div class="imgs">
+                    <img src="../../images/02.png" alt="">
+                </div>
+                <p class="more" id="departs">
+                    更多查看
+                </p>
+            </div>
+            <div class="headPhoto">
+
+            </div>
+            <div class="row_title">
+                <div class="imgs">
+                    <img src="../../images/01.png" alt="">
+                </div>
+                <p class="name">特色服务</p>
+                <div class="imgs">
+                    <img src="../../images/02.png" alt="">
+                </div>
+                <p class="more" id="ts_server_id">
+                    更多查看
+                </p>
+            </div>
+            <div class="dynamic">
+                <div class="box">
+                    <div class="box_child">
+                        <div class="img">
+                            <div class="timeBox">
+                                <p class="time">04</p>
+                                <p class="year">2020-12</p>
+                            </div>
+                        </div>
+                        <div class="textWrap">
+                            <p class="text">
+                                我市完成全国首例机器人辅助下治疗肱骨外科颈骨折手术（市）
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="boxSolid">
+                        <div class="textCont">
+                            <p class="color">大腿根部突现“肿块”，几个月疯长成足球般大小</p>
+                            <p class="desc">
+                                案例回放大腿根部突现“肿块”今年63岁的薛阿姨家住新会，平时健康的薛阿姨突然发现自己的右大腿根部长了东西
+                            </p>
+                        </div>
+                        <div class="bottom">
+                            <div class="l_time_box">
+                                <p class="time">04</p>
+                                <p class="year">2020-12</p>
+                            </div>
+                            <div class="youjiantou"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box_child">
+                        <div class="img">
+                            <div class="timeBox">
+                                <p class="time">04</p>
+                                <p class="year">2020-12</p>
+                            </div>
+                        </div>
+                        <div class="textWrap">
+                            <p class="text">
+                                我市完成全国首例机器人辅助下治疗肱骨外科颈骨折手术（市）
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box_child">
+                        <div class="img">
+                            <div class="timeBox">
+                                <p class="time">04</p>
+                                <p class="year">2020-12</p>
+                            </div>
+                        </div>
+                        <div class="textWrap">
+                            <p class="text">
+                                我市完成全国首例机器人辅助下治疗肱骨外科颈骨折手术（市）
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_wrap">
+
+        </div>
+    </div>
+</body>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/swiper-3.4.2.min.js"></script>
+<script src="../../utils/head.js"></script>
+ 
+<script src="../../utils/footer.js"></script>
+<script>
+    $(function(){
+        function tempFun(){
+            let template = '';
+            for(let i = 0; i < 6 ; i++){
+                template += '<div class="box">'+
+'                        <div class="block">'+
+'                            <div class="hover">'+
+'                                <div class="box_child">'+
+'                                    <div class="pad">'+
+'                                        <div class="img">'+
+'                                            <img src="../../images/avatar1_1.png" alt="">'+
+'                                        </div>'+
+'                                        <p class="name">王晞星</p>'+
+'                                        <p class="position">肿瘤病专家</p>'+
+'                                    </div>'+
+'                                </div>'+
+'                                <div class="box_active_wrap">'+
+'                                    <div class="box_active">'+
+'                                        <div class="descWrap">'+
+'                                            <p class="text">'+
+'                                                王晞星，主任医师，教授，博/硕士研究生导师，国贴专家，山西名医，全国中医药专家学术经验继承导师，山西省中医院院长，重点专科带头人。'+
+'                                            </p>'+
+'                                            <p class="title">擅长：</p>'+
+'                                            <p class="text">'+
+'                                                中西医结合治疗肺癌、胃癌、食管癌、结直肠癌、肾癌等；对消化道疾病有独到的治疗方法'+
+'                                            </p>'+
+'                                        </div>'+
+'                                    </div>'+
+'                                </div>'+
+'                            </div>'+
+'                            <div class="back_row">'+
+'                                <div class="cel_o">挂号</div>'+
+'                                <div class="cel_t">问诊</div>'+
+'                            </div>'+
+'                        </div>'+
+'                    </div>';
+            }
+            return template;
+        }
+        $('.headPhoto').append(tempFun());
+        // 查看详细
+        $('#previewDetail').click(function(){
+            window.location.href = '/page/characteristic/detail.html?index=2';
+        })
+        var swiperTwo = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            slidesPerView: 3,
+            paginationClickable: true
+        });
+        $('#featuresId .box .add_icon').click(function(){
+            $('.modal_modal').show();
+        })
+        $('#modal_cancel').click(function(){
+            $('.modal_modal').hide();
+        })
+        $('#displayId').click(function(){
+            window.location.href = '/page/chineseMedicine/displayBlock.html?index=10';
+        })
+        $('#ztVideo').click(function(){
+            window.location.href = '/page/chineseMedicine/video.html?index=10';
+        })
+        $('#therapy').click(function(){
+            window.location.href = '/page/chineseMedicine/therapy.html?index=10';
+        })
+        $('#departs').click(function(){
+            window.location.href = '/page/department/team.html?index='+3
+        })
+        $('#ts_server_id').click(function(){
+            window.location.href = '/page/journalism/journalism.html?index=6&name=医院动态'
+        })
+    })
+</script>
+</html>

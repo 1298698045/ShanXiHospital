@@ -475,7 +475,6 @@
         })
         let name = getUrlParam("name");
         $('#defaultVal').html(name)
-        console.log(name,'name')
         $('#swiperId .swiper-slide').removeClass('active');
         $('#swiperId .swiper-slide[title="'+name+'"]').addClass('active');
         var index = $('#swiperId .swiper-slide[title="'+name+'"]').index();
@@ -490,7 +489,6 @@
             //返回参数值
             return result ? decodeURIComponent(result[2]) : null;
         }
-
         var swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
             slidesPerView: 5,
@@ -511,6 +509,8 @@
                 }
             }
         });
+        let slideIdx = getUrlParam("slideIdx");
+        swiper[0].slideTo(slideIdx, 1000, false);
         $('.swiper-wrapper .swiper-slide').click(function(){
             $('.swiper-wrapper .swiper-slide').removeClass('active');
             $(this).addClass('active');
@@ -522,7 +522,7 @@
                 funScroll();
             }
         })
-        var swiper = new Swiper('.swiper-container', {
+        var swiperTwo = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
             slidesPerView: 3,
             paginationClickable: true
@@ -778,6 +778,9 @@
         })  
         $('#modal_cancel').click(function(){
             $('.modal_modal').hide();
+        })
+        $('#memorabiliaId .box').click(function(){
+            window.location.href = '/page/characteristic/detail.html?index=2';
         })
     })
 </script>

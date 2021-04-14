@@ -734,3 +734,23 @@
   #ybzn_id .insurance .cont_wrap .imgs{
     margin-top: 30px;
   }
+
+  /* 查询服务 */
+  .queryServer .keyWord{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .queryServer .keyWord .text{
+    font-size: 14px;
+    color: #333333;
+  }
+  .queryServer .keyWord .text span{
+    color: #815b3f;
+    font-size: 18px;
+  }
+  .queryServer .keyWord .return {
+    font-size: 16px;
+    cursor: pointer;
+  }

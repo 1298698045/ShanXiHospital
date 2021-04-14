@@ -97,6 +97,12 @@ $(function () {
     },function(){
         $(this).addClass('active');
     });
+    $('.departList .uls .lis').click(function(){
+        window.location.href = '/page/department/detail.html?index=3'
+    })
+    $('.img_wrap').click(function(){
+        window.location.href = '/page/department/detail.html?index=3'
+    })
     function onMyLoad() {
         var lis = $('.nav ul li');
         for (var i = 0; i < lis.length; i++) {

@@ -56,8 +56,9 @@
     outline: 0;
     background: #fff;
     font-size: 14px;
-    text-align: center;
+    /* text-align: center; */
     padding: 0 20px;
+    padding-left: 37px;
   }
 .search_wrap .serach_icon{
     position: absolute;
@@ -126,6 +127,7 @@
   .flex_head_container .header_box .header .header_child .lLogo {
     width: 332px;
     height: 80px;
+    cursor: pointer;
   }
   .flex_head_container .header_box .header .header_child .lLogo img {
     width: 100%;
@@ -299,6 +301,7 @@
     font-size: 15px;
     color: #cbaf9c;
     margin-bottom: 12px;
+    margin-right: 10px;
   }
   .flex_head_container .nav ul li .content .content_child .row .column .widths {
     width: 300px!important;
