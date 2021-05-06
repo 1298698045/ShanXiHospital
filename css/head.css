@@ -269,7 +269,11 @@
     width: 100%;
     background: rgba(106, 63, 36, 0.9);
     z-index: 9999;
-    display: none;
+    /* display: none; */
+    height: 0;
+    overflow: hidden;
+    transition: .3s ease-out;
+    transition-delay: .3s;
   }
   .flex_head_container .nav ul li .content .content_child {
     width: 1264px;
@@ -388,7 +392,7 @@
     margin-top: 15px;
   }
   .flex_head_container .nav ul li .content.active {
-    display: block;
+    /* display: block; */
   }
   .flex_head_container .nav ul li.active {
     color: #fff;
@@ -400,9 +404,9 @@
     background: url('../images/head_tab.png') no-repeat;
     background-size: 100% 100%;
   }
-  .flex_head_container .nav ul li:hover .content {
+  /* .flex_head_container .nav ul li:hover .content {
     display: block;
-  }
+  } */
   .flex_head_container .nav ul li:hover span {
     color: #fff;
     font-weight: bold;
@@ -420,7 +424,8 @@
     top: 50%;
     height: 520px;
     margin-top: -181px;
-    z-index: 1001;
+    /* z-index: 1001; */
+    z-index: 999999;
   }
   .rightNav .box {
     width: 56px;

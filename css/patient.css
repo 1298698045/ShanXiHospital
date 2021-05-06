@@ -511,25 +511,29 @@
     margin: 35px;
     height: 500px;
     /* overflow: hidden; */
-    position: absolute;
+    /* position: absolute; */
+    position: relative;
   }
-  .wrap .center .container .content .NoticeBody .right_wrap .article .title{
+  .wrap .center .container .content .NoticeBody .right_wrap .head{
+    margin: 35px;
+  }
+  .wrap .center .container .content .NoticeBody .right_wrap  .title{
     font-size: 22px;
     color: #333333;
     font-weight: bold;
     display: flex;
     align-items: center;
   }
-  .wrap .center .container .content .NoticeBody .right_wrap .article .title span{
+  .wrap .center .container .content .NoticeBody .right_wrap  .title span{
     margin-left: 17px;
   }
-  .wrap .center .container .content .NoticeBody .right_wrap .article .title .left{
+  .wrap .center .container .content .NoticeBody .right_wrap  .title .left{
     width: 12px;
     height: 20px;
     display: inline-block;
     background: url('../images/left_icon_1.png') no-repeat;
   }
-  .wrap .center .container .content .NoticeBody .right_wrap .article .time{
+  .wrap .center .container .content .NoticeBody .right_wrap  .time{
     display: flex;
     justify-content: center;
     font-size:14px;

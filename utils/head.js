@@ -542,9 +542,24 @@ $(function(){
     }
     // onMyLoad();
     $('.nav ul li').hover(function(){
+        if($(this).find('.content .content_child').length!=0){
+            $('.nav .content').hide()
+        }
         $('.nav ul li').children('span').removeClass('active');
+        $(this).children('.content').css({
+            'height':0+'px'
+        }).show()
         $(this).children('span' ).addClass('active');
+        // $(this).children('.content').addClass('active');
+        let height = $(this).children('.content').children('.content_child').height();
+        $(this).children('.content').css({
+            'height':height+'px'
+        })
     },function(){
+        // $(this).children('.content').removeClass('active');
+        $(this).children('.content').css({
+            'height':0+'px'
+        })
         // $(this).children('span' ).addClass('active');
         resetFun();
     })

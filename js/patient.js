@@ -71,9 +71,8 @@ $(function(){
         var y = 0; 
 
         //确定每次滚动滚轮右侧滚动条移动的距离
-        var ystepnumber = (($('.l_text').height()+40 - $('.left_wrap').height())/55)
-        var ysteplength = $('.scrollBar').height()/ystepnumber
-        
+        var ystepnumber = (($('.l_text').height()+40 - $('.left_wrap').height())/55) // 滚动次数
+        var ysteplength = $('.scrollBar').height()/ystepnumber // 每次滚动的距离
 
         //为wrap添加滚轮事件 
         var wrapDiv = document.querySelector('.left_wrap');
@@ -108,7 +107,41 @@ $(function(){
             //$('.l_text').css('top',-y/scale+'px');
         }
     }
-
+    function scrollTwo(idx){
+        // 设置y轴的增量
+        let y = 0;
+        // 确定每次滚动滚轮右侧滚动条移动的距离
+        let dContHeight = $('.NoticeBody .right_wrap .rightCont').eq(idx).children('.article').children('.d-visible').height();
+        let ystepNumber = (dContHeight - $('.right_wrap').height()) / 30;
+        // console.log(ystepNumber,'ysetpNumber')
+        let ystepLength =  $('.right_wrap .sliderWrapTwo').height()/ystepNumber;
+        // console.log(ystepLength,'ystepLength')
+        
+        let wrapDiv1 = document.querySelector('.NoticeBody .right_wrap');
+        console.log(dContHeight,'dContHeightdContHeightdContHeight')
+        wrapDiv1.onmousewheel = function(e){
+            if(dContHeight>485){
+                e.stopPropagation()
+                e.preventDefault();
+                var event1 = event || e ;
+                if(event1.wheelDelta < 0){
+                    y+=ystepLength;
+                }else if(event1.wheelDelta > 0){
+                    y-=ystepLength;
+                }
+    
+                if(y <= 0){
+                    y=0;
+                }
+                if(y >= $('.sliderWrapTwo').height() - $('.sliderTwo').height()){
+                    y = $('.sliderWrapTwo').height() -  $('.sliderTwo').height();
+                }
+                let scale = y/($('.sliderWrapTwo').height() - $('.sliderTwo').height()); 
+                $('.sliderTwo').css('top',y+'px')
+                $('.right_wrap .rightCont .article').css('top',-scale*((dContHeight+200) - $('.right_wrap .rightCont').height())+'px');
+            }
+        }
+    }
     function funScroll(){
         //设置y轴的增量 
         var y = 0;
@@ -162,12 +195,18 @@ $(function(){
     })
     // 就医须知
     $('#jyxz_id .row_back').click(function(){
+        // 重置滚动条
+        $('.sliderTwo').css('top',0+'px')
+        $('.right_wrap .rightCont .article').css('top',0+'px');
         $('#jyxz_id .row_back').removeClass('active');
         $('#jyxz_id .row_back span').removeClass('active');
         $(this).addClass('active');
         $(this).children('span').addClass('active');
         $('#jyxz_id .rightCont').hide();
         $('#jyxz_id .rightCont').eq($(this).index()).show();
+        // if($(this).index()==1){
+            scrollTwo($(this).index());
+        // }
     })
     $('#zyzn .row_back').click(function(){
         $('#zyzn .row_back').removeClass('active');
