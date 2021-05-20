@@ -8,6 +8,9 @@
     font-family: 'St';
     src: url('../static/SourceHanSerifCN-Bold.otf') format('truetype');
   }
+  .wrap{
+    background-size: cover!important;
+  }
   .devIng{
     padding: 30px 0 50px;
     text-align: center;

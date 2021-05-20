@@ -337,7 +337,8 @@
   .wrap .bottomBack .top {
     width: 100%;
     height: 18px;
-    background: url('../images/sy-2.png') no-repeat;
+    /* background: url('../images/sy-2.png') no-repeat; */
+    background: url('../images/sy-2.png') center repeat-x; 
   }
   .wrap .bottomBack .cont {
     width: 100%;
@@ -346,6 +347,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-size: cover;
   }
   .wrap .bottomBack .cont .minW {
     width: 1230px;
@@ -490,13 +492,16 @@
     margin: 20px 20px 0  0;
   }
   .wrap .center .container .content .NoticeBody .right_wrap .scrollBarTwo .sliderWrapTwo{
-    height: 500px;
+    /* height: 500px; */
+    height: 408px;
     width: 10px;
     /* height: 499px; */
     background: url('../images/sliderWrap.png') no-repeat;
     position: absolute;
     right: 20px;
-    top: 30px;
+    /* top: 30px; */
+    top: 135px;
+    background-size: 100% 100%;
   }
   .wrap .center .container .content .NoticeBody .right_wrap .scrollBarTwo .sliderWrapTwo .sliderTwo{
     width:27px; 
@@ -507,12 +512,17 @@
     left: -9px;
     cursor: pointer;
   }
-  .wrap .center .container .content .NoticeBody .right_wrap .article{
-    margin: 35px;
+  .wrap .center .container .content .NoticeBody .right_wrap .articleWrap{
+    position: relative;
     height: 500px;
+    overflow: hidden;
+  }
+  .wrap .center .container .content .NoticeBody .right_wrap .article{
+    margin: 0 35px;
+    /* height: 500px; */
     /* overflow: hidden; */
     /* position: absolute; */
-    position: relative;
+    position: absolute;
   }
   .wrap .center .container .content .NoticeBody .right_wrap .head{
     margin: 35px;

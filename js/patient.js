@@ -111,7 +111,7 @@ $(function(){
         // 设置y轴的增量
         let y = 0;
         // 确定每次滚动滚轮右侧滚动条移动的距离
-        let dContHeight = $('.NoticeBody .right_wrap .rightCont').eq(idx).children('.article').children('.d-visible').height();
+        let dContHeight = $('.NoticeBody .right_wrap .rightCont').eq(idx).children('.articleWrap').children('.article').children('.d-visible').height();
         let ystepNumber = (dContHeight - $('.right_wrap').height()) / 30;
         // console.log(ystepNumber,'ysetpNumber')
         let ystepLength =  $('.right_wrap .sliderWrapTwo').height()/ystepNumber;
@@ -138,7 +138,7 @@ $(function(){
                 }
                 let scale = y/($('.sliderWrapTwo').height() - $('.sliderTwo').height()); 
                 $('.sliderTwo').css('top',y+'px')
-                $('.right_wrap .rightCont .article').css('top',-scale*((dContHeight+200) - $('.right_wrap .rightCont').height())+'px');
+                $('.right_wrap .rightCont .article').css('top',-scale*((dContHeight-200) - $('.right_wrap .rightCont').height())+'px');
             }
         }
     }

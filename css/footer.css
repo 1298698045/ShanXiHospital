@@ -4,7 +4,8 @@
 .wrap .bottomBack .top {
   width: 100%;
   height: 18px;
-  background: url('../images/sy-2.png') no-repeat;
+  /* background: url('../images/sy-2.png') no-repeat; */
+  background: url('../images/sy-2.png') center repeat-x; 
 }
 .wrap .bottomBack .cont {
   width: 100%;
@@ -13,6 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-size: cover;
 }
 .wrap .bottomBack .cont .minW {
   width: 1230px;
