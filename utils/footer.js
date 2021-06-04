@@ -145,7 +145,7 @@ $(function(){
     '                            <p class="imgs">'+
     '                                <img src="../../images/icon_6.png" alt="">'+
     '                            </p>'+
-    '                            <p class="name">健康科普</p>'+
+    '                            <p class="name">健康时间</p>'+
     '                        </div>'+
     '                    </div>'+
     '                </div>'+
@@ -212,4 +212,25 @@ $(function(){
     '        </div>'+
     '    </div>';
     $('.footer_wrap').html(str);
+
+    $('.minW .box_wrap .item').click(function(){
+        console.log($(this).index())
+        let idx = $(this).index();
+        if(idx == 0) {
+            // 门诊出诊表
+            let val = encodeURI('出诊查询');
+            window.location.href = '/page/visitingNews/index.html?index='+7+'&name='+val+'&slideIdx='+1+'&id='+'d_czdt';
+        }else if(idx == 1){
+            
+        }else if(idx == 2){
+            let val = encodeURI('交通路线');
+            window.location.href = '/page/hospitalSurvey/hospitalSurvey.html?index='+5+'&name='+val+'&id='+'d_yygk'+'&slideIdx=2';
+        }else if(idx == 3){ 
+
+        }else if(idx == 4){
+            window.location.href = '/page/home/nursing.html?id='+'d_ksdh'
+        }else if(idx == 5){
+            window.location.href = '/page/chineseMedicine/therapy.html?index=10'+'&id='+'d_zyts'
+        }
+    })
 })

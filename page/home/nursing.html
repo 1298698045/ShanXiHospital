@@ -19,6 +19,7 @@
                 <div class="Breadcrumb">
                     <span>您现在的位置:  </span>
                     <span class="black" id="homePage">首页 ></span>
+                    <span class="black" id="ks_nav">科室导航 ></span>
                     <span>体检中心</span>
                 </div>
                 <div class="layOut_panel">
@@ -222,6 +223,9 @@
         })
         $('#ts_server_id').click(function(){
             window.location.href = '/page/journalism/journalism.html?index=6&name=医院动态'
+        })
+        $('#ks_nav').click(function(){
+            window.location.href = '/page/department/department.html?index=8&id=d_ksdh';
         })
     })
 </script>

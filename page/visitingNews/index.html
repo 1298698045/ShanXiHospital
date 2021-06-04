@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1220px">
-    <title>患者服务</title>
+    <title>出诊动态</title>
     <link rel="stylesheet" href="../../css/swiper-3.4.2.min.css">
     <link rel="stylesheet" href="../../css/public.css">
     <link rel="stylesheet" href="../../css/head.css">
@@ -19,7 +19,7 @@
             <div class="Breadcrumb">
                 <span>您现在的位置:  </span>
                 <span class="black" id="homePage">首页 ></span>
-                <span class="black" id="return">患者服务 ></span>
+                <span class="black" id="return">出诊动态 ></span>
                 <span id="defaultVal">出诊信息</span>
             </div>
             <div class="container">
@@ -27,7 +27,7 @@
                     <div class="imgs">
                         <img src="../../images/01.png" alt="">
                     </div>
-                    <p class="name">患者服务</p>
+                    <p class="name">出诊动态</p>
                     <div class="imgs">
                         <img src="../../images/02.png" alt="">
                     </div>
@@ -37,13 +37,25 @@
                     </div>
                     <div class="swiper-container">
                         <div class="swiper-wrapper" id="swiperId">
-                            <!-- <div class="swiper-slide active" title="出诊信息">
+                            <div class="swiper-slide active" title="出诊信息">
                                 出诊信息
                             </div>
                             <div class="swiper-slide" title="停诊信息">
                                 停诊信息
-                            </div> -->
-                            <div class="swiper-slide" title="就医须知">
+                            </div>
+                            <div class="swiper-slide" title="出诊查询">
+                                出诊查询
+                            </div>
+                            <div class="swiper-slide" title="假期出诊">
+                                假期出诊
+                            </div>
+                            <div class="swiper-slide" title="挂号须知">
+                                挂号须知
+                            </div>
+                            <div class="swiper-slide" title="预约挂号">
+                                预约挂号
+                            </div>
+                            <!-- <div class="swiper-slide" title="就医须知">
                                 就医须知
                             </div>
                             <div class="swiper-slide" title="住院指南">
@@ -52,10 +64,7 @@
                             <div class="swiper-slide" title="医保指南">
                                 医保指南
                             </div>
-                            <div class="swiper-slide" title="检验报告查询">
-                                检验报告查询
-                            </div>
-                            <!-- <div class="swiper-slide" title="体检中心">
+                            <div class="swiper-slide" title="体检中心">
                                 体检中心
                             </div>
                             <div class="swiper-slide" title="交通路线">
@@ -79,8 +88,8 @@
                     </div>
                 </div>
                 <!-- 出诊信息 -->
-                <!-- <div class="content" id="visitInfo" style="display:block;">
-                    <div class="formSearch">
+                <div class="content" id="visitInfo" style="display:block;">
+                    <!-- <div class="formSearch">
                         <div class="filed">
                             <input type="text" class="inp" placeholder="疾病名称">
                         </div>
@@ -109,12 +118,12 @@
                         <div class="filed">
                             <button class="btn">搜索</button>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="box" id="tab_child">
-                        <p class="active">专家出诊（名医门诊）</p>
-                        <p>专家出诊（总院）</p>
-                        <p>专家出诊（胜利分院）</p>
-                        <p>和平分院专家出诊表</p>
+                        <p class="tabC active">专家出诊（名医门诊）</p>
+                        <p class="tabC">专家出诊（总院）</p>
+                        <p class="tabC">专家出诊（胜利分院）</p>
+                        <p class="tabC">专家出诊（和平分院）</p>
                     </div>
                     <div class="blockWrap active">
                         <div class="top_back"></div>
@@ -130,6 +139,16 @@
                                     </tr>
                                 </thead>
                                 <tbody class="tbody" id="tbodyOne">
+                                    <!-- <tr class="dataRow">
+                                        <td class="name user">肖汉玺</td>
+                                        <td>主任医师</td>
+                                        <td>胃及十二指肠溃疡、胃肠功能性疾病</td>
+                                        <td>周二、四、六上午、周一、三、五、日下午</td>
+                                        <td class="operation">
+                                            <button class="btn user">预约</button>
+                                            <button class="btn msg">在线咨询</button>
+                                        </td>
+                                    </tr> -->
                                 </tbody>
                                 
                             </table>
@@ -476,9 +495,9 @@
                         </div>
                         <div class="bottom_back"></div>
                     </div>
-                </div> -->
+                </div>
                 <!-- 停诊信息 -->
-                <!-- <div class="content">
+                <div class="content">
                     <div class="cont"></div>
                     <div class="blockWrap">
                         <div class="top_back"></div>
@@ -533,7 +552,210 @@
                         </div>
                         <div class="bottom_back"></div>
                     </div>
-                </div> -->
+                </div>
+                <!-- 出诊查询 -->
+                <div class="content" id="visitQuery">
+                    <div class="formSearch" style="margin-bottom:20px;">
+                        <div class="filed">
+                            <input type="text" class="inp" placeholder="疾病名称">
+                        </div>
+                        <div class="filed">
+                            <div class="inp select" id="departSel">
+                                <input type="text" placeholder="科室名称" readonly>
+                                <i class="bottom_icon">
+                                    
+                                </i>
+                                <div class="selectModal">
+                                    <p class="subject">科室名称</p>
+                                    <ul>
+                                        <li>肿瘤科</li>
+                                        <li>肿瘤科</li>
+                                        <li>肿瘤科</li>
+                                        <li>肿瘤科</li>
+                                        <li>肿瘤科</li>
+                                        <li>肿瘤科</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filed">
+                            <input type="text" class="inp" placeholder="医师名称">
+                        </div>
+                        <div class="filed">
+                            <button class="btn">搜索</button>
+                        </div>
+                    </div>
+                    <div class="blockWrap active" >
+                        <div class="top_back"></div>
+                        <div class="cont_wrap">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th width="100">科室</th>
+                                        <th>姓名</th>
+                                        <th>职称</th>
+                                        <th>主治</th>
+                                        <th>出诊时间</th>
+                                        <th>诊查费（元）</th>
+                                        <th>挂号费（元）</th>
+                                        <th>预约/咨询</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="tbody">
+                                    <tr class="dataRow">
+                                        <td  class="name departmentId" rowspan="6">脾胃病科</td>
+                                        <td>肖汉玺</td>
+                                        <td>主任医师</td>
+                                        <td>主任医师、省优秀专家</td>
+                                        <td>周2、4全日</td>
+                                        <td>42</td>
+                                        <td>0.5</td>
+                                        <td class="operation">
+                                            <button class="btn">预约</button>
+                                            <button class="btn msg">在线咨询</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="dataRow">
+                                        <td>肖汉玺</td>
+                                        <td>主任医师</td>
+                                        <td>主任医师、省优秀专家</td>
+                                        <td>周2、4全日</td>
+                                        <td>42</td>
+                                        <td>0.5</td>
+                                        <td class="operation">
+                                            <button class="btn">预约</button>
+                                            <button class="btn msg">在线咨询</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="dataRow">
+                                        <td>肖汉玺</td>
+                                        <td>主任医师</td>
+                                        <td>主任医师、省优秀专家</td>
+                                        <td>周2、4全日</td>
+                                        <td>42</td>
+                                        <td>0.5</td>
+                                        <td class="operation">
+                                            <button class="btn">预约</button>
+                                            <button class="btn msg">在线咨询</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="dataRow">
+                                        <td>肖汉玺</td>
+                                        <td>主任医师</td>
+                                        <td>主任医师、省优秀专家</td>
+                                        <td>周2、4全日</td>
+                                        <td>42</td>
+                                        <td>0.5</td>
+                                        <td class="operation">
+                                            <button class="btn">预约</button>
+                                            <button class="btn msg">在线咨询</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="dataRow">
+                                        <td>肖汉玺</td>
+                                        <td>主任医师</td>
+                                        <td>主任医师、省优秀专家</td>
+                                        <td>周2、4全日</td>
+                                        <td>42</td>
+                                        <td>0.5</td>
+                                        <td class="operation">
+                                            <button class="btn">预约</button>
+                                            <button class="btn msg">在线咨询</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="dataRow">
+                                        <td>肖汉玺</td>
+                                        <td>主任医师</td>
+                                        <td>主任医师、省优秀专家</td>
+                                        <td>周2、4全日</td>
+                                        <td>42</td>
+                                        <td>0.5</td>
+                                        <td class="operation">
+                                            <button class="btn">预约</button>
+                                            <button class="btn msg">在线咨询</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="dataRow">
+                                        <td  class="name departmentId" rowspan="6">内综肿
+                                            瘤科</td>
+                                        <td>肖汉玺</td>
+                                        <td>主任医师</td>
+                                        <td>主任医师、省优秀专家</td>
+                                        <td>周2、4全日</td>
+                                        <td>42</td>
+                                        <td>0.5</td>
+                                        <td class="operation">
+                                            <button class="btn">预约</button>
+                                            <button class="btn msg">在线咨询</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="dataRow">
+                                        <td>肖汉玺</td>
+                                        <td>主任医师</td>
+                                        <td>主任医师、省优秀专家</td>
+                                        <td>周2、4全日</td>
+                                        <td>42</td>
+                                        <td>0.5</td>
+                                        <td class="operation">
+                                            <button class="btn">预约</button>
+                                            <button class="btn msg">在线咨询</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="dataRow">
+                                        <td>肖汉玺</td>
+                                        <td>主任医师</td>
+                                        <td>主任医师、省优秀专家</td>
+                                        <td>周2、4全日</td>
+                                        <td>42</td>
+                                        <td>0.5</td>
+                                        <td class="operation">
+                                            <button class="btn">预约</button>
+                                            <button class="btn msg">在线咨询</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="dataRow">
+                                        <td>肖汉玺</td>
+                                        <td>主任医师</td>
+                                        <td>主任医师、省优秀专家</td>
+                                        <td>周2、4全日</td>
+                                        <td>42</td>
+                                        <td>0.5</td>
+                                        <td class="operation">
+                                            <button class="btn">预约</button>
+                                            <button class="btn msg">在线咨询</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="dataRow">
+                                        <td>肖汉玺</td>
+                                        <td>主任医师</td>
+                                        <td>主任医师、省优秀专家</td>
+                                        <td>周2、4全日</td>
+                                        <td>42</td>
+                                        <td>0.5</td>
+                                        <td class="operation">
+                                            <button class="btn">预约</button>
+                                            <button class="btn msg">在线咨询</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="dataRow">
+                                        <td>肖汉玺</td>
+                                        <td>主任医师</td>
+                                        <td>主任医师、省优秀专家</td>
+                                        <td>周2、4全日</td>
+                                        <td>42</td>
+                                        <td>0.5</td>
+                                        <td class="operation">
+                                            <button class="btn">预约</button>
+                                            <button class="btn msg">在线咨询</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                
+                            </table>
+                        </div>
+                        <div class="bottom_back"></div>
+                    </div>
+                </div>
                 <!-- 就医须知 -->
                 <div class="content ">
                     <div class="NoticeBody"  id="jyxz_id">
@@ -675,6 +897,129 @@
                                     <div class="time">
                                         时间：2019-12-30      点击：5121次
                                     </div> -->
+                                    <div class="d-visible">
+                                        <p class="r_text">
+                                            尊敬的患者朋友：
+                                        </p>
+                                        <p class="r_text">
+                                            感谢您信任我院，为了方便您快捷就诊，特提示下列注意事项：
+                                        </p>
+                                        <div class="subject">
+                                            <p class="name">一、预约挂号</p>
+                                            <p class="min-timu">
+                                                1、预约挂号方法：
+                                            </p>
+                                            <p class="text">
+                                                电话预约：12580 、  118114 、 12320
+                                            </p>
+                                            <p class="text">
+                                                微信预约：sxszyyfwh 、 近医通 、健康山西微服务
+                                            </p>
+                                            <p class="text">
+                                                网址预约：www.sxzyy.com
+                                            </p>
+                                            <p class="min-timu">
+                                                2、患者实名注册，每日下午16:00开放第15日号源，预约成功后，如未交费需凭身份证提前半小时来院取号
+                                            </p>
+                                            <p class="name">二、现场挂号</p>
+                                            <p class="min-timu">
+                                                门诊大厅一层设有专家出诊时间表，各科室均有专家门诊、普通门诊，根据病情选择您需要的大夫来挂号
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="scrollBarTwo">
+                                    <div class="sliderWrapTwo">
+                                        <div class="sliderTwo">
+    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rightCont mzjzlc">
+                                <div class="head">
+                                    <div class="title">
+                                        <i class="left"></i>
+                                        <span>门诊就诊流程</span>
+                                    </div>
+                                    <div class="time">
+                                        时间：2019-12-30      点击：5121次
+                                    </div>
+                                </div>
+                                <div class="articleWrap">
+                                    <div class="article">
+                                        <div class="d-visible">
+                                            <div class="imgPhoto">
+                                                <img src="/images/mz.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="scrollBarTwo">
+                                    <div class="sliderWrapTwo">
+                                        <div class="sliderTwo">
+    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rightCont"></div>
+                            <div class="rightCont"></div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- 挂号须知 -->
+                <div class="content ">
+                    <div class="NoticeBody"  id="jyxz_id">
+                        <div class="left_wrap">
+                            <div class="l_text">
+                                <div class="row_back active">
+                                    <i class="icon_l"></i>
+                                    <span class="active">
+                                        挂号须知
+                                    </span>
+                                </div>
+                                <div class="row_back">
+                                    <i class="icon_l"></i>
+                                    <span>
+                                        现场挂号
+                                    </span>
+                                </div>
+                                <div class="row_back">
+                                    <i class="icon_l"></i>
+                                    <span>
+                                        候诊须知
+                                    </span>
+                                </div>
+                                <div class="row_back">
+                                    <i class="icon_l"></i>
+                                    <span>
+                                        缴费须知
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="scrollBar">
+                                <div class="sliderWrap">
+                                    <div class="slider">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right_wrap">
+                            <div class="rightCont active ">
+                                <div class="article">
+                                    <div class="head" style="margin:35px 0">
+                                        <div class="title">
+                                            <i class="left"></i>
+                                            <span>挂号须知</span>
+                                        </div>
+                                        <div class="time">
+                                            时间：2019-12-30      点击：5121次
+                                        </div>
+                                    </div>
                                     <div class="d-visible">
                                         <p class="r_text">
                                             尊敬的患者朋友：
@@ -1523,7 +1868,7 @@
 <script src="../../js/swiper-3.4.2.min.js"></script>
 <script src="../../utils/head.js"></script>
  
-<script src="../../js/patient.js"></script>
+<script src="../../js/visitingNews.js"></script>
 <script src="../../utils/footer.js"></script>
 <script src="../../js/pagination.js"></script>
 <script>

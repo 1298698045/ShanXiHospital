@@ -10,4 +10,7 @@ $(function(){
     $('.label').click(function(){
         window.location.href = '/page/department/detail.html?index='+3;
     })
+    $('.detail .label').click(function(){
+        window.location.href = '/page/characteristic/detail.html?index='+2+'&id='+'d_ksdh'
+    })
 })

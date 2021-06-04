@@ -1,5 +1,5 @@
 $(function(){
-    let header = document.querySelector('.headerWrap')
+    let header = document.querySelector('.headerWrap');
     let str = '<div class="flex_head_container"> '+
     '            <div class="back_top"></div> '+
     '            <div class="header_box"> '+
@@ -39,13 +39,13 @@ $(function(){
     '            <div class="nav"> '+
     '                <div class="nav_box spacing"> '+
     '                    <ul class="spacing"> '+
-    '                        <li> '+
-    '                            <span class="" id="home"> '+
+    '                        <li  id="home"> '+
+    '                            <span class=""> '+
     '                                首页 '+
     '                            </span> '+
     '                            <div class="content"></div> '+
     '                        </li> '+
-    '                        <li id="hostipalSurvey"> '+
+    '                        <li id="d_yygk"> '+
     '                            <span> '+
     '                                医院概况 '+
     '                            </span>       '+
@@ -58,10 +58,10 @@ $(function(){
     '                                            </div>'+
     '                                            <div class="column columnBox hover"> '+
     '                                                <p class="lis_p" slideIdx="0">医院介绍</p> '+
-    '                                                <p class="lis_p" slideIdx="2">历史沿革</p> '+
+    '                                                <p class="lis_p" slideIdx="0">历史沿革</p> '+
     '                                                <p class="lis_p" slideIdx="0">院容院貌</p> '+
-    '                                                <p class="lis_p" slideIdx="2">医院文化</p> '+
-    '                                                <p class="lis_p" slideIdx="0">院内导航</p> '+
+    '                                                <p class="lis_p" slideIdx="0">医院文化</p> '+
+    '                                                <p class="lis_p" slideIdx="2">院内导航</p> '+
     '                                                <p class="lis_p" slideIdx="2">交通路线</p> '+
     '                                            </div>'+
     '                                        </div>'+
@@ -86,8 +86,8 @@ $(function(){
     '                                </div> '+
     '                            </div> '+
     '                        </li> '+
-    '                        <li> '+
-    '                            <span class="" id="branch"> '+
+    '                        <li id="d_fyjs"> '+
+    '                            <span class=""> '+
     '                                分院介绍 '+
     '                            </span> '+
     '                            <div class="content"> '+
@@ -98,8 +98,8 @@ $(function(){
     '                                                <h3>分院介绍</h3>'+
     '                                            </div> '+
     '                                            <div class="column columnBox hover"> '+
-    '                                                <p class="lis_p">胜利分院</p> '+
-    '                                                <p class="lis_p">和平分院</p> '+
+    '                                                <p class="lis_p" name="victory">胜利分院</p> '+
+    '                                                <p class="lis_p" name="peace">和平分院</p> '+
     '                                            </div>'+
     '                                        </div>'+
     '                                        <div class="itemBox">'+
@@ -124,7 +124,7 @@ $(function(){
     '                                </div> '+
     '                            </div> '+
     '                        </li> '+
-    '                        <li id="journalism"> '+
+    '                        <li id="d_xwzx"> '+
     '                            <span> '+
     '                                新闻中心 '+
     '                            </span>       '+
@@ -162,7 +162,7 @@ $(function(){
     '                                </div> '+
     '                            </div> '+
     '                        </li> '+
-    '                        <li id="infoPublic"> '+
+    '                        <li id="d_tzgg"> '+
     '                            <span> '+
     '                                通知公告 '+
     '                            </span>       '+
@@ -201,8 +201,8 @@ $(function(){
     '                                </div> '+
     '                            </div> '+
     '                        </li> '+
-    '                        <li> '+
-    '                            <span class="" id="branch"> '+
+    '                        <li id="d_czdt"> '+
+    '                            <span class=""> '+
     '                                出诊动态 '+
     '                            </span> '+
     '                            <div class="content"> '+
@@ -243,7 +243,7 @@ $(function(){
     '                                </div> '+
     '                            </div> '+
     '                        </li> '+
-    '                        <li id="patient"> '+
+    '                        <li id="d_hzfw"> '+
     '                            <span> '+
     '                                患者服务 '+
     '                            </span>       '+
@@ -257,7 +257,7 @@ $(function(){
     '                                            <div class="column columnBox hover alignment"> '+
     '                                                <p class="lis_p" id="cz" slideIdx="0">就医须知</p> '+
     '                                                <p class="lis_p" slideIdx="2">住院指南</p> '+
-    '                                                <p class="lis_p" slideIdx="0">出诊查询</p>'+
+    '                                                <p class="lis_p" slideIdx="0">医保指南</p>'+
     '                                                <p class="lis_p" slideIdx="3">检验报告查询</p> '+
     '                                            </div>'+
     '                                        </div>'+
@@ -283,8 +283,8 @@ $(function(){
     '                                </div> '+
     '                            </div> '+
     '                        </li> '+
-    '                        <li> '+
-    '                            <span class="" id="branch"> '+
+    '                        <li id="d_djgz"> '+
+    '                            <span class="" > '+
     '                                党建工作 '+
     '                            </span> '+
     '                            <div class="content"> '+
@@ -321,7 +321,7 @@ $(function(){
     '                                </div> '+
     '                            </div> '+
     '                        </li> '+
-    '                        <li id="department"> '+
+    '                        <li id="d_ksdh"> '+
     '                            <span> '+
     '                                科室导航 '+
     '                            </span>       '+
@@ -387,14 +387,14 @@ $(function(){
     '                                </div> '+
     '                            </div> '+
     '                        </li> '+
-    '                        <li id="expert"> '+
+    '                        <li id="d_zjjs"> '+
     '                            <span> '+
     '                                专家介绍 '+
     '                            </span>       '+
     '                            <div class="content"> '+
     '                            </div> '+
     '                        </li> '+
-    '                        <li id="expert"> '+
+    '                        <li id="d_yjsjy"> '+
     '                            <span> '+
     '                                研究生教育 '+
     '                            </span>       '+
@@ -435,7 +435,7 @@ $(function(){
     '                                </div> '+
     '                            </div> '+
     '                        </li> '+
-    '                        <li id="chineseMedicine"> '+
+    '                        <li id="d_zyts"> '+
     '                            <span> '+
     '                                中医特色 '+
     '                            </span>       '+
@@ -474,7 +474,7 @@ $(function(){
     '                                </div> '+
     '                            </div> '+
     '                        </li> '+
-    '                        <li> '+
+    '                        <li id="d_GCP"> '+
     '                            <span> '+
     '                                GCP中心 '+
     '                            </span>       '+
@@ -631,7 +631,18 @@ $(function(){
     })
     resetFun();
     function resetFun(){
-        let index = getQueryVariable("index");
+        // let index = getQueryVariable("index");
+        let id = getQueryVariable("id");
+        let index = ''; 
+        // console.log(id,'----');
+        for(var i = 0 ; i < $('.nav ul li').length; i++){
+            let attrId = $('.nav ul li').eq(i).attr('id');
+            // console.log(attrId,'---')
+            if(id==attrId){
+                console.log(i,'hello word')
+                index = i;
+            }
+        }
         $('.nav ul li').children('span').removeClass('active');
         $('.nav ul li').eq(index).children('span').addClass('active');
     }
@@ -656,39 +667,31 @@ $(function(){
         window.location.href = '/page/department/department.html?index='+3;
     })
     // 新闻
-    $('#journalism').children('span').click(function(){
-        $('#journalism .content').css({
+    $('#d_xwzx').children('span').click(function(){
+        $('#d_xwzx .content').css({
             'display':'none'
         })
-        let val = encodeURI('院内新闻');
-        window.location.href = '/page/journalism/journalism.html?index='+6+'&name='+val
+        let val = encodeURI('医院新闻');
+        window.location.href = '/page/journalism/journalism.html?index='+6+'&name='+val+'&id='+'d_xwzx'
     })
-    // 信息公开
-    $('#infoPublic').children('span').click(function(){
-        $('#infoPublic .content').css({
+    // 通知公告 --信息公开
+    $('#d_tzgg').children('span').click(function(){
+        $('#d_tzgg .content').css({
             'display':'none'
         })
         let val = encodeURI('通知公告');
-        window.location.href = '/page/infoOpen/infoOpen.html?index='+7+'&name='+val;
+        window.location.href = '/page/infoOpen/infoOpen.html?index='+7+'&name='+val+'&id='+'d_tzgg';
     })
     $('#expert').click(function(){
         window.location.href = '/page/expert/expert.html?index='+4
     })
     // 医院概况
-    $('#hostipalSurvey').children('span').click(function(){
-        $('#hostipalSurvey .content').css({
+    $('#d_yygk').children('span').click(function(){
+        $('#d_yygk .content').css({
             'display':'none'
         })
-        let val = encodeURI('医院简介');
-        window.location.href = '/page/hospitalSurvey/hospitalSurvey.html?index='+5+'&name='+val;
-    })
-    // 科研教学
-    $('#teaching').children('span').click(function(){
-        $('#teaching .content').css({
-            'display':'none'
-        })
-        let val = encodeURI('科研动态');
-        window.location.href = '/page/teaching/teaching.html?index='+8+'&name='+val
+        let val = encodeURI('医院介绍');
+        window.location.href = '/page/hospitalSurvey/hospitalSurvey.html?index='+5+'&name='+val+'&id='+'d_yygk';
     })
     $('#talentDevelopment').children('span').click(function(){
         $('#talentDevelopment .content').css({
@@ -713,41 +716,54 @@ $(function(){
         window.location.href = '/index.html?index='+0
     })
     // 患者服务
-    $('#patient .hover .lis_p').click(function(){
+    $('#d_hzfw .hover .lis_p').click(function(){
         if($(this).attr('tjzx')=='tjzx'){
             window.location.href = '/page/home/nursing.html?index=-1'
         }else{
             let val = encodeURI($(this).html());
             let slideIdx = $(this).attr('slideIdx');
-            window.location.href = '/page/patient/index.html?index='+1+'&name='+val+'&slideIdx='+slideIdx;
+            window.location.href = '/page/patient/index.html?index='+1+'&name='+val+'&slideIdx='+slideIdx+'&id='+'d_hzfw';
         }
     })
-    $('#patient #jzxz .lis_p').click(function(){
+    // $('#d_hzfw #jzxz .lis_p').click(function(){
+    //     let val = encodeURI('就医须知');
+    //     window.location.href = '/page/patient/index.html?index='+1+'&name='+val+'&slideIdx='+0+'&id='+'d_hzfw';
+    // })
+    // $('#d_hzfw #yndh .lis_p').click(function(){
+    //     let val = encodeURI('院内导航');
+    //     window.location.href = '/page/patient/index.html?index='+1+'&name='+val+'&slideIdx='+3+'&id='+'d_hzfw';
+    // })
+    $('#d_hzfw').children('span').click(function(){
+        $('#d_hzfw .content').css({
+            'display':'none'
+        })
         let val = encodeURI('就医须知');
-        window.location.href = '/page/patient/index.html?index='+1+'&name='+val+'&slideIdx='+0;
+        window.location.href = '/page/patient/index.html?index='+1+'&name='+val+'&id='+'d_hzfw';
     })
-    $('#patient #yndh .lis_p').click(function(){
-        let val = encodeURI('院内导航');
-        window.location.href = '/page/patient/index.html?index='+1+'&name='+val+'&slideIdx='+3;
-    })
-    $('#patient').children('span').click(function(){
-        $('#patient .content').css({
+    // 出诊动态
+    $('#d_czdt').children('span').click(function(){
+        $('#d_czdt .content').css({
             'display':'none'
         })
         let val = encodeURI('出诊信息');
-        window.location.href = '/page/patient/index.html?index='+1+'&name='+val;
+        window.location.href = '/page/visitingNews/index.html?index='+1+'&name='+val+'&id='+'d_czdt';
+    })
+    $('#d_czdt .hover .lis_p').click(function(){
+        let val = encodeURI($(this).html());
+        let slideIdx = $(this).attr('slideIdx');
+        window.location.href = '/page/visitingNews/index.html?index='+7+'&name='+val+'&slideIdx='+slideIdx+'&id='+'d_czdt';
     })
     // 医院概况
-    $('#hostipalSurvey .hover .lis_p').click(function(){
+    $('#d_yygk .hover .lis_p').click(function(){
         let val = encodeURI($(this).html());
         let slideIdx = $(this).attr('slideIdx');
-        window.location.href = '/page/hospitalSurvey/hospitalSurvey.html?index='+5+'&name='+val+'&slideIdx='+slideIdx;
+        window.location.href = '/page/hospitalSurvey/hospitalSurvey.html?index='+5+'&name='+val+'&slideIdx='+slideIdx+'&id='+'d_yygk';
     })
-    // 信息公开
-    $('#infoPublic .hover .lis_p').click(function(){
+    // 通知公告 --信息公开
+    $('#d_tzgg .hover .lis_p').click(function(){
         let val = encodeURI($(this).html());
         let slideIdx = $(this).attr('slideIdx');
-        window.location.href = '/page/infoOpen/infoOpen.html?index='+7+'&name='+val+'&slideIdx='+slideIdx;
+        window.location.href = '/page/infoOpen/infoOpen.html?index='+7+'&name='+val+'&slideIdx='+slideIdx+'&id='+'d_tzgg';
     })
     // 人才建设
     $('#talentDevelopment .hover .lis_p').click(function(){
@@ -755,14 +771,69 @@ $(function(){
         window.location.href = '/page/talentDevelopment/index.html?index='+9+'&name='+val;
     })
     // 新闻
-    $('#journalism .hover .lis_p').click(function(){
+    $('#d_xwzx .hover .lis_p').click(function(){
         let val = encodeURI($(this).html());
-        window.location.href = '/page/journalism/journalism.html?index='+6+'&name='+val
+        window.location.href = '/page/journalism/journalism.html?index='+6+'&name='+val+'&id='+'d_xwzx'
     })
-    // 科研教学
-    $('#teaching .hover .lis_p').click(function(){
+    // 党建工作
+    $('#d_djgz .hover .lis_p').click(function(){
         let val = encodeURI($(this).html());
-        window.location.href = '/page/teaching/teaching.html?index='+8+'&name='+val
+        window.location.href = '/page/teaching/teaching.html?index='+8+'&name='+val+'&id='+'d_djgz'
+    })
+    $('#d_djgz').children('span').click(function(){
+        $('#d_djgz .content').css({
+            'display':'none'
+        })
+        let val = encodeURI('党务公开');
+        window.location.href = '/page/teaching/teaching.html?index='+8+'&name='+val+'&id='+'d_djgz'
+    })
+    // 科室导航
+    $('#d_ksdh').children('span').click(function(){
+        $('#d_ksdh .content').css({
+            'display':'none'
+        })
+        // let val = encodeURI('党务公开');
+        window.location.href = '/page/department/department.html?index='+8+'&id='+'d_ksdh'
+    })
+    // 专家介绍
+    $('#d_zjjs').children('span').click(function(){
+        $('#d_zjjs .content').css({
+            'display':'none'
+        })
+        // let val = encodeURI('党务公开');
+        window.location.href = '/page/expert/expert.html?index='+8+'&id='+'d_zjjs'
+    })
+    // 研究生教育
+    $('#d_yjsjy').children('span').click(function(){
+        $('#d_zjjs .content').css({
+            'display':'none'
+        })
+        // let val = encodeURI('党务公开');
+        window.location.href = '/page/talentDevelopment/postgraduate.html?index='+8+'&id='+'d_yjsjy'
+    })
+    // 中医特色
+    $('#d_zyts').children('span').click(function(){
+        $('#d_zjjs .content').css({
+            'display':'none'
+        })
+        // let val = encodeURI('党务公开');
+        window.location.href = '/page/chineseMedicine/index.html?index='+8+'&id='+'d_zyts'
+    })
+    // 分院介绍
+    $('#d_fyjs').children('span').click(function(){
+        $('#d_fyjs .content').css({
+            'display':'none'
+        })
+        window.location.href = '/page/hospital/victory.html';
+    })
+    $('#d_fyjs .hover .lis_p').click(function(){
+        // let val = encodeURI($(this).html());
+        let val = $(this).attr('name');
+        if(val == 'peace'){
+            window.location.href = '/page/hospital/peace.html';
+        }else if(val == 'victory'){
+            window.location.href = '/page/hospital/victory.html';
+        }
     })
     $('.rightNav .box').click(function(){
         let idx = $(this).index();
@@ -788,3 +859,14 @@ $(function(){
         $('.lis_p').removeClass('active');
     })
 })
+
+function getUrlParam(key) {
+    // 获取参数
+    var url = window.location.search;
+    // 正则筛选地址栏
+    var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+    // 匹配目标参数
+    var result = url.substr(1).match(reg);
+    //返回参数值
+    return result ? decodeURIComponent(result[2]) : null;
+}
