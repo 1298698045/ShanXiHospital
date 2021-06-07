@@ -124,6 +124,7 @@
     font-size: 32px;
     font-weight: bold;
     color: #815b3f;
+    cursor: pointer;
   }
   .wrap .center .News .left_box .row .list_text {
     display: flex;
@@ -266,6 +267,7 @@
     font-size: 32px;
     font-weight: bold;
     color: #815b3f;
+    cursor: pointer;
   }
   .wrap .center .News .right_box .row .list_text {
     display: flex;

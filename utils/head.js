@@ -12,15 +12,11 @@ $(function(){
     '                            <div class="back_icon"  id="edition"> '+
     '                                <p class="back_url active h">患者版</p> '+
     '                                <p class="back_url">员工版</p> '+
-    '                                <p class="Avatar"> '+
-    '                                </p> '+
     '                            </div> '+
     '                            <div class="search_row"> '+
     '                                <div class="hospitalTab"> '+
     '                                    <div class="topTab maxTab">治未病健康体检中心</div> '+
     '                                    <div class="topTab minTab">名医门诊</div> '+
-    '                                    <div class="topTab minTab">胜利分院</div> '+
-    '                                    <div class="topTab minTab">和平分院</div> '+
     '                                </div> '+
     '                                <div class="search_wrap"> '+
     '                                    <div class="searchs"> '+
@@ -333,12 +329,12 @@ $(function(){
     '                                                <h3>科室导航</h3> '+
     '                                            </div> '+
     '                                            <div class="column columnBox hover"> '+
-    '                                                <p class="lis_p">临床科室</p> '+
-    '                                                <p class="lis_p">名医门诊</p> '+
-    '                                                <p class="lis_p">医技科室</p> '+
-    '                                                <p class="lis_p">特色医疗</p> '+
-    '                                                <p class="lis_p">治未病健康体检中心</p> '+
-    '                                                <p class="lis_p">优势病种</p> '+
+    '                                                <p class="lis_p" childId="lchs">临床科室</p> '+
+    '                                                <p class="lis_p" childId="mymz">名医门诊</p> '+
+    '                                                <p class="lis_p" childId="yjks">医技科室</p> '+
+    '                                                <p class="lis_p" childId="tszl">特色医疗</p> '+
+    '                                                <p class="lis_p" childId="tj">治未病健康体检中心</p> '+
+    '                                                <p class="lis_p" childId="ysbz">优势病种</p> '+
     '                                            </div>'+
     '                                        </div>'+
     '                                        <div class="itemBox">'+
@@ -542,8 +538,8 @@ $(function(){
     '                    <img src="../../images/r_icon5.jpg" />'+
     '                </div>'+
     '                <div class="w_text">'+
-    '                    <p>重点</p>'+
-    '                    <p>专科</p>'+
+    '                    <p>科室</p>'+
+    '                    <p>导航</p>'+
     '                </div>'+
     '            </div>'+
     '            <div class="box">'+
@@ -596,6 +592,14 @@ $(function(){
         $('#edition .back_url').removeClass('active');
         $(this).addClass('active');
     })
+    $('.hospitalTab .topTab').click(function(){
+        let idx = $(this).index();
+        if(idx==0){
+            window.location.href = '/page/home/nursing.html?id='+'d_ksdh'
+        }else {
+            window.location.href = '/page/hospital/famousDoctor.html?index=-1'
+        }
+    })
     function onMyLoad() {
         var lis = $('.nav ul li');
         for (var i = 0; i < lis.length; i++) {
@@ -645,8 +649,17 @@ $(function(){
         }
         $('.nav ul li').children('span').removeClass('active');
         $('.nav ul li').eq(index).children('span').addClass('active');
+        // 独立的模块不在任何导航下
+        let newIdx = getQueryVariable('index');
+        if(newIdx=='-1'){
+            $('.nav ul li').children('span').removeClass('active');
+        }
     }
-
+    // 独立的模块不在任何导航下
+    // let newIdx = getQueryVariable('index');
+    // if(newIdx=='-1'){
+    //     $('.nav ul li').children('span').removeClass('active');
+    // }
     function getQueryVariable(variable)
     {
         var query = window.location.search.substring(1);
@@ -679,8 +692,8 @@ $(function(){
         $('#d_tzgg .content').css({
             'display':'none'
         })
-        let val = encodeURI('通知公告');
-        window.location.href = '/page/infoOpen/infoOpen.html?index='+7+'&name='+val+'&id='+'d_tzgg';
+        let val = encodeURI('招标公告');
+        window.location.href = '/page/notice/index.html?index='+7+'&name='+val+'&id='+'d_tzgg';
     })
     $('#expert').click(function(){
         window.location.href = '/page/expert/expert.html?index='+4
@@ -763,7 +776,7 @@ $(function(){
     $('#d_tzgg .hover .lis_p').click(function(){
         let val = encodeURI($(this).html());
         let slideIdx = $(this).attr('slideIdx');
-        window.location.href = '/page/infoOpen/infoOpen.html?index='+7+'&name='+val+'&slideIdx='+slideIdx+'&id='+'d_tzgg';
+        window.location.href = '/page/notice/index.html?index='+7+'&name='+val+'&slideIdx='+slideIdx+'&id='+'d_tzgg';
     })
     // 人才建设
     $('#talentDevelopment .hover .lis_p').click(function(){
@@ -794,6 +807,11 @@ $(function(){
         })
         // let val = encodeURI('党务公开');
         window.location.href = '/page/department/department.html?index='+8+'&id='+'d_ksdh'
+    })
+    $('#d_ksdh .hover .lis_p').click(function(){
+        let val = encodeURI($(this).html());
+        let childId = $(this).attr('childId')
+        window.location.href = '/page/department/department.html?index='+8+'&name='+val+'&id='+'d_ksdh'+'&childId='+childId
     })
     // 专家介绍
     $('#d_zjjs').children('span').click(function(){
@@ -826,6 +844,18 @@ $(function(){
         })
         window.location.href = '/page/hospital/victory.html';
     })
+    // GCP中心d_GCP
+    $('#d_GCP').children('span').click(function(){
+        $('#d_GCP .content').css({
+            'display':'none'
+        })
+        let val = encodeURI('GCP中心');
+        window.location.href = '/page/gcpView/index.html?name='+val+'&id='+'d_GCP';
+    })
+    $('#d_GCP .hover .lis_p').click(function(){
+        let val = encodeURI($(this).html());
+        window.location.href = '/page/gcpView/index.html?index='+8+'&name='+val+'&id='+'d_GCP'
+    })
     $('#d_fyjs .hover .lis_p').click(function(){
         // let val = encodeURI($(this).html());
         let val = $(this).attr('name');
@@ -835,20 +865,35 @@ $(function(){
             window.location.href = '/page/hospital/victory.html';
         }
     })
+    // 右侧固定快捷方式
     $('.rightNav .box').click(function(){
         let idx = $(this).index();
-        if(idx==0){
-            window.location.href = '/page/patient/index.html?index=1&name=就医须知&slideIdx=0';
-        }else if(idx==1){
-            window.location.href = '/page/patient/index.html?index=1&name=出诊信息&slideIdx=0';
-        }else if(idx==2){
-            window.location.href = '/page/department/department.html?index=3';
-        }else if(idx==3){
-            window.location.href = '/page/home/server.html?index=-1';
-        }else if(idx==4){
-            window.location.href = '/page/patient/index.html?index=1&name=查询服务&slideIdx=4';
+        if(idx == 1){
+            let val = encodeURI('出诊信息');
+            window.location.href = '/page/visitingNews/index.html?name='+val+'&id='+'d_czdt'
+        }else if(idx == 2){
+            window.location.href = '/page/department/department.html?name='+''+'&id='+'d_ksdh'
+        }else if(idx == 3){
+            window.location.href = '/page/home/server.html';
+        }else if(idx == 4){
+            let val = encodeURI('检验报告查询');
+            window.location.href = '/page/patient/index.html?name='+val+'&id='+'d_hzfw'
         }
     })
+    // $('.rightNav .box').click(function(){
+    //     let idx = $(this).index();
+    //     if(idx==0){
+    //         window.location.href = '/page/patient/index.html?index=1&name=就医须知&slideIdx=0';
+    //     }else if(idx==1){
+    //         window.location.href = '/page/patient/index.html?index=1&name=出诊信息&slideIdx=0';
+    //     }else if(idx==2){
+    //         window.location.href = '/page/department/department.html?index=3';
+    //     }else if(idx==3){
+    //         window.location.href = '/page/home/server.html?index=-1';
+    //     }else if(idx==4){
+    //         window.location.href = '/page/patient/index.html?index=1&name=查询服务&slideIdx=4';
+    //     }
+    // })
     $('.lLogo').click(function(){
         window.location.href = '/index.html?index=0'
     })

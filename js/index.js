@@ -12,15 +12,15 @@ $(function () {
         let val = '';
         if(idx==0){
             val = '出诊信息'
-            window.location.href = '/page/patient/index.html?index=1&name='+val
+            window.location.href = '/page/visitingNews/index.html?index=1&name='+val
         }else if(idx==1){
             val = '就医须知'
             window.location.href = '/page/patient/index.html?index=1&name='+val
         }else if(idx==2){
             val = '交通路线'
-            window.location.href = '/page/patient/index.html?index=1&name='+val
+            window.location.href = '/page/hospitalSurvey/hospitalSurvey.html?index=1&name='+val+'&id='+'d_yygk'
         }else if(idx==3){
-            window.location.href = '/page/characteristic/characteristic.html?index=2';
+            window.location.href = '/page/department/department.html?index=8&id=d_ksdh'+'&childId='+'tszl';
         }
     })
     // 科室导航
@@ -55,30 +55,42 @@ $(function () {
     $('.right_box .cont .box').click(function(){
       let idx =  $(this).parent('.cont').attr('idx');
       if(idx==0){
-        window.location.href = '/page/infoOpen/infoOpen.html?index=7&name='+'通知公告';
+        let val = encodeURI('招标公告');
+        window.location.href = '/page/notice/index.html?index=7&name='+val+'&id='+'d_tzgg';
       }else if(idx==1){
-        window.location.href = '/page/talentDevelopment/index.html?index=9&name='+'人才招聘';
+        let val = encodeURI('招聘信息')
+        window.location.href = '/page/notice/index.html?index=9&name='+val+'&id='+'d_tzgg';
       }else if(idx==2){
-        window.location.href = '/page/infoOpen/infoOpen.html?index=7&name='+'招标信息';
+        let val = encodeURI('医讯')
+        window.location.href = '/page/notice/index.html?index=7&name='+val+'&id='+'d_tzgg';
       }
     })
     // 新闻tab跳转
     $('#newsOne .back').click(function () {
         let val = encodeURI($(this).html());
-        window.location.href = '/page/journalism/journalism.html?index=6'+'&name='+val;
+        window.location.href = '/page/journalism/journalism.html?index=6'+'&name='+val+'&id='+'d_xwzx';
     });
+    $('#xwzx').click(function(){
+        let val = encodeURI('医院新闻');
+        window.location.href = '/page/journalism/journalism.html?index=6'+'&name='+val+'&id='+'d_xwzx';
+    })
+    // 通知公告
+    $('#tzgg').click(function(){
+        let val = encodeURI('招标公告');
+        window.location.href = '/page/notice/index.html?index=6'+'&name='+val+'&id='+'d_tzgg';
+    })
     //通知tab跳转
     $('#newsTwo .tzgg').click(function () {
         let val = encodeURI($(this).html());
-        window.location.href = '/page/infoOpen/infoOpen.html?index=7&name='+val;
+        window.location.href = '/page/notice/index.html?index=7&name='+val+'&id='+'d_tzgg';
     });
     $('#newsTwo .rczp').click(function () {
-        let val = encodeURI($(this).html());
-        window.location.href = '/page/talentDevelopment/index.html?index=9&name='+val;
+        let val = encodeURI('招聘信息');
+        window.location.href = '/page/notice/index.html?index=9&name='+val+'&id='+'d_tzgg';
     });
     $('#newsTwo .zbxx').click(function () {
         let val = encodeURI($(this).html());
-        window.location.href = '/page/infoOpen/infoOpen.html?index=7&name='+val;
+        window.location.href = '/page/notice/index.html?index=7&name='+val+'&id='+'d_tzgg';
     });
     // $('#edition .back_url').click(function () {
     //     $('#edition .back_url').removeClass('active');

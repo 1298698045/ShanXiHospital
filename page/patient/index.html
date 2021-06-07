@@ -10,6 +10,36 @@
     <link rel="stylesheet" href="../../css/patient.css">
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/pagination.css">
+    <link rel="stylesheet" href="/module/css/download.css">
+    <style>
+        .formSearch .filed .label{
+            display: inline-block;
+            line-height: 40px;
+        }
+        .formSearch{
+            flex-wrap: wrap;
+            justify-content: initial!important;
+        }
+        .formSearch .filed{
+            /* margin-right: 20px!important; */
+        }
+        .formSearch .filed.max{
+            margin-right: 30px!important;
+            margin-bottom: 10px;
+        }
+        .formSearch .filed.filedBtn{
+            margin-right: 10px!important;
+        }
+        .formSearch .filed .inp.minWidth{
+            width: 120px !important;;
+        }
+        .fl_l{
+            float: left;
+        }
+        .fl_r{
+            float: right;
+        }
+    </style>
 </head>
 <body>
     <div class="wrap">
@@ -1089,6 +1119,142 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="formWrap">
+                        <div class="formSearch clearFix" style="margin-bottom:20px;">
+                            <div class="filed max">
+                                <span class="label fl_l">
+                                    患者姓名：
+                                </span>
+                                <input type="text" class="inp fl_l" placeholder="请填写患者姓名">
+                            </div>
+                            <div class="filed max">
+                                <span class="label fl_l">身份证号：</span>
+                                <input type="text" class="inp fl_l" placeholder="请填写身份证号">
+                            </div>
+                            <div class="filed max">
+                                <span class="label fl_l">手机号码：</span>
+                                <input type="text" class="inp fl_l" placeholder="请填写手机号码">
+                            </div>
+                            <div class="filed">
+                                <span class="label fl_l">开始日期：</span>
+                                <input type="text" class="inp fl_l minWidth" placeholder="年/月/日">
+                            </div>
+                            <div class="filed">
+                                <span class="label fl_l">结束日期：</span>
+                                <input type="text" class="inp fl_l minWidth" placeholder="年/月/日">
+                            </div>
+                            <div class="filed">
+                                <span class="label fl_l">验证码：</span>
+                                <input type="text" class="inp fl_l minWidth" placeholder="请输入验证码">
+                            </div>
+                            <div class="filed filedBtn">
+                                <button class="btn">发送验证码</button>
+                            </div>
+                            <div class="filed filedBtn">
+                                <button class="btn">检验</button>
+                            </div>
+                            <div class="filed filedBtn">
+                                <button class="btn">检查</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download">
+                        <div class="row">
+                            <p class="name">
+                                山西省中医院科研经费使用申请表
+                            </p>
+                            <p class="btn">
+                                <i class="icon"></i>
+                                立即下载
+                            </p>
+                        </div>
+                        <div class="row">
+                            <p class="name">
+                                医院自筹经费课题财务科用章审批表
+                            </p>
+                            <p class="btn">
+                                <i class="icon"></i>
+                                立即下载
+                            </p>
+                        </div>
+                        <div class="row">
+                            <p class="name">
+                                2021年卫生厅科技研究计划课题结题报告
+                            </p>
+                            <p class="btn">
+                                <i class="icon"></i>
+                                立即下载
+                            </p>
+                        </div>
+                        <div class="row">
+                            <p class="name">
+                                山西省高校科研项目结题申请书
+                            </p>
+                            <p class="btn">
+                                <i class="icon"></i>
+                                立即下载
+                            </p>
+                        </div>
+                        <div class="row">
+                            <p class="name">
+                                山西省科学研究与技术开发计划项目验收相关表格
+                            </p>
+                            <p class="btn">
+                                <i class="icon"></i>
+                                立即下载
+                            </p>
+                        </div>
+                        <div class="row">
+                            <p class="name">
+                                山西中管局结题报告
+                            </p>
+                            <p class="btn">
+                                <i class="icon"></i>
+                                立即下载
+                            </p>
+                        </div>
+                        <div class="row">
+                            <p class="name">
+                                发表论文投稿申请及推荐证明
+                            </p>
+                            <p class="btn">
+                                <i class="icon"></i>
+                                立即下载
+                            </p>
+                        </div>
+                        <div class="row">
+                            <p class="name">
+                                进修申请表
+                            </p>
+                            <p class="btn">
+                                <i class="icon"></i>
+                                立即下载
+                            </p>
+                        </div>
+                        <div class="row">
+                            <p class="name">
+                                山西科学研究与技术开发计划项目验收相关表格
+                            </p>
+                            <p class="btn">
+                                <i class="icon"></i>
+                                立即下载
+                            </p>
+                        </div>
+                        <div class="row">
+                            <p class="name">
+                                医院自筹经费课题财务科用章审批表
+                            </p>
+                            <p class="btn">
+                                <i class="icon"></i>
+                                立即下载
+                            </p>
+                        </div>
+                    </div>
+                    <div id="downPages" style="margin: 50px 0;">
+
                     </div>
                 </div>
                 <!-- 体检中心 -->

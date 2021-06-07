@@ -45,6 +45,7 @@
   }
   .wrap .center .container .tabs {
     display: flex;
+    justify-content: center;
   }
   .wrap .center .container .tabs .tab {
     display: flex;

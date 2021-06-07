@@ -19,6 +19,11 @@ $(function(){
         $('.container .content').find('#tab_child p').eq(3).addClass('active');
         $('.container .content').eq(0).find('.blockWrap').removeClass('active');
         $('.container .content').eq(0).find('.blockWrap').eq(3).addClass('active');
+    }else if(hospitalName=='total'){
+        $('.container .content').eq(0).find('#tab_child p').removeClass('active');
+        $('.container .content').find('#tab_child p').eq(1).addClass('active');
+        $('.container .content').eq(0).find('.blockWrap').removeClass('active');
+        $('.container .content').eq(0).find('.blockWrap').eq(1).addClass('active');
     }
     function getUrlParam(key) {
         // 获取参数

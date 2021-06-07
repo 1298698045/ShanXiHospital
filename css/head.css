@@ -8,6 +8,9 @@
     font-family: 'St';
     src: url('../static/SourceHanSerifCN-Bold.otf') format('truetype');
   }
+  .wrap .center .container .tabs{
+    justify-content: center;
+  }
   .wrap{
     background-size: cover!important;
   }

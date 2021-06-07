@@ -3,13 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1220px">
-    <title>通知公告(信息公开)</title>
+    <title>通知公告</title>
     <link rel="stylesheet" href="../../css/swiper-3.4.2.min.css">
     <link rel="stylesheet" href="../../css/public.css">
     <link rel="stylesheet" href="../../css/head.css">
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/infoOpen.css">
     <link rel="stylesheet" href="/css/pagination.css">
+    <style>
+        .wrap .center .container .tabs {
+            display: flex;
+        }
+        .wrap .center .container .tabs .tab {
+            display: flex;
+            align-items: center;
+            margin-right: 30px;
+        }
+        .wrap .center .container .tabs .tab .imgs {
+            width: 10px;
+            height: 46px;
+        }
+        .wrap .center .container .tabs .tab .imgs img {
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+        }
+        .wrap .center .container .tabs .tab .l {
+            background: url('/images/l-1.png') no-repeat;
+        }
+        .wrap .center .container .tabs .tab .r {
+            background: url('/images/r-1.png') no-repeat;
+        }
+        .wrap .center .container .tabs .tab .l.active {
+            background: url('/images/backl.png') no-repeat;
+        }
+        .wrap .center .container .tabs .tab .r.active {
+            background: url('/images/backr.png') no-repeat;
+        }
+        .wrap .center .container .tabs .tab .text {
+            width: 285px;
+            height: 47px;
+            line-height: 47px;
+            background: url('/images/tab_child.png') no-repeat;
+            text-align: center;
+            color: #086252;
+            cursor: pointer;
+            background-size: 100% 100%;
+        }
+        .wrap .center .container .tabs .tab .text.active {
+            color: #fff;
+            background: url('/images/tab_child_active.png') no-repeat;
+            background-size: 100% 100%;
+        }
+    </style>
 </head>
 <body>
     <div class="wrap">
@@ -32,38 +78,21 @@
                         <img src="../../images/02.png" alt="">
                     </div>
                 </div>
-                <div class="tab_wrap">
-                    <div class="left_icon icon">
+                <div class="tabs">
+                    <div class="tab">
+                        <p class="text active" title="招标公告">
+                            招标公告
+                        </p>
                     </div>
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper" id="swiperId">
-                            <div class="swiper-slide active" title="招标公告">
-                                招标公告
-                            </div>
-                            <div class="swiper-slide" title="招标信息">
-                                招聘信息
-                            </div>
-                            <div class="swiper-slide" title="规章制度">
-                                医讯（放假通知）
-                            </div>
-                            <!-- <div class="swiper-slide" title="院务、党务公开">
-                                院务、党务公开
-                            </div>
-                            <div class="swiper-slide" title="用药信息">
-                                用药信息
-                            </div>
-                            <div class="swiper-slide" title="医院资源">
-                                医院资源
-                            </div>
-                            <div class="swiper-slide" title="医保新政">
-                                医保新政
-                            </div>
-                            <div class="swiper-slide" title="下载专区">
-                                下载专区
-                            </div> -->
-                        </div>
+                    <div class="tab">
+                        <p class="text" title="招聘信息">
+                            招聘信息
+                        </p>
                     </div>
-                    <div class="right_icon icon">
+                    <div class="tab">
+                        <p class="text" title="医讯">
+                            医讯（放假通知）
+                        </p>
                     </div>
                 </div>
                 <div class="content" style="display: block;">
@@ -155,14 +184,14 @@
                             <div class="article">
                                 <div class="title">
                                     <i class="left"></i>
-                                    <span>【敬告患者】关于刘光珍院长出诊时间调整的通知</span>
+                                    <span>山西省中医院电梯维保中标公告</span>
                                 </div>
                                 <div class="time">
                                     时间：2019-12-30      点击：5121次
                                 </div>
                                 <div class="subject">
                                     <p class="text">
-                                        刘光珍院长于11月23日起调整出诊时间为：每周二、四全天、周六上午出诊（周五停诊），请前来就诊的患者调整就诊时间，望周知。
+                                        山西省中医院于2021年1月27日对该项目进行了竞争性谈判招标采购。谈判小组依据谈判文件的具体要求，经过客观公正的评定，形成了集体意见。现将结果公告如下：
                                     </p>
                                 </div>
                             </div>
@@ -277,217 +306,6 @@
                         网页更新中......
                     </div>
                 </div>
-                <div class="content">
-                    <div class="devIng">
-                        网页更新中......
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="NoticeBody">
-                        <div class="left_wrap">
-                            <div class="l_text">
-                                <div class="row_back active">
-                                    <i class="icon_l"></i>
-                                    <span class="active">
-                                        门诊药房用药须知
-                                    </span>
-                                </div>
-                                <div class="row_back">
-                                    <i class="icon_l"></i>
-                                    <span>
-                                        中成药安全性
-                                    </span>
-                                </div>
-                                <div class="row_back">
-                                    <i class="icon_l"></i>
-                                    <span>
-                                        药品使用注意事项
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="scrollBar">
-                                <div class="sliderWrap">
-                                    <div class="slider">
-    
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="right_wrap">
-                            <div class="article">
-                                <div class="title">
-                                    <i class="left"></i>
-                                    <span>药品使用注意事项</span>
-                                </div>
-                                <div class="time">
-                                    时间：2019-12-30      点击：5121次
-                                </div>
-                                <div class="subject">
-                                    <p class="text">
-                                        众所周知，我们国家已经进入了老年社会，老年人大多患有高血压、高血脂、糖尿病、心脑血管等疾病与一身。他们需要长期、固定的吃一种或几种药物。在门诊处方中，大家不难发信，这类疾病的用药量占有门诊用药量相当大的比例。
-                                    　　一、老年人常用药品的不良反应。
-                                    　　1.镇静与安眠药等，易引起中枢神经系统抑制，表现有嗜睡、神经模糊与口齿不清。长期应用苯二氮卓类药物可是老年人出现抑郁症。
-                                    　　2. 非甾体抗炎药如阿司匹林、对乙酰氨基酚，对于发热尤其是高热的老人，可致大汗淋漓、 血压体温下降、四肢冰冷、极度虚弱甚至虚脱。长期服用阿司匹林、吲哚美辛等可致胃出血，呕吐咖啡色物以及黑便。
-                                    　　3.抗高血压药如利血平、甲基多巴长期应用易导致郁郁症。
-                                    　　4.抗心绞痛药如硝酸甘油可引起头晕、头痛、心率加快、可诱发或加重青光眼;硝苯地平可出现面部潮红、心悸、头痛等反应。
-                                    　　5.抗心律失常药如胺碘酮可出现室性心动过速。
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="NoticeBody">
-                        <div class="left_wrap">
-                            <div class="l_text">
-                                <div class="row_back active">
-                                    <i class="icon_l"></i>
-                                    <span class="active">
-                                        飞利浦英特瑞1.5T核磁
-                                    </span>
-                                </div>
-                                <div class="row_back">
-                                    <i class="icon_l"></i>
-                                    <span>
-                                        先进的检查设备
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="scrollBar">
-                                <div class="sliderWrap">
-                                    <div class="slider">
-    
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="right_wrap">
-                            <div class="article">
-                                <div class="title">
-                                    <i class="left"></i>
-                                    <span>飞利浦英特瑞1.5T核磁</span>
-                                </div>
-                                <div class="time">
-                                    时间：2019-12-30      点击：5121次
-                                </div>
-                                <div class="subject">
-                                    <p class="text">
-                                        品牌：飞利浦
-                                    </p>
-                                    <p class="text">
-                                        型号：MAGNETOM Avanto
-                                    </p>
-                                </div>
-                                <div class="imgs">
-                                    <img src="/images/图片 530.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="devIng">
-                        网页更新中......
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="download">
-                        <div class="row">
-                            <p class="name">
-                                山西省中医院科研经费使用申请表
-                            </p>
-                            <p class="btn">
-                                <i class="icon"></i>
-                                立即下载
-                            </p>
-                        </div>
-                        <div class="row">
-                            <p class="name">
-                                医院自筹经费课题财务科用章审批表
-                            </p>
-                            <p class="btn">
-                                <i class="icon"></i>
-                                立即下载
-                            </p>
-                        </div>
-                        <div class="row">
-                            <p class="name">
-                                2021年卫生厅科技研究计划课题结题报告
-                            </p>
-                            <p class="btn">
-                                <i class="icon"></i>
-                                立即下载
-                            </p>
-                        </div>
-                        <div class="row">
-                            <p class="name">
-                                山西省高校科研项目结题申请书
-                            </p>
-                            <p class="btn">
-                                <i class="icon"></i>
-                                立即下载
-                            </p>
-                        </div>
-                        <div class="row">
-                            <p class="name">
-                                山西省科学研究与技术开发计划项目验收相关表格
-                            </p>
-                            <p class="btn">
-                                <i class="icon"></i>
-                                立即下载
-                            </p>
-                        </div>
-                        <div class="row">
-                            <p class="name">
-                                山西中管局结题报告
-                            </p>
-                            <p class="btn">
-                                <i class="icon"></i>
-                                立即下载
-                            </p>
-                        </div>
-                        <div class="row">
-                            <p class="name">
-                                发表论文投稿申请及推荐证明
-                            </p>
-                            <p class="btn">
-                                <i class="icon"></i>
-                                立即下载
-                            </p>
-                        </div>
-                        <div class="row">
-                            <p class="name">
-                                进修申请表
-                            </p>
-                            <p class="btn">
-                                <i class="icon"></i>
-                                立即下载
-                            </p>
-                        </div>
-                        <div class="row">
-                            <p class="name">
-                                山西科学研究与技术开发计划项目验收相关表格
-                            </p>
-                            <p class="btn">
-                                <i class="icon"></i>
-                                立即下载
-                            </p>
-                        </div>
-                        <div class="row">
-                            <p class="name">
-                                医院自筹经费课题财务科用章审批表
-                            </p>
-                            <p class="btn">
-                                <i class="icon"></i>
-                                立即下载
-                            </p>
-                        </div>
-                    </div>
-                    <div id="downPages" style="margin: 50px 0;">
-
-                    </div>
-                </div>
             </div>
         </div>
         <div class="footer_wrap"></div>
@@ -504,15 +322,19 @@
 <script>
     $(function(){
         $('#return').click(function(){
-            window.location.href = '/page/infoOpen/infoOpen.html?index=7&name=通知公告';
+            window.location.href = '/page/notice/index.html?index=7&name=通知公告';
             $('#defaultVal').html('通知公告')
         })
         let name = getUrlParam("name");
         $('#defaultVal').html(name)
-        console.log(name,'name')
-        $('#swiperId .swiper-slide').removeClass('active');
-        $('#swiperId .swiper-slide[title="'+name+'"]').addClass('active');
-        var index = $('#swiperId .swiper-slide[title="'+name+'"]').index();
+        // console.log(name,'name')
+        // $('#swiperId .swiper-slide').removeClass('active');
+        // $('#swiperId .swiper-slide[title="'+name+'"]').addClass('active');
+        // var index = $('#swiperId .swiper-slide[title="'+name+'"]').index();
+        // $('.container .content').hide().eq(index).show()
+        $('.tabs .tab p').removeClass('active');
+        $('.tabs .tab p[title="'+name+'"]').addClass('active');
+        var index = $('.tabs .tab p[title="'+name+'"]').parent().index();
         $('.container .content').hide().eq(index).show()
         function getUrlParam(key) {
             // 获取参数
@@ -524,7 +346,18 @@
             //返回参数值
             return result ? decodeURIComponent(result[2]) : null;
         }
-        
+        $('.tabs .tab').click(function(){
+            $('.tabs .tab').children().removeClass('active');
+            $(this).children().addClass('active');
+            let value = $(this).children().html();
+            $('#defaultVal').html(value);
+            $('.container .content').hide();
+            let index = $(this).index();
+            $('.container .content').eq(index).show();
+            if($(this).index()==0){
+                funScroll();
+            }
+        })
         $('.swiper-wrapper .swiper-slide').click(function(){
             $('.swiper-wrapper .swiper-slide').removeClass('active');
             $(this).addClass('active');

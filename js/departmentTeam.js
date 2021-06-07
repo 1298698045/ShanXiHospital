@@ -100,5 +100,10 @@ $(function(){
             console.log(index);
         }
     });
-    
+    $('.Breadcrumb .return').click(function(){
+        window.location.href = '/page/department/department.html?id='+'d_ksdh'+'&childId='+'ksdh'
+    })
+    $('.Breadcrumb .depart').click(function(){
+        window.location.href = '/page/department/detail.html?id='+'d_ksdh';
+    })
 })
