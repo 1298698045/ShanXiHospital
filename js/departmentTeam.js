@@ -64,8 +64,8 @@ $(function(){
             '                                            王晞星，主任医师，教授，博/硕士研究生导师，国贴专家，山西名医，全国中医药专家学术经验继承导师，山西省中医院院长，重点专科带头人。'+
             '                                        </p>'+
             '                                        <p class="title">擅长：</p>'+
-            '                                        <p class="text">'+
-            '                                            中西医结合治疗肺癌、胃癌、食管癌、结直肠癌、肾癌等；对消化道疾病有独到的治疗方法'+
+            '                                        <p class="text ellipsis">'+
+            '                                            中西医结合治疗肺癌、胃癌、食管癌、结直肠癌、肾癌等；对消化道疾病有独到的治疗方法1123123213'+
             '                                        </p>'+
             '                                    </div>'+
             '                                </div>'+
@@ -82,7 +82,7 @@ $(function(){
     }
     $('.headPhoto').append(tempFun());
     $('.box').click(function(){
-        window.location.href = '/page/department/doctorDetail.html?index='+3
+        window.location.href = '/page/department/doctorDetail.html?index='+3+'&id='+'d_ksdh'
     })
     new Pagination({
         element: '#pages',

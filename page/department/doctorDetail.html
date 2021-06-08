@@ -19,7 +19,7 @@
                 <span>您现在的位置:  </span>
                 <span class="black" id="homePage">首页 ></span>
                 <span class="black">科室导航 ></span>
-                <span class="black">科室导航 ></span>
+                <span class="black">临床科室 ></span>
                 <span class="black">康复科 ></span>
                 <span class="black">医生团队 ></span>
                 <span>详情</span>
@@ -65,7 +65,7 @@
                                     <div class="box">
                                         <p>预约挂号</p>
                                     </div>
-                                    <div class="box">
+                                    <div class="box" id="czxx">
                                         <p>出诊信息</p>
                                     </div>
                                 </div>
@@ -216,6 +216,37 @@
 <script>
     $(function(){
         $('.bottomBack').hide();
+        $('.Breadcrumb .black').click(function(){
+            console.log($(this).index(),'===')
+            let idx = $(this).index();
+            if(idx == 2){
+                window.location.href = '/page/department/department.html?index=8&id=d_ksdh';
+            }else if(idx==3){
+                window.location.href = '/page/department/department.html?index=8&id=d_ksdh';
+            }else if(idx == 4){
+                window.location.href = '/page/department/detail.html?index=3&id=d_ksdh';
+            }else if(idx == 5){
+                window.location.href = '/page/department/team.html?index=3&id=d_ksdh';
+            }
+        })
+        $('.rowColumn #czxx').click(function(){
+            let val = encodeURI('出诊信息');
+            window.location.href = '/page/visitingNews/index.html?index='+1+'&name='+val+'&id='+'d_czdt'+'&hospitalName='+'total';
+        })
+        let childId = getUrlParam("childId");
+        if(childId){
+            $("html, body").scrollTop(0).animate({scrollTop: $("."+childId).offset().top});
+        }
+        function getUrlParam(key) {
+            // 获取参数
+            var url = window.location.search;
+            // 正则筛选地址栏
+            var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+            // 匹配目标参数
+            var result = url.substr(1).match(reg);
+            //返回参数值
+            return result ? decodeURIComponent(result[2]) : null;
+        }
     })
 </script>
 </html>

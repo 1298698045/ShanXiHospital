@@ -91,6 +91,10 @@ $(function(){
         return template;
     }
     $('.headPhoto').append(tempFun());
+    // 挂号
+    $('.headPhoto .cel_o').click(function(){
+        window.location.href = '/page/department/doctorDetail.html?id='+'d_ksdh'+'&childId='+'info'
+    })
     new Pagination({
         element: '#pages',
         type: 1,

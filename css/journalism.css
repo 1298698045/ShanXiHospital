@@ -174,7 +174,7 @@
     border: 1px solid #ccc;
     border-top: none;
     color: #333333;
-    background: rgba(255,255,255,.4);
+    background: rgba(255,255,255,.8);
   }
   .wrap .center .container .content_wrap .content .rCont .recommend:hover{
     cursor: pointer;

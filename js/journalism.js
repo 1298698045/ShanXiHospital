@@ -1,7 +1,7 @@
 $(function(){
     $('#return').click(function(){
-        window.location.href = '/page/journalism/journalism.html?index=6&name=院内新闻';
-        $('#defaultVal').html('院内新闻')
+        window.location.href = '/page/journalism/journalism.html?index=6&name=新闻中心'+'&id='+'d_xwzx';
+        $('#defaultVal').html('新闻中心')
     })
     let name = getUrlParam("name");
     $('#defaultVal').html(name);
@@ -142,7 +142,7 @@ new Pagination({
     }
 });
 $('#memorabiliaId .box').click(function(){
-    window.location.href = '/page/characteristic/detail.html?index=2';
+    window.location.href = '/page/characteristic/detail.html?index=2'+'&id=d_xwzx';
 })
 $('#videoId .box').click(function(){
     window.location.href = '/page/hospitalSurvey/videoDetail.html?index=5';

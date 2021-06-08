@@ -27,6 +27,7 @@
   .wrap .banner .swiper-container {
     width: 100%;
     height: 100%;
+    cursor: pointer;
   }
   .wrap .banner .swiper-container .swiper-wrapper .swiper-slide img {
     width: 100%;
@@ -343,11 +344,16 @@
     display: flex;
     justify-content: space-between;
   }
+  .wrap .center .department .cont .fixedBox{
+    width: 425px;
+    height: 310px;
+  }
   .wrap .center .department .cont .img_wrap {
     width: 425px;
     height: 310px;
     /* background: url('../images/depart.png'); */
     position: relative;
+    display: none;
   }
   .wrap .center .department .cont .img_wrap img{
     width: 100%;

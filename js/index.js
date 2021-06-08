@@ -23,6 +23,67 @@ $(function () {
             window.location.href = '/page/department/department.html?index=8&id=d_ksdh'+'&childId='+'tszl';
         }
     })
+    // 医师介绍
+    let ysjsStr = '';
+    for(let i=0; i < 6; i++){
+        ysjsStr += '<div class="swiper-slide ">'+
+        '                            <div class="box">'+
+        '                                <div class="block">'+
+        '                                    <div class="hover">'+
+        '                                        <div class="box_child">'+
+        '                                            <div class="pad">'+
+        '                                                <div class="img">'+
+        '                                                    <img src="./images/avatar1_1.png" alt="">'+
+        '                                                </div>'+
+        '                                                <p class="name">王晞星</p>'+
+        '                                                <p class="position">肿瘤病专家</p>'+
+        '                                            </div>'+
+        '                                        </div>'+
+        '                                        <div class="box_active_wrap">'+
+        '                                            <div class="box_active">'+
+        '                                                <div class="descWrap">'+
+        '                                                    <!-- <p class="title">王晞星，主任医师</p> -->'+
+        '                                                    <p class="text">'+
+        '                                                        王晞星，主任医师，教授，博/硕士研究生导师，国贴专家，山西名医，全国中医药专家学术经验继承导师，山西省中医院院长，重点专科带头人。'+
+        '                                                    </p>'+
+        '                                                    <p class="title">擅长：</p>'+
+        '                                                    <p class="text">'+
+        '                                                        中西医结合治疗肺癌、胃癌、食管癌、结直肠癌、肾癌等；对消化道疾病有独到的治疗方法'+
+        '                                                    </p>'+
+        '                                                    <!-- <p class="title">出诊时间：</p>'+
+        '                                                    <p class="text">'+
+        '                                                        每周二、周四、周五上午..'+
+        '                                                    </p> -->'+
+        '                                                </div>'+
+        '                                            </div>'+
+        '                                        </div>'+
+        '                                    </div>'+
+        '                                    <div class="back_bord">'+
+        '                                        <div class="back">'+
+        '                                            内综肿瘤科'+
+        '                                        </div>'+
+        '                                    </div>'+
+        '                                    <div class="back_row">'+
+        '                                        <div class="cel_o">挂号</div>'+
+        '                                        <div class="cel_t">问诊</div>'+
+        '                                    </div>'+
+        '                                </div>'+
+        '                            </div>'+
+        '                        </div>';
+
+    }
+    $('.headPhoto').html(ysjsStr);
+    mySwiper1.init()
+    $('.headPhoto .hover').click(function(){
+        window.location.href = '/page/department/doctorDetail.html?index=3'+'&id='+'d_ksdh';
+    })
+    $('.headPhoto .back_bord').click(function(){
+        window.location.href = '/page/department/detail.html?index=3'+'&id='+'d_ksdh';
+    })
+    // 挂号
+    $('.headPhoto .cel_o').click(function(){
+        window.location.href = '/page/department/doctorDetail.html?id='+'d_ksdh'+'&childId='+'info'
+    })
     // 科室导航
     $('#depart .tab').click(function () {
         $('#depart .tab').removeClass('active');
@@ -32,7 +93,7 @@ $(function () {
     });
     // 科室导航-查看更多
     $('#depart .more').click(function(){
-        window.location.href = '/page/department/department.html?index=3'
+        window.location.href = '/page/department/department.html?index=3'+'&id='+'d_ksdh'
     })
     // 新闻
     $('#newsOne .back').hover(function(){
@@ -101,13 +162,16 @@ $(function () {
         $('.departList .uls .lis').removeClass('active');
         $(this).addClass('active');
         console.log($(this).index())
-        if($(this).index()==0){
-            $('.img_wrap img').attr('src','/images/depart.png');
-        }else {
-            $('.img_wrap img').attr('src','/images/back2.png');
-        }
+        let idx = $(this).index();
+        $('.department .cont .img_wrap').hide();
+        $('.department .cont .img_wrap').eq(idx).show();
+        // if($(this).index()==0){
+        //     $('.img_wrap img').attr('src','/images/depart.png');
+        // }else {
+        //     $('.img_wrap img').attr('src','/images/back2.png');
+        // }
     },function(){
-        $(this).addClass('active');
+        // $(this).addClass('active');
     });
     $('.departList .uls .lis').click(function(){
         window.location.href = '/page/department/detail.html?index=3'
@@ -131,5 +195,6 @@ $(function () {
     $('.News .left_box .row_wrap').click(function(){
         window.location.href = '/page/journalism/detail.html?index='+6
     })
+    $('.bottomBack').hide();
     //    onMyLoad();
 });

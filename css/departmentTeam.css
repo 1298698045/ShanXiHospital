@@ -222,6 +222,7 @@
   }
   .wrap .center .content .headPhoto .box .box_active .descWrap{
     padding: 20px;
+    overflow: hidden;
   }
   .wrap .center .content .headPhoto .box .box_active .title {
     font-size: 16px;
@@ -232,6 +233,12 @@
   .wrap .center .content .headPhoto .box .box_active .text {
     font-size: 14px;
     color: #edded3;
+  }
+  .wrap .center .content .headPhoto .box .box_active .ellipsis{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
   }
   .wrap .center .content .headPhoto .box .back_bord {
     /* border: 1px solid #815b3f; */

@@ -52,11 +52,12 @@
   font-size: 14px;
   overflow: hidden;
   white-space: nowrap;
+  text-align: center;
 }
 .footer .top .box .solid{
-  color: #fff;
+  color: #9e9692!important;
   display: inline-block;
-  padding: 0 5px;
+  padding: 0 18px!important;
   font-size: 12px;
 }
 .footer .top .box .write {
@@ -109,4 +110,10 @@
   color: #9e9692;
   padding-bottom: 17px;
   cursor: pointer;
+}
+.footer .bottom .box .flex_row .right p  a{
+  color: #9e9692;
+}
+.footer .bottom .box .flex_row .right p  a:hover{
+  color: #fff;
 }
