@@ -286,6 +286,7 @@
 <script src="../../utils/head.js"></script>
  
 <script src="../../utils/footer.js"></script>
+<script src="/js/articleSlice.js"></script>
 <script>
     $(function(){
         $('#return').click(function(){
@@ -313,7 +314,7 @@
 '                                                王晞星，主任医师，教授，博/硕士研究生导师，国贴专家，山西名医，全国中医药专家学术经验继承导师，山西省中医院院长，重点专科带头人。'+
 '                                            </p>'+
 '                                            <p class="title">擅长：</p>'+
-'                                            <p class="text">'+
+'                                            <p class="text ellipsis">'+
 '                                                中西医结合治疗肺癌、胃癌、食管癌、结直肠癌、肾癌等；对消化道疾病有独到的治疗方法'+
 '                                            </p>'+
 '                                        </div>'+
@@ -330,6 +331,12 @@
             return template;
         }
         $('.headPhoto').append(tempFun());
+        $('.headPhoto .hover').click(function(){
+            window.location.href = '/page/department/doctorDetail.html?index='+3+'&id='+'d_ksdh'+'&hospitalCode='+'victory'
+        })
+        $('.headPhoto .cel_o').click(function(){
+            window.location.href = '/page/department/doctorDetail.html?id='+'d_ksdh'+'&childId='+'info'+'&hospitalCode='+'victory'
+        })
         // 查看详细
         $('#previewDetail').click(function(){
             $('.modal').css('display','block');
@@ -380,7 +387,7 @@
             // })
         }
         $('#departs').click(function(){
-            window.location.href = '/page/department/team.html?index='+3
+            window.location.href = '/page/department/team.html?index='+3+'&id='+'d_ksdh'+'&hospitalCode='+'victory'
         })
         var rowX = 0;
         $('#rowSliderWrap .slider').mousedown(function(e){
@@ -431,7 +438,10 @@
         }
         $('#memorabiliaId').append(memorabiliaIdstr);
         $('#departDynamic').click(function(){
-            window.location.href = '/page/journalism/journalism.html?index=6&name=医院动态'
+            window.location.href = '/page/journalism/journalism.html?index=6&name=医院动态'+'&id='+'d_xwzx'
+        })
+        $('.dynamic .box').click(function(){
+            window.location.href = '/page/journalism/detail.html?id=d_xwzx'
         })
         $('.rowColumn .box').click(function(){
             let name = $(this).attr('name');

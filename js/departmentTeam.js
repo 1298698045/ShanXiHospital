@@ -106,4 +106,22 @@ $(function(){
     $('.Breadcrumb .depart').click(function(){
         window.location.href = '/page/department/detail.html?id='+'d_ksdh';
     })
+    let hospitalCode = getUrlParam('hospitalCode');
+    if(hospitalCode=='victory'){
+        $('.Breadcrumb .black').eq(3).hide();
+        $('.Breadcrumb .black').eq(2).html('<span class="black"><a href="/page/hospital/victory.html?id=d_fyjs">胜利分院<a/> ></span>')
+    }else if(hospitalCode=='peace'){
+        $('.Breadcrumb .black').eq(3).hide();
+        $('.Breadcrumb .black').eq(2).html('<span class="black"><a href="/page/hospital/peace.html?id=d_fyjs">和平分院<a/> ></span>')
+    }
+    function getUrlParam(key) {
+        // 获取参数
+        var url = window.location.search;
+        // 正则筛选地址栏
+        var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+        // 匹配目标参数
+        var result = url.substr(1).match(reg);
+        //返回参数值
+        return result ? decodeURIComponent(result[2]) : null;
+    }
 })

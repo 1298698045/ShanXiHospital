@@ -446,6 +446,7 @@
 <script src="../../utils/head.js"></script>
  
 <script src="../../utils/footer.js"></script>
+<script src="/js/articleSlice.js"></script>
 <script>
     $(function(){
         $('#return').click(function(){
@@ -534,8 +535,11 @@
             $('.modal').css('display','none');
             document.documentElement.style.overflow='auto';
         })
-        $('.headPhoto .box').click(function(){
+        $('.headPhoto .hover').click(function(){
             window.location.href = '/page/department/doctorDetail.html?index='+3+'&id='+'d_ksdh'
+        })
+        $('.headPhoto .cel_o').click(function(){
+            window.location.href = '/page/department/doctorDetail.html?id='+'d_ksdh'+'&childId='+'info';
         })
         function funScroll(){
             //设置y轴的增量 
@@ -641,7 +645,10 @@
         }
         $('#memorabiliaId').append(memorabiliaIdstr);
         $('#departDynamic').click(function(){
-            window.location.href = '/page/journalism/journalism.html?index=6&name=医院动态'
+            window.location.href = '/page/journalism/journalism.html?index=6&name=医院新闻'+'&id='+'d_xwzx';
+        })
+        $('.dynamic .box').click(function(){
+            window.location.href = '/page/journalism/detail.html?index=6&id=d_xwzx';
         })
         $('.rowColumn .box').click(function(){
             debugger
@@ -656,49 +663,49 @@
         })
 
 
-        let desc = $('.r_cont_wrap .article .column').html();
-        var number = 175
-        number = parseInt(f1(number,desc,number/2));
-        desc = f2(desc,number)
-        $('.r_cont_wrap .article').html('<div class="column">'+desc+'...</div>')
-        function f1(number,desc,total){
-            var prestr = f2(desc,number/2) // 前100个字符串
-            var endstr = f3(desc,number/2) // 剩余字符串
-            var len = getByteLen(prestr); // 前100个字符串的字符总数
-            var num = 0
-            //前100个的字符数
-            if(len!=0){
-                if(number>len){
-                    num = number - len
-                    total += num/2
-                    return f1(num,endstr,total)
-                }else{
-                    return total
-                }
-            }else{
-                return total
-            }
+        // let desc = $('.r_cont_wrap .article .column').html();
+        // var number = 160
+        // number = parseInt(f1(number,desc,number/2));
+        // desc = f2(desc,number)
+        // $('.r_cont_wrap .article').html('<div class="column">'+desc+'...</div>')
+        // function f1(number,desc,total){
+        //     var prestr = f2(desc,number/2) // 前100个字符串
+        //     var endstr = f3(desc,number/2) // 剩余字符串
+        //     var len = getByteLen(prestr); // 前100个字符串的字符总数
+        //     var num = 0
+        //     //前100个的字符数
+        //     if(len!=0){
+        //         if(number>len){
+        //             num = number - len
+        //             total += num/2
+        //             return f1(num,endstr,total)
+        //         }else{
+        //             return total
+        //         }
+        //     }else{
+        //         return total
+        //     }
             
             
-        }
-        function f2(desc,length){
-            return desc.slice(0,length)
-        }
-        function f3(desc,length){
-            return desc.slice(length,desc.length)
-        }
-        function getByteLen(val) {
-            var len = 0;
-            for (var i = 0; i < val.length; i++) {
-                var a = val.charAt(i);
-                if (a.match(/[^\x00-\xff]/ig) != null){
-                    len += 2;
-                }else{
-                    len += 1;
-                }
-            }
-            return len;
-        }
+        // }
+        // function f2(desc,length){
+        //     return desc.slice(0,length)
+        // }
+        // function f3(desc,length){
+        //     return desc.slice(length,desc.length)
+        // }
+        // function getByteLen(val) {
+        //     var len = 0;
+        //     for (var i = 0; i < val.length; i++) {
+        //         var a = val.charAt(i);
+        //         if (a.match(/[^\x00-\xff]/ig) != null){
+        //             len += 2;
+        //         }else{
+        //             len += 1;
+        //         }
+        //     }
+        //     return len;
+        // }
     })
 </script>
 </html>

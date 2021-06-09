@@ -65,7 +65,7 @@ $(function(){
             '                            <img src="/images/teaching1.1.png" alt="">'+
             '                        </div>'+
             '                        <div class="rightCont">'+
-            '                            <p class="title">我院圆满完成山西省科学技术厅社会发展攻关项目课题验...</p>'+
+            '                            <p class="title d_multiline">我院圆满完成山西省科学技术厅社会发展攻关项目课题验...</p>'+
             '                            <div class="boxTime">'+
             '                                <p class="maxText">'+
             '                                    04'+
@@ -79,6 +79,9 @@ $(function(){
             '                </li>';
         }
         $('.dynamic').append(str);
+        $('.dynamic .block').click(function(){
+            window.location.href = '/page/commen/detail.html?index=-1'
+        })
     }
 })
 new Pagination({

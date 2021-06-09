@@ -6,7 +6,25 @@ $(function(){
     $('#swiperId .swiper-slide[title="'+name+'"]').addClass('active');
     var index = $('#swiperId .swiper-slide[title="'+name+'"]').index();
     $('.container .content').hide().eq(index).show()
-    console.log($('#swiperId .swiper-slide[title="'+name+'"]'))
+    let listId = getUrlParam('listId');
+    // let childlist = $('.container .content').hide().eq(index).find('.left_wrap .row_back');
+    if(listId!=''&&listId){
+       let idx = $('#'+listId).index();
+       $('.container .content').find('.left_wrap .row_back').removeClass('active').eq(idx).addClass('active');
+       $('.container .content').find('.left_wrap .row_back span').removeClass('active');
+       $('.container .content').find('.right_wrap .rightCont').removeClass('active').eq(idx).addClass('active');
+    }
+    // for(let i = 0; i < childlist.length; i++){
+    //     let id = childlist.eq(i).attr('id');
+    //     if(id == listId){
+    //         $('.container .content').hide().eq(index).show().find('.left_wrap .row_back').removeClass('active');
+    //         $('.container .content').hide().eq(index).show().find('.left_wrap .row_back span').removeClass('active');
+    //         $('.container .content').hide().eq(index).show().find('.left_wrap .row_back').eq(i).addClass('active');
+    //         $('.container .content').hide().eq(index).show().find('.right_wrap .rightCont').removeClass('active');
+    //         $('.container .content').hide().eq(index).show().find('.right_wrap .rightCont').eq(i).addClass('active');
+    //     }
+    // }
+    // console.log($('#swiperId .swiper-slide[title="'+name+'"]'))
     function getUrlParam(key) {
         // 获取参数
         var url = window.location.search;

@@ -4,6 +4,13 @@
     background-position: center;
     background-attachment: fixed;
   }
+  .d_multiline{
+    width: 247px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
     .wrap .center {
       width: 1230px;
       margin: 30px auto;
@@ -89,6 +96,7 @@
     }
     .wrap .center .container .content.active{
       display: block;
+      cursor: pointer;
     }
     .wrap .center .container .content{
       display: none;

@@ -98,7 +98,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-right: 10px !important;
+    margin-right: 20px !important;
   }
   .wrap .container .hospitalWrap .tab_wrap .swiper-container .swiper-wrapper .swiper-slide .img {
     width: 54px;
@@ -793,6 +793,12 @@
   .wrap  .container .content .historyWrap{
     display: flex;
   }
+  .wrap  .container .content .historyWrap .swiper-container-vertical{
+    overflow: hidden;
+  }
+  .wrap  .container .content .historyWrap .swiper-container-vertical .swiper-wrapper{
+    height: 690px;
+  }
   .wrap  .container .content .historyWrap .leftWrap{
     width: 382px;
     height: 809px;
@@ -801,10 +807,20 @@
     width: 382px;
     height: 44px;
     background: url('../images/prev.png') no-repeat;
+    position: relative;
+    z-index: 999;
+    cursor: pointer;
+    margin-bottom: 10px;
+    cursor: not-allowed;
   }
-  .wrap  .container .content .historyWrap .leftWrap .boxCont{
+  .wrap  .container .content .historyWrap .leftWrap .prev_btn.active{
+    background: url('/images/next_btn.png');
+    transform: rotate(180deg);
+    cursor: pointer;
+  }
+  /* .wrap  .container .content .historyWrap .leftWrap .boxCont{
     margin: 16px 0;
-  }
+  } */
   .wrap  .container .content .historyWrap .leftWrap .boxCont .box{
     width: 382px;
     height: 130px;
@@ -836,10 +852,26 @@
     width: 382px;
     height: 44px;
     background: url('../images/next_btn.png') no-repeat;
+    position: relative;
+    z-index: 999;
+    cursor: pointer;
+  }
+  .wrap  .container .content .historyWrap .leftWrap .next_btn.active{
+    background: url('/images/prev.png') no-repeat;
+    transform: rotate(180deg);
+    cursor: not-allowed;
+    
   }
   .wrap  .container .content .historyWrap .rightWrap {
-    margin-left: 45px;
+    margin-left: 25px;
+    padding-left: 20px;
     box-sizing: border-box;
+    height: 809px;
+    overflow-y: hidden;
+  }
+  /*定义了滚动条整体样式；*/ 
+	.wrap  .container .content .historyWrap .rightWrap::-webkit-scrollbar{
+    display: none;
   }
   .wrap  .container .content .historyWrap .rightWrap .stepBox{
     padding-left: 37px;
@@ -849,12 +881,12 @@
     font-size: 22px;
     font-weight: bold;
     color: #333333;
-    padding-bottom: 46px;
+    padding-bottom: 28px;
     display: flex;
     align-items: center;
   }
   .wrap  .container .content .historyWrap .rightWrap .stepBox .title.top{
-    padding-top: 65px;
+    padding-top: 56px;
   }
   .wrap  .container .content .historyWrap .rightWrap .stepBox .title::before{
     content: '';
@@ -869,6 +901,7 @@
     color: #333333;
     /* line-height: 2; */
     position: relative;
+    line-height: 42px;
   }
   .wrap  .container .content .historyWrap .rightWrap .stepBox .desc .tag_icon{
     display: inline-block;
@@ -877,7 +910,7 @@
     background: url('../images/yuan.png');
     position: absolute;
     left: -43px;
-    top: 10px;
+    top: 14px;
   }
   /* 医院领导 */
   .wrap  .container .content .leader_wrap{
@@ -1064,30 +1097,51 @@
   }
   .modal_modal .popupWrap .block .swiper-container_modal{
     width: 810px;
+    /* height: 410px; */
+    /* background: url('/images/modal_photo_box.png') no-repeat; */
+    /* background-size: 100% 100%; */
+    /* padding: 5px; */
+    box-sizing: border-box;
+    margin: 0 auto;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .modal_modal .popupWrap .block .swiper-container_modal .swiper-wrapper{
+    /* width: 100%;
+    height: 100%;
+    overflow: hidden; */
+  }
+  .modal_modal .popupWrap .block .swiper-container_modal .swiper-wrapper .swiper-slide{
+    /* width: 810px;
+    height: 410px;
+    background: url('/images/modal_photo_box.png') no-repeat;
+    background-size: 100% 100%;
+    padding: 5px;
+    box-sizing: border-box; */
+    width: 100%;
+    height: 100%;
+  }
+  .modal_modal .popupWrap .block .swiper-container_modal .swiper-wrapper .swiper-slide .imgBox{
+    width: 810px;
     height: 410px;
     background: url('/images/modal_photo_box.png') no-repeat;
     background-size: 100% 100%;
     padding: 5px;
     box-sizing: border-box;
-    margin: 0 auto;
   }
-  .modal_modal .popupWrap .block .swiper-container_modal .swiper-wrapper{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  .modal_modal .popupWrap .block .swiper-container_modal .swiper-wrapper .swiper-slide{
-    width: 100%;
-    height: 100%;
-  }
-  .modal_modal .popupWrap .block .swiper-container_modal .swiper-wrapper .swiper-slide img{
+  .modal_modal .popupWrap .block .swiper-container_modal .swiper-wrapper .swiper-slide .imgBox img{
     width: 100%;
     height: 100%;
   }
   .modal_modal .popupWrap .block .swiper-container_modal .swiper-button-prev{
     width: 15px;
     height: 27px;
-    background: url('/images/modal_icon_l.png');
+    background: url('/images/modal_icon_r.png');
+    transform: rotate(180deg);
+  }
+  .modal_modal .popupWrap .block .swiper-container_modal .swiper-button-prev.active{
+    background: url('/images/modal_icon_r.png');
+    transform: rotate(180deg);
   }
   .modal_modal .popupWrap .block .swiper-container_modal .swiper-button-next{
     width: 15px;
@@ -1103,4 +1157,5 @@
   .modal_modal .popupWrap .block .row .title{
     color: #fff;
     font-size: 18px;
+    padding-left: 1px;
   }

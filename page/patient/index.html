@@ -39,6 +39,13 @@
         .fl_r{
             float: right;
         }
+        .wrap .center .container .tab_wrap .swiper-container .swiper-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+        .wrap .center .container .content .box{
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
@@ -63,9 +70,9 @@
                     </div>
                 </div>
                 <div class="tab_wrap">
-                    <div class="left_icon icon">
-                    </div>
-                    <div class="swiper-container">
+                    <!-- <div class="left_icon icon">
+                    </div> -->
+                    <div class="swiper-container swiper-no-swiping">
                         <div class="swiper-wrapper" id="swiperId">
                             <!-- <div class="swiper-slide active" title="出诊信息">
                                 出诊信息
@@ -105,8 +112,8 @@
                             </div> -->
                         </div>
                     </div>
-                    <div class="right_icon icon">
-                    </div>
+                    <!-- <div class="right_icon icon">
+                    </div> -->
                 </div>
                 <!-- 出诊信息 -->
                 <!-- <div class="content" id="visitInfo" style="display:block;">
@@ -569,13 +576,13 @@
                     <div class="NoticeBody"  id="jyxz_id">
                         <div class="left_wrap">
                             <div class="l_text">
-                                <div class="row_back active">
+                                <div class="row_back active" id='yyghxz'>
                                     <i class="icon_l"></i>
                                     <span class="active">
                                         预约挂号须知
                                     </span>
                                 </div>
-                                <div class="row_back">
+                                <div class="row_back" id="mzjzlc">
                                     <i class="icon_l"></i>
                                     <span>
                                         门诊就诊流程

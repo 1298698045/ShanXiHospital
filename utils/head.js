@@ -114,7 +114,7 @@ $(function(){
     '                                            <div class="column column_flex"> '+
     '                                                <h5>和平分院</h5> '+
     '                                                <div class="paragraph"> '+
-    '                                                    山西省中医院和平分院系山西省卫生厅批准设立的中医医疗机构，是山西省中医院的下属机构，位于万柏林区和平南路336号。和平分院开设六年来，门诊量呈快速增长的态势，年门诊量八万余人次，满足了河西百姓看中医，求名中医的需求。山西省中医院百余名.. '+
+    '                                                    山西省中医院和平分院系山西省卫生厅批准设立的中医医疗机构，是山西省中医院的下属机构，位于万柏林区和平南路336号。和平分院开设六年来，门诊量呈快速增长的态势，年门诊量八万余人次，满足了河西百姓看中医，求名中医的需求。'+
     '                                                </div> '+
     '                                                <div class="detail_btn"><a href="/page/hospital/peace.html?id=d_fyjs">查看详细</a></div> '+
     '                                            </div> '+
@@ -263,15 +263,15 @@ $(function(){
     '                                        <div class="itemBox">'+
     '                                            <div class="column border columnBox column_flex" id="jzxz"> '+
     '                                                <h5>就诊须知</h5> '+
-    '                                                <p class="newLi"><a href="/page/commen/detail.html?index=-1">· 预约挂号须知</a></p> '+
+    '                                                <p class="newLi"><a href="/page/patient/index.html?id=d_hzfw&name=就医须知&listId=yyghxz">· 预约挂号须知</a></p> '+
     '                                                <p class="newLi"><a href="/page/commen/detail.html?index=-1">· 就诊须知（总院）</a></p> '+
     '                                                <p class="newLi"><a href="/page/commen/detail.html?index=-1">· 就医须知（名医门诊</a></p> '+
-    '                                                <p class="newLi"><a href="/page/commen/detail.html?index=-1">· 门诊就诊流程</a></p> '+
+    '                                                <p class="newLi"><a href="/page/patient/index.html?id=d_hzfw&name=就医须知&listId=mzjzlc">· 门诊就诊流程</a></p> '+
     '                                            </div> '+
     '                                        </div>'+
     '                                        <div class="itemBox">'+
     '                                            <div class="column column_flex" id="yndh"> '+
-    '                                                <h5>院内导航</h5> '+
+    '                                                <h5>住院指南</h5> '+
     '                                                <p class="newLi"><a href="/page/commen/detail.html?index=-1">· 门诊楼层科示意图</a></p> '+
     '                                                <p class="newLi"><a href="/page/commen/detail.html?index=-1">· 病房楼楼层分布</a></p> '+
     '                                                <p class="newLi"><a href="/page/commen/detail.html?index=-1">· 西楼楼层分布</a></p> '+

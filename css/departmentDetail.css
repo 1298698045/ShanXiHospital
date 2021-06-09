@@ -60,6 +60,7 @@
     /* display: flex;
     margin-right: 10px; */
     overflow: hidden;
+    float: right;
   }
   .wrap .maxImage .max_img_content .layOut_panel .r_cont_wrap .preview{
     width: 32px;
@@ -110,7 +111,7 @@
     word-wrap: break-word;
     word-break:break-all;
     line-height: 1; */
-    height: 200px;
+    height: 308px;
     float: left;
     font-size: 16px;
     color: #ffffff;
@@ -129,6 +130,9 @@
     text-align: center;
     position: relative;
     margin-top: 12px;
+    line-height: 1.05;
+    font-family: 'St';
+    padding: 20px 0;
   }
   .wrap .maxImage .max_img_content .layOut_panel .r_cont_wrap .tag .text .topBack{
     width: 77px;
@@ -154,8 +158,10 @@
     right: -3px;
   }
   .wrap .maxImage .max_img_content .layOut_panel .r_cont_wrap .rowColumn{
-    display: flex;
-    margin-top: 53px;
+    /* display: flex; */
+    /* margin-top: 53px; */
+    float: left;
+    margin-right: 30px;
     /* float: right; */
   }
   .wrap .maxImage .max_img_content .layOut_panel .r_cont_wrap .rowColumn .box{
@@ -170,6 +176,7 @@
     justify-content: center;
     align-items: center;
     margin-right: 40px;
+    margin-bottom: 20px;
   }
   .wrap .maxImage .max_img_content .layOut_panel .r_cont_wrap .rowColumn .box:hover{
     background: url('../images/box_active.png') no-repeat;
@@ -423,6 +430,12 @@
     justify-content: space-between;
     padding: 50px 0;
     flex-wrap: wrap;
+  }
+  .wrap .center .headPhoto .box .ellipsis{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
   }
   .wrap .center .headPhoto .box .block .hover:hover .box_child{
     display: none;

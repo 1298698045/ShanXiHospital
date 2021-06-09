@@ -32,11 +32,7 @@
                                 <i class="icon bottom_icon"></i>
                             </div>
                             <div class="article">
-                                <p class="column">医药特色的综合性三级甲等中医院。&nbsp;...</p>
-                                <p class="column">山西省集医疗、教学、科研于一体，具有鲜明中</p>
-                                <p class="column">属医院。历经60余年的建设，目前已发展成为</p>
-                                <p class="column">年，原名山西省中医研究所，山西省中医研究所附</p>
-                                <p class="column">山西省中医药研究院，山西省中医院成立于</p>
+                                <p class="column">山西省集医疗、教学、科研于一体，具有鲜明中属医院。历经60余年的建设，目前已发展成为年，原名山西省中医研究所，山西省中医研究所附山西省中医药研究院，山西省中医院成立于</p>
                             </div>
                             <div class="tag">
                                 <div class="text">
@@ -72,8 +68,13 @@
                     <div class="boxWrap">
                         <div class="box">
                             <div class="boxBlock">
+                                <div class="preview">
+                                    <i class="icon top_icon"></i>
+                                    <p class="texta" id="previewDetail">查看详细</p>
+                                    <i class="icon bottom_icon"></i>
+                                </div>
                                 <p class="text">
-                                    复试时间：2021年3月28日（周日）、3月29日（周一），采用网络复试形式，请提前1小时至候考区等待。
+                                    山西省集医疗、教学、科研于一体，具有鲜明中属医院。历经60余年的建设，目前已发展成为年，原名山西省中医研究所，山西省中医研究所附山西省中医药研究院，山西省中医院成立于
                                 </p>
                                 <div class="subject">
                                     2021年硕士研究生复试考生公告
@@ -589,6 +590,7 @@
 <script src="../../utils/head.js"></script>
  
 <script src="../../utils/footer.js"></script>
+<script src="/js/articleSlice.js"></script>
 <script>
     $(function(){
         function tempFun(){
@@ -647,7 +649,7 @@
 '                                                王晞星，主任医师，教授，博/硕士研究生导师，国贴专家，山西名医，全国中医药专家学术经验继承导师，山西省中医院院长，重点专科带头人。'+
 '                                            </p>'+
 '                                            <p class="title">擅长：</p>'+
-'                                            <p class="text">'+
+'                                            <p class="text d_multiline">'+
 '                                                中西医结合治疗肺癌、胃癌、食管癌、结直肠癌、肾癌等；对消化道疾病有独到的治疗方法'+
 '                                            </p>'+
 '                                        </div>'+
@@ -660,6 +662,9 @@
             return template;
         }
         $('.headPhoto').append(tempFun());
+        $('.headPhoto .box').click(function(){
+            
+        })
         // 查看详细
         $('#previewDetail').click(function(){
             $('.modal').css('display','block');

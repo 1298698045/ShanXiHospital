@@ -84,7 +84,7 @@
     /* width: 295px; */
     height: 186px;
     cursor: pointer;
-    margin-left: 20px;
+    margin-left: 50px;
   }
   .wrap .maxImage .max_img_content .layOut_panel .r_cont_wrap .article .column{
     /* width: 20px;
@@ -101,7 +101,7 @@
     float: left;
     font-size: 16px;
     color: #ffffff;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
     writing-mode: vertical-rl;
   }
   .wrap .maxImage .max_img_content .layOut_panel .r_cont_wrap .tag{
@@ -114,6 +114,9 @@
     text-align: center;
     position: relative;
     margin-top: 12px;
+    line-height: 1.05;
+    font-family: 'St';
+    padding: 20px 0;
   }
   .wrap .maxImage .max_img_content .layOut_panel .r_cont_wrap .tag .text .topBack{
     width: 77px;
@@ -699,30 +702,51 @@
   }
   .modal_modal .popupWrap .block .swiper-container_modal{
     width: 810px;
+    /* height: 410px; */
+    /* background: url('/images/modal_photo_box.png') no-repeat; */
+    /* background-size: 100% 100%; */
+    /* padding: 5px; */
+    box-sizing: border-box;
+    margin: 0 auto;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .modal_modal .popupWrap .block .swiper-container_modal .swiper-wrapper{
+    /* width: 100%;
+    height: 100%;
+    overflow: hidden; */
+  }
+  .modal_modal .popupWrap .block .swiper-container_modal .swiper-wrapper .swiper-slide{
+    /* width: 810px;
+    height: 410px;
+    background: url('/images/modal_photo_box.png') no-repeat;
+    background-size: 100% 100%;
+    padding: 5px;
+    box-sizing: border-box; */
+    width: 100%;
+    height: 100%;
+  }
+  .modal_modal .popupWrap .block .swiper-container_modal .swiper-wrapper .swiper-slide .imgBox{
+    width: 810px;
     height: 410px;
     background: url('/images/modal_photo_box.png') no-repeat;
     background-size: 100% 100%;
     padding: 5px;
     box-sizing: border-box;
-    margin: 0 auto;
   }
-  .modal_modal .popupWrap .block .swiper-container_modal .swiper-wrapper{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  .modal_modal .popupWrap .block .swiper-container_modal .swiper-wrapper .swiper-slide{
-    width: 100%;
-    height: 100%;
-  }
-  .modal_modal .popupWrap .block .swiper-container_modal .swiper-wrapper .swiper-slide img{
+  .modal_modal .popupWrap .block .swiper-container_modal .swiper-wrapper .swiper-slide .imgBox img{
     width: 100%;
     height: 100%;
   }
   .modal_modal .popupWrap .block .swiper-container_modal .swiper-button-prev{
     width: 15px;
     height: 27px;
-    background: url('/images/modal_icon_l.png');
+    background: url('/images/modal_icon_r.png');
+    transform: rotate(180deg);
+  }
+  .modal_modal .popupWrap .block .swiper-container_modal .swiper-button-prev.active{
+    background: url('/images/modal_icon_r.png');
+    transform: rotate(180deg);
   }
   .modal_modal .popupWrap .block .swiper-container_modal .swiper-button-next{
     width: 15px;
@@ -738,4 +762,5 @@
   .modal_modal .popupWrap .block .row .title{
     color: #fff;
     font-size: 18px;
+    padding-left: 1px;
   }

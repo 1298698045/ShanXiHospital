@@ -244,6 +244,7 @@
     position: relative;
     height: 61px;
     box-sizing: border-box;
+    padding-right: 80px;
   }
   .flex_head_container .nav .nav_box {
     width: 1230px;
@@ -285,6 +286,11 @@
   .flex_head_container .nav ul li .content .paragraph{
     font-size: 15px;
     color: #cbaf9c;
+    width: 288px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
   }
   .flex_head_container .nav ul li .content .content_child {
     width: 1230px;

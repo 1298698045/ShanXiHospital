@@ -30,7 +30,10 @@ $(function(){
         $('.content_wrap').eq(index).show();
     })
     $('#news .box').click(function(){
-        window.location.href = '../journalism/detail.html?index='+6;
+        window.location.href = '../journalism/detail.html?index='+6+'&id='+'d_xwzx';
+    })
+    $('#memorabiliaId .box').click(function(){
+        window.location.href = '/page/commen/detail.html?index=-1'
     })
     $('#news .box').hover(function () {
         $('#news .box').removeClass('active');

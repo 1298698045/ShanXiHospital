@@ -237,6 +237,14 @@
         if(childId){
             $("html, body").scrollTop(0).animate({scrollTop: $("."+childId).offset().top});
         }
+        let hospitalCode = getUrlParam('hospitalCode');
+        if(hospitalCode=='victory'){
+            $('.Breadcrumb .black').eq(3).hide();
+            $('.Breadcrumb .black').eq(2).html('<span class="black"><a href="/page/hospital/victory.html?id=d_fyjs">胜利分院<a/> ></span>')
+        }else if(hospitalCode=='peace'){
+            $('.Breadcrumb .black').eq(3).hide();
+            $('.Breadcrumb .black').eq(2).html('<span class="black"><a href="/page/hospital/peace.html?id=d_fyjs">和平分院<a/> ></span>')
+        }
         function getUrlParam(key) {
             // 获取参数
             var url = window.location.search;
