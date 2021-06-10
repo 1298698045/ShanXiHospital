@@ -512,17 +512,13 @@
     left: -9px;
     cursor: pointer;
   }
-  .wrap .center .container .content .NoticeBody .right_wrap .articleWrap{
-    position: relative;
-    height: 500px;
-    overflow: hidden;
+  .wrap .center .container .content .NoticeBody .right_wrap .descWrap{
+    width: 700px;
+    margin-left: 30px;
   }
   .wrap .center .container .content .NoticeBody .right_wrap .article{
-    margin: 0 35px;
-    /* height: 500px; */
-    /* overflow: hidden; */
-    /* position: absolute; */
-    position: absolute;
+    width: 780px;
+    height: 450px;
   }
   .wrap .center .container .content .NoticeBody .right_wrap .head{
     margin: 35px;
@@ -556,6 +552,7 @@
   }
   .wrap .center .container .content .NoticeBody .right_wrap .article .subject{
     margin-left: 30px;
+    width: 700px;
   }
   .wrap .center .container .content .NoticeBody .right_wrap .article .subject .name{
     font-size:16px;

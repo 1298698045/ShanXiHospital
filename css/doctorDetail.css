@@ -12,7 +12,7 @@
     font-size: 14px;
     color: #333333;
   }
-  .wrap .center .Breadcrumb .black:hover {
+  .wrap .center .Breadcrumb .black:hover, .wrap .center .Breadcrumb .black:hover a{
     color: #815b3f;
     cursor: pointer;
   }

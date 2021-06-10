@@ -738,26 +738,26 @@
     background: url('../images/right_box_back.png') no-repeat;
     background-size: 100% 100%;
   }
-  .wrap  .container .content .NoticeBody .right_wrap .article{
-    margin: 35px;
+  .wrap  .container .content .NoticeBody .right_wrap .rightHead{
+    margin: 35px 35px 10px 35px;
   }
-  .wrap  .container .content .NoticeBody .right_wrap .article .title{
+  .wrap  .container .content .NoticeBody .right_wrap .rightHead .title{
     font-size: 22px;
     color: #333333;
     font-weight: bold;
     display: flex;
     align-items: center;
   }
-  .wrap  .container .content .NoticeBody .right_wrap .article .title span{
+  .wrap  .container .content .NoticeBody .right_wrap .rightHead .title span{
     margin-left: 17px;
   }
-  .wrap  .container .content .NoticeBody .right_wrap .article .title .left{
+  .wrap  .container .content .NoticeBody .right_wrap .rightHead .title .left{
     width: 12px;
     height: 20px;
     display: inline-block;
     background: url('../images/left_icon_1.png') no-repeat;
   }
-  .wrap  .container .content .NoticeBody .right_wrap .article .time{
+  .wrap  .container .content .NoticeBody .right_wrap .rightHead .time{
     display: flex;
     justify-content: center;
     font-size:14px;
@@ -768,8 +768,17 @@
     line-height: 3;
     margin-left: 50px;
   }
-  .wrap  .container .content .NoticeBody .right_wrap .article .subject{
+  .wrap  .container .content .NoticeBody .right_wrap .article{
+    width: 780px;
+    height: 450px;
+  }
+  .wrap  .container .content .NoticeBody .right_wrap .article .descWrap{
     margin-left: 30px;
+    width: 700px;
+    /* height: 450px; */
+  }
+  .wrap  .container .content .NoticeBody .right_wrap .article .descWrap .desc{
+    width: 700px;
   }
   .wrap  .container .content .NoticeBody .right_wrap .article .subject .name{
     font-size:16px;
@@ -783,7 +792,7 @@
     margin-left: 40px;
     padding: 20px 0;
   }
-  .wrap  .container .content .NoticeBody .right_wrap .article .subject .text{
+  .wrap  .container .content .NoticeBody .right_wrap .article .desc .text{
     text-indent: 2em;
     line-height: 2;
     color: #333333;

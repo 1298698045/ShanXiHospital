@@ -68,11 +68,16 @@ $(function(){
         console.log()
         $('.container .content').hide()
         $('.container .content').eq($(this).index()).show()
-        if($(this).index()==2){
+        let idx = $(this).index();
+        if(idx==2){
             fun();
-        }else if($(this).index()==3){
-            funScroll();
-        }else if($(this).index()==5){
+        }else if(idx==4){
+            // funScroll();
+            var scrollLeft = new scrollBar('.left_wrap','.l_text',55,40,'Y');
+            scrollLeft.init();
+            var scrollRight = new scrollBar('.article','.d-visible',55,40,'Y');
+            scrollRight.init();
+        }else if(idx==5){
             // window.location.href = '/page/home/nursing.html?index=-1';
         }
     })
@@ -190,22 +195,22 @@ $(function(){
         }
     }
 
-    new Pagination({
-        element: '#pages',
-        type: 1,
-        pageIndex: 1,
-        pageSize: 10,
-        pageCount: 7,
-        total: 100,
-        jumper: true,
-        singlePageHide: false,
-        prevText: '',
-        nextText: '',
-        disabled: true,
-        currentChange: function(index) {
-            console.log(index);
-        }
-    });
+    // new Pagination({
+    //     element: '#pages',
+    //     type: 1,
+    //     pageIndex: 1,
+    //     pageSize: 10,
+    //     pageCount: 7,
+    //     total: 100,
+    //     jumper: true,
+    //     singlePageHide: false,
+    //     prevText: '',
+    //     nextText: '',
+    //     disabled: true,
+    //     currentChange: function(index) {
+    //         console.log(index);
+    //     }
+    // });
     // 交通路线
     $('#traffic .tabs .tab').click(function(){
         $('#traffic .tabs .tab').removeClass('active');
@@ -223,8 +228,13 @@ $(function(){
         $('#jyxz_id .rightCont').hide();
         $('#jyxz_id .rightCont').eq($(this).index()).show();
         // if($(this).index()==1){
-            scrollTwo($(this).index());
+            // scrollTwo($(this).index());
         // }
+        let idx = $(this).index();
+        if(idx==1){
+            var scrollRightTwo = new scrollBar('.articleTwo','.d-visible_two',55,40,'Y');
+            scrollRightTwo.init();
+        }
     })
     $('#zyzn .row_back').click(function(){
         $('#zyzn .row_back').removeClass('active');

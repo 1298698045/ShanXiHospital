@@ -16,7 +16,7 @@ $(function(){
     '                            <div class="search_row"> '+
     '                                <div class="search_wrap"> '+
     '                                    <div class="searchs"> '+
-    '                                        <input type="text" class="inp" placeholder="请输入你要查询的内容"> '+
+    '                                        <input type="text" class="inp" name="searchVal" placeholder="请输入你要查询的内容"> '+
     '                                        <i class="serach_icon"></i> '+
     '                                    </div> '+
     '                                    <div class="btn_text"> '+
@@ -405,7 +405,6 @@ $(function(){
     '                                                <h3>研究生教育</h3> '+
     '                                            </div> '+
     '                                            <div class="column columnBox hover alignment"> '+
-    '                                                <p class="lis_p" zyy=\/\/ zyy\/\/ >研究生教育概况</p>'+
     '                                                <p class="lis_p">招生与就业</p>  '+
     '                                                <p class="lis_p">学位与培养</p> '+
     '                                                <p class="lis_p">导师工作</p> '+
@@ -832,6 +831,10 @@ $(function(){
         // let val = encodeURI('党务公开');
         window.location.href = '/page/talentDevelopment/postgraduate.html?index='+8+'&id='+'d_yjsjy'
     })
+    $('#d_yjsjy .hover .lis_p').click(function(){
+        let val = encodeURI($(this).html());
+        window.location.href = '/page/talentDevelopment/student.html?index='+8+'&name='+val+'&id='+'d_yjsjy'
+    })
     // 中医特色
     $('#d_zyts').children('span').click(function(){
         $('#d_zjjs .content').css({
@@ -905,6 +908,10 @@ $(function(){
         $(this).addClass('active');
     },function(){
         $('.lis_p').removeClass('active');
+    })
+    $('.btn_text').click(function(){
+        let val = $('input[name="searchVal"]').val();
+        window.location.href = '/page/search/index.html?searchVal='+val+'&index=-1';
     })
 })
 

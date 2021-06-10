@@ -295,6 +295,7 @@
   }
   .wrap .ysImageWrap .ys_container .rightBox .boxWrap .box .boxBlock .preview:hover .bottom_icon{
     background: url('../images/bottom_icon1_active.png') no-repeat;
+    transform: rotate(0deg);
   }
   .wrap .ysImageWrap .ys_container .rightBox .boxWrap .box .boxBlock .preview .icon{
     width: 32px;
@@ -302,12 +303,14 @@
     display: inline-block;
   }
   .wrap .ysImageWrap .ys_container .rightBox .boxWrap .box .boxBlock .preview .top_icon{
-    background: url('../images/top_icon.png') no-repeat;
+    background: url('../images/colortop_icon_active.png') no-repeat;
     background-size: 100% 100%;
   }
   .wrap .ysImageWrap .ys_container .rightBox .boxWrap .box .boxBlock .preview .bottom_icon{
-    background: url('../images/bottom_icon1.png') no-repeat;
+    /* background: url('../images/bottom_icon1.png') no-repeat; */
+    background: url('../images/colortop_icon_active.png') no-repeat;
     background-size: 100% 100%;
+    transform: rotate(180deg);
   }
   .wrap .ysImageWrap .ys_container .rightBox .boxWrap .box .subject{
     /* width: 10px; */

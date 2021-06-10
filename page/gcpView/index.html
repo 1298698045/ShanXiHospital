@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/infoOpen.css">
     <link rel="stylesheet" href="/css/pagination.css">
+    <link rel="stylesheet" href="/css/rightScroll.css">
     <style>
         .wrap .center .container .tabs {
             display: flex;
@@ -174,16 +175,16 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="scrollBar">
+                            <!-- <div class="scrollBar">
                                 <div class="sliderWrap">
                                     <div class="slider">
     
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="right_wrap">
-                            <div class="article">
+                            <div class="rightHead">
                                 <div class="title">
                                     <i class="left"></i>
                                     <span>山西省中医院电梯维保中标公告</span>
@@ -191,10 +192,44 @@
                                 <div class="time">
                                     时间：2019-12-30      点击：5121次
                                 </div>
-                                <div class="subject">
-                                    <p class="text">
-                                        山西省中医院于2021年1月27日对该项目进行了竞争性谈判招标采购。谈判小组依据谈判文件的具体要求，经过客观公正的评定，形成了集体意见。现将结果公告如下：
-                                    </p>
+                            </div>
+                            <div class="article">
+                                <div class="descWrap">
+                                    <div class="desc">
+                                        <p class="text">
+                                            山西省中医院于2021年1月27日对该项目进行了竞争性谈判招标采购。谈判小组依据谈判文件的具体要求，经过客观公正的评定，形成了集体意见。现将结果公告如下：
+                                        </p>
+                                        <p class="text">
+                                            山西省中医院于2021年1月27日对该项目进行了竞争性谈判招标采购。谈判小组依据谈判文件的具体要求，经过客观公正的评定，形成了集体意见。现将结果公告如下：
+                                        </p>
+                                        <p class="text">
+                                            山西省中医院于2021年1月27日对该项目进行了竞争性谈判招标采购。谈判小组依据谈判文件的具体要求，经过客观公正的评定，形成了集体意见。现将结果公告如下：
+                                        </p>
+                                        <p class="text">
+                                            山西省中医院于2021年1月27日对该项目进行了竞争性谈判招标采购。谈判小组依据谈判文件的具体要求，经过客观公正的评定，形成了集体意见。现将结果公告如下：
+                                        </p>
+                                        <p class="text">
+                                            山西省中医院于2021年1月27日对该项目进行了竞争性谈判招标采购。谈判小组依据谈判文件的具体要求，经过客观公正的评定，形成了集体意见。现将结果公告如下：
+                                        </p>
+                                        <p class="text">
+                                            山西省中医院于2021年1月27日对该项目进行了竞争性谈判招标采购。谈判小组依据谈判文件的具体要求，经过客观公正的评定，形成了集体意见。现将结果公告如下：
+                                        </p>
+                                        <p class="text">
+                                            山西省中医院于2021年1月27日对该项目进行了竞争性谈判招标采购。谈判小组依据谈判文件的具体要求，经过客观公正的评定，形成了集体意见。现将结果公告如下：
+                                        </p>
+                                        <p class="text">
+                                            山西省中医院于2021年1月27日对该项目进行了竞争性谈判招标采购。谈判小组依据谈判文件的具体要求，经过客观公正的评定，形成了集体意见。现将结果公告如下：
+                                        </p>
+                                        <p class="text">
+                                            山西省中医院于2021年1月27日对该项目进行了竞争性谈判招标采购。谈判小组依据谈判文件的具体要求，经过客观公正的评定，形成了集体意见。现将结果公告如下：
+                                        </p>
+                                        <p class="text">
+                                            山西省中医院于2021年1月27日对该项目进行了竞争性谈判招标采购。谈判小组依据谈判文件的具体要求，经过客观公正的评定，形成了集体意见。现将结果公告如下：
+                                        </p>
+                                        <p class="text">
+                                            山西省中医院于2021年1月27日对该项目进行了竞争性谈判招标采购。谈判小组依据谈判文件的具体要求，经过客观公正的评定，形成了集体意见。现将结果公告如下：
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -228,6 +263,7 @@
 <script src="../../utils/footer.js"></script>
 <script src="../../js/infoOpen.js"></script>
 <script src="/js/pagination.js"></script>
+<script src="/js/scroll.js"></script>
 <script>
     $(function(){
         $('#return').click(function(){
@@ -272,13 +308,22 @@
             $(this).addClass('active');
             let value = $(this).html();
             $('#defaultVal').html(value);
-            $('.container .content').hide()
-            $('.container .content').eq($(this).index()).show()
-                if($(this).index()==0){
-                    funScroll();
-                }
+            $('.container .content').hide();
+            $('.container .content').eq($(this).index()).show();
+            let idx = $(this).index();
+            if(idx==0){
+                // funScroll();
+                var scrollLeft = new scrollBar('.left_wrap','.l_text',55,40,'Y');
+                scrollLeft.init();
+                var scrollRight = new scrollBar('.article','.descWrap .desc',55,40,'Y');
+                scrollRight.init();
+            }
         })
-        funScroll();
+        var scrollLeft = new scrollBar('.left_wrap','.l_text',55,40,'Y');
+        scrollLeft.init();
+        var scrollRight = new scrollBar('.article','.descWrap .desc',55,40,'Y');
+        scrollRight.init();
+        // funScroll();
         function funScroll(){
             //设置滑块的高度 
             //$('.slider').css('height',h1+'px'); 

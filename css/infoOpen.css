@@ -9,11 +9,11 @@
     margin: 30px auto;
     padding-bottom: 50px;
   }
-  .wrap .center .Breadcrumb span {
+  .wrap .center .Breadcrumb span,   .wrap .center .Breadcrumb span a{
     font-size: 14px;
     color: #333333;
   }
-  .wrap .center .Breadcrumb .black:hover {
+  .wrap .center .Breadcrumb .black:hover,  .wrap .center .Breadcrumb .black:hover a {
     color: #704c2f;
     cursor: pointer;
   }
@@ -235,7 +235,7 @@
     left: -9px;
     cursor: pointer;
   }
-  .wrap  .container .content .NoticeBody .right_wrap{
+  /* .wrap  .container .content .NoticeBody .right_wrap{
     width: 790px;
     height: 585px;
     background: url('../images/right_box_back.png') no-repeat;
@@ -296,7 +296,7 @@
   .wrap  .container .content .NoticeBody .right_wrap .article .imgs{
     margin-top: 20px;
     margin-left: 60px;
-  }
+  } */
   .wrap  .container .content .download{
     margin-top: 20px;
   }

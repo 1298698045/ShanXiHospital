@@ -68,130 +68,34 @@ $(function(){
         console.log()
         $('.container .content').hide()
         $('.container .content').eq($(this).index()).show()
-        if($(this).index()==2){
-            fun();
-        }else if($(this).index()==3){
-            funScroll();
-        }else if($(this).index()==5){
-            window.location.href = '/page/home/nursing.html?index=-1';
+        let idx = $(this).index();
+        // if(idx==2){
+        //     fun();
+        // }else if(idx==3){
+        //     funScroll();
+        // }else if(idx==5){
+        //     window.location.href = '/page/home/nursing.html?index=-1';
+        // }
+        if(idx==1){
+            var scrollLeftTwo = new scrollBar('.left_wrap_two','.l_text_tow',55,40,'Y');
+            scrollLeftTwo.init();
+            var scrollRightThree = new scrollBar('.articleThree','.d-visible_three',55,40,'Y');
+            scrollRightThree.init();
         }
+
     })
+    var scrollLeft = new scrollBar('.left_wrap','.l_text',55,40,'Y');
+    scrollLeft.init();
+    var scrollRight = new scrollBar('.article','.d-visible',55,40,'Y');
+    scrollRight.init();
     $('#tab_child p').click(function(){
         $('#tab_child p').removeClass('active');
         $(this).addClass('active');
         $('#visitInfo .blockWrap').hide();
         $('#visitInfo .blockWrap').eq($(this).index()).show();
     })
-    function fun(){
-        //设置滑块的高度 
-        //$('.slider').css('height',h1+'px'); 
-        //设置y轴的增量 
-        var y = 0; 
-
-        //确定每次滚动滚轮右侧滚动条移动的距离
-        var ystepnumber = (($('.l_text').height()+40 - $('.left_wrap').height())/55) // 滚动次数
-        var ysteplength = $('.scrollBar').height()/ystepnumber // 每次滚动的距离
-
-        //为wrap添加滚轮事件 
-        var wrapDiv = document.querySelector('.left_wrap');
-        wrapDiv.onmousewheel = function(e){
-            e.preventDefault();
-            var event1 = event || e 
-            if (event.wheelDelta < 0) { 
-                //滑动条向下滚动 
-                y += ysteplength; 
-            }else if (event.wheelDelta > 0) { 
-                //滑动条向上滚动 
-                y -= ysteplength; 
-            } 
-            //y变化时说明在滚动，此时使滚动条发生滚动，以及设置content内容部分滚动 
-            //判断极端情况，滑块不能划出屏幕 
-            if (y <= 0) { 
-                //滑块最多滑到顶部 
-                y = 0; 
-            } 
-            if(y >= $('.sliderWrap').height() - $('.slider').height()){ 
-                //滑块最多滑到最底部 
-                y = $('.sliderWrap').height() - $('.slider').height(); 
-            } 
-            var scale = y/($('.sliderWrap').height() - $('.slider').height()); 
-            // console.log(scale)
-            $('.slider').css('top',y+'px')
-            $('.l_text').css('top',-scale*(($('.l_text').height()+40) - $('.left_wrap').height())+'px');
-
-            //console.log(y/sliderWrap)
-            //console.log(-y/scale)
-            //更新滑块的位置 
-            //$('.l_text').css('top',-y/scale+'px');
-        }
-    }
-    function scrollTwo(idx){
-        // 设置y轴的增量
-        let y = 0;
-        // 确定每次滚动滚轮右侧滚动条移动的距离
-        let dContHeight = $('.NoticeBody .right_wrap .rightCont').eq(idx).children('.articleWrap').children('.article').children('.d-visible').height();
-        let ystepNumber = (dContHeight - $('.right_wrap').height()) / 30;
-        // console.log(ystepNumber,'ysetpNumber')
-        let ystepLength =  $('.right_wrap .sliderWrapTwo').height()/ystepNumber;
-        // console.log(ystepLength,'ystepLength')
-        
-        let wrapDiv1 = document.querySelector('.NoticeBody .right_wrap');
-        console.log(dContHeight,'dContHeightdContHeightdContHeight')
-        wrapDiv1.onmousewheel = function(e){
-            if(dContHeight>485){
-                e.stopPropagation()
-                e.preventDefault();
-                var event1 = event || e ;
-                if(event1.wheelDelta < 0){
-                    y+=ystepLength;
-                }else if(event1.wheelDelta > 0){
-                    y-=ystepLength;
-                }
-    
-                if(y <= 0){
-                    y=0;
-                }
-                if(y >= $('.sliderWrapTwo').height() - $('.sliderTwo').height()){
-                    y = $('.sliderWrapTwo').height() -  $('.sliderTwo').height();
-                }
-                let scale = y/($('.sliderWrapTwo').height() - $('.sliderTwo').height()); 
-                $('.sliderTwo').css('top',y+'px')
-                $('.right_wrap .rightCont .article').css('top',-scale*((dContHeight-200) - $('.right_wrap .rightCont').height())+'px');
-            }
-        }
-    }
-    function funScroll(){
-        //设置y轴的增量 
-        var y = 0;
-        $('#zyzn .article').height(500);
-        //确定每次滚动滚轮右侧滚动条移动的距离
-        var leftheight = -$('#zyzn .scrollBarTwo').height() + $('#zyzn .article').height();
-        var rightheight = $('#zyzn .sliderWrapTwo').height() - $('#zyzn .sliderWrapTwo .sliderTwo').height();
-        var ysteplength = (rightheight/leftheight)*50;
-        var wrapDiv = document.querySelector('#zyzn .right_wrap');
-        wrapDiv.onmousewheel = function(e){
-            e.preventDefault();
-            var events = event || e;
-            if(events.wheelDelta < 0){
-                y += ysteplength;
-            }else if(events.wheelDelta > 0){
-                y -= ysteplength;
-            }
-            if( y <= 0){
-                y = 0;
-            }
-            if(y >= rightheight){
-                //滑块最多滑到最底部 
-                y = rightheight
-            }
-            var scale = y / rightheight;
-            $('#zyzn .sliderWrapTwo .sliderTwo').css('top',y+'px')
-            $('#zyzn .article').css('top',-scale * leftheight);
-        }
-    }
-
     new Pagination({
-        element: '#pages',
+        element: '#downPages',
         type: 1,
         pageIndex: 1,
         pageSize: 10,
@@ -223,8 +127,13 @@ $(function(){
         $('#jyxz_id .rightCont').hide();
         $('#jyxz_id .rightCont').eq($(this).index()).show();
         // if($(this).index()==1){
-            scrollTwo($(this).index());
+            // scrollTwo($(this).index());
         // }
+        let idx = $(this).index();
+        if(idx==1){
+            var scrollRightTwo = new scrollBar('.articleTwo','.d-visible_two',55,40,'Y');
+            scrollRightTwo.init();
+        }
     })
     $('#zyzn .row_back').click(function(){
         $('#zyzn .row_back').removeClass('active');
@@ -235,6 +144,14 @@ $(function(){
         $('#zyzn .rightCont').removeClass('active');
         $('#zyzn .rightCont').eq($(this).index()).show();
         $('#zyzn .rightCont').eq($(this).index()).addClass('active');
+        let idx = $(this).index();
+        if(idx==1){
+            var scrollRightFour = new scrollBar('.articleFour','.d-visible_four',55,40,'Y');
+            scrollRightFour.init();
+        }else if(idx==2){
+            var scrollRightFive = new scrollBar('.articleFive','.d-visible_five',55,40,'Y');
+            scrollRightFive.init();
+        }
     })
     // 医保指南
     $('#ybzn_tab_child p').click(function(){
