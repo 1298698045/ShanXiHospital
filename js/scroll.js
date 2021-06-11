@@ -131,6 +131,8 @@ function scrollBar(scrollid,textclass,step,margin,type){
                     $(this).unbind('mousemove')
                 })
             })
+        }else {
+            $('.YscrollBar').remove();
         }
     }
     this.scrollX = function(){

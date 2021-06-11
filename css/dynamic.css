@@ -65,6 +65,13 @@
     box-sizing: border-box;
     background: #fff;
 }
+.dynamic .box .box_child .textWrap .text{
+    width: 241px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
 .dynamic .box .boxSolid{
     width: 100%;
     height: 100%;
@@ -80,6 +87,12 @@
 .dynamic .box .boxSolid .textCont .color{
     color: #333333;
     font-size: 16px;
+    width: 244px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    
 }
 .dynamic .box .boxSolid:hover .textCont .color{
     color: #815b3f;
@@ -89,8 +102,12 @@
     font-size: 14px;
     color: #999999;
     margin-top: 19px;
-    padding-bottom: 10px;
-    
+    /* padding-bottom: 10px; */
+    width: 242px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
 .dynamic .box .boxSolid .bottom{
     display: flex;

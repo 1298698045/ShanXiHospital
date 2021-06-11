@@ -407,6 +407,7 @@ $(function(){
     '                                            <div class="column columnBox hover alignment"> '+
     '                                                <p class="lis_p">招生与就业</p>  '+
     '                                                <p class="lis_p">学位与培养</p> '+
+    '                                                <p class="lis_p">导师团队</p> '+
     '                                                <p class="lis_p">导师工作</p> '+
     '                                                <p class="lis_p">学生工作</p> '+
     '                                            </div>'+
@@ -445,9 +446,10 @@ $(function(){
     '                                                <h3>中医特色</h3> '+
     '                                            </div> '+
     '                                            <div class="column columnBox hover alignment"> '+
-    '                                                <p class="lis_p" zyy=\/\/ zyy\/\/ >中医药博物馆</p> '+
-    '                                                <p class="lis_p">健康时间</p> '+
-    '                                                <p class="lis_p">中医药文化宣传</p> '+
+    '                                                <p class="lis_p" zyy=\/\/ zyy\/\/ ><a href="/page/chineseMedicine/index.html?index=8&id=d_zyts">中医药博物馆</a></p> '+
+    '                                                <p class="lis_p" zyy=\/\/ zyy\/\/ ><a href="/page/chineseMedicine/displayBlock.html?index=10&id=d_zyts">陈列展示</a></p> '+
+    '                                                <p class="lis_p" zyy=\/\/ zyy\/\/ ><a href="/page/chineseMedicine/video.html?index=10&id=d_zyts">特色诊疗视频</a></p> '+
+    '                                                <p class="lis_p"><a href="/page/chineseMedicine/therapy.html?index=10&id=d_zyts">健康时间</a></p> '+
     '                                            </div>'+
     '                                        </div>'+
     '                                        <div class="itemBox">'+
@@ -839,6 +841,10 @@ $(function(){
     })
     $('#d_yjsjy .hover .lis_p').click(function(){
         let val = encodeURI($(this).html());
+        let idx = $(this).index();
+        if(idx==2)
+        window.location.href = '/page/talentDevelopment/tudorTeam.html?id=d_yjsjy';
+        else 
         window.location.href = '/page/talentDevelopment/student.html?index='+8+'&name='+val+'&id='+'d_yjsjy'
     })
     // 中医特色

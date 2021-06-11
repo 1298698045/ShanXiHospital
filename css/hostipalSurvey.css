@@ -706,6 +706,10 @@
     font-size: 18px;
     color: #333333;
     margin-left: 15px;
+    width: 283px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   .wrap  .container .content .NoticeBody .left_wrap .l_text .row_back span.active{
     margin-left: 39px;

@@ -674,6 +674,13 @@
     box-sizing: border-box;
     background: #fff;
   }
+  .wrap .center .dynamic .box .box_child .textWrap .text{
+    width: 241px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
   .wrap .center .dynamic .box .boxSolid{
     width: 100%;
     height: 100%;

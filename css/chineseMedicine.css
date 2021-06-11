@@ -479,6 +479,10 @@
   .wrap .center .features .dynamic .box .box_child .text_Wrap .text{
       margin: 19px;
       font-weight: bold;
+      width: 342px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
   }
   .wrap .center .features .dynamic .box .boxSolid{
     width: 100%;
@@ -613,6 +617,10 @@
     .wrap .center .videoWrap .dynamic .box .box_child .textWrap .text{
       margin: 19px;
       font-weight: bold;
+      width: 342px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
   }
     .wrap .center .videoWrap .dynamic .box .boxSolid{
     width: 100%;

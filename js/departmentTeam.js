@@ -81,12 +81,21 @@ $(function(){
         return template;
     }
     $('.headPhoto').append(tempFun());
-    $('.box').click(function(){
+    $('.box .hover').click(function(){
         let hospitalCode = getUrlParam('hospitalCode');
         if(hospitalCode){
             window.location.href = '/page/department/doctorDetail.html?index='+3+'&id='+'d_ksdh'+'&hospitalCode='+hospitalCode
         }else {
             window.location.href = '/page/department/doctorDetail.html?index='+3+'&id='+'d_ksdh'
+        }
+    })
+    // +'&childId='+'info
+    $('.headPhoto .cel_o').click(function(){
+        let hospitalCode = getUrlParam('hospitalCode');
+        if(hospitalCode){
+            window.location.href = '/page/department/doctorDetail.html?id='+'d_ksdh'+'&childId='+'info'+'&hospitalCode='+hospitalCode;
+        }else {
+            window.location.href = '/page/department/doctorDetail.html?id='+'d_ksdh'+'&childId='+'info';
         }
     })
     new Pagination({

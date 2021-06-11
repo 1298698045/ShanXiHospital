@@ -342,6 +342,15 @@
     display: flex;
     white-space: nowrap;
   }
+  .flex_head_container .nav ul li .content .content_child .row .column .lis_p a{
+    font-size: 15px;
+    color: #cbaf9c;
+    margin-bottom: 12px;
+    margin-right: 10px;
+    display: flex;
+    white-space: nowrap;
+    display: block;
+  }
   .flex_head_container .nav ul li .content .content_child .row .column .newLi a{
     width: 300px;
     font-size: 15px;
@@ -537,7 +546,8 @@
     height: 56px;
     margin-top: 10px;
     border-radius: 3px;
-    box-shadow: 0 2px 14px 0 rgba(23, 71, 113, 0.1);
+    /* box-shadow: 0 2px 14px 0 rgba(23, 71, 113, 0.1); */
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
     background: #fff;
     cursor: pointer;
     display: flex;
