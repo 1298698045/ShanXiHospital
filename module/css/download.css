@@ -9,11 +9,11 @@
     cursor: pointer;
   }
   .wrap  .container .content .download .row::before{
-    width: 24px;
+    /* width: 24px;
     height: 24px;
     background: url('/images/shu_icon.png') no-repeat;
     content: '';
-    display: block;
+    display: block; */
   }
   .wrap  .container .content .download .row .name{
     font-size: 20px;

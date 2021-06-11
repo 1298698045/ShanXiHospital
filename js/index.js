@@ -12,10 +12,10 @@ $(function () {
         let val = '';
         if(idx==0){
             val = '出诊信息'
-            window.location.href = '/page/visitingNews/index.html?index=1&name='+val
+            window.location.href = '/page/visitingNews/index.html?index=1&name='+val+'&id='+'d_czdt'
         }else if(idx==1){
             val = '就医须知'
-            window.location.href = '/page/patient/index.html?index=1&name='+val
+            window.location.href = '/page/patient/index.html?index=1&name='+val+'&id='+'d_hzfw'
         }else if(idx==2){
             val = '交通路线'
             window.location.href = '/page/hospitalSurvey/hospitalSurvey.html?index=1&name='+val+'&id='+'d_yygk'

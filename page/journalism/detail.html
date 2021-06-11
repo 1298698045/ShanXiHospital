@@ -19,8 +19,8 @@
             <div class="Breadcrumb">
                 <span>您现在的位置:  </span>
                 <span class="black" id="homePage">首页 ></span>
-                <span class="black">新闻中心 ></span>
-                <span class="black">医院新闻 ></span>
+                <span class="black"><a href="/page/journalism/journalism.html?index=6&name=医院新闻&id=d_xwzx">新闻中心 ></a></span>
+                <span class="black"><a href="/page/journalism/journalism.html?index=6&name=医院新闻&id=d_xwzx">医院新闻 ></a></span>
                 <span>详情</span>
             </div>
             <div class="container">
@@ -67,7 +67,7 @@
                         </div>
                         <div class="hr"></div>
                         <div class="next">
-                            <p class="text">上一篇：没有了</p>
+                            <p class="text disabled">上一篇：没有了</p>
                             <p class="text">下一篇：春风送暖 牵手情深</p>
                         </div>
                     </div>
@@ -77,12 +77,27 @@
                     <div class="trends">
                         热门新闻
                     </div>
-                    <p class="text">2020年山西省中医药学会肾病专业委员会第五届学术年会</p>
-                    <p class="text">2020年山西省中医药学会肾病专业委员会第五届学术年会</p>
-                    <p class="text">2020年山西省中医药学会肾病专业委员会第五届学术年会</p>
-                    <p class="text">2020年山西省中医药学会肾病专业委员会第五届学术年会</p>
-                    <p class="text">2020年山西省中医药学会肾病专业委员会第五届学术年会</p>
-                    <p class="text">2020年山西省中医药学会肾病专业委员会第五届学术年会</p>
+                    <a href="/page/journalism/detail.html?index=6&id=d_xwzx" target="_blank">
+                        <p class="text">2020年山西省中医药学会肾病专业委员会第五届学术年会</p>
+                    </a>
+                    <a href="/page/journalism/detail.html?index=6&id=d_xwzx" target="_blank">
+                        <p class="text">2020年山西省中医药学会肾病专业委员会第五届学术年会</p>
+                    </a>
+                    <a href="/page/journalism/detail.html?index=6&id=d_xwzx" target="_blank">
+                        <p class="text">2020年山西省中医药学会肾病专业委员会第五届学术年会</p>
+                    </a>
+                    <a href="/page/journalism/detail.html?index=6&id=d_xwzx" target="_blank">
+                        <p class="text">2020年山西省中医药学会肾病专业委员会第五届学术年会</p>
+                    </a>
+                    <a href="/page/journalism/detail.html?index=6&id=d_xwzx" target="_blank">
+                        <p class="text">2020年山西省中医药学会肾病专业委员会第五届学术年会</p>
+                    </a>
+                    <a href="/page/journalism/detail.html?index=6&id=d_xwzx" target="_blank">
+                        <p class="text">2020年山西省中医药学会肾病专业委员会第五届学术年会</p>
+                    </a>
+                    <a href="/page/journalism/detail.html?index=6&id=d_xwzx" target="_blank">
+                        <p class="text">2020年山西省中医药学会肾病专业委员会第五届学术年会</p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -95,4 +110,30 @@
 <script src="../../utils/head.js"></script>
  
 <script src="../../utils/footer.js"></script>
+<script>
+    $('.r_img').click(function(){
+        // window.open('http://connect.qq.com/widget/shareqq/index.html?url=分享后跳转链接&title=山西省中医院')
+        window.open('https://service.weibo.com/share/share.php?&title=山西省中医院党委召开巡视工作部署会')
+    })
+    
+    function getUrlParam(key) {
+        console.log(key,'key')
+        // 获取参数
+        var url = window.location.search;
+        // 正则筛选地址栏
+        var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+        // 匹配目标参数
+        var result = url.substr(1).match(reg);
+        //返回参数值
+        return result ? decodeURIComponent(result[2]) : null;
+    }
+    let name = getUrlParam("name");
+    if(name){
+        $('.black').eq(2).html(
+            `
+            <span class="black"><a href="/page/journalism/journalism.html?index=6&name=${name}&id=d_xwzx">${name} ></a></span>
+            `
+        )
+    }
+</script>
 </html>

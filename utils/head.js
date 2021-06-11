@@ -264,18 +264,18 @@ $(function(){
     '                                            <div class="column border columnBox column_flex" id="jzxz"> '+
     '                                                <h5>就诊须知</h5> '+
     '                                                <p class="newLi"><a href="/page/patient/index.html?id=d_hzfw&name=就医须知&listId=yyghxz">· 预约挂号须知</a></p> '+
-    '                                                <p class="newLi"><a href="/page/commen/detail.html?index=-1">· 就诊须知（总院）</a></p> '+
-    '                                                <p class="newLi"><a href="/page/commen/detail.html?index=-1">· 就医须知（名医门诊</a></p> '+
     '                                                <p class="newLi"><a href="/page/patient/index.html?id=d_hzfw&name=就医须知&listId=mzjzlc">· 门诊就诊流程</a></p> '+
+    '                                                <p class="newLi"><a href="#">· 就诊须知（总院）</a></p> '+
+    '                                                <p class="newLi"><a href="#">· 就医须知（名医门诊</a></p> '+
     '                                            </div> '+
     '                                        </div>'+
     '                                        <div class="itemBox">'+
     '                                            <div class="column column_flex" id="yndh"> '+
     '                                                <h5>住院指南</h5> '+
-    '                                                <p class="newLi"><a href="/page/commen/detail.html?index=-1">· 门诊楼层科示意图</a></p> '+
-    '                                                <p class="newLi"><a href="/page/commen/detail.html?index=-1">· 病房楼楼层分布</a></p> '+
-    '                                                <p class="newLi"><a href="/page/commen/detail.html?index=-1">· 西楼楼层分布</a></p> '+
-    '                                                <p class="newLi"><a href="/page/commen/detail.html?index=-1">· 院内导航二维码</a></p> '+
+    '                                                <p class="newLi"><a href="#">· 门诊楼层科示意图</a></p> '+
+    '                                                <p class="newLi"><a href="#">· 病房楼楼层分布</a></p> '+
+    '                                                <p class="newLi"><a href="#">· 西楼楼层分布</a></p> '+
+    '                                                <p class="newLi"><a href="#">· 院内导航二维码</a></p> '+
     '                                            </div> '+
     '                                        </div>'+
     '                                    </div> '+
@@ -333,31 +333,31 @@ $(function(){
     '                                            </div> '+
     '                                            <div class="column columnBox hover"> '+
     '                                                <p class="lis_p" childId="lchs">临床科室</p> '+
-    '                                                <p class="lis_p" childId="mymz">名医门诊</p> '+
     '                                                <p class="lis_p" childId="yjks">医技科室</p> '+
     '                                                <p class="lis_p" childId="tszl">特色医疗</p> '+
-    '                                                <p class="lis_p" childId="tj">治未病健康体检中心</p> '+
     '                                                <p class="lis_p" childId="ysbz">优势病种</p> '+
+    '                                                <p class="lis_p" childId="tj">治未病健康体检中心</p> '+
+    '                                                <p class="lis_p" childId="mymz">名医门诊</p> '+
     '                                            </div>'+
     '                                        </div>'+
     '                                        <div class="itemBox">'+
     '                                            <div class="column border column_flex" style="width: 280px;"> '+
     '                                                <h5>临床科室</h5>'+
     '                                                <div class="rowLi"> '+
-    '                                                    <p class="cel_li"><a href="#">· 康复科</a></p> '+
-    '                                                    <p class="cel_li"><a href="#">· 康复科</a></p> '+
+    '                                                    <p class="cel_li"><a href="/page/department/detail.html?index=3&id=d_ksdh">· 康复科</a></p> '+
+    '                                                    <p class="cel_li"><a href="/page/department/detail.html?index=3&id=d_ksdh">· 康复科</a></p> '+
     '                                                </div> '+
     '                                                <div class="rowLi"> '+
-    '                                                    <p class="cel_li"><a href="#">· 康复科</a></p> '+
-    '                                                    <p class="cel_li"><a href="#">· 康复科</a></p> '+
+    '                                                    <p class="cel_li"><a href="/page/department/detail.html?index=3&id=d_ksdh">· 康复科</a></p> '+
+    '                                                    <p class="cel_li"><a href="/page/department/detail.html?index=3&id=d_ksdh">· 康复科</a></p> '+
     '                                                </div> '+
     '                                                <div class="rowLi"> '+
-    '                                                    <p class="cel_li"><a href="#">· 康复科</a></p> '+
-    '                                                    <p class="cel_li"><a href="#">· 康复科</a></p> '+
+    '                                                    <p class="cel_li"><a href="/page/department/detail.html?index=3&id=d_ksdh">· 康复科</a></p> '+
+    '                                                    <p class="cel_li"><a href="/page/department/detail.html?index=3&id=d_ksdh">· 康复科</a></p> '+
     '                                                </div> '+
     '                                                <div class="rowLi"> '+
-    '                                                    <p class="cel_li"><a href="#">· 康复科</a></p> '+
-    '                                                    <p class="cel_li"><a href="#">· 康复科</a></p> '+
+    '                                                    <p class="cel_li"><a href="/page/department/detail.html?index=3&id=d_ksdh">· 康复科</a></p> '+
+    '                                                    <p class="cel_li"><a href="/page/department/detail.html?index=3&id=d_ksdh">· 康复科</a></p> '+
     '                                                </div> '+
     '                                            </div> '+
     '                                        </div>'+
@@ -365,20 +365,20 @@ $(function(){
     '                                            <div class="column column_flex"> '+
     '                                                <h5>优势病种</h5> '+
     '                                                <div class="rowLi"> '+
-    '                                                    <p class="cel_li"><a href="#">· 康复科</a></p> '+
-    '                                                    <p class="cel_li"><a href="#">· 康复科</a></p> '+
+    '                                                    <p class="cel_li"><a href="/page/characteristic/detail.html?index=2&id=d_ksdh">· 肿瘤科中</a></p> '+
+    '                                                    <p class="cel_li"><a href="/page/characteristic/detail.html?index=2&id=d_ksdh">· 肿瘤科中</a></p> '+
     '                                                </div> '+
     '                                                <div class="rowLi"> '+
-    '                                                    <p class="cel_li"><a href="#">· 康复科</a></p> '+
-    '                                                    <p class="cel_li"><a href="#">· 康复科</a></p> '+
+    '                                                    <p class="cel_li"><a href="/page/characteristic/detail.html?index=2&id=d_ksdh">· 肿瘤科中</a></p> '+
+    '                                                    <p class="cel_li"><a href="/page/characteristic/detail.html?index=2&id=d_ksdh">· 肿瘤科中</a></p> '+
     '                                                </div> '+
     '                                                <div class="rowLi"> '+
-    '                                                    <p class="cel_li"><a href="#">· 康复科</a></p> '+
-    '                                                    <p class="cel_li"><a href="#">· 康复科</a></p> '+
+    '                                                    <p class="cel_li"><a href="/page/characteristic/detail.html?index=2&id=d_ksdh">· 肿瘤科中</a></p> '+
+    '                                                    <p class="cel_li"><a href="/page/characteristic/detail.html?index=2&id=d_ksdh">· 肿瘤科中</a></p> '+
     '                                                </div> '+
     '                                                <div class="rowLi"> '+
-    '                                                    <p class="cel_li"><a href="#">· 康复科</a></p> '+
-    '                                                    <p class="cel_li"><a href="#">· 康复科</a></p> '+
+    '                                                    <p class="cel_li"><a href="/page/characteristic/detail.html?index=2&id=d_ksdh">· 肿瘤科中</a></p> '+
+    '                                                    <p class="cel_li"><a href="/page/characteristic/detail.html?index=2&id=d_ksdh">· 肿瘤科中</a></p> '+
     '                                                </div> '+
     '                                            </div> '+
     '                                        </div>'+
@@ -813,7 +813,13 @@ $(function(){
     $('#d_ksdh .hover .lis_p').click(function(){
         let val = encodeURI($(this).html());
         let childId = $(this).attr('childId')
-        window.location.href = '/page/department/department.html?index='+8+'&name='+val+'&id='+'d_ksdh'+'&childId='+childId
+        if(childId=='tj'){
+            window.location.href = '/page/home/nursing.html?index=-1';
+        }else if(childId=='mymz'){
+            window.location.href = '/page/hospital/famousDoctor.html?index=-1';
+        }else{
+            window.location.href = '/page/department/department.html?index='+8+'&name='+val+'&id='+'d_ksdh'+'&childId='+childId
+        }
     })
     // 专家介绍
     $('#d_zjjs').children('span').click(function(){

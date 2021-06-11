@@ -238,6 +238,11 @@
   }
   .wrap .ysImageWrap .ys_container .rightBox .boxWrap{
     width: 1090px;
+    position: relative;
+    height: 344px;
+    overflow: hidden;
+  }
+  .wrap .ysImageWrap .ys_container .rightBox .boxWrap .scrollbox{
     overflow: hidden;
     display: flex;
     position: absolute;
@@ -287,6 +292,8 @@
   .wrap .ysImageWrap .ys_container .rightBox .boxWrap .box .boxBlock .preview .texta{
     color: #333;
     font-weight: bold;
+    line-height: 1.05;
+    padding: 8px 0 10px 0;
   }
   .wrap .ysImageWrap .ys_container .rightBox .boxWrap .box .boxBlock .preview:hover .texta{
     color: #815b3f;

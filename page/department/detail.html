@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../css/head.css">
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/departmentDetail.css">
+    <link rel="stylesheet" href="/css/dynamic.css">
 </head>
 <body>
     <div class="wrap">
@@ -23,7 +24,9 @@
                     <span>康复科</span>
                 </div>
                 <div class="layOut_panel">
-                    <div class="l_img"></div>
+                    <div class="l_img">
+                        <img src="/images/women.png" alt="">
+                    </div>
                     <div class="r_cont_wrap">
                         <div class="flex">
                             <div class="preview">
@@ -165,42 +168,11 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- 
-                            我科开展辩证精确、配伍合理中医药治疗：传统中草药，体针、头针、腹针、
-                            电针、腕踝针、毛刺、围刺等多种针法，回旋灸、雀啄灸、太乙神针灸、
-                            温和灸、隔姜灸、隔药灸等多种灸法，火罐、气罐、刺络拔罐，
-                            三棱针放血，耳穴磁疗，穴位敷贴，穴位注射，推拿、
-                            小儿推、药推、油推，中药熏蒸等内治外治方法针对不同患者的病情及需求区别使用。
-                         -->
-                        
-                    </div>
-                    <div class="sliderWrap" id="rowSliderWrap">
-                        <div class="slider">
-
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="center">
-            <!-- <div class="row">
-                <div class="cel">
-                    <div class="box">
-                        <p class="icon">
-                            <img src="../../images/9.svg" alt="">
-                        </p>
-                        <p class="icon">
-                            <img src="../../images/62 (1).svg" alt="">
-                        </p>
-                    </div>
-                </div>
-                <div class="cel">
-                    <p class="title">医生团队</p>
-                </div>
-                <div class="cel">
-                    <p class="btn">查看更多</p>
-                </div>
-            </div> -->
             <div class="row_title">
                 <div class="imgs">
                     <img src="../../images/01.png" alt="">
@@ -220,7 +192,7 @@
                 <div class="imgs">
                     <img src="../../images/01.png" alt="">
                 </div>
-                <p class="name">科室动态</p>
+                <p class="name">医院新闻</p>
                 <div class="imgs">
                     <img src="../../images/02.png" alt="">
                 </div>
@@ -228,26 +200,72 @@
                     更多查看
                 </p>
             </div>
-            <!-- <div class="row">
-                <div class="cel">
-                    <div class="box">
-                        <p class="icon">
-                            <img src="../../images/9.svg" alt="">
-                        </p>
-                        <p class="icon">
-                            <img src="../../images/62 (1).svg" alt="">
-                        </p>
-                    </div>
-                </div>
-                <div class="cel">
-                    <p class="title">科室动态</p>
-                </div>
-                <div class="cel">
-                    <p class="btn">查看更多</p>
-                </div>
-            </div> -->
             <div class="memorabilia marginAuto">
+                <!-- <div class="dynamic" id="memorabiliaId">
+                </div> -->
                 <div class="dynamic" id="memorabiliaId">
+                    <div class="box">
+                        <div class="box_child">
+                            <div class="img">
+                                <div class="timeBox">
+                                    <p class="time">04</p>
+                                    <p class="year">2020-12</p>
+                                </div>
+                            </div>
+                            <div class="textWrap">
+                                <p class="text">
+                                    山西省中医药研究院研究生部组织的“师仲景、学伤寒”趣味知识竞
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="boxSolid">
+                            <div class="textCont">
+                                <p class="color">大腿根部突现“肿块”，几个月疯长成足球般大小</p>
+                                <p class="desc">
+                                    案例回放大腿根部突现“肿块”今年63岁的薛阿姨家住新会，平时健康的薛阿姨突然发现自己的右大腿根部长了东西
+                                </p>
+                            </div>
+                            <div class="bottom">
+                                <div class="l_time_box">
+                                    <p class="time">04</p>
+                                    <p class="year">2020-12</p>
+                                </div>
+                                <div class="youjiantou"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box_child">
+                            <div class="img">
+                                <div class="timeBox">
+                                    <p class="time">04</p>
+                                    <p class="year">2020-12</p>
+                                </div>
+                            </div>
+                            <div class="textWrap">
+                                <p class="text">
+                                    山西省中医药研究院研究生部学生会成立大会顺利召开
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box_child">
+                            <div class="img">
+                                <div class="timeBox">
+                                    <p class="time">04</p>
+                                    <p class="year">2020-12</p>
+                                </div>
+                            </div>
+                            <div class="textWrap">
+                                <p class="text">
+                                    山西省中医药研究院研究生部学生会成立大会顺利召开
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -447,48 +465,17 @@
  
 <script src="../../utils/footer.js"></script>
 <script src="/js/articleSlice.js"></script>
+<script src="/js/scroll.js"></script>
 <script>
     $(function(){
         $('#return').click(function(){
-            window.location.href = '/page/department/department.html?index=3';
+            window.location.href = '/page/department/department.html?id='+'d_ksdh';
         })
+        var scrollView = new scrollBar('.rightBox','.scrollbox',50,0,'X');
+        scrollView.init();
         function tempFun(){
             let template = '';
             for(let i = 0; i < 6 ; i++){
-                // template += `
-                //     <div class="box">
-                //         <div class="block">
-                //             <div class="hover">
-                //                 <div class="box_child">
-                //                     <div class="pad">
-                //                         <div class="img">
-                //                             <img src="../../images/avatar1_1.png" alt="">
-                //                         </div>
-                //                         <p class="name">王晞星</p>
-                //                         <p class="position">肿瘤病专家</p>
-                //                     </div>
-                //                 </div>
-                //                 <div class="box_active_wrap">
-                //                     <div class="box_active">
-                //                         <div class="descWrap">
-                //                             <p class="text">
-                //                                 王晞星，主任医师，教授，博/硕士研究生导师，国贴专家，山西名医，全国中医药专家学术经验继承导师，山西省中医院院长，重点专科带头人。
-                //                             </p>
-                //                             <p class="title">擅长：</p>
-                //                             <p class="text">
-                //                                 中西医结合治疗肺癌、胃癌、食管癌、结直肠癌、肾癌等；对消化道疾病有独到的治疗方法
-                //                             </p>
-                //                         </div>
-                //                     </div>
-                //                 </div>
-                //             </div>
-                //             <div class="back_row">
-                //                 <div class="cel_o">挂号</div>
-                //                 <div class="cel_t">问诊</div>
-                //             </div>
-                //         </div>
-                //     </div>
-                // `
                 template += '<div class="box">'+
 '                        <div class="block">'+
 '                            <div class="hover">'+
@@ -527,9 +514,10 @@
         $('.headPhoto').append(tempFun());
         // 查看详细
         $('#previewDetail').click(function(){
-            $('.modal').css('display','block');
-            document.documentElement.style.overflow='hidden';
-            funScroll();
+            // $('.modal').css('display','block');
+            // document.documentElement.style.overflow='hidden';
+            // funScroll();
+            window.open('/page/commen/detail.html?index=-1&name=科室导航');
         })
         $('.cancel').click(function(){
             $('.modal').css('display','none');
@@ -592,22 +580,7 @@
 
             var pageX1 = e.pageX - $(this)[0].offsetLeft;
             $(document).mousemove(function(e){
-                //var cleft = e.pageX - 
                 var pageX2 = e.pageX - pageX1
-                //console.log(e.offsetX);
-                // console.log(123,'123');
-                // var positionDiv = $(this).offset();
-                // var distenceX = e.pageX - positionDiv.left;     //记录鼠标点击的位置与div左上角水平方向的距离
-                // var distenceY = e.pageY - positionDiv.top;     //记录鼠标点击的位置与div左上角数值方向的距离
-                // console.log(distenceX);
-                // var length = $('#rowSliderWrap').outerWidth();
-                // console.log(length)
-                // console.log(rowX,'ppp')
-                // if(rowX+27>=length){
-                //     rowX = rowX;
-                // }else {
-                //     rowX += 10;
-                // }
                 if(pageX2<0){
                     pageX2 = 0
                 }
@@ -643,7 +616,7 @@
         '                    </div>'+
         '                </div>';
         }
-        $('#memorabiliaId').append(memorabiliaIdstr);
+        // $('#memorabiliaId').append(memorabiliaIdstr);
         $('#departDynamic').click(function(){
             window.location.href = '/page/journalism/journalism.html?index=6&name=医院新闻'+'&id='+'d_xwzx';
         })
@@ -651,7 +624,6 @@
             window.location.href = '/page/journalism/detail.html?index=6&id=d_xwzx';
         })
         $('.rowColumn .box').click(function(){
-            debugger
             let name = $(this).attr('name');
             if(name=='d_czdt'){
                 let val = encodeURI('出诊信息');

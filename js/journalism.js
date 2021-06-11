@@ -1,6 +1,6 @@
 $(function(){
     $('#return').click(function(){
-        window.location.href = '/page/journalism/journalism.html?index=6&name=新闻中心'+'&id='+'d_xwzx';
+        window.location.href = '/page/journalism/journalism.html?index=6&name=医院新闻'+'&id='+'d_xwzx';
         $('#defaultVal').html('新闻中心')
     })
     let name = getUrlParam("name");
@@ -29,12 +29,12 @@ $(function(){
         let index = $(this).index();
         $('.content_wrap').eq(index).show();
     })
-    $('#news .box').click(function(){
-        window.location.href = '../journalism/detail.html?index='+6+'&id='+'d_xwzx';
-    })
-    $('#memorabiliaId .box').click(function(){
-        window.location.href = '/page/commen/detail.html?index=-1'
-    })
+    // $('#news .box').click(function(){
+    //     window.location.href = '../journalism/detail.html?index='+6+'&id='+'d_xwzx';
+    // })
+    // $('#memorabiliaId .box').click(function(){
+    //     window.location.href = '/page/commen/detail.html?index=-1'
+    // })
     $('#news .box').hover(function () {
         $('#news .box').removeClass('active');
         $('#news .box .desc_wrap').children('.title').removeClass('active');
@@ -47,7 +47,7 @@ $(function(){
 })
 let str = '';
 for(let i=0; i < 9; i++){
-    str += '<div class="box">'+
+    str += '<a href="/page/journalism/detail.html?id=d_xwzx&name=媒体报道" target="_blank" class="box">'+
 '                    <div class="box_child">'+
 '                        <div class="img">'+
 '                            <div class="timeBox">'+
@@ -61,7 +61,7 @@ for(let i=0; i < 9; i++){
 '                            </p>'+
 '                        </div>'+
 '                    </div>'+
-'                </div>';
+'                </a>';
 }
 $('#memorabiliaId').append(str);
 let videoStr = '';
@@ -145,7 +145,7 @@ new Pagination({
     }
 });
 $('#memorabiliaId .box').click(function(){
-    window.location.href = '/page/characteristic/detail.html?index=2'+'&id=d_xwzx';
+    // window.location.href = '/page/characteristic/detail.html?index=2'+'&id=d_xwzx';
 })
 $('#videoId .box').click(function(){
     window.location.href = '/page/hospitalSurvey/videoDetail.html?index=5';

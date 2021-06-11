@@ -8,11 +8,11 @@
     width: 1230px;
     margin: 30px auto;
   }
-  .wrap .center .Breadcrumb span {
+  .wrap .center .Breadcrumb span, .wrap .center .Breadcrumb span a{
     font-size: 14px;
     color: #333333;
   }
-  .wrap .center .Breadcrumb .black:hover {
+  .wrap .center .Breadcrumb .black:hover,  .wrap .center .Breadcrumb .black:hover a {
     color: #704c2f;
     cursor: pointer;
   }
@@ -96,13 +96,16 @@
     margin-top: 29px;
   }
   .wrap .center .container .l_box .l_center .next .text{
-    font-size: 16px;
-    color: #999999;
+    color: #333333;
     line-height: 2;
+    font-size: 16px;
+  }
+  .wrap .center .container .l_box .l_center .next .text.disabled{
+    color: #999999!important;
   }
   .wrap .center .container .l_box .l_center .next .text:hover{
     cursor: pointer;
-    color: #333333;
+    color: #815b3f;
   }
   .wrap .center .container .r_box {
     width: 344px;

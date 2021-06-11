@@ -21,11 +21,11 @@
   .wrap .center .Breadcrumb{
     margin-top: 28px;
   }
-  .wrap .center .Breadcrumb span {
+  .wrap .center .Breadcrumb span,  .wrap .center .Breadcrumb span a {
     font-size: 14px;
     color: #333333;
   }
-  .wrap .center .Breadcrumb .black:hover{
+  .wrap .center .Breadcrumb .black:hover,  .wrap .center .Breadcrumb .black:hover a{
     color: #815b3f;
     cursor: pointer;
   }
@@ -585,6 +585,10 @@
     box-sizing: border-box;
     background: #fff;
   }
+  .wrap .center .videoWrap .dynamic .box:hover .text{
+    color: #6a3f24;
+    cursor: pointer;
+  }
     .wrap .center .videoWrap .dynamic .box .box_child .textWrap .text{
       margin: 19px;
       font-weight: bold;
@@ -681,30 +685,51 @@
   }
   .modal_modal .popupWrap .block .swiper-container_modal{
     width: 810px;
+    /* height: 410px; */
+    /* background: url('/images/modal_photo_box.png') no-repeat; */
+    /* background-size: 100% 100%; */
+    /* padding: 5px; */
+    box-sizing: border-box;
+    margin: 0 auto;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .modal_modal .popupWrap .block .swiper-container_modal .swiper-wrapper{
+    /* width: 100%;
+    height: 100%;
+    overflow: hidden; */
+  }
+  .modal_modal .popupWrap .block .swiper-container_modal .swiper-wrapper .swiper-slide{
+    /* width: 810px;
+    height: 410px;
+    background: url('/images/modal_photo_box.png') no-repeat;
+    background-size: 100% 100%;
+    padding: 5px;
+    box-sizing: border-box; */
+    width: 100%;
+    height: 100%;
+  }
+  .modal_modal .popupWrap .block .swiper-container_modal .swiper-wrapper .swiper-slide .imgBox{
+    width: 810px;
     height: 410px;
     background: url('/images/modal_photo_box.png') no-repeat;
     background-size: 100% 100%;
     padding: 5px;
     box-sizing: border-box;
-    margin: 0 auto;
   }
-  .modal_modal .popupWrap .block .swiper-container_modal .swiper-wrapper{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  .modal_modal .popupWrap .block .swiper-container_modal .swiper-wrapper .swiper-slide{
-    width: 100%;
-    height: 100%;
-  }
-  .modal_modal .popupWrap .block .swiper-container_modal .swiper-wrapper .swiper-slide img{
+  .modal_modal .popupWrap .block .swiper-container_modal .swiper-wrapper .swiper-slide .imgBox img{
     width: 100%;
     height: 100%;
   }
   .modal_modal .popupWrap .block .swiper-container_modal .swiper-button-prev{
     width: 15px;
     height: 27px;
-    background: url('/images/modal_icon_l.png');
+    background: url('/images/modal_icon_r.png');
+    transform: rotate(180deg);
+  }
+  .modal_modal .popupWrap .block .swiper-container_modal .swiper-button-prev.active{
+    background: url('/images/modal_icon_r.png');
+    transform: rotate(180deg);
   }
   .modal_modal .popupWrap .block .swiper-container_modal .swiper-button-next{
     width: 15px;
@@ -720,4 +745,5 @@
   .modal_modal .popupWrap .block .row .title{
     color: #fff;
     font-size: 18px;
+    padding-left: 1px;
   }

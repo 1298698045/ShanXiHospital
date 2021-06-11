@@ -606,6 +606,10 @@
     box-sizing: border-box;
     background: #fff;
   }
+  .wrap .center .videoWrap .dynamic .box:hover .text{
+    color: #6a3f24;
+    cursor: pointer;
+  }
     .wrap .center .videoWrap .dynamic .box .box_child .textWrap .text{
       margin: 19px;
       font-weight: bold;

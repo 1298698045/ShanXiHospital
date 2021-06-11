@@ -32,6 +32,7 @@
                     </div>
                 </div>
                 <div class="formSearch">
+                    <span class="">出诊信息查询：</span>
                     <div class="filed">
                         <input type="text" class="inp" placeholder="疾病名称">
                     </div>
@@ -53,12 +54,19 @@
                                 </ul>
                             </div>
                         </div>
+                        <!-- <select class="inp select" name="" id="">
+                            <option class="" value="123">123123</option>
+                            <option value="123">123123</option>
+                            <option value="123">123123</option>
+                        </select> -->
                     </div>
                     <div class="filed">
                         <input type="text" class="inp" placeholder="医师名称">
                     </div>
                     <div class="filed">
-                        <button class="btn">搜索</button>
+                        <button class="btn">
+                            <a href="/page/visitingNews/index.html?index=1&name=出诊查询&id=d_czdt">搜索</a>
+                        </button>
                     </div>
                 </div>
                 <div class="classWrap">
@@ -289,6 +297,12 @@
             }
             
             $('#paramsId').append(modouleStr);
+
+            $('#paramsId li .close').click(function(){
+                // console.log($(this).parent('li').index())
+                let idx = $(this).parent('li').index();
+                $('#paramsId li').eq(idx).remove();
+            })
         }
         function uniq(array){
             var temp = []; //一个新的临时数组

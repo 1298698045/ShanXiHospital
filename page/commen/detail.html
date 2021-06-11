@@ -18,8 +18,8 @@
             <div class="Breadcrumb">
                 <span>您现在的位置:  </span>
                 <span class="black" id="homePage">首页 ></span>
-                <span class="black" id="ks_nav">科室导航  ></span>
-                <span>肿瘤科中医特色治疗</span>
+                <span class="black"><a href="#">文章  ></a></span>
+                <span>详情</span>
             </div>
             <div class="content">
                 <div class="top"></div>
@@ -75,6 +75,16 @@
         $('#ks_nav').click(function(){
             window.location.href = '/page/department/department.html?index=8&id=d_ksdh';
         })
+        function getUrlParam(key) {
+            // 获取参数
+            var url = window.location.search;
+            // 正则筛选地址栏
+            var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+            // 匹配目标参数
+            var result = url.substr(1).match(reg);
+            //返回参数值
+            return result ? decodeURIComponent(result[2]) : null;
+        }
     })
 </script>
 </html>

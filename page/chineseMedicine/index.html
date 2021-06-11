@@ -116,7 +116,7 @@
                                 </div>
                                 <div class="row">
                                     <p class="title">科室介绍</p>
-                                    <p class="cancel" id="modal_cancel"></p>
+                                    <p class="cancel modal_cancel"></p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
@@ -125,7 +125,7 @@
                                 </div>
                                 <div class="row">
                                     <p class="title">科室介绍1</p>
-                                    <p class="cancel" id="modal_cancel"></p>
+                                    <p class="cancel modal_cancel"></p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
@@ -134,7 +134,7 @@
                                 </div>
                                 <div class="row">
                                     <p class="title">科室介绍2</p>
-                                    <p class="cancel" id="modal_cancel"></p>
+                                    <p class="cancel modal_cancel"></p>
                                 </div>
                             </div>
                         </div>
@@ -223,11 +223,17 @@
 '                </div>';
         }
         $('#videoIdTow').append(videoStrTwo);
+        $('#videoId .box').click(function(){
+            window.open('https://v.qq.com/x/page/k0568xqoq2a.html');
+        })
+        $('#videoIdTow .box').click(function(){
+            window.open('https://v.qq.com/x/page/k0568xqoq2a.html');
+        })
         // 查看详细
         $('#previewDetail').click(function(){
-            window.location.href = '/page/talentDevelopment/index.html?index=9&name=研究生教育';
+            window.location.href = '/page/commen/detail.html?index=-1'+'&name='+'中医特色';
         })
-        $('#modal_cancel').click(function(){
+        $('.modal_cancel').click(function(){
             $('.modal_modal').hide();
         })
         // var swiperTwo = new Swiper('.swiper-container', {
@@ -235,31 +241,35 @@
         //     slidesPerView: 1,
         //     paginationClickable: true
         // });
-        function modalSwiperFun(){
-            var mySwiper1 = new Swiper ('.swiper-container_modal', {
-                // autoplay: 3000,
-                // mousewheel: {
-                //     releaseOnEdges: true,//PC端释放滑动
-                // }, 
-                slidesPerView: 1,
-                paginationClickable:true,
-                pagination: '.swiper-pagination',
-                nextButton: '.swiper-button-next',
-                prevButton: '.swiper-button-prev',
-                onSlideChangeEnd: function(swiper){
-                    if(swiper.isBeginning){
-                        swiper.prevButton.removeClass('active');
-                    }else{
-                        swiper.prevButton.addClass('active');
-                    }
+        var mySwiper1 = new Swiper ('.swiper-container_modal', {
+            // autoplay: 3000,
+            // mousewheel: {
+            //     releaseOnEdges: true,//PC端释放滑动
+            // }, 
+            slidesPerView: 1,
+            initialSlide :0,
+            paginationClickable:true,
+            pagination: '.swiper-pagination',
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            onSlideChangeEnd: function(swiper){
+                if(swiper.isBeginning){
+                    swiper.prevButton.removeClass('active');
+                }else{
+                    swiper.prevButton.addClass('active');
                 }
-            })  
+            }
+        })  
+        function modalSwiperFun(idx){
+            mySwiper1.init();
+            mySwiper1.slideTo(idx, 1000, false);
         }
-        $('#featuresId .box .add_icon').click(function(){
+        $('#featuresId .box').click(function(){
+            let idx = $(this).index();
             $('.modal_modal').show();
-            modalSwiperFun();
+            modalSwiperFun(idx);
         })
-        $('#modal_cancel').click(function(){
+        $('.modal_cancel').click(function(){
             $('.modal_modal').hide();
         })
         $('#displayId').click(function(){

@@ -19,8 +19,8 @@
             <div class="Breadcrumb">
                 <span>您现在的位置:  </span>
                 <span class="black" id="homePage">首页 ></span>
-                <span class="black">中医特色 ></span>
-                <span class="black">中医药博物馆 ></span>
+                <span class="black"><a href="/page/chineseMedicine/index.html?index=8&id=d_zyts">中医特色 ></a></span>
+                <span class="black"><a href="/page/chineseMedicine/index.html?index=8&id=d_zyts">中医药博物馆 ></a></span>
                 <span>健康时间</span>
             </div>
             <div class="row_title">
@@ -70,6 +70,9 @@
 '                </div>';
         }
         $('#videoId').append(videoStr);
+        $('#videoId .box').click(function(){
+            window.open('https://v.qq.com/x/page/k0568xqoq2a.html');
+        })
         var swiperTwo = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
             slidesPerView: 3,

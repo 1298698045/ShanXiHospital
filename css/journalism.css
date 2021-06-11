@@ -109,6 +109,7 @@
     cursor: pointer;
     border-bottom: 1px solid #cccccc;
     position: relative;
+    display: block;
   }
   .wrap .center .container .content_wrap .content .lCont .box.active{
     background: #fff;
@@ -263,6 +264,8 @@
     box-sizing: border-box;
     margin-bottom: 30px;
     cursor: pointer;
+    display: block;
+    color: #333;
   }
   .wrap .container .memorabilia .dynamic .box .box_child{
     width: 100%;

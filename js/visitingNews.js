@@ -43,18 +43,25 @@ $(function(){
         spaceBetween: 30,
         nextButton: '.right_icon',
         prevButton: '.left_icon',
-        onSlideChangeEnd: function(swiper){
-            if(swiper.isBeginning){
-                swiper.prevButton.removeClass('prev_active');
-            }else{
-                swiper.prevButton.addClass('prev_active');
-            }
-            if(swiper.isEnd){
-                swiper.nextButton.addClass('next_active');
-            }else{
-                swiper.nextButton.removeClass('next_active');
-            }
-        }
+        onSlideChangeEnd: function(swiper){
+            if(swiper.isBeginning){
+                swiper.prevButton.removeClass('prev_active');
+            }else{
+                swiper.prevButton.addClass('prev_active');
+            }
+            if(swiper.isEnd){
+                swiper.nextButton.addClass('next_active');
+                $('#swiperId').css('transition-duration','0ms')
+                $('#swiperId').addClass('swiperId')
+                var X = $('#swiperId').css('transform').replace(/[^0-9\-,]/g,'').split(',')[4]-40
+                $('#swiperId').css('transform','translate3d('+X+'px,0px,0px)')
+                setTimeout(function(){
+                    $('#swiperId').removeClass('swiperId')
+                },150);
+            }else{
+                swiper.nextButton.removeClass('next_active');
+            }
+        }
     });
     let slideIdx = getUrlParam("slideIdx");
     swiper.slideTo(slideIdx, 1000, false);

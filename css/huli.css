@@ -104,6 +104,9 @@
     text-align: center;
     position: relative;
     margin-top: 12px;
+    font-family: 'St';
+    line-height: 1.05;
+    padding: 20px 0;
   }
   .wrap .maxImage .max_img_content .layOut_panel .r_cont_wrap .tag .text .topBack{
     width: 77px;

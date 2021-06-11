@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="../../css/patient.css">
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/pagination.css">
+    <style>
+        #swiperId{
+            transition-timing-function:linear !important;
+        }
+        #swiperId.swiperId{
+            transition-duration: 150ms !important;
+        }
+    </style>
 </head>
 <body>
     <div class="wrap">
@@ -901,7 +909,7 @@
 <script> 
     $(function(){
         $('#return').click(function(){
-            window.location.href = '/page/patient/index.html?index=1&name=出诊信息';
+            window.location.href = '/page/visitingNews/index.html?index=1&name=出诊信息'+'&id='+'d_czdt';
             $('#defaultVal').html('出诊信息')
         })
         $('#departSel input').focus(function(){

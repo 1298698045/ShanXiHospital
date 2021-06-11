@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1220px">
-    <title>体检中心</title>
+    <title>治未病健康体检中心</title>
     <link rel="stylesheet" href="../../css/swiper-3.4.2.min.css">
     <link rel="stylesheet" href="../../css/public.css">
     <link rel="stylesheet" href="../../css/head.css">
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/nursing.css">
+    <link rel="stylesheet" href="/css/dynamic.css">
 </head>
 <body>
     <div class="wrap">
@@ -19,8 +20,7 @@
                 <div class="Breadcrumb">
                     <span>您现在的位置:  </span>
                     <span class="black" id="homePage">首页 ></span>
-                    <span class="black" id="ks_nav">科室导航 ></span>
-                    <span>体检中心</span>
+                    <span>治未病健康体检中心</span>
                 </div>
                 <div class="layOut_panel">
                     <div class="l_img"></div>
@@ -70,7 +70,7 @@
                 <div class="imgs">
                     <img src="../../images/01.png" alt="">
                 </div>
-                <p class="name">特色服务</p>
+                <p class="name">医院新闻</p>
                 <div class="imgs">
                     <img src="../../images/02.png" alt="">
                 </div>
@@ -78,7 +78,7 @@
                     更多查看
                 </p>
             </div>
-            <div class="dynamic">
+            <div class="dynamic" id="memorabiliaId">
                 <div class="box">
                     <div class="box_child">
                         <div class="img">
@@ -89,7 +89,7 @@
                         </div>
                         <div class="textWrap">
                             <p class="text">
-                                我市完成全国首例机器人辅助下治疗肱骨外科颈骨折手术（市）
+                                山西省中医药研究院研究生部组织的“师仲景、学伤寒”趣味知识竞
                             </p>
                         </div>
                     </div>
@@ -121,7 +121,7 @@
                         </div>
                         <div class="textWrap">
                             <p class="text">
-                                我市完成全国首例机器人辅助下治疗肱骨外科颈骨折手术（市）
+                                山西省中医药研究院研究生部学生会成立大会顺利召开
                             </p>
                         </div>
                     </div>
@@ -136,7 +136,7 @@
                         </div>
                         <div class="textWrap">
                             <p class="text">
-                                我市完成全国首例机器人辅助下治疗肱骨外科颈骨折手术（市）
+                                山西省中医药研究院研究生部学生会成立大会顺利召开
                             </p>
                         </div>
                     </div>
@@ -194,9 +194,16 @@
             return template;
         }
         $('.headPhoto').append(tempFun());
+        $('.headPhoto .hover').click(function(){
+            window.location.href = '/page/department/doctorDetail.html?index='+3+'&id='+'d_ksdh'+'&hospitalCode='+'health'
+        })
+        $('.headPhoto .cel_o').click(function(){
+            window.location.href = '/page/department/doctorDetail.html?id='+'d_ksdh'+'&childId='+'info'+'&hospitalCode='+'health';
+        })
         // 查看详细
         $('#previewDetail').click(function(){
-            window.location.href = '/page/characteristic/detail.html?index=2';
+            window.open('/page/characteristic/detail.html?index=1'+'&id='+'d_ksdh');
+            // window.location.href = '/page/commen/detail.html?index=-1';
         })
         var swiperTwo = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
@@ -219,13 +226,16 @@
             window.location.href = '/page/chineseMedicine/therapy.html?index=10';
         })
         $('#departs').click(function(){
-            window.location.href = '/page/department/team.html?index='+3
+            window.location.href = '/page/department/team.html?index='+3+'&hospitalCode='+'health'+'&id=d_ksdh'
         })
         $('#ts_server_id').click(function(){
             window.location.href = '/page/journalism/journalism.html?index=6&name=医院动态'
         })
         $('#ks_nav').click(function(){
             window.location.href = '/page/department/department.html?index=8&id=d_ksdh';
+        })
+        $('.dynamic .box').click(function(){
+            window.location.href = '/page/journalism/detail.html?id=d_xwzx'
         })
     })
 </script>

@@ -19,8 +19,8 @@
             <div class="Breadcrumb">
                 <span>您现在的位置:  </span>
                 <span class="black" id="homePage">首页 ></span>
-                <span class="black">中医特色 ></span>
-                <span class="black">中医药博物馆 ></span>
+                <span class="black"><a href="/page/chineseMedicine/index.html?index=8&id=d_zyts">中医特色 ></a></span>
+                <span class="black"><a href="/page/chineseMedicine/index.html?index=8&id=d_zyts">中医药博物馆 ></a></span>
                 <span>陈列展示</span>
             </div>
             <div class="row_title">
@@ -50,13 +50,31 @@
                     <div class="swiper-container_modal">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="/images/yyfm_1.1.png" alt="">
+                                <div class="imgBox">
+                                    <img src="/images/yyfm_1.1.png" alt="">
+                                </div>
+                                <div class="row">
+                                    <p class="title">科室介绍</p>
+                                    <p class="cancel modal_cancel"></p>
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="/images/yyfm_1.1.png" alt="">
+                                <div class="imgBox">
+                                    <img src="/images/yyfm_1.1.png" alt="">
+                                </div>
+                                <div class="row">
+                                    <p class="title">科室介绍1</p>
+                                    <p class="cancel modal_cancel"></p>
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="/images/yyfm_1.1.png" alt="">
+                                <div class="imgBox">
+                                    <img src="/images/yyfm_1.1.png" alt="">
+                                </div>
+                                <div class="row">
+                                    <p class="title">科室介绍2</p>
+                                    <p class="cancel modal_cancel"></p>
+                                </div>
                             </div>
                         </div>
                         <div >
@@ -64,12 +82,7 @@
                             <div class="swiper-button-next"></div>
                         </div>
                     </div>
-                    <div class="row">
-                        <p class="title">陈列展示</p>
-                        <p class="cancel" id="modal_cancel">
-                            
-                        </p>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -145,12 +158,38 @@
             slidesPerView: 3,
             paginationClickable: true
         });
-        $('#featuresId .box .add_icon').click(function(){
+        var mySwiper1 = new Swiper ('.swiper-container_modal', {
+            // autoplay: 3000,
+            // mousewheel: {
+            //     releaseOnEdges: true,//PC端释放滑动
+            // }, 
+            slidesPerView: 1,
+            initialSlide :0,
+            paginationClickable:true,
+            pagination: '.swiper-pagination',
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            onSlideChangeEnd: function(swiper){
+                if(swiper.isBeginning){
+                    swiper.prevButton.removeClass('active');
+                }else{
+                    swiper.prevButton.addClass('active');
+                }
+            }
+        })  
+        function modalSwiperFun(idx){
+            mySwiper1.init();
+            mySwiper1.slideTo(idx, 1000, false);
+        }
+        $('#featuresId .box').click(function(){
+            let idx = $(this).index();
             $('.modal_modal').show();
+            modalSwiperFun(idx);
         })
-        $('#modal_cancel').click(function(){
+        $('.modal_cancel').click(function(){
             $('.modal_modal').hide();
         })
+        
         new Pagination({
             element: '#pages',
             type: 1,

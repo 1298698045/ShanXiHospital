@@ -12,6 +12,14 @@
     <link rel="stylesheet" href="../../css/pagination.css">
     <link rel="stylesheet" href="../../css/hostipalSurvey.css">
     <link rel="stylesheet" href="/module/css/traffic.css">
+    <style>
+        #swiperId{
+            transition-timing-function:linear !important;
+        }
+        #swiperId.swiperId{
+            transition-duration: 150ms !important;
+        }
+    </style>
 </head>
 <body>
     <div class="wrap">
@@ -21,7 +29,7 @@
             <div class="hospitalWrap">
                 <div class="Breadcrumb">
                     <span>您现在的位置:  </span>
-                    <span class="black">首页 ></span>
+                    <span class="black" id="home"><a href="/">首页 ></a></span>
                     <span class="black" id="return">医院概况 ></span>
                     <span id="defaultVal">医院简介</span>
                 </div>
@@ -45,9 +53,6 @@
                             <div class="swiper-slide" title="历史沿革">
                                 历史沿革
                             </div>
-                            <!-- <div class="swiper-slide" title="大事记">
-                                大事记
-                            </div> -->
                             <div class="swiper-slide" title="院容院貌">
                                 院容院貌
                             </div>
@@ -60,12 +65,6 @@
                             <div class="swiper-slide" title="交通路线">
                                 交通路线
                             </div>
-                            <!-- <div class="swiper-slide" title="医院领导">
-                                医院领导
-                            </div> -->
-                            <!-- <div class="swiper-slide" title="视频中心">
-                                视频中心
-                            </div> -->
                         </div>
                     </div>
                     <div class="right_icon icon">
@@ -635,7 +634,7 @@
                                 </div>
                                 <div class="row">
                                     <p class="title">科室介绍</p>
-                                    <p class="cancel" id="modal_cancel"></p>
+                                    <p class="cancel modal_cancel"></p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
@@ -644,7 +643,7 @@
                                 </div>
                                 <div class="row">
                                     <p class="title">科室介绍1</p>
-                                    <p class="cancel" id="modal_cancel"></p>
+                                    <p class="cancel modal_cancel"></p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
@@ -653,7 +652,7 @@
                                 </div>
                                 <div class="row">
                                     <p class="title">科室介绍2</p>
-                                    <p class="cancel" id="modal_cancel"></p>
+                                    <p class="cancel modal_cancel"></p>
                                 </div>
                             </div>
                         </div>
@@ -676,10 +675,12 @@
 <script src="../../js/pagination.js"></script>
 <script src="/module/js/traffic.js"></script>
 <script src="/js/scroll.js"></script>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 <script>
     $(function () {
         $('#return').click(function(){
-            window.location.href = '/page/hospitalSurvey/hospitalSurvey.html?index=5&name=医院简介';
+            window.location.href = '/page/hospitalSurvey/hospitalSurvey.html?index=5&name=医院介绍'+'&id=d_yygk';
             $('#defaultVal').html('医院介绍')
         })
         let name = getUrlParam("name");
@@ -705,18 +706,25 @@
             spaceBetween: 30,
             nextButton: '.right_icon',
             prevButton: '.left_icon',
-            onSlideChangeEnd: function(swiper){
-                if(swiper.isBeginning){
-                    swiper.prevButton.removeClass('prev_active');
-                }else{
-                    swiper.prevButton.addClass('prev_active');
-                }
-                if(swiper.isEnd){
-                    swiper.nextButton.addClass('next_active');
-                }else{
-                    swiper.nextButton.removeClass('next_active');
-                }
-            }
+            onSlideChangeEnd: function(swiper){
+                if(swiper.isBeginning){
+                    swiper.prevButton.removeClass('prev_active');
+                }else{
+                    swiper.prevButton.addClass('prev_active');
+                }
+                if(swiper.isEnd){
+                    swiper.nextButton.addClass('next_active');
+                    $('#swiperId').css('transition-duration','0ms')
+                    $('#swiperId').addClass('swiperId')
+                    var X = $('#swiperId').css('transform').replace(/[^0-9\-,]/g,'').split(',')[4]-40
+                    $('#swiperId').css('transform','translate3d('+X+'px,0px,0px)')
+                    setTimeout(function(){
+                        $('#swiperId').removeClass('swiperId')
+                    },150);
+                }else{
+                    swiper.nextButton.removeClass('next_active');
+                }
+            }
         });
         let slideIdx = getUrlParam("slideIdx");
         swiper[0].slideTo(slideIdx, 1000, false);
@@ -773,6 +781,7 @@
                 $(this).addClass('active');
                 $('.rightWrap .stepBox').show();
                 $('.rightWrap .stepBox').eq(idx).prevAll().hide();
+                $('.rightWrap .stepBox .title').addClass('top');
                 $('.rightWrap .stepBox').eq(idx).children('.title').removeClass('top');
                 // $('.rightWrap .stepBox').eq(idx).children('.title').removeClass('top');
                 // if(idx==1){
@@ -880,9 +889,10 @@
 '                </div>';
         }
         $('#videoId').append(videoStr);
-        $('#featuresId .box .add_icon').click(function(){
+        $('#featuresId .box').click(function(){
+            let idx = $(this).index();
             $('.modal_modal').show();
-            modalSwiperFun();
+            modalSwiperFun(idx);
         })
         $('#videoId .box').click(function(){
             window.location.href = '/page/hospitalSurvey/videoDetail.html?index='+5
@@ -964,27 +974,31 @@
                 //$('.l_text').css('top',-y/scale+'px');
             }
         }
-        function modalSwiperFun(){
-            var mySwiper1 = new Swiper ('.swiper-container_modal', {
-                // autoplay: 3000,
-                // mousewheel: {
-                //     releaseOnEdges: true,//PC端释放滑动
-                // }, 
-                slidesPerView: 1,
-                paginationClickable:true,
-                pagination: '.swiper-pagination',
-                nextButton: '.swiper-button-next',
-                prevButton: '.swiper-button-prev',
-                onSlideChangeEnd: function(swiper){
-                    if(swiper.isBeginning){
-                        swiper.prevButton.removeClass('active');
-                    }else{
-                        swiper.prevButton.addClass('active');
-                    }
-                }
-            })  
+        var mySwiper1 = new Swiper ('.swiper-container_modal', {
+             // autoplay: 3000,
+             // mousewheel: {
+             //     releaseOnEdges: true,//PC端释放滑动
+             // }, 
+             slidesPerView: 1,
+             initialSlide :0,
+             paginationClickable:true,
+             pagination: '.swiper-pagination',
+             nextButton: '.swiper-button-next',
+             prevButton: '.swiper-button-prev',
+             onSlideChangeEnd: function(swiper){
+                 if(swiper.isBeginning){
+                     swiper.prevButton.removeClass('active');
+                 }else{
+                     swiper.prevButton.addClass('active');
+                 }
+             }
+         })
+        function modalSwiperFun(idx){
+            // console.log(idx,mySwiper1,'mySwiper1')
+            mySwiper1.init();
+            mySwiper1.slideTo(idx, 1000, false);
         }
-        $('#modal_cancel').click(function(){
+        $('.modal_cancel').click(function(){
             $('.modal_modal').hide();
         })
         $('#memorabiliaId .box').click(function(){

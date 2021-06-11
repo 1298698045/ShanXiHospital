@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/pagination.css">
     <link rel="stylesheet" href="/module/css/download.css">
+    <link rel="stylesheet" href="/js/layui/css/layui.css">
     <style>
         .formSearch .filed .label{
             display: inline-block;
@@ -25,13 +26,13 @@
         }
         .formSearch .filed.max{
             margin-right: 30px!important;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
         .formSearch .filed.filedBtn{
             margin-right: 10px!important;
         }
         .formSearch .filed .inp.minWidth{
-            width: 120px !important;;
+            width: 163px !important;;
         }
         .fl_l{
             float: left;
@@ -453,221 +454,135 @@
                 </div>
                 <!-- 医保指南 -->
                 <div class="content" id="ybzn_id">
-                    <div class="box" id="ybzn_tab_child">
-                        <p class="active">医保通道</p>
-                        <p>医保信息</p>
-                        <p>医保新政</p>
-                    </div>
-                    <div class="insurance blockWrap active">
-                        <div class="top_back"></div>
-                        <div class="cont_wrap">
-                            <div class="subject_title">
-                                【省医保患者就诊流程】
+                    <div class="NoticeBody">
+                        <div class="left_wrap">
+                            <div class="l_text">
+                                <div class="row_back active">
+                                    <i class="icon_l"></i>
+                                    <span class="active">
+                                        省医保患者就诊流程
+                                    </span>
+                                </div>
+                                <div class="row_back">
+                                    <i class="icon_l"></i>
+                                    <span>
+                                        使用体内置放材料的管理规定
+                                    </span>
+                                </div>
+                                <div class="row_back">
+                                    <i class="icon_l"></i>
+                                    <span>
+                                        医保科工作简介
+                                    </span>
+                                </div>
+                                <div class="row_back">
+                                    <i class="icon_l"></i>
+                                    <span>
+                                        医保患者家庭病床管理规定
+                                    </span>
+                                </div>
+                                <div class="row_back">
+                                    <i class="icon_l"></i>
+                                    <span>
+                                        医保用药规定
+                                    </span>
+                                </div>
+                                <div class="row_back">
+                                    <i class="icon_l"></i>
+                                    <span>
+                                        费用录入有关规定
+                                    </span>
+                                </div>
+                                <div class="row_back">
+                                    <i class="icon_l"></i>
+                                    <span>
+                                        医保患者住院管理规定
+                                    </span>
+                                </div>
+                                <div class="row_back">
+                                    <i class="icon_l"></i>
+                                    <span>
+                                        市医保离休干部门诊就医规定
+                                    </span>
+                                </div>
+                                <div class="row_back">
+                                    <i class="icon_l"></i>
+                                    <span>
+                                        医保患者门诊就医规定
+                                    </span>
+                                </div>
                             </div>
-                            <div class="imgs">
-                                <img src="/images/lc.jpg" alt="">
-                            </div>
+                            <!-- <div class="scrollBar">
+                                <div class="sliderWrap">
+                                    <div class="slider">
+
+                                    </div>
+                                </div>
+                            </div> -->
                         </div>
-                        <div class="bottom_back"></div>
-                    </div>
-                    <div class="insurance">
-                        <div class="NoticeBody" style="margin: 0;">
-                            <div class="left_wrap">
-                                <div class="l_text">
-                                    <div class="row_back active">
-                                        <i class="icon_l"></i>
-                                        <span class="active">
-                                            医保管理规定
-                                        </span>
+                        <div class="right_wrap">
+                            <div class="rightCont active ">
+                                <div class="head">
+                                    <div class="title">
+                                        <i class="left"></i>
+                                        <span>【省医保患者就诊流程】</span>
                                     </div>
-                                    <div class="row_back">
-                                        <i class="icon_l"></i>
-                                        <span>
-                                            使用体内置放材料的管理规定
-                                        </span>
-                                    </div>
-                                    <div class="row_back">
-                                        <i class="icon_l"></i>
-                                        <span>
-                                            医保科工作简介
-                                        </span>
-                                    </div>
-                                    <div class="row_back">
-                                        <i class="icon_l"></i>
-                                        <span>
-                                            医保患者家庭病床管理规定
-                                        </span>
-                                    </div>
-                                    <div class="row_back">
-                                        <i class="icon_l"></i>
-                                        <span>
-                                            医保用药规定
-                                        </span>
-                                    </div>
-                                    <div class="row_back">
-                                        <i class="icon_l"></i>
-                                        <span>
-                                            费用录入有关规定
-                                        </span>
-                                    </div>
-                                    <div class="row_back">
-                                        <i class="icon_l"></i>
-                                        <span>
-                                            医保患者住院管理规定
-                                        </span>
-                                    </div>
-                                    <div class="row_back">
-                                        <i class="icon_l"></i>
-                                        <span>
-                                            市医保离休干部门诊就医规定
-                                        </span>
-                                    </div>
-                                    <div class="row_back">
-                                        <i class="icon_l"></i>
-                                        <span>
-                                            医保患者门诊就医规定
-                                        </span>
+                                    <div class="time">
+                                        时间：2019-12-30      点击：5121次
                                     </div>
                                 </div>
-                                <div class="scrollBar">
-                                    <div class="sliderWrap">
-                                        <div class="slider">
-    
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="right_wrap">
-                                <div class="rightCont">
-                                    <div class="article">
-                                        <div class="title">
-                                            <i class="left"></i>
-                                            <span>关于农村居民重大疾病即时结报的规定</span>
-                                        </div>
-                                        <div class="time">
-                                            时间：2019-12-30      点击：5121次
-                                        </div>
-                                        <div class="subject">
-                                            <p class="text-indent">
-                                                根据山西省卫生厅、民政厅、财政厅关于《山西省新增农村居民重大疾病提高医疗保障水平工作实施方案（试行）》的通知，我院将对农村居民部分重大疾病实行即时结报。
-                                            </p>
-                                            <p class="name" style="margin: 30px 0;">一、重大疾病病种范围</p>
-                                            <p class="text-indent">
-                                                Ｉ型糖尿病、脑梗死、急性心肌梗塞、结肠癌、直肠癌、食道癌、胃癌、肺癌、乳腺癌、宫颈癌。
-                                            </p>
-                                            <p class="text-indent">
-                                                3. 严格控制检查自费率。因病情需要必须使用非《山西省医疗服务项目价格和医疗服务设施管理暂行办法》时，须征得患者或其家属的同意并在《知情同意书》上签字。
-                                            </p>
-                                            <p class="text-indent">
-                                                4. 医保患者在其他定点医疗机构所做的检查，在不影响诊疗质量的前提下，应充分利用，尽量避免不必要的重复检查。
-                                            </p>
-                                            <p class="text-indent">
-                                                5. 医保患者除常规检查外，其他各项检查均应有针对性。凡近期内做过的检查，如非必要，不应重复；能用一般检查达到诊断目的，就不用特殊检查；一种检查方法能确定的，就不应用多种检查。
-                                            </p>
-                                            <p class="text-indent">
-                                                6. 核磁、CT室、彩超室对医保患者进行登记，在登记本上注明“省”、“市”、“城镇居民”等医保属地，每月底汇总阳性率以备检查。
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="insurance">
-                        <div class="NoticeBody" style="margin: 0;">
-                            <div class="left_wrap">
-                                <div class="l_text">
-                                    <div class="row_back active">
-                                        <i class="icon_l"></i>
-                                        <span class="active">
-                                            关于农村居民重大疾病即时结报的规定
-                                        </span>
-                                    </div>
-                                    <div class="row_back">
-                                        <i class="icon_l"></i>
-                                        <span>
-                                            关于提高太原市城镇居民医疗保险待遇标准的规定
-                                        </span>
-                                    </div>
-                                    <div class="row_back">
-                                        <i class="icon_l"></i>
-                                        <span>
-                                            关于增加门诊慢性病定点医疗机构的规定
-                                        </span>
-                                    </div>
-                                    <div class="row_back">
-                                        <i class="icon_l"></i>
-                                        <span>
-                                            农村居民重大疾病即时结报的实施
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="scrollBar">
-                                    <div class="sliderWrap">
-                                        <div class="slider">
-    
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="right_wrap">
-                                <div class="rightCont">
-                                    <div class="article">
-                                        <div class="title">
-                                            <i class="left"></i>
-                                            <span>关于农村居民重大疾病即时结报的规定</span>
-                                        </div>
-                                        <div class="time">
-                                            时间：2019-12-30      点击：5121次
-                                        </div>
-                                        <div class="subject">
-                                            <p class="text-indent">
-                                                根据山西省卫生厅、民政厅、财政厅关于《山西省新增农村居民重大疾病提高医疗保障水平工作实施方案（试行）》的通知，我院将对农村居民部分重大疾病实行即时结报。
-                                            </p>
-                                            <p class="name" style="margin: 20px 0;">一、重大疾病病种范围</p>
-                                            <p class="text-indent">
-                                                Ｉ型糖尿病、脑梗死、急性心肌梗塞、结肠癌、直肠癌、食道癌、胃癌、肺癌、乳腺癌、宫颈癌。
-                                            </p>
-                                            <p class="name" style="margin: 20px 0;">二、重大疾病医药费用限额标准</p>
-                                            <div class="table">
-                                                <table class="table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>重大疾病名称</th>
-                                                            <th>治疗方法</th>
-                                                            <th>限额费用（万元）</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody class="tbody">
-                                                        <tr class="dataRow">
-                                                            <td class="name">I型糖尿病</td>
-                                                            <td>规范化治疗</td>
-                                                            <td>1.1</td>
-                                                        </tr>
-                                                        <tr class="dataRow">
-                                                            <td class="name">I型糖尿病</td>
-                                                            <td>规范化治疗</td>
-                                                            <td>1.1</td>
-                                                        </tr>
-                                                        <tr class="dataRow">
-                                                            <td class="name">I型糖尿病</td>
-                                                            <td>规范化治疗</td>
-                                                            <td>1.1</td>
-                                                        </tr>
-                                                    </tbody>
-                                                    
-                                                </table>
+                                <div class="article articleTwo">
+                                    <div class="descWrap descWrapTwo">
+                                        <div class="d-visible d-visible_two">
+                                            <div class="imgPhoto">
+                                                <img src="/images/process.png" alt="">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- <div class="scrollBarTwo">
+                                    <div class="sliderWrapTwo">
+                                        <div class="sliderTwo">
+    
+                                        </div>
+                                    </div>
+                                </div> -->
                             </div>
+                            <div class="rightCont mzjzlc">
+                                <div class="head">
+                                    <div class="title">
+                                        <i class="left"></i>
+                                        <span>门诊就诊流程</span>
+                                    </div>
+                                    <div class="time">
+                                        时间：2019-12-30      点击：5121次
+                                    </div>
+                                </div>
+                                <div class="article articleTwo">
+                                    <div class="descWrap descWrapTwo">
+                                        <div class="d-visible d-visible_two">
+                                            <div class="imgPhoto">
+                                                <img src="/images/mz.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="scrollBarTwo">
+                                    <div class="sliderWrapTwo">
+                                        <div class="sliderTwo">
+    
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="rightCont"></div>
+                            <div class="rightCont"></div>
                         </div>
                     </div>
                 </div>
                 <div class="content">
                     <div class="formWrap">
-                        <div class="formSearch clearFix" style="margin-bottom:20px;">
+                        <div class="formSearch clearFix" style="margin-bottom:50px;">
                             <div class="filed max">
                                 <span class="label fl_l">
                                     患者姓名：
@@ -684,15 +599,19 @@
                             </div>
                             <div class="filed">
                                 <span class="label fl_l">开始日期：</span>
-                                <input type="text" class="inp fl_l minWidth" placeholder="年/月/日">
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input inp fl_l minWidth" id="startTime" placeholder="年/月/日">
+                                  </div>
+                                <!-- <input type="text" class="inp fl_l minWidth" placeholder="年/月/日"> -->
                             </div>
                             <div class="filed">
                                 <span class="label fl_l">结束日期：</span>
-                                <input type="text" class="inp fl_l minWidth" placeholder="年/月/日">
+                                <!-- <input type="text" class="inp fl_l minWidth" placeholder="年/月/日"> -->
+                                <input type="text" class="layui-input inp fl_l minWidth" id="endTime" placeholder="年/月/日">
                             </div>
                             <div class="filed">
                                 <span class="label fl_l">验证码：</span>
-                                <input type="text" class="inp fl_l minWidth" placeholder="请输入验证码">
+                                <input type="text" class="inp fl_l minWidth" placeholder="请输入" style="width: 82px!important;">
                             </div>
                             <div class="filed filedBtn">
                                 <button class="btn">发送验证码</button>
@@ -807,250 +726,6 @@
                         网页更新中......
                     </div>
                 </div>
-                <!-- 交通路线 -->
-                <div class="content">   
-                    <div class="traffic" id="traffic">
-                        <div class="left_box">
-                            <div class="imgs">
-                                <img src="../../images/location.png" alt="">
-                            </div>
-                        </div>
-                        <div class="right_box">
-                            <div class="tabs">
-                                <p class="tab active">总院</p>
-                                <p class="tab">胜利分院</p>
-                                <p class="tab marginNo">和平分院</p>
-                            </div>
-                            <div class="address">
-                                <div class="icon_text">
-                                    <i class="icon iconOne"></i>
-                                    <p class="text">地址：</p>
-                                </div>
-                                <p class="row-text">山西省太原市迎泽区并州西街46号</p>
-                            </div>
-                            <div class="address">
-                                <div class="icon_text">
-                                    <i class="icon iconTwo"></i>
-                                    <p class="text">乘车路线：</p>
-                                </div>
-                                <p class="row-text">省中医院（25路、814路）</p>
-                                <p class="row-text">青年路双塔西街口（25路、814路）</p>
-                                <p class="row-text">并州西街（814路）</p>
-                            </div>
-                            <div class="address">
-                                <div class="icon_text">
-                                    <i class="icon iconThree"></i>
-                                    <p class="text">电话：</p>
-                                </div>
-                                <p class="row-text">0351-4668200</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 查询服务 -->
-                <div class="content queryServer">
-                    <div class="box">
-                        <p class="active">出诊信息查询</p>
-                        <p>报告查询</p>
-                        <p>化验参考值查询</p>
-                        <p>缴费查询</p>
-                    </div>
-                    <div class="formSearch">
-                        <div class="filed">
-                            <input type="text" class="inp" placeholder="疾病名称">
-                        </div>
-                        <div class="filed">
-                            <div class="inp select" id="departSel">
-                                <input type="text" placeholder="科室名称" readonly>
-                                <i class="bottom_icon">
-                                    
-                                </i>
-                                <div class="selectModal">
-                                    <p class="subject">科室名称</p>
-                                    <ul>
-                                        <li>肿瘤科</li>
-                                        <li>肿瘤科</li>
-                                        <li>肿瘤科</li>
-                                        <li>肿瘤科</li>
-                                        <li>肿瘤科</li>
-                                        <li>肿瘤科</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="filed">
-                            <input type="text" class="inp" placeholder="医师名称">
-                        </div>
-                        <div class="filed">
-                            <button class="btn">搜索</button>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                
-                <!-- 便民服务 -->
-                <div class="content">
-                    <div class="NoticeBody">
-                        <div class="left_wrap">
-                            <div class="l_text">
-                                <div class="row_back active">
-                                    <i class="icon_l"></i>
-                                    <span class="active">
-                                        EMS药品快递
-                                    </span>
-                                </div>
-                                <div class="row_back">
-                                    <i class="icon_l"></i>
-                                    <span>
-                                        母婴关爱室
-                                    </span>
-                                </div>
-                                <div class="row_back">
-                                    <i class="icon_l"></i>
-                                    <span>
-                                        轮椅租借
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="scrollBar">
-                                <div class="sliderWrap">
-                                    <div class="slider">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="right_wrap">
-                            <div class="article">
-                                <div class="title">
-                                    <i class="left"></i>
-                                    <span>EMS药品快递</span>
-                                </div>
-                                <div class="time">
-                                    时间：2019-12-30      点击：5121次
-                                </div>
-                                <div class="subject">
-                                    <p class="text-indent">
-                                        我院与中国邮政速递物流公司(EMS)合作，开通中草药、代煎汤药、病历的特快专递服务，这一举措极大地满足了患者的需求，尤其方便了上班族、老弱及外地患者足不出户，轻松取药，一经推出，受到患者普遍欢迎。
-                                    </p>
-                                    <p class="text-indent">
-                                        1、快递药品：快递药品需出具本院处方正、底联，收件人姓名要与处方患者姓名一致。
-                                    </p>
-                                    <p class="text-indent">
-                                        2、代煎汤剂：只办理本市内寄递业务，收费标准包括邮寄费用+包装箱费用+四联单+封装费。
-                                    </p>
-                                    <p class="text-indent">
-                                        3、病历邮寄：为了解决广大患者复印病案费时费力的难题，我院特提供国内特快专递住院
-                                        快递时间：周一至周五，8:00--16:00。
-                                        联系电话：0351-4668293。
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="scrollBarTwo">
-                                <div class="sliderWrapTwo">
-                                    <div class="sliderTwo">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 常见问题 -->
-                <div class="content">
-                    <div class="commonProblem">
-                        <div class="rowBox">
-                            <div class="topBack"></div>
-                            <div class="centBack">
-                                <div class="row">
-                                    <div class="left_icon wen">问</div>
-                                    <p class="text">单位有二次报销，我在哪能开出诊断证明？</p>
-                                </div>
-                                <div class="row">
-                                    <div class="left_icon da">答</div>
-                                    <p class="text da_text">单位有二次报销，我在哪能开出诊断证明？</p>
-                                </div>
-                            </div>
-                            <div class="bottom_back"></div>
-                        </div>
-                        <div class="rowBox">
-                            <div class="topBack"></div>
-                            <div class="centBack">
-                                <div class="row">
-                                    <div class="left_icon wen">问</div>
-                                    <div class="text">在哪能补打底方？</div>
-                                </div>
-                                <div class="row">
-                                    <div class="left_icon da">答</div>
-                                    <p class="text da_text">您好，您去之前就诊科室找上次看病医生补打底方就可以。</p>
-                                </div>
-                            </div>
-                            <div class="bottom_back"></div>
-                        </div>
-                        <div class="rowBox">
-                            <div class="topBack"></div>
-                            <div class="centBack">
-                                <div class="row">
-                                    <div class="left_icon wen">问</div>
-                                    <div class="text">我是皮肤病患者，一周就要跑一次医院开药能不能多开点药？</div>
-                                </div>
-                                <div class="row">
-                                    <div class="left_icon da">答</div>
-                                    <p class="text da_text">根据太原市医保部门相关规定，开药需遵守“急三慢七”的原则，即急诊开3天量，慢性病开7天量，行动不便的可开两周量，这是对患者用药</p>
-                                </div>
-                            </div>
-                            <div class="bottom_back"></div>
-                        </div>
-                        <div class="rowBox">
-                            <div class="topBack"></div>
-                            <div class="centBack">
-                                <div class="row">
-                                    <div class="left_icon wen">问</div>
-                                    <div class="text">我在哪能查询到医生出诊时间？</div>
-                                </div>
-                                <div class="row">
-                                    <div class="left_icon da">答</div>
-                                    <p class="text da_text">您好！您可以在山西省中医医院官网进行查询，官网信息是实时更新。</p>
-                                </div>
-                            </div>
-                            <div class="bottom_back"></div>
-                        </div>
-                        <div class="rowBox">
-                            <div class="topBack"></div>
-                            <div class="centBack">
-                                <div class="row">
-                                    <div class="left_icon wen">问</div>
-                                    <div class="text">我早上来窗口挂号，能挂到专家号吗？</div>
-                                </div>
-                                <div class="row">
-                                    <div class="left_icon da">答</div>
-                                    <p class="text da_text">因为我院在公众号平台提前7天放号，当日不能保证您来一定能挂上专家号，您可以选择在手机微信公众号搜索“京医通”进行线上预约，可以提前预约专家号，就不用早起来医院排
-                                        队挂号了。</p>
-                                </div>
-                            </div>
-                            <div class="bottom_back"></div>
-                        </div>
-                        <div class="rowBox">
-                            <div class="topBack"></div>
-                            <div class="centBack">
-                                <div class="row">
-                                    <div class="left_icon wen">问</div>
-                                    <div class="text">家里的药都吃完了，今天来开药显示还有5天用量，是怎么回事？</div>
-                                </div>
-                                <div class="row">
-                                    <div class="left_icon da">答</div>
-                                    <p class="text da_text">在医生端口查询患者上一次就诊开药记录，医嘱是说明书用量，如果您吃的量比说明书用量大，系统是按照药品说明书常规剂量计算的，所以今天您来开药还是显示还有5天用量，
-                                        希望您按照说明书剂量服用，是否加量需要遵医嘱。</p>
-                                </div>
-                            </div>
-                            <div class="bottom_back"></div>
-                        </div>
-                    </div>
-                    <div id="pages">
-                
-                    </div>
-                </div>
             </div>
         </div>
         <div class="footer_wrap"></div>
@@ -1064,10 +739,21 @@
 <script src="../../utils/footer.js"></script>
 <script src="../../js/pagination.js"></script>
 <script src="/js/scroll.js"></script>
+<script src="/js/layui/layui.js"></script>
 <script>
     $(function(){
+        layui.use('laydate', function(){
+            var laydate = layui.laydate;
+            laydate.render({
+                elem: '#startTime'
+            });
+            laydate.render({
+                elem: '#endTime'
+            });
+  
+        })
         $('#return').click(function(){
-            window.location.href = '/page/patient/index.html?index=1&name=出诊信息';
+            window.location.href = '/page/patient/index.html?index=1&name=就医须知'+'&id='+'d_hzfw';
             $('#defaultVal').html('出诊信息')
         })
         $('#departSel input').focus(function(){

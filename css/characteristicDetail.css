@@ -9,11 +9,11 @@
     width: 1230px;
     margin: 30px auto;
 }
-.wrap .container .Breadcrumb span {
+.wrap .container .Breadcrumb span , .wrap .container .Breadcrumb span a{
     font-size: 14px;
     color: #333;
   }
-  .wrap .container .Breadcrumb .black:hover {
+  .wrap .container .Breadcrumb .black:hover,  .wrap .container .Breadcrumb .black:hover a {
     color: #815b3f;
     cursor: pointer;
   }

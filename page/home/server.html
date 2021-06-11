@@ -35,6 +35,9 @@
             text-align: center;
             position: relative;
             top: 138px;
+            font-family: 'St';
+            line-height: 1.05;
+            padding: 20px 0;
         }
         .guide .guide_content .tag .text .topBack{
             width: 77px;
@@ -70,12 +73,13 @@
             letter-spacing: 2px;
             writing-mode: vertical-rl;
             border-right: 2px solid #333333;
-            padding: 70px 11px 26px 46px;
+            padding: 50px 11px 0px 46px;
             position: relative;
         }
         .guide .guide_content .right .column .text:hover{
             cursor: pointer;
             color: #815b3f;
+            border-right: 2px solid #815b3f;
         }
         .guide .guide_content .right .column .text:hover .yuan_icon{
             background: url('/images/yc_yuan_icon_active.png');
@@ -89,13 +93,18 @@
             height: 16px;
             background: url('/images/yc_yuan_icon.png');
         }
+        .wrap .maxImage{
+            background: url('/images/bannerTwo_6.jpg') no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+        }
     </style>
 </head>
 <body>
     <div class="wrap">
         <div class="headerWrap"></div>
         <div class="posBoxWrap"></div>
-        <div class="maxImage" style="background: url('/images/bannerTwo_6.jpg') no-repeat;">
+        <div class="maxImage">
             <div class="max_img_content">
                 <div class="Breadcrumb">
                     <span>您现在的位置:  </span>
@@ -358,6 +367,10 @@
         // 特色服务
         $('#ts_server_id').click(function(){
             window.location.href = '/page/journalism/journalism.html?index=6&name=医院动态'
+        })
+        // 就医指南
+        $('.guide .guide_content .right .column .text').click(function(){
+            window.open('/page/commen/detail.html?index=-1')
         })
     })
 </script>

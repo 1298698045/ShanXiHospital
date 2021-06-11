@@ -239,11 +239,21 @@
         }
         let hospitalCode = getUrlParam('hospitalCode');
         if(hospitalCode=='victory'){
-            $('.Breadcrumb .black').eq(3).hide();
-            $('.Breadcrumb .black').eq(2).html('<span class="black"><a href="/page/hospital/victory.html?id=d_fyjs">胜利分院<a/> ></span>')
+            $('.Breadcrumb .black').eq(4).hide();
+            $('.Breadcrumb .black').eq(2).html('<a href="/page/hospital/victory.html?id=d_fyjs">胜利分院<a/> >')
+            $('.Breadcrumb .black').eq(3).html('<a href="/page/department/team.html?index=3&id=d_ksdh&hospitalCode=victory">医生团队 ><a/>')
         }else if(hospitalCode=='peace'){
-            $('.Breadcrumb .black').eq(3).hide();
-            $('.Breadcrumb .black').eq(2).html('<span class="black"><a href="/page/hospital/peace.html?id=d_fyjs">和平分院<a/> ></span>')
+            $('.Breadcrumb .black').eq(4).hide();
+            $('.Breadcrumb .black').eq(2).html('<a href="/page/hospital/peace.html?id=d_fyjs">和平分院 ><a/>')
+            $('.Breadcrumb .black').eq(3).html('<a href="/page/department/team.html?index=3&id=d_ksdh&hospitalCode=peace">医生团队 ><a/>')
+        }else if(hospitalCode=='doctor'){
+            $('.Breadcrumb .black').eq(4).hide();
+            $('.Breadcrumb .black').eq(2).html('<a href="/page/hospital/famousDoctor.html?index=-1">名医门诊 ><a/>')
+            $('.Breadcrumb .black').eq(3).html('<a href="/page/department/team.html?index=3&hospitalCode=doctor&id=d_ksdh">医生团队 ><a/>')
+        }else if(hospitalCode=='health'){
+            $('.Breadcrumb .black').eq(4).hide();
+            $('.Breadcrumb .black').eq(2).html('<a href="/page/hospital/famousDoctor.html?index=-1">治未病健康体检中心 ><a/>')
+            $('.Breadcrumb .black').eq(3).html('<a href="/page/department/team.html?index=3&hospitalCode=health&id=d_ksdh">医生团队 ><a/>')
         }
         function getUrlParam(key) {
             // 获取参数

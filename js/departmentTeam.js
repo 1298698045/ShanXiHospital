@@ -82,7 +82,12 @@ $(function(){
     }
     $('.headPhoto').append(tempFun());
     $('.box').click(function(){
-        window.location.href = '/page/department/doctorDetail.html?index='+3+'&id='+'d_ksdh'
+        let hospitalCode = getUrlParam('hospitalCode');
+        if(hospitalCode){
+            window.location.href = '/page/department/doctorDetail.html?index='+3+'&id='+'d_ksdh'+'&hospitalCode='+hospitalCode
+        }else {
+            window.location.href = '/page/department/doctorDetail.html?index='+3+'&id='+'d_ksdh'
+        }
     })
     new Pagination({
         element: '#pages',
@@ -113,6 +118,12 @@ $(function(){
     }else if(hospitalCode=='peace'){
         $('.Breadcrumb .black').eq(3).hide();
         $('.Breadcrumb .black').eq(2).html('<span class="black"><a href="/page/hospital/peace.html?id=d_fyjs">和平分院<a/> ></span>')
+    }else if(hospitalCode=='doctor'){
+        $('.Breadcrumb .black').eq(3).hide();
+        $('.Breadcrumb .black').eq(2).html('<span class="black"><a href="/page/hospital/famousDoctor.html?index=-1">名医门诊<a/> ></span>')
+    }else if(hospitalCode=='health'){
+        $('.Breadcrumb .black').eq(3).hide();
+        $('.Breadcrumb .black').eq(2).html('<span class="black"><a href="/page/home/nursing.html?index=-1">治未病健康体检中心<a/> ></span>')
     }
     function getUrlParam(key) {
         // 获取参数

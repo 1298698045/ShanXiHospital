@@ -171,7 +171,7 @@ function scrollBar(scrollid,textclass,step,margin,type){
                     }
                     var maxleft = self.dom.width()-margin-27
                     if(pageX2>maxleft){
-                        pageX2 = maxtop
+                        pageX2 = maxleft
                     }
                     self.dom.find('.slider').css({
                         'left':pageX2+'px'

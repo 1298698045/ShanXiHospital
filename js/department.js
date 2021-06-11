@@ -13,8 +13,22 @@ $(function(){
     $('.detail .label').click(function(){
         window.location.href = '/page/characteristic/detail.html?index='+2+'&id='+'d_ksdh'
     })
+    $('.imgList .box').click(function(){
+        let idx = $(this).index();
+        if(idx==0){
+            window.location.href = '/page/home/nursing.html?index=-1';
+        }else if(idx==1){
+            window.location.href = '/page/hospital/famousDoctor.html?index=-1';
+        }else if(idx==2){
+            window.location.href = '/page/hospital/victory.html?index=1'+'&id='+'d_fyjs';
+        }else if(idx==3){
+            window.location.href = '/page/hospital/peace.html?index=1'+'&id='+'d_fyjs';
+        }
+    })
     let childId = getUrlParam("childId");
-    $("html, body").scrollTop(0).animate({scrollTop: $("#"+childId).offset().top});
+    if(childId){
+        $("html, body").scrollTop(0).animate({scrollTop: $("#"+childId).offset().top});
+    }
     function getUrlParam(key) {
         // 获取参数
         var url = window.location.search;
