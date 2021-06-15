@@ -93,6 +93,8 @@
     color: #ffffff;
     letter-spacing: 5px;
     writing-mode: vertical-rl;
+    width: 126px;
+    overflow: hidden;
   }
   .wrap .maxImage .max_img_content .layOut_panel .r_cont_wrap .tag{
     width: 77px;
@@ -281,6 +283,8 @@
     color: #333;
     letter-spacing: 2px;
     writing-mode: vertical-rl;
+    width: 95px;
+    overflow: hidden;
   }
   .wrap .ysImageWrap .ys_container .rightBox .boxWrap .box .boxBlock .preview{
     width: 32px;
@@ -513,6 +517,7 @@
     width: 100%;
     height: 100%;
     vertical-align: middle;
+    object-fit: cover;
   }
   .wrap .center .headPhoto .box .box_child .name {
     font-size: 20px;
@@ -536,6 +541,9 @@
   }
   .wrap .center .headPhoto .box .box_active .descWrap{
     padding: 20px;
+    width: 145px;
+    height: 230px;
+    overflow: hidden;
   }
   .wrap .center .headPhoto .box .box_active .title {
     font-size: 16px;
@@ -642,6 +650,7 @@
     width: 100%;
     height: 166px;
     background: url('../images/c_img1.1.png') no-repeat;
+    background-size: cover!important;
     position: relative;
   }
   .wrap .center .dynamic .box .box_child .img .timeBox{

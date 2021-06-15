@@ -202,7 +202,7 @@
     background: url('../images/row.png') no-repeat;
   }
   .wrap  .container .content .NoticeBody .left_wrap .l_text .row_back span{
-    width: 250px;
+    width: 280px;
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 18px;

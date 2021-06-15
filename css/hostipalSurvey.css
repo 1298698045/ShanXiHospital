@@ -369,6 +369,7 @@
     width: 100%;
     height: 100%;
     vertical-align: middle;
+    object-fit: cover;
 }
 .swiper-pagination-bullet-active{
     width: 23px!important;
@@ -543,6 +544,7 @@
     width: 100%;
     height: 100%;
     margin-top: -1px;
+    object-fit: cover;
   }
   .wrap .container .features .dynamic .box .box_child .img .modal{
       position: absolute;
@@ -595,6 +597,10 @@
   .wrap .container .features .dynamic .box .box_child .textWrap .text{
       margin: 19px;
       font-weight: bold;
+      width: 342px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
   }
   .wrap .container .features .dynamic .box .boxSolid{
     width: 100%;

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../css/head.css">
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/huli.css">
+    <link rel="stylesheet" href="/css/dynamic.css">
     <style>
         .guide{
             width: 100%;
@@ -122,7 +123,7 @@
                             </div>
                             <div class="article">
                                 <p class="column">
-                                    互联网诊疗服务系统是依托互联网技术，实现患者远程挂号、咨询、诊断、处方、药品配送为一体的业务体系。在疫情防控期间，互联网诊疗满...
+                                    互联网诊疗服务系统是依托互联网技术，实现患者远程挂号、咨询、诊断、处方、药品配送为一体的业务体系。在疫情防控期间，互联网诊疗满
                                 </p>
                             </div>
                             <div class="tag">
@@ -199,7 +200,7 @@
                     更多查看
                 </p>
             </div>
-            <div class="dynamic">
+            <div class="dynamic" id="memorabiliaId">
                 <div class="box">
                     <div class="box_child">
                         <div class="img">
@@ -210,7 +211,7 @@
                         </div>
                         <div class="textWrap">
                             <p class="text">
-                                我市完成全国首例机器人辅助下治疗肱骨外科颈骨折手术（市）
+                                山西省中医药研究院研究生部组织的“师仲景、学伤寒”趣味知识竞
                             </p>
                         </div>
                     </div>
@@ -242,7 +243,7 @@
                         </div>
                         <div class="textWrap">
                             <p class="text">
-                                我市完成全国首例机器人辅助下治疗肱骨外科颈骨折手术（市）
+                                山西省中医药研究院研究生部学生会成立大会顺利召开
                             </p>
                         </div>
                     </div>
@@ -257,7 +258,7 @@
                         </div>
                         <div class="textWrap">
                             <p class="text">
-                                我市完成全国首例机器人辅助下治疗肱骨外科颈骨折手术（市）
+                                山西省中医药研究院研究生部学生会成立大会顺利召开
                             </p>
                         </div>
                     </div>
@@ -301,7 +302,7 @@
 <script src="../../js/jquery.js"></script>
 <script src="../../js/swiper-3.4.2.min.js"></script>
 <script src="../../utils/head.js"></script>
- 
+ <script src="/js/articleSlice.js"></script>
 <script src="../../utils/footer.js"></script>
 <script>
     $(function(){
@@ -366,7 +367,10 @@
         })
         // 特色服务
         $('#ts_server_id').click(function(){
-            window.location.href = '/page/journalism/journalism.html?index=6&name=医院动态'
+            window.location.href = '/page/journalism/journalism.html?index=6&name=医院新闻&id=d_xwzx'
+        })
+        $('#memorabiliaId .box').click(function(){
+            window.location.href = '/page/journalism/detail.html?index=6&id=d_xwzx';
         })
         // 就医指南
         $('.guide .guide_content .right .column .text').click(function(){

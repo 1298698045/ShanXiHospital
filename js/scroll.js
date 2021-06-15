@@ -198,7 +198,7 @@ $('body').append(`<style>
 .YsliderWrap{height:500px;width:10px;background:url(/images/sliderWrap.png) no-repeat;position:absolute;right:20px;top:30px;background-size: 100% 100%;}
 .YscrollBar .YsliderWrap .slider{width:27px;height:26px;background:url(/images/slider.png) no-repeat;position:absolute;top:0;left:-9px;cursor:pointer}
 .XscrollBar{height:50px;width:500px;position: relative;margin-top:40px}
-.XsliderWrap{width:500px;height:10px;background:url(/images/slider_max.png) no-repeat;position:absolute;}
-.XscrollBar .XsliderWrap .slider{width:27px;height:26px;background:url(/images/slider.png) no-repeat;position:absolute;top:-5px;left:0;cursor:pointer}
+.XsliderWrap{width:500px;height:10px;background:url(/images/slider_max.png) no-repeat;position:absolute;background-size: 100% 100%;}
+.XscrollBar .XsliderWrap .slider{width:27px;height:26px;background:url(/images/slider.png) no-repeat;position:absolute;top:-5px;left:0;}
 </style>
 `)

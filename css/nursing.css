@@ -103,6 +103,8 @@
     color: #ffffff;
     letter-spacing: 2px;
     writing-mode: vertical-rl;
+    width: 126px;
+    overflow: hidden;
   }
   .wrap .maxImage .max_img_content .layOut_panel .r_cont_wrap .tag{
     width: 77px;
@@ -114,6 +116,9 @@
     text-align: center;
     position: relative;
     margin-top: 12px;
+    line-height: 1.05;
+    font-family: 'St';
+    padding: 10px 0;
   }
   .wrap .maxImage .max_img_content .layOut_panel .r_cont_wrap .tag .text .topBack{
     width: 77px;

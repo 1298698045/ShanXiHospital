@@ -53,6 +53,7 @@
   .wrap .maxImage .max_img_content .layOut_panel .l_img img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
   .wrap .maxImage .max_img_content .layOut_panel .r_cont_wrap{
     /* width: 475px;
@@ -121,6 +122,8 @@
     color: #ffffff;
     letter-spacing: 5px;
     writing-mode: vertical-rl;
+    width: 126px;
+    overflow: hidden;
   }
   .wrap .maxImage .max_img_content .layOut_panel .r_cont_wrap .tag{
     width: 77px;
@@ -489,6 +492,7 @@
     width: 100%;
     height: 100%;
     vertical-align: middle;
+    object-fit: cover;
   }
   .wrap .center .headPhoto .box .box_child .name {
     font-size: 20px;
@@ -512,6 +516,9 @@
   }
   .wrap .center .headPhoto .box .box_active .descWrap{
     padding: 20px;
+    width: 145px;
+    height: 230px;
+    overflow: hidden;
   }
   .wrap .center .headPhoto .box .box_active .title {
     font-size: 16px;

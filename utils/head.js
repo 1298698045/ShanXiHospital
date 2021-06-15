@@ -107,7 +107,7 @@ $(function(){
     '                                                <div class="paragraph"> '+
     '                                                    胜利分院隶属山西省中医院，是省、市基本医疗保险、铁路医保定点机构，医疗资源与总院共享，出诊专家均为山西省中医院副高职称以上专家，汇集山西省中医界老专家和学术权威。分院位于胜利街与解放北路十字口东边200米处，一.. '+
     '                                                </div> '+
-    '                                                <div class="detail_btn"><a href="/page/hospital/victory.html?id=d_fyjs">查看详细</a></div> '+
+    '                                                <div class="detail_btn"><a href="/page/commen/detail.html?index=-1">查看详细</a></div> '+
     '                                            </div> '+
     '                                        </div>'+
     '                                        <div class="itemBox">'+
@@ -116,7 +116,7 @@ $(function(){
     '                                                <div class="paragraph"> '+
     '                                                    山西省中医院和平分院系山西省卫生厅批准设立的中医医疗机构，是山西省中医院的下属机构，位于万柏林区和平南路336号。和平分院开设六年来，门诊量呈快速增长的态势，年门诊量八万余人次，满足了河西百姓看中医，求名中医的需求。'+
     '                                                </div> '+
-    '                                                <div class="detail_btn"><a href="/page/hospital/peace.html?id=d_fyjs">查看详细</a></div> '+
+    '                                                <div class="detail_btn"><a href="/page/commen/detail.html?index=-1">查看详细</a></div> '+
     '                                            </div> '+
     '                                        </div>'+
     '                                    </div> '+

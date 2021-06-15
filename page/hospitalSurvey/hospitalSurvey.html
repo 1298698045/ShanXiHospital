@@ -675,8 +675,8 @@
 <script src="../../js/pagination.js"></script>
 <script src="/module/js/traffic.js"></script>
 <script src="/js/scroll.js"></script>
-<script src="https://unpkg.com/vue/dist/vue.js"></script>
-<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+<!-- <script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script> -->
 <script>
     $(function () {
         $('#return').click(function(){
@@ -751,7 +751,7 @@
                 HistoricalFun()
             }
         })
-        HistoricalFun();
+        // HistoricalFun();
         function HistoricalFun(){
             var swiper = new Swiper('.swiper-container-vertical', {
                 pagination: '.swiper-pagination',
@@ -793,7 +793,7 @@
             })
         }
         var swiperTwo = new Swiper('._swiper-container_new', {
-        pagination: '.swiper-pagination',
+            pagination: '.swiper-pagination',
             slidesPerView: 3,
             paginationClickable: true
         });
