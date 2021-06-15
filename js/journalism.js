@@ -96,54 +96,6 @@ new Pagination({
         console.log(index);
     }
 });
-// new Pagination({
-//     element: '#pageTwo',
-//     type: 1,
-//     pageIndex: 1,
-//     pageSize: 10,
-//     pageCount: 5,
-//     total: 100,
-//     jumper: true,
-//     singlePageHide: false,
-//     prevText: '',
-//     nextText: '',
-//     disabled: true,
-//     currentChange: function(index) {
-//         console.log(index);
-//     }
-// });
-// new Pagination({
-//     element: '#pageThree',
-//     type: 1,
-//     pageIndex: 1,
-//     pageSize: 10,
-//     pageCount: 5,
-//     total: 100,
-//     jumper: true,
-//     singlePageHide: false,
-//     prevText: '',
-//     nextText: '',
-//     disabled: true,
-//     currentChange: function(index) {
-//         console.log(index);
-//     }
-// });
-// new Pagination({
-//     element: '#videoPages',
-//     type: 1,
-//     pageIndex: 1,
-//     pageSize: 10,
-//     pageCount: 5,
-//     total: 100,
-//     jumper: true,
-//     singlePageHide: false,
-//     prevText: '',
-//     nextText: '',
-//     disabled: true,
-//     currentChange: function(index) {
-//         console.log(index);
-//     }
-// });
 $('#memorabiliaId .box').click(function(){
     // window.location.href = '/page/characteristic/detail.html?index=2'+'&id=d_xwzx';
 })

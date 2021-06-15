@@ -289,7 +289,7 @@
     width: 288px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 6;
+    -webkit-line-clamp: 4;
     overflow: hidden;
   }
   .flex_head_container .nav ul li .content .content_child {

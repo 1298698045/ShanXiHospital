@@ -202,22 +202,6 @@ $(function(){
         }
     }
 
-    // new Pagination({
-    //     element: '#pages',
-    //     type: 1,
-    //     pageIndex: 1,
-    //     pageSize: 10,
-    //     pageCount: 7,
-    //     total: 100,
-    //     jumper: true,
-    //     singlePageHide: false,
-    //     prevText: '',
-    //     nextText: '',
-    //     disabled: true,
-    //     currentChange: function(index) {
-    //         console.log(index);
-    //     }
-    // });
     // 交通路线
     $('#traffic .tabs .tab').click(function(){
         $('#traffic .tabs .tab').removeClass('active');

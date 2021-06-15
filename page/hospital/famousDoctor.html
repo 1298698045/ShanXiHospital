@@ -441,31 +441,14 @@
                 $('.modal_slider').css('top',y+'px')
                 $('.scrollPage').css('top',-scale * leftheight);
             }
-            // 拖拽
-            // $('.modal_slider').on({
-            //     mousedown:function(){
-            //         $('.modal_slider').mousemove(function(e){
-            //             var top = $('.modal_slider').offset().top - $(window).scrollTop()
-            //             console.log(e.clientY-e.offsetY)
-            //             $('.modal_slider').css('top',e.clientY-top+'px');
-            //         })
-            //     }
-            // })
         }
         $('#departs').click(function(){
             window.location.href = '/page/department/team.html?index='+3+'&hospitalCode='+'doctor'+'&id=d_ksdh'
         })
         var rowX = 0;
         $('#rowSliderWrap .slider').mousedown(function(e){
-            // var parentOffset = $(this).parent().offset();
-            // // //or $(this).offset(); if you really just want the current element's offset
-            // var relX = e.pageX - parentOffset.left;
-            // var relY = e.pageY - parentOffset.top;
-            // console.log(relX,'--')
-
             var pageX1 = e.pageX - $(this)[0].offsetLeft;
             $(document).mousemove(function(e){
-                //var cleft = e.pageX - 
                 var pageX2 = e.pageX - pageX1
                 if(pageX2<0){
                     pageX2 = 0
