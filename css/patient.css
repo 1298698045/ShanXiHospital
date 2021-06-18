@@ -295,7 +295,7 @@
     font-weight: bold;
   }
   .wrap .center .container .content .table .tbody .dataRow {
-    line-height: 48px;
+    /* line-height: 2; */
     font-size: 14px;
   }
   .wrap .center .container .content .table .tbody .dataRow td.name{
@@ -303,12 +303,14 @@
     font-size: 16px;
   }
   .wrap .center .container .content .table .tbody .dataRow td {
-    text-align: center;
+    text-align: left;
     border: 1px solid #dadada;
     vertical-align: middle;
+    padding-left: 20px;
   }
   .wrap .center .container .content .table .tbody .dataRow .operation {
     background: #fff;
+    padding: 20px 0px 20px 20px;
   }
   .wrap .center .container .content .table .tbody .dataRow .operation .btn {
     width: 80px;
