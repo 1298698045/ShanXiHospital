@@ -316,16 +316,15 @@
     box-shadow: 1px 0px 10px rgb(34 23 20 / 20%);
     border-radius: 5px;
     cursor: pointer;
+    height: 116px;
+    box-sizing: border-box;
   }
   .wrap .center .News .right_box .cont .box .time {
     font-size: 22px;
     font-weight: bold;
     color: #999999;
     margin-bottom: 10px;
-  }
-  .wrap .center .News .right_box .cont .box .text {
-    font-weight: 18px;
-    font-size: #333333;
+    font-family: 'Arial Negreta', 'Arial Normal', 'Arial';
   }
   .wrap .center .News .right_box .cont .box:hover .time,
   .wrap .center .News .right_box .cont .box:hover .text {
@@ -338,6 +337,7 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    font-weight: 18px;
   }
   .wrap .center .department .row_title {
     display: flex;
@@ -480,7 +480,6 @@
     margin-top: 15px;
     background: url('../images/depart_icon.png') no-repeat;
     cursor: pointer;
-    float: left;
   }
   .wrap .center .department .cont .departList .uls .fake_item{
     background-color: #52B948;

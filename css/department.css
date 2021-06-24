@@ -220,6 +220,10 @@
     display: flex;
     align-items: center;
   }
+  .wrap .center .department .boxContent .label_box .fake_item{
+    flex: 0 0 196px;
+    height: 0px;
+  }
   .wrap .center .department .boxContent .label.none{
     visibility: hidden!important;
   }
