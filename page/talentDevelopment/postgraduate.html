@@ -798,6 +798,31 @@
         $('.student .box').click(function(){
             window.location.href = '/page/talentDevelopment/student.html?id=d_yjsjy&name=学生工作';
         })
+        funText();
+        function funText(){
+            for(var i=0; i < $('.ysImageWrap').length; i++){
+                for(var j=0; j < $('.ysImageWrap').eq(i).find('.box').length; j++){
+                    let text = $('.ysImageWrap').eq(i).find('.box').eq(j).find('.text').html();
+                    let textNum = getByteLen(text);
+                    console.log(text,textNum,'----------')
+                    if(textNum<100){
+                        $('.ysImageWrap').eq(i).find('.box').eq(j).find('.text').css('width','auto')
+                    }
+                }
+            }
+        }
+        function getByteLen(val) {
+            var len = 0;
+            for (var i = 0; i < val.length; i++) {
+                var a = val.charAt(i);
+                if (a.match(/[^\x00-\xff]/gi) != null) {
+                len += 2;
+                } else {
+                len += 1;
+                }
+            }
+            return len;
+        }
         var scrollView = new scrollBar('#rightBox','.scrollbox',50,0,'X');
         scrollView.init();
         var scrollViewTwo = new scrollBar('.rightBoxTwo','.scrollboxTwo',50,0,'X');

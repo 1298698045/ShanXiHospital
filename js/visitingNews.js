@@ -831,7 +831,8 @@ $(function(){
             name:"吕蕾",
             title:"主任医师",
             indications:"糖尿病并发症、甲状腺疾病、更年期综合症、内分泌紊乱等",
-            time:"周3下午"
+            time:"周3下午",
+            rowspan:3
         },
         {
             departName:"代谢病门诊",
@@ -855,14 +856,16 @@ $(function(){
             name:"张传稷",
             title:"主任医师",
             indications:"四肢骨折脱位、骨关节炎、颈腰椎间盘突出",
-            time:"周5上午"
+            time:"周5上午",
+            rowspan:2
         },
         {
             departName:"骨伤科",
             name:"杜志伟",
             title:"主任医师",
             indications:"四肢骨折脱位、颈腰间盘突出症、老年性骨性关节炎",
-            time:"周4上午"
+            time:"周4上午",
+            rowspan:2
         },
         
         
@@ -882,14 +885,16 @@ $(function(){
             name:"王建青",
             title:"副主任医师、院青年名医",
             indications:"成人及儿童皮肤病、杂病",
-            time:"周6上午"
+            time:"周6上午",
+            rowspan:2
         },
         {
             departName:"皮肤科",
             name:"梁晓军",
             title:"主治医师",
             indications:"皮肤病、胃肠疾病、失眠、鼻炎、更年期等杂病",
-            time:"周1、2、3、4、5全天，周6上午"
+            time:"周1、2、3、4、5全天，周6上午",
+            rowspan:1
         },
         
         
@@ -899,7 +904,8 @@ $(function(){
             name:"赵聚峰",
             title:"主任医师",
             indications:"颈椎病及腰椎病、骨质疏松压缩骨折、癌症椎体骨转移",
-            time:"周2下午"
+            time:"周2下午",
+            rowspan:1
         },
         
         
@@ -909,7 +915,8 @@ $(function(){
             name:"李兰芳",
             title:"主任医师",
             indications:"小儿多动、秽语抽动症、目眨、小儿脾虚、消化不良、咳嗽",
-            time:"周5下午"
+            time:"周5下午",
+            rowspan:4
         },
         {
             departName:"儿科",
@@ -940,7 +947,8 @@ $(function(){
             name:"陈猛",
             title:"主治医师",
             indications:"颈椎病、腰椎间盘突出症、膝关节炎、面瘫、中风后遗症",
-            time:"周1、2、3、4、5全天，周6上午"
+            time:"周1、2、3、4、5全天，周6上午",
+            rowspan:2
         },
         {
             departName:"针灸科",
@@ -957,7 +965,8 @@ $(function(){
             name:"王丽",
             title:"副主任医师",
             indications:"小儿推拿、颈椎病、腰椎间盘突出症、面瘫、痛经",
-            time:"周5上午"
+            time:"周5上午",
+            rowspan:4
         },
         {
             departName:"推拿科",
@@ -989,7 +998,8 @@ $(function(){
             name:"畅立强",
             title:"副主任医师",
             indications:"混合型便秘、结直肠良性、恶性肿瘤、混合痔及男性病",
-            time:"周3上午"
+            time:"周3上午",
+            rowspan:1
         }
     ]
     function victoryFun(){

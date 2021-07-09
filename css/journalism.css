@@ -169,6 +169,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    padding-top: 15px;
   }
   .wrap .center .container .content_wrap .content .lCont .box .desc_wrap .title.active{
     color: #815b3f;
@@ -176,11 +177,12 @@
   .wrap .center .container .content_wrap .content .lCont .box .desc_wrap .desc {
     font-size: 14px;
     color: #333333;
-    margin: 25px 0;
+    margin: 10px 0;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
+    line-height: 24px;
   }
   .wrap .center .container .content_wrap .content .lCont .box .desc_wrap .time {
     font-size: 14px;
@@ -287,17 +289,26 @@
   .wrap .container .memorabilia .dynamic .box .box_child .img{
     width: 100%;
     height: 225px;
-    background: url('../images/memorabilia_photo.png') no-repeat;
+    /* background: url('../images/memorabilia_photo.png') no-repeat; */
     background-size: cover;
     padding-top: 1px;
+    position: relative;
+  }
+  .wrap .container .memorabilia .dynamic .box .box_child .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .wrap .container .memorabilia .dynamic .box .box_child .img .timeBox{
     width: 54px;
     height: 54px;
     background: url('../images/g_box.png') no-repeat;
     text-align: center;
-    margin-top: 23px;
-    margin-left: 19px;
+    /* margin-top: 23px;
+    margin-left: 19px; */
+    position: absolute;
+    top: 23px;
+    left: 19px;
   }
   .wrap .container .memorabilia .dynamic .box:hover .box_child .img .timeBox{
     background: url('../images/g_box_active.png') no-repeat;

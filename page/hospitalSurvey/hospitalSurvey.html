@@ -577,7 +577,7 @@
                 <div class="traffic marginAuto" id="traffic">
                     <div class="left_box">
                         <div class="imgs">
-                            <img src="../../images/location.png" alt="">
+                            <div id="localcontainer"></div>
                         </div>
                     </div>
                     <div class="right_box">
@@ -1057,4 +1057,55 @@
         })
     })
 </script>
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=dpYUGNcGjk0Kx0p3o8zR7z3QI53HuGEc&s=1"></script>
+<script type="text/javascript">
+    //百度地图API功能
+    // var map = new BMap.Map("localcontainer");
+    // map.centerAndZoom(new BMap.Point(112.572875,37.85717),12);//根据坐标初始化地图
+    // map.enableScrollWheelZoom(true);
+    // map.addControl(new BMap.NavigationControl());   //平移缩放控件
+    // map.addControl(new BMap.ScaleControl());        //比例尺
+    // map.addControl(new BMap.OverviewMapControl());  //缩略地图
+    // map.addControl(new BMap.MapTypeControl());      //地图类型
+    // map.setCurrentCity("太原市"); // 仅当设置城市信息时，MapTypeControl的切换功能才能可用
+    // //添加标注
+    // var marker = new BMap.Marker(new BMap.Point(112.572875,37.85717),12);        // 创建标注
+    // map.addOverlay(marker);
+
+    var map = new BMap.Map("localcontainer");
+	map.centerAndZoom(new BMap.Point(112.572875,37.85717), 12);
+    map.enableScrollWheelZoom(true);
+    map.addControl(new BMap.NavigationControl());   //平移缩放控件
+    map.addControl(new BMap.ScaleControl());        //比例尺
+    map.addControl(new BMap.OverviewMapControl());  //缩略地图
+    map.addControl(new BMap.MapTypeControl());      //地图类型
+    map.setCurrentCity("太原市"); // 仅当设置城市信息时，MapTypeControl的切换功能才能可用
+	var top_left_control = new BMap.ScaleControl({anchor: BMAP_ANCHOR_TOP_LEFT});// 左上角，添加比例尺
+	var top_left_navigation = new BMap.NavigationControl();  //左上角，添加默认缩放平移控件
+	var top_right_navigation = new BMap.NavigationControl({anchor: BMAP_ANCHOR_TOP_RIGHT, type: BMAP_NAVIGATION_CONTROL_SMALL}); //右上角，仅包含平移和缩放按钮
+	/*缩放控件type有四种类型:
+	BMAP_NAVIGATION_CONTROL_SMALL：仅包含平移和缩放按钮；BMAP_NAVIGATION_CONTROL_PAN:仅包含平移按钮；BMAP_NAVIGATION_CONTROL_ZOOM：仅包含缩放按钮*/
+	var marker = new BMap.Marker(new BMap.Point(112.572875,37.85717),12);        // 创建标注
+    map.addOverlay(marker);
+	//添加控件和比例尺
+	function add_control(){
+		map.addControl(top_left_control);        
+		map.addControl(top_left_navigation);     
+		map.addControl(top_right_navigation);    
+	}
+	//移除控件和比例尺
+	function delete_control(){
+		map.removeControl(top_left_control);     
+		map.removeControl(top_left_navigation);  
+		map.removeControl(top_right_navigation); 
+	}
+    </script>
+    <style type="text/css">  
+        html{height:100%}    
+        body{height:100%;margin:0px;padding:0px}    
+        #localcontainer{
+            width: 100%;
+            height: 100%;
+        }
+    </style> 
 </html>

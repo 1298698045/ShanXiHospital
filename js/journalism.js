@@ -51,6 +51,7 @@ for(let i=0; i < 9; i++){
 '                    <div class="box_child">'+
 '                        <div class="img">'+
 '                            <div class="timeBox">'+
+'                                <img src="/images/memorabilia_photo.png" />                   '+
 '                                <p class="time">04</p>'+
 '                                <p class="year">2020-12</p>'+
 '                            </div>'+
