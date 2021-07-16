@@ -346,7 +346,7 @@
     font-size: 15px;
     color: #cbaf9c;
     margin-bottom: 12px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     display: flex;
     white-space: nowrap;
     display: block;

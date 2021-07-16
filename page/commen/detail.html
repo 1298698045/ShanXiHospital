@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1220px">
+    <meta name="viewport" content="width=1300">
     <title>病种详情</title>
     <link rel="stylesheet" href="../../css/swiper-3.4.2.min.css">
     <link rel="stylesheet" href="../../css/public.css">
@@ -29,12 +29,14 @@
                         <p class="time">
                             发布时间：2012-12-29 11:31:07 <span>来源：肿瘤科</span>点击数： 241 次
                         </p>
-                        <div class="row_right">
+                        <div class="row_right bdsharebuttonbox">
                             <span>分享到：</span>
+                            <a class="bds_tsina" subject="文章标题" data-cmd="tsina" title="微博"></a>
+                            <a class="bds_qzone" subject="文章标题" data-cmd="qzone" title="QQ空间"></a>
                         </div>
                     </div>
                     <div class="hr"></div>
-                    <div class="article">
+                    <div class="article" desc="描述内容 ye">
                         <p class="c_subject">一、率先在省内开展海扶无创治疗肿瘤</p>
                         <p class="text">20世纪40年代美国人首先提出了应用超声进行手术的设想，20世纪90年代中国人研制成功了海扶超声聚焦刀，实现了无创手术治疗肿瘤。</p>
                         <p class="indent">
@@ -85,6 +87,17 @@
             //返回参数值
             return result ? decodeURIComponent(result[2]) : null;
         }
+        var share_config = {
+            'bdText': $('.title').text(),
+            'bdUrl': location.href,
+            'bdDesc': $('.article').attr('desc')
+        };
+        $('.bds_tsina').click(function(){
+            window.open('http://service.weibo.com/share/share.php?title=' + share_config.bdText + '&url=' + share_config.bdUrl)
+        })
+        $('.bds_qzone').click(function(){
+            window.open('https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='+share_config.bdUrl+'&title='+share_config.bdText+'&desc='+share_config.bdDesc)
+        })
     })
 </script>
 </html>

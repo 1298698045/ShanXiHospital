@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1220px">
+    <meta name="viewport" content="width=1300">
     <title>新闻详情</title>
     <link rel="stylesheet" href="../../css/swiper-3.4.2.min.css">
     <link rel="stylesheet" href="../../css/public.css">
@@ -44,13 +44,14 @@
                             </p>
                             <div class="r_img">
                                 <span class="time">分享到：</span>
-                                <img src="../../images/share.png" alt="">
+                                <a class="bds_tsina" subject="文章标题" data-cmd="tsina" title="微博"></a>
+                                <a class="bds_qzone" subject="文章标题" data-cmd="qzone" title="QQ空间"></a>
                             </div>
                         </div>
                         <div class="hr">
 
                         </div>
-                        <div class="article">
+                        <div class="article" desc="descrip">
                             <p class="indent">
                                 2月24日上午，山西省中医院召开党委扩大会议，对巡视工作进行了专题部署。院领导班子全体成员及党委办、院办、人事科
                             </p>
@@ -62,7 +63,8 @@
                             <p class="time">&nbsp;</p>
                             <div class="r_img">
                                 <span class="time">分享到：</span>
-                                <img src="../../images/share.png" alt="">
+                                <a class="bds_tsina" subject="文章标题" data-cmd="tsina" title="微博"></a>
+                                <a class="bds_qzone" subject="文章标题" data-cmd="qzone" title="QQ空间"></a>
                             </div>
                         </div>
                         <div class="hr"></div>
@@ -111,9 +113,20 @@
  
 <script src="../../utils/footer.js"></script>
 <script>
-    $('.r_img').click(function(){
-        // window.open('http://connect.qq.com/widget/shareqq/index.html?url=分享后跳转链接&title=山西省中医院')
-        window.open('https://service.weibo.com/share/share.php?&title=山西省中医院党委召开巡视工作部署会')
+    // $('.r_img').click(function(){
+    //     // window.open('http://connect.qq.com/widget/shareqq/index.html?url=分享后跳转链接&title=山西省中医院')
+    //     window.open('https://service.weibo.com/share/share.php?&title=山西省中医院党委召开巡视工作部署会')
+    // })
+    var share_config = {
+        'bdText': $('.title').text(),
+        'bdUrl': location.href,
+        'bdDesc': $('.article').attr('desc')
+    };
+    $('.bds_tsina').click(function(){
+        window.open('http://service.weibo.com/share/share.php?title=' + share_config.bdText + '&url=' + share_config.bdUrl)
+    })
+    $('.bds_qzone').click(function(){
+        window.open('https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='+share_config.bdUrl+'&title='+share_config.bdText+'&desc='+share_config.bdDesc)
     })
     
     function getUrlParam(key) {

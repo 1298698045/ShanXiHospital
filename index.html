@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=.3; minimum-scale=.3; maximum-scale=.3"> -->
-    <meta name="viewport" content="width=1220px">
+    <meta name="viewport" content="width=1300">
     <title>山西省中医院</title>
     <link rel="stylesheet" href="./css/swiper-3.4.2.min.css">
     <link rel="stylesheet" href="./css/public.css">
@@ -1088,6 +1088,80 @@
 <!--   -->
 <script src="./js/index.js"></script>
 <script>
+    // var str = '1234567890';
+    // toThousands(str);
+    // 方法一
+    // function toThousands(num) {
+    //     var result = [], 
+    //         counter = 0;
+    //     num = (num || 0).toString().split('');
+    //     for (var i = num.length - 1; i >= 0; i--) {
+    //         counter++;
+    //         result.unshift(num[i]);
+    //         if (!(counter % 3) && i != 0) { 
+    //             result.unshift(','); 
+    //         }
+    //     }
+    //     return result.join('');
+    // }
+    // 方法二
+    // function toThousands(num) {
+    //     var result = '', 
+    //         counter = 0;
+    //         num = (num || 0).toString();
+    //     for (var i = num.length - 1; i >= 0; i--) {
+    //         counter++;
+    //         result = num.charAt(i) + result;
+    //         if (!(counter % 3) && i != 0) {
+    //             result = ',' + result; 
+    //         }
+    //     }
+    //     return result;
+    // }
+
+    function showName(){
+        console.log('Toutiao');
+    }
+    showName();
+    function showName(){
+        console.log('OceanEngine');
+    }
+    showName();
+    var myname = 'abc';
+    function showName2(){
+        console.log(myname);
+        var myname = 'aabbcc';
+        console.log(myname);
+    }
+    showName2();
+
+    async function async1(){
+        console.log('a');
+        await async2();
+        console.log('b');
+    }
+    async function async2(){
+        console.log('c');
+    }
+    console.log('d')
+
+    setTimeout(() => {
+        console.log('e')
+    }, 0);
+    async1();
+    new Promise(function(resolve){
+        console.log('f');
+        resolve();
+    }).then(res=>{
+        console.log('g')
+    })
+    console.log('h')
+    /**
+     * showNmae函数两次都打印的是OceanEngine,showName2下的第一个myname打印的是undefined,第二个是aabbcc
+     * 
+     * 原来JS在调用函数时会查找对应名称的方法，如果找到了还会继续往下找，如果之后没有了，就执行之前找到的，如果之后也找到了，就覆盖之前的函数。所以，结果是两次OceanEngine
+    */
+
     var mySwiper = new Swiper ('.swiper-container', {
         // autoplay: false,
         // duration: 1000,
