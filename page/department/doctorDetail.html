@@ -101,99 +101,26 @@
                 </div>
                 <div class="info">
                     <p class="name">出诊信息</p>
-                    <p class="hr"></p>
+                    <!-- <p class="hr"></p>
                     <p class="moreText">
                         更多查看
-                    </p>
+                    </p> -->
                 </div>
                 <div class="blockWrap">
                     <div class="top_back"></div>
                     <div class="cont_wrap">
                         <table class="table">
                             <thead>
-                                <tr>
-                                    <th width="120">医生</th>
-                                    <th width="220">科室</th>
-                                    <th>日期</th>
-                                    <th widht="400">班次</th>
-                                    <th width="60">诊查费（元）</th>
-                                    <th width="60">挂号费（元）</th>
-                                    <th>可预约数</th>
-                                    <th width="200">地点</th>
-                                    <th width="100">
-                                        操作
-                                    </th>
+                                <tr class="tableTr">
+                                    <th width="60">时间</th>
                                 </tr>
                             </thead>
                             <tbody class="tbody">
-                                <tr class="dataRow">
-                                    <td>肖汉玺</td>
-                                    <td>内综肿瘤科</td>
-                                    <td>2021-03-16星期二</td>
-                                    <td>上午
-                                        08:00~12:00
-                                    </td>
-                                    <td>
-                                        42
-                                    </td>
-                                    <td>
-                                        0.5
-                                    </td>
-                                    <td>
-                                        0
-                                    </td>
-                                    <td rowspan="2">
-                                        总院
-                                    </td>
-                                    <td class="operation">
-                                        <button class="btn default">约满</button>
-                                    </td>
+                                <tr class="dataRow AM">
+                                    <td>上午</td>
                                 </tr>
-                                <tr class="dataRow">
-                                    <td>肖汉玺</td>
-                                    <td>内综肿瘤科</td>
-                                    <td>2021-03-16星期二</td>
-                                    <td>上午
-                                        08:00~12:00
-                                    </td>
-                                    <td>
-                                        42
-                                    </td>
-                                    <td>
-                                        0.5
-                                    </td>
-                                    <td>
-                                        0
-                                    </td>
-                                    <!-- <td>
-                                        总院
-                                    </td> -->
-                                    <td class="operation">
-                                        <button class="btn">预约</button>
-                                    </td>
-                                </tr>
-                                <tr class="dataRow">
-                                    <td>肖汉玺</td>
-                                    <td>内综肿瘤科</td>
-                                    <td>2021-03-16星期二</td>
-                                    <td>上午
-                                        08:00~12:00
-                                    </td>
-                                    <td>
-                                        42
-                                    </td>
-                                    <td>
-                                        0.5
-                                    </td>
-                                    <td>
-                                        0
-                                    </td>
-                                    <td>
-                                        总院
-                                    </td>
-                                    <td class="operation">
-                                        <button class="btn">预约</button>
-                                    </td>
+                                <tr class="dataRow PM">
+                                    <td>下午</td>
                                 </tr>
                             </tbody>
                             
@@ -214,6 +141,123 @@
  
 <script src="../../utils/footer.js"></script>
 <script>
+    window.onload = function(){
+        let date = new Date();
+        let yy = date.getFullYear();
+        let mm = date.getMonth()+1;
+        let dd = date = date.getDate();
+        let currenTime = `${yy}-${mm}-${dd}`
+        let today = new Date().getTime()
+        let lastDay = getTimeByDay(16) //获取30天后的日期
+        let lastTime = formatTime(lastDay)
+
+        console.log('lastTime:',lastTime);
+         /* 
+        num 获取当天多少天后的日期
+        */
+        function getTimeByDay(num) {
+            return today + 60 * 60 * 1000 * 24 * num;
+        }
+
+        function formatTime(time) {
+            //new Date(time).toISOString()    => 2019-02-23T08:40:35.825Z
+            return new Date(time).toISOString().split('T')[0];
+        }
+
+
+        function getDayAll(starDay, endDay) {
+        
+        　　 var arr = [];
+            var dates = [];
+        
+            // 设置两个日期UTC时间
+        　　　var db = new Date(starDay);
+        　　　var de = new Date(endDay);
+        
+            // 获取两个日期GTM时间
+        　　　var s = db.getTime() - 24 * 60 * 60 * 1000;
+        　　　var d = de.getTime() - 24 * 60 * 60 * 1000;
+        
+            // 获取到两个日期之间的每一天的毫秒数
+        　　　for (var i = s; i <= d;) {
+        　　　　　　i = i + 24 * 60 * 60 * 1000;
+                arr.push(parseInt(i))
+        　　　}
+            
+            var week = ['周日','周一','周二','周三','周四','周五','周六'];
+            // 获取每一天的时间  YY-MM-DD
+            for( var j in arr ){
+                var time = new Date(arr[j]);
+                var year = time.getFullYear(time);
+                var mouth = (time.getMonth() + 1)>=10?(time.getMonth() + 1):('0'+(time.getMonth() + 1));
+                var day = time.getDate()>=10?time.getDate():('0'+time.getDate());
+                var weekDay = week[time.getDay()];
+                console.log('weekDay',weekDay)
+                var YYMMDD = year + '-' + mouth + '-' + day;
+                var MMDD = mouth + '-' + day;
+                dates.push({
+                    weekDay,
+                    MMDD,
+                    YYMMDD
+                })
+            }
+            
+            return dates
+        }
+    
+        var dataAll = getDayAll(currenTime,lastTime);
+        console.log(dataAll)
+
+        // tableTr
+        var str = '';
+        for(var i = 0; i < dataAll.length; i++){
+            str += `
+                <th>
+                    <p>${dataAll[i].MMDD}</p>
+                    <p>${dataAll[i].weekDay}</p>
+                </th>
+            `
+        }
+        $('.tableTr').append(str);
+        var strAM = '';
+        var mathAm = getRandomArrayElements(dataAll, 4);
+        function getRandomArrayElements(arr, count) {
+            var shuffled = arr.slice(0), i = arr.length, min = i - count, temp, index;
+            while (i-- > min) {
+                index = Math.floor((i + 1) * Math.random());
+                temp = shuffled[index];
+                shuffled[index] = shuffled[i];
+                shuffled[i] = temp;
+            }
+            return shuffled.slice(min);
+        }
+        for(var i=0; i<dataAll.length; i++){
+            for(var j=0; j<mathAm.length; j++){
+                if(dataAll[i].MMDD==mathAm[j].MMDD){
+                    dataAll[i].text = '有号';
+                }
+            }
+        }
+        console.log(dataAll);
+        for(let i = 0; i < dataAll.length; i++){
+            if(dataAll[i].text){
+
+                strAM += `
+                    <td class="text">
+                        ${dataAll[i].text}
+                    </td>
+                `
+            }else {
+                strAM += `
+                    <td>
+                        
+                    </td>
+                `
+            }
+        }
+        $('.AM').append(strAM);
+        $('.PM').append(strAM);
+    }
     $(function(){
         $('.bottomBack').hide();
         $('.Breadcrumb .black').click(function(){

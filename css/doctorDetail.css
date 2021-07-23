@@ -210,11 +210,14 @@
     background: #086252;
     color: #fff;
     white-space: nowrap;
-    height: 58px;
-    line-height: 58px;
     border: 1px solid #dadada;
     font-size: 16px;
     font-weight: bold;
+    vertical-align: middle;
+    padding: 10px 0;
+  }
+  .wrap .center .content .table thead tr th p{
+    line-height: 1.2;
   }
   .wrap .center .content .table .tbody .dataRow {
     line-height: 48px;
@@ -228,6 +231,9 @@
     text-align: center;
     border: 1px solid #dadada;
     vertical-align: middle;
+  }
+  .wrap .center .content .table .tbody .dataRow .text{
+    color: #2bb902;
   }
   .wrap .center .content .table .tbody .dataRow .operation {
     background: #fff;
