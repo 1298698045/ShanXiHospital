@@ -196,5 +196,19 @@ $(function () {
         window.location.href = '/page/journalism/detail.html?index='+6
     })
     $('.bottomBack').hide();
-    //    onMyLoad();
+    //    onMyLoad();\
+    var btn = document.querySelector('.back_url.active');
+    function pay(){
+        console.log('点击了')
+    }
+    function db(func,delay){
+        let timer ;
+        return function(){
+            clearTimeout(timer);
+            timer = setTimeout(function(){
+                func();
+            },delay)
+        }
+    }
+    btn.addEventListener('click',db(pay,1000));
 });
