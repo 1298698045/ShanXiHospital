@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=1300">
+    <meta name="viewport" content="width=device-width, initial-scale=0">
     <title>山西省中医院</title>
     <link rel="stylesheet" href="./css/swiper-3.4.2.min.css">
     <link rel="stylesheet" href="/css/login.css">
@@ -18,44 +17,50 @@
                         <img src="/images/newLogo.png" alt="">
                     </div>
                     <div class="right_icons">
-                        <div class="box l1"></div>
-                        <div class="box l2"></div>
-                        <div class="box l3">
+                        <div class="box l1" title="预约挂号">
+                            <span>预约挂号</span>
+                        </div>
+                        <div class="box l2">
                             <div class="qrCode">
-
+                                <img src="/images/sx_weibo.jpg" alt="">
                             </div>
                         </div>
-                        <div class="box l4"></div>
+                        <div class="box l3">
+                            <div class="qrCode active">
+                                <img src="/images/qrcode_m.weibo.cn.jpg" alt="">
+                            </div>
+                        </div>
+                        <!-- <div class="box l4"></div> -->
                     </div>
                 </div>
-                <div class="content">
-                    <div class="left">
-                        <p class="row">咨询电话：0351-303009</p>
-                        <p class="row">医院地址：太原市迎泽区并州西街16号</p>
-                        <p class="row">版本所有：西安市中医医院</p>
-                        <p class="row">网站备案号：晋ICP备12002475</p>
-                        <p class="row">网站建设：北京凤凰世纪科技有限公司</p>
-                    </div>
-                    <div class="right">
-                        <div class="columns">
-                            <div class="column">
-                                <div class="box">
-                                    <a href="#">
-                                        <img src="/images/hzb.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="radio"></div>
-                                <p class="text">Patient</p>
+                <div class="contontWrap">
+                    <div class="content">
+                        <div class="left">
+                            <div>
+                                <p class="row">咨询电话：0351-303009</p>
+                                <p class="row">医院地址：太原市迎泽区并州西街16号</p>
+                                <p class="row">版本所有：西安市中医医院</p>
+                                <p class="row">网站备案号：晋ICP备12002475</p>
+                                <p class="row">网站建设：北京凤凰世纪科技有限公司</p>
                             </div>
-                            <div class="column">
-                                <div class="box">
+                        </div>
+                        <div class="right">
+                            <ul class="columns">
+                                <li class="column">
                                     <a href="#">
-                                        <img src="/images/ygb.png" alt="">
+                                        <u class="box">
+                                        </u>
+                                        <u class="radio">Patient</u>
                                     </a>
-                                </div>
-                                <div class="radio"></div>
-                                <p class="text">Staff</p>
-                            </div>
+                                </li>
+                                <li class="column">
+                                    <a href="#">
+                                        <u class="box">
+                                        </u>
+                                        <u class="radio">Staff</u>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -94,6 +99,62 @@
         mousewheel: {
             releaseOnEdges: true,//PC端释放滑动
         }
-    })  
+    })
+    var list = [
+        {
+            id:1,
+            name:'张三1',
+            children:[
+                {
+                    id:2,
+                    name:'张三1-1',
+                },
+                {
+                    id:3,
+                    name:'张三1-2',
+                    children:[
+                        {
+                            id:1,
+                            name:'张三3-1',
+                        },
+                        {
+                            id:1,
+                            name:'张三3-2',
+                            children:[
+                                {
+                                    id:1,
+                                    name:'张三3-1-1',
+                                },
+                                {
+                                    id:1,
+                                    name:'张三3-2-2',
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            id:2,
+            name:'李四',
+        },
+        {
+            id:3,
+            name:'王五',
+        }
+    ];
+    var temp = [];
+    function treeFun(arr){
+        function agree(row){
+            temp.push(row.name);
+            if(row.children){
+                treeFun(row.children);
+            }
+        }
+        arr.forEach(agree)
+    }
+    treeFun(list);
+    console.log(temp)
 </script>
 </html>
